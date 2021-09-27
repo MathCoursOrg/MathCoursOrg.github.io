@@ -1,0 +1,283 @@
+% Created 2021-09-27 lun. 20:18
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\input{/home/fabien/alphabetagammadelta/parametre.tex}
+\author{Delhomme Fabien}
+\date{\today}
+\title{Factorisation et Developpement}
+\hypersetup{
+ pdfauthor={Delhomme Fabien},
+ pdftitle={Factorisation et Developpement},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+
+\section{Reconnaître une forme factorisée et une forme développée}
+\label{sec:org108fd94}
+
+Certains calculs sont sous forme factorisée.
+
+\begin{ex}
+L'expression :
+\[
+(x+7)\times (x - 4)
+\]
+est sous forme factorisée
+\end{ex}
+
+\begin{ex}
+    L'expression :
+    \[
+        x^{2} + 3x
+    \]
+    n'est pas factorisée, puisque on peut encore trouver des facteurs communs aux différents termes. Cette expression est sous forme développé car il n'y a que des produit de termes simples
+\end{ex}
+
+\begin{ex}
+   L'expression :
+\[
+x(x+1) + 1
+\]
+N'est ni sous forme factorisée (car le terme $1$ n'est pas dans un produit) ni sous forme développée (car il existe le terme $x(x+1)$ qui peut encore être développé
+\end{ex}
+
+
+\section{Développer}
+\label{sec:org08c440c}
+
+ \begin{defi}{Développement}
+On appelle développement le processus qui permet de passer d'une forme développer à une forme factorisée.
+ \end{defi}
+
+\begin{ex}
+    \[
+        x \times (x + 5) = x^{2} + 5x
+    \]
+ \end{ex}
+
+\subsection{Techniques pour développer un produit de deux facteurs}
+\label{sec:orgc233821}
+
+On peut faire appel à un tableau.
+
+Si on veut développer le produit suivant :
+\begin{align*}
+(x-4)\times (x + 3)
+\end{align*}
+
+on peut utiliser le tableau suivant :
+
+\begin{center}
+\begin{tabular}{center}
+\hline
+\texttimes{} & x & 3\\
+\hline
+x & x\textsuperscript{2} & 3x\\
+-4 & -4x & -12\\
+\hline
+\end{tabular}
+\end{center}
+
+Puis faire la somme de tous les termes du tableau :
+ \[
+    (x-4)\times (x + 3) =  x^{2} + 3x - 4x -12 = x^{2} -x -12
+ \]
+
+\section{Factoriser}
+\label{sec:org4305f81}
+
+On appelle la factorisation le processus qui permet de passer d'une forme développée à une forme factorisée
+
+\subsection{Identités remarquables}
+\label{sec:org409e073}
+Les identités remarquables servent à reconnaitres des expressions pour développer ou factoriser. Il faut donc les connaître dans les deux sens (de gauche à droite du signe égal, mais également de droite à gauche).
+
+\subsubsection{Première identité}
+\label{sec:org898e1f9}
+\begin{prop}
+Pour tout nombres réels $a$ et $b$, on a l'égalité suivante
+ \[
+    (a + b)^{2} = a^{2} + 2ab + b^{2}
+ \]
+\end{prop}
+
+\begin{dem}
+  \textit{Version graphique}
+
+  \textit{Version littérale}
+
+  On développe le carré par :
+  \begin{align*}
+    (a+b)^{2} &= (a +b) \times (a +b ) \\
+              &= a \times (a +b ) + b \times (a+b)\\
+              &= a\times a + a \times b + b \times a + b \times b \\
+              &= a^{2} + ab + ba + b^{2} \\
+              &= a^{2} + 2 a \times b + b^{2}
+  \end{align*}
+  En on trouve bien l'égalité annoncée
+\end{dem}
+
+\subsubsection{Deuxième identité}
+\label{sec:org2ae23af}
+En partant de la première identité, on peut en déduire la deuxième facilement.
+\begin{prop}
+  Pour tout nombre réel $a$, $b$, on a :
+  \[
+    (a-b)^{2} = a^{2} - 2a \times b + b^{2}
+  \]
+\end{prop}
+
+\begin{dem}
+  Pour montrer cette identité, on peut soit redévelopper comme cela a été fait à
+  la démonstration précédente, soit, puisque l'identité précédente est valable
+  pour tous les nombres $a$, et $b$, on peut \emph{remplacer} $b$ par $-b$ pour
+  obtenir :
+  \[
+    (a + (-b)) = a^{2} + 2 \times a \times (-b) + (-b)^{2}
+  \]
+  Sauf que $(-b)^{2} = b^{2}$, donc on obtient
+  \[
+    (a-b) = a^{2} - 2 \times a \times b + b^{2}
+  \]
+\end{dem}
+
+\begin{ex}
+  On peut par exemple calculer $98^{2}$ en remarquant que $98= 100 - 2$, et donc :
+  \[
+    98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
+  \]
+  Finalement :
+  \[
+    98^{2} = 10000 - 400 + 4 =  9604
+  \]
+\end{ex}
+
+\subsubsection{Troisième identité}
+\label{sec:org3b58b7f}
+La troisième identité est bien différente des deux autres.
+\begin{prop}
+  Pour tout $a$ et $b$ réel, on a l'égalité suivante :
+  \[
+    (a+b)(a-b) = a^{2} - b^{2}
+  \]
+\end{prop}
+
+\begin{dem}
+On démontre cette égalité à l'aide d'un développement comme pour la première identité
+\begin{align*}
+  (a+b)(a-b) &= a\times (a - b) + b \times (a - b)\\
+             &= a\times a - a \times b + b \times a - b \times b \\
+             &= a^{2} - b^{2}
+\end{align*}
+\end{dem}
+
+\begin{rem}
+   Qu'obtient-on lorsque l'on remplace $b$ par $-b$, quelle nouvelle identité découvre-t-on  ?
+\end{rem}
+
+\section{Applications théoriques : résolution d'équations}
+\label{sec:org4705751}
+Les identités remarquables permettent de résoudre des équations sans faire
+d'erreur. Regardons précisemment l'équations :
+\[
+    x^{2} = 49
+\]
+
+On sait déjà qu'une solution est donnée par \(x = 7\), puisque le carré de \(7\)
+fait \(49\). Mais est-ce la seule solution ?
+
+On va utiliser une identité remarquable pour le savoir.
+
+\begin{meth}
+  On soustrait $49$ à chaque membre de l'équation, pour obtenir la nouvelle
+  équation (équivalente à la première) suivante :
+
+  \(
+  x^{2} - 49 = 0
+  \)
+
+  On peut
+  remplacer 49 par $7^{2}$, pour obtenir :
+
+  \[
+    x^{2} - 7^{2} = 0
+  \]
+
+  On peut utiliser l'identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$, avec $a =
+  x$ et $b = 7$, on obtient donc :
+
+  \(
+    (x-7)(x+7) = 0
+  \)
+
+  Puis, si un produit est nul, c'est
+  que l'un de ses facteurs est nul, donc soit $x$ vaut $7$ (on retrouve une
+  solution vue précédemment), soit $x$ vaut $-7$ (et c'est souvent l'equation que
+  l'on oublie !)
+\end{meth}
+
+\section{Applications concrètes : calculer mentalement des carrés}
+\label{sec:orgbe3b97e}
+
+Si on considère le calcul de \(204^{2}\), on peut utiliser la relation suivante :
+\begin{align*}
+  204^{2} &= (200 + 4)^{2} \\
+          &= 200^{2}+2 \times 200 \times 4 + 4^{2}\\
+          &=  40000 + 1600 + 16 \\
+          &= 41616
+\end{align*}
+
+\section{Application concrete et théorique : extraction d'une racine carré}
+\label{sec:org43532ea}
+\begin{meth}
+
+On vient de voir par exemple que $\sqrt{41616} = 204$. Peut-on calculer à la
+main les premieres décimales de $\sqrt{41617}$ ?
+
+On sait que $\sqrt{41617} \approx 204$. Que doit-on rajouter à $204$ pour
+s'approcher le plus possible de $\sqrt{41617}$ ?
+
+On pose $h$ le nombre tel que
+\begin{align*}
+    \sqrt{41617} = 204 + h
+\end{align*}
+On obtient donc
+\begin{align*}
+  41617 &= (204 + h)^{2} \\
+        &= 204^{2} + 2 \times 204 \times h + h^{2}\\
+        &= 41616 + 408 \times h + h^{2}
+\end{align*}
+
+Le terme $h^{2}$ devrait être très très petit, donc on va à partir de maintenant
+considérer qu'il est nul (alors qu'il ne l'est pas ! Mais on cherche une approximation !)
+
+On se retrouve ainsi avec l'expression :
+\begin{align*}
+    1 = 408 \times h
+\end{align*}
+Donc, si on considère que $h^{2}$ est négligeable car très petit, on obtient
+finalement $h = \frac{1}{408}$. Il vient :
+\begin{align*}
+\sqrt{41617} &\approx 204 + \frac{1}{408}
+\end{align*}
+\end{meth}
+\end{document}

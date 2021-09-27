@@ -1,0 +1,84 @@
+% Created 2021-09-27 lun. 20:18
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\input{/home/fabien/Cours/alphabetagammadelta/parametre.tex}
+\author{Delhomme Fabien}
+\date{\today}
+\title{Cours Valeur Absolue}
+\hypersetup{
+ pdfauthor={Delhomme Fabien},
+ pdftitle={Cours Valeur Absolue},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Definition}
+\label{sec:org9ca7431}
+
+\subsection{Symbolisme}
+\label{sec:org5411d87}
+La fonction valeur absolue est une fonction qui s'écrit \(x \mapsto |x|\).
+
+\subsection{Calcul}
+\label{sec:org94f6bab}
+\begin{defi}{La valeur absolue}
+La valeur absolue d'un nombre correspond exactement a sa distance à $0$
+\end{defi}
+
+\begin{ex}
+La valeur absolue de $-3$ s'écrit $|-3|$, et vaut $3$, puisque $-3$ est à distance $3$ de $0$.
+\end{ex}
+
+\section{Représentation graphique}
+\label{sec:org0b26480}
+
+Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
+\begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel=$x$,
+        ylabel={$f(x) = |x|$},
+        axis lines = center,
+    ]
+        \addplot[domain=-10:10, samples=100, color=orange]{abs(x)};
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\section{Lien entre la valeur absolue et la distance entre deux nombres}
+\label{sec:org0806dd6}
+
+La valeur absolue d'un nombre représente sa distance avec \(0\).
+
+Mais la valeur absolue de la différence entre deux nombres représente la
+distance entre ces deux nombres.
+
+\begin{ex}
+  Le nombre $|2 - 3|$ représente la distance entre le nombre $2$ et le nombre $3$, qui vaut donc $1$. Si on fait le calcul, on a :
+
+  \begin{align*}
+    |2-3| &= |-1| \\
+          &= 1
+  \end{align*}
+
+On remarque par ailleurs que $|2 - 3|$ est égal à $|3 - 2|$, puisque la distnace entre $2$ et $3$ est la même que la distance entre $3$ et $2$.
+\end{ex}
+\end{document}

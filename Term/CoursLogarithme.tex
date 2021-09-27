@@ -1,0 +1,117 @@
+% Created 2021-09-27 lun. 20:18
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\input{/home/fabien/alphabetagammadelta/parametre.tex}
+\author{Delhomme Fabien}
+\date{\today}
+\title{Cours Logarithme}
+\hypersetup{
+ pdfauthor={Delhomme Fabien},
+ pdftitle={Cours Logarithme},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Les puissances}
+\label{sec:orgc083207}
+
+\subsection{Definition}
+\label{sec:org47be094}
+
+\begin{defi}
+On rappelle que la notation $a^{n}$ désigne le calcul :
+\begin{align*}
+    a^{n} = \underbrace{a \times \ldots \times a}_\text{n fois}
+\end{align*}
+\end{defi}
+
+\section{La fonction puissance}
+\label{sec:org2bca8b3}
+
+\subsection{Definition}
+\label{sec:org8154a24}
+
+On peut regarder la fonction puissance de \(10\). Par exemple :
+
+\begin{center}
+\begin{tabular}{rr}
+nombre de départ & puissance de \(10\) de ce nombre\\
+1 & 10\\
+1.5 & 31.622\\
+2 & 100\\
+3 & 1000\\
+4 & 10000\\
+\ldots{} & \ldots{}\\
+x & 10\textsuperscript{x}\\
+\end{tabular}
+\end{center}
+
+Cette fonction est définie par :
+\begin{align*}
+    f(x) = 10^{x}
+\end{align*}
+
+\begin{rem}
+On peut définir des puissances qui ne sont pas entières. Par exemple :
+\[
+10^{1.5} \approx 31.6227766017
+\]
+\end{rem}
+
+\begin{rem}
+Si vous commencez avec une puissance qui n'est pas entière, vous avez peu de
+chance de tomber sur un nombre entier. Ici, on a pris comme puissance $1.5$, et
+le résultat, $31,622$ n'est pas entier.
+\end{rem}
+
+\section{La fonction logarithme décimale}
+\label{sec:org3064e8b}
+
+\begin{defi}{Fonction logarithme}
+Cette fonction est la fonction qui «lit» le tableau de la fonction puissance
+dans l'autre sens. Cette fonction se note $\log$.
+\end{defi}
+
+\begin{center}
+\begin{tabular}{rr}
+nombre de départ & logarithme décimale de ce nombre\\
+\hline
+10 & 1\\
+31.622 & 1.5\\
+100 & 2\\
+1000 & 3\\
+10000 & 4\\
+\ldots{} & \ldots{}\\
+\(x\) & \(\log{x}\)\\
+\end{tabular}
+\end{center}
+
+Donc, on peut en déduire les expressions suivantes :
+\begin{align*}
+  \log(10)  & = 1 \quad \log(31,622) & \approx 1,5 \\
+  \log(100) & = 2 \quad \log(1000)   & = 3
+\end{align*}
+
+Le logarithme décimale permet de «mesurer» entre quelle puissance de dix un nombre se trouve. Par exemple :
+\begin{align*}
+    5 < \log(318327) < 6
+\end{align*}
+\end{document}
