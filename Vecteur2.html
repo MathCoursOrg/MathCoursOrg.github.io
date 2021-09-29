@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-29 mer. 15:58 -->
+<!-- 2021-09-29 mer. 16:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vecteur, deuxième partie</title>
@@ -224,6 +224,7 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Vecteur, deuxième partie</h1>
+
 <div id="outline-container-org3d52d5d" class="outline-2">
 <h2 id="org3d52d5d"><span class="section-number-2">1.</span> Coordonnées d&rsquo;un vecteur dans un repère orthonormé</h2>
 <div class="outline-text-2" id="text-1">
@@ -231,25 +232,24 @@
 <div id="outline-container-orgbbba14f" class="outline-3">
 <h3 id="orgbbba14f"><span class="section-number-3">1.1.</span> Définition</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org8e8c361">
-<p>
-
-</p>
-
+<div class="defi" id="org372562a">
 <p>
 Soit \(\vec{u}\) un vecteur, et on considère un repère orthonormé du plan. Alors,
 le vecteur \(\vec{u}\) admet des coordonnées qui le décrivent.
 </p>
-\begin{tikzpicture}[x=.4cm, y=.4cm]
-  \draw[help lines, ultra thin, step=.4cm] (-2,-2) grid (4,3);
-  \draw[->, thick, color = blue] (-1,0) -- (3,1) node[below] {$\vec{u}$};
-  \draw[dash, color=black] (-1, 0) -- (3, 0)  node [midway] {$4$};
-  \draw[dash, color=black] (3, 0) -- (3, 1) node [midway] {$1$};
-\end{tikzpicture}
+
+\begin{center}
+  \begin{tikzpicture}[x=.4cm, y=.4cm]
+    \draw[help lines, ultra thin, step=.4cm] (-2,-2) grid (4,3);
+    \draw[->, thick, color = blue] (-1,0) -- (3,1) node[below] {$\vec{u}$};
+    \draw[dash, color=black] (-1, 0) -- (3, 0)  node [midway] {$4$};
+    \draw[dash, color=black] (3, 0) -- (3, 1) node [midway] {$1$};
+  \end{tikzpicture}
+\end{center}
 
 </div>
 
-<div class="ex" id="org5c7c943">
+<div class="ex" id="orga56442d">
 <p>
 Les coordonnées \((3;4)\) désigne un vecteur qui déplace de \(3\) horizontalement, et
 de \(4\) verticalement. Les coordonnées peuvent aussi être négatives, voici par
@@ -261,7 +261,7 @@ exemple le vecteur \((-2; 1)\).
 \end{tikzpicture}
 
 </div>
-<div class="defi" id="orga8e0865">
+<div class="defi" id="org8922446">
 <p>
 Les coordonnées nulles, c&rsquo;est-à-dire \((0;0)\) désignent le
 vecteur nul, noté \(\vec{0}\).
@@ -281,7 +281,7 @@ coordonnées de \(A\) et de celle de \(B\), on peut en déduire les coordonnées
 vecteur \(\overrightarrow{AB}\).
 </p>
 
-<div class="prop" id="org7bd679c">
+<div class="prop" id="org0eb4718">
 <p>
 Si \(A\) et \(B\) admettent les coordonnées \((x_{A}, y_{A})\), \((x_{B}, y_{B})\),
 alors le vecteur \(\overrightarrow{AB}\) a pour coordonnées :
@@ -292,7 +292,7 @@ alors le vecteur \(\overrightarrow{AB}\) a pour coordonnées :
 
 </div>
 
-<div class="ex" id="orgc84caa6">
+<div class="ex" id="org024c532">
 <p>
 Si \(A(3;4)\) et \(B(-2;-3)\) alors le vecteur \(\overrightarrow{AB}\) a pour
 coordonnées
@@ -315,7 +315,7 @@ Donc pour se rendre de \(A\) vers \(B\), il faut se déplacer de \(5\) horizonta
 <div id="outline-container-org7293fb0" class="outline-4">
 <h4 id="org7293fb0"><span class="section-number-4">1.3.1.</span> Coordonnées d&rsquo;une somme de vecteurs</h4>
 <div class="outline-text-4" id="text-1-3-1">
-<div class="prop" id="org83073b6">
+<div class="prop" id="org4bd6749">
 <p>
 Si on considère deux vecteurs \(\vec{u}\) et \(\vec{v}\) de coordonnée \((x;y)\) et
 \((w;z)\), alors si on note \(\vec{z} = \vec{u} + \vec{v}\), le vecteur \(\vec{z}\) a
@@ -327,7 +327,7 @@ pour coordonnées :
 
 </div>
 
-<div class="ex" id="org48d6c45">
+<div class="ex" id="orgfb442e7">
 <p>
 Si \(\vec{u} = (-3;4)\) et \(\vec{v} = (2; 5)\) alors \(\vec{u} + \vec{v} = (-1;9)\)
 </p>
@@ -344,7 +344,7 @@ Si \(\vec{u}\) est un vecteur, alors \(2 \vec{u}\), \(3\vec{u}\), \(\sqrt{2}\vec
 etc, sont aussi des vecteurs. On peut multiplier un vecteur par n&rsquo;importe quel
 nombre réel \(k\), et on notera l&rsquo;opération \(k \vec{u}\)
 </p>
-<div class="prop" id="org06823b2">
+<div class="prop" id="org3d7091d">
 <p>
 Soit \(\vec{u}\) un vecteur, de coordonnées \((x;y)\). Alors, le vecteur \(k \vec{u}\)
 a pour coordonnées
@@ -355,7 +355,7 @@ k \vec{u} = (k x ; k y)
 
 </div>
 
-<div class="ex" id="org2d9f2bc">
+<div class="ex" id="org8423f69">
 <p>
 Si \(\vec{u} = (-3; 5)\), alors \(-2 \vec{u} = (6;-10)\)
 </p>
@@ -375,7 +375,7 @@ scalaire est simple à calculer si vous connaissez les coordonnées de deux
 vecteurs.
 </p>
 
-<div class="defi" id="orgfbfbd5c">
+<div class="defi" id="orgb175234">
 <p>
 Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs, de coordonnées respectives \((x;y)\) et
 \((w;z)\). Alors, le produit scalaire est un nombre, noté \((\vec{u}, \vec{v})\),
@@ -392,7 +392,7 @@ Avec cette formule, on peut remarquer énormément de propriétés associées au
 produit scalaire. Par exemple,
 </p>
 
-<div class="prop" id="org59f0bc8">
+<div class="prop" id="org4a6d2cd">
 <p>
 Pour tout vecteur \(\vec{u}\) et \(\vec{v}\), on a :
 \[
@@ -419,7 +419,7 @@ pour emmener \(A\) vers \(B\).
 À partir des coordonnées d&rsquo;un vecteur, on peut calculer sa norme !
 </p>
 
-<div class="prop" id="org72e70f6">
+<div class="prop" id="org6d192fc">
 <p>
 Soit \(\vec{u}\) un vecteur, de coordonnées \((x ;y)\). Alors, sa norme se calcule
 par
@@ -430,7 +430,7 @@ par
 
 </div>
 
-<div class="ex" id="org3af723a">
+<div class="ex" id="orgd6dbcef">
 <p>
 Ce résultat provient du théorème de Pythagore !
 Sur l&rsquo;image, puisque le triangle est rectangle, d&rsquo;apres le théorème de
@@ -451,12 +451,12 @@ Ici, puisque \(\vec{u} = (4;5)\), on a :
 </div>
 
 
-<div id="orgf32a3c3" class="figure">
-<p><img src="./images/thPythagoreEtNorme.png" alt="thPythagoreEtNorme.png" />
+<div id="org942ce04" class="figure">
+<p><img src="./images/thPythagoreEtNorme.png" alt="thPythagoreEtNorme.png" width="500px" />
 </p>
 </div>
 
-<div class="prop" id="org8ebff9f">
+<div class="prop" id="orgf8f53fb">
 <p>
 Pour tout vecteur \(\vec{u}\), on peut remarquer que :
 \[
@@ -473,7 +473,7 @@ Le produit scalaire est décidement partout !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-09-29 mer. 15:58</p>
+<p class="date">Created: 2021-09-29 mer. 16:22</p>
 </div>
 </body>
 </html>
