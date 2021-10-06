@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-06 mer. 20:00 -->
+<!-- 2021-10-06 mer. 20:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Factorisation et Developpement</title>
@@ -233,29 +233,38 @@
 Certains calculs sont sous forme factorisée.
 </p>
 
-\begin{ex}
-L'expression :
+<div class="ex" id="orgda3b259">
+<p>
+L&rsquo;expression :
 \[
 (x+7)\times (x - 4)
 \]
 est sous forme factorisée
-\end{ex}
+</p>
 
-\begin{ex}
-    L'expression :
-    \[
+</div>
+
+<div class="ex" id="orgcefea4c">
+<p>
+L&rsquo;expression :
+\[
         x^{2} + 3x
     \]
-    n'est pas factorisée, puisque on peut encore trouver des facteurs communs aux différents termes. Cette expression est sous forme développé car il n'y a que des produit de termes simples
-\end{ex}
+n&rsquo;est pas factorisée, puisque on peut encore trouver des facteurs communs aux différents termes. Cette expression est sous forme développé car il n&rsquo;y a que des produit de termes simples
+</p>
 
-\begin{ex}
-   L'expression :
+</div>
+
+<div class="ex" id="orgb324b57">
+<p>
+   L&rsquo;expression :
 \[
 x(x+1) + 1
 \]
-N'est ni sous forme factorisée (car le terme $1$ n'est pas dans un produit) ni sous forme développée (car il existe le terme $x(x+1)$ qui peut encore être développé
-\end{ex}
+N&rsquo;est ni sous forme factorisée (car le terme \(1\) n&rsquo;est pas dans un produit) ni sous forme développée (car il existe le terme \(x(x+1)\) qui peut encore être développé
+</p>
+
+</div>
 </div>
 </div>
 
@@ -263,15 +272,20 @@ N'est ni sous forme factorisée (car le terme $1$ n'est pas dans un produit) ni 
 <div id="outline-container-org08c440c" class="outline-2">
 <h2 id="org08c440c"><span class="section-number-2">2.</span> Développer</h2>
 <div class="outline-text-2" id="text-2">
- \begin{defi}{Développement}
-On appelle développement le processus qui permet de passer d'une forme développer à une forme factorisée.
- \end{defi}
+<p>
+ #+begin<sub>defi</sub>{Développement}
+On appelle développement le processus qui permet de passer d&rsquo;une forme développer à une forme factorisée.
+ #+end<sub>defi</sub>
+</p>
 
-\begin{ex}
-    \[
+<div class="ex" id="org252a79e">
+<p>
+\[
         x \times (x + 5) = x^{2} + 5x
     \]
- \end{ex}
+</p>
+
+</div>
 </div>
 
 <div id="outline-container-orgc233821" class="outline-3">
@@ -353,28 +367,40 @@ Les identités remarquables servent à reconnaitres des expressions pour dévelo
 <div id="outline-container-org898e1f9" class="outline-4">
 <h4 id="org898e1f9"><span class="section-number-4">3.1.1.</span> Première identité</h4>
 <div class="outline-text-4" id="text-3-1-1">
-\begin{prop}
-Pour tout nombres réels $a$ et $b$, on a l'égalité suivante
+<div class="prop" id="orgae476c2">
+<p>
+Pour tout nombres réels \(a\) et \(b\), on a l&rsquo;égalité suivante
  \[
     (a + b)^{2} = a^{2} + 2ab + b^{2}
  \]
-\end{prop}
+</p>
 
-\begin{dem}
-  \textit{Version graphique}
+</div>
 
-  \textit{Version littérale}
+<div class="dem" id="org9996cd9">
+<p>
+\textit{Version graphique}
+</p>
 
-  On développe le carré par :
-  \begin{align*}
-    (a+b)^{2} &= (a +b) \times (a +b ) \\
-              &= a \times (a +b ) + b \times (a+b)\\
-              &= a\times a + a \times b + b \times a + b \times b \\
-              &= a^{2} + ab + ba + b^{2} \\
-              &= a^{2} + 2 a \times b + b^{2}
-  \end{align*}
-  En on trouve bien l'égalité annoncée
-\end{dem}
+<p>
+\textit{Version littérale}
+</p>
+
+<p>
+On développe le carré par :
+</p>
+\begin{align*}
+  (a+b)^{2} &= (a +b) \times (a +b ) \\
+            &= a \times (a +b ) + b \times (a+b)\\
+            &= a\times a + a \times b + b \times a + b \times b \\
+            &= a^{2} + ab + ba + b^{2} \\
+            &= a^{2} + 2 a \times b + b^{2}
+\end{align*}
+<p>
+En on trouve bien l&rsquo;égalité annoncée
+</p>
+
+</div>
 </div>
 </div>
 
@@ -384,37 +410,46 @@ Pour tout nombres réels $a$ et $b$, on a l'égalité suivante
 <p>
 En partant de la première identité, on peut en déduire la deuxième facilement.
 </p>
-\begin{prop}
-  Pour tout nombre réel $a$, $b$, on a :
-  \[
+<div class="prop" id="org099f981">
+<p>
+Pour tout nombre réel \(a\), \(b\), on a :
+\[
     (a-b)^{2} = a^{2} - 2a \times b + b^{2}
   \]
-\end{prop}
+</p>
 
-\begin{dem}
-  Pour montrer cette identité, on peut soit redévelopper comme cela a été fait à
-  la démonstration précédente, soit, puisque l'identité précédente est valable
-  pour tous les nombres $a$, et $b$, on peut \emph{remplacer} $b$ par $-b$ pour
-  obtenir :
-  \[
+</div>
+
+<div class="dem" id="org3f43404">
+<p>
+Pour montrer cette identité, on peut soit redévelopper comme cela a été fait à
+la démonstration précédente, soit, puisque l&rsquo;identité précédente est valable
+pour tous les nombres \(a\), et \(b\), on peut \emph{remplacer} \(b\) par \(-b\) pour
+obtenir :
+\[
     (a + (-b)) = a^{2} + 2 \times a \times (-b) + (-b)^{2}
   \]
-  Sauf que $(-b)^{2} = b^{2}$, donc on obtient
-  \[
+Sauf que \((-b)^{2} = b^{2}\), donc on obtient
+\[
     (a-b) = a^{2} - 2 \times a \times b + b^{2}
   \]
-\end{dem}
+</p>
 
-\begin{ex}
-  On peut par exemple calculer $98^{2}$ en remarquant que $98= 100 - 2$, et donc :
-  \[
-    98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
-  \]
-  Finalement :
-  \[
-    98^{2} = 10000 - 400 + 4 =  9604
-  \]
-\end{ex}
+</div>
+
+<div class="ex" id="orgca8ae7a">
+<p>
+On peut par exemple calculer \(98^{2}\) en remarquant que \(98= 100 - 2\), et donc :
+\[
+     98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
+   \]
+Finalement :
+\[
+     98^{2} = 10000 - 400 + 4 =  9604
+   \]
+</p>
+
+</div>
 </div>
 </div>
 
@@ -424,25 +459,34 @@ En partant de la première identité, on peut en déduire la deuxième facilemen
 <p>
 La troisième identité est bien différente des deux autres.
 </p>
-\begin{prop}
-  Pour tout $a$ et $b$ réel, on a l'égalité suivante :
-  \[
+<div class="prop" id="org18461d5">
+<p>
+Pour tout \(a\) et \(b\) réel, on a l&rsquo;égalité suivante :
+\[
     (a+b)(a-b) = a^{2} - b^{2}
   \]
-\end{prop}
+</p>
 
-\begin{dem}
-On démontre cette égalité à l'aide d'un développement comme pour la première identité
+</div>
+
+<div class="dem" id="orga0ffb9c">
+<p>
+On démontre cette égalité à l&rsquo;aide d&rsquo;un développement comme pour la première identité
+</p>
 \begin{align*}
   (a+b)(a-b) &= a\times (a - b) + b \times (a - b)\\
              &= a\times a - a \times b + b \times a - b \times b \\
              &= a^{2} - b^{2}
 \end{align*}
-\end{dem}
 
-\begin{rem}
-   Qu'obtient-on lorsque l'on remplace $b$ par $-b$, quelle nouvelle identité découvre-t-on  ?
-\end{rem}
+</div>
+
+<div class="rem" id="orgc4295bc">
+<p>
+Qu&rsquo;obtient-on lorsque l&rsquo;on remplace \(b\) par \(-b\), quelle nouvelle identité découvre-t-on  ?
+</p>
+
+</div>
 </div>
 </div>
 </div>
@@ -468,33 +512,48 @@ fait \(49\). Mais est-ce la seule solution ?
 On va utiliser une identité remarquable pour le savoir.
 </p>
 
-\begin{meth}
-  On soustrait $49$ à chaque membre de l'équation, pour obtenir la nouvelle
-  équation (équivalente à la première) suivante :
+<div class="meth" id="org0b35e30">
+<p>
+On soustrait \(49\) à chaque membre de l&rsquo;équation, pour obtenir la nouvelle
+équation (équivalente à la première) suivante :
+</p>
 
-  \(
+<p>
+\(
   x^{2} - 49 = 0
   \)
+</p>
 
-  On peut
-  remplacer 49 par $7^{2}$, pour obtenir :
+<p>
+On peut
+remplacer 49 par \(7^{2}\), pour obtenir :
+</p>
 
-  \[
+<p>
+\[
     x^{2} - 7^{2} = 0
   \]
+</p>
 
-  On peut utiliser l'identité remarquable $a^{2} - b^{2} = (a+b)(a-b)$, avec $a =
-  x$ et $b = 7$, on obtient donc :
+<p>
+On peut utiliser l&rsquo;identité remarquable \(a^{2} - b^{2} = (a+b)(a-b)\), avec \(a =
+  x\) et \(b = 7\), on obtient donc :
+</p>
 
-  \(
+<p>
+\(
     (x-7)(x+7) = 0
   \)
+</p>
 
-  Puis, si un produit est nul, c'est
-  que l'un de ses facteurs est nul, donc soit $x$ vaut $7$ (on retrouve une
-  solution vue précédemment), soit $x$ vaut $-7$ (et c'est souvent l'equation que
-  l'on oublie !)
-\end{meth}
+<p>
+Puis, si un produit est nul, c&rsquo;est
+que l&rsquo;un de ses facteurs est nul, donc soit \(x\) vaut \(7\) (on retrouve une
+solution vue précédemment), soit \(x\) vaut \(-7\) (et c&rsquo;est souvent l&rsquo;equation que
+l&rsquo;on oublie !)
+</p>
+
+</div>
 </div>
 </div>
 
@@ -516,44 +575,62 @@ Si on considère le calcul de \(204^{2}\), on peut utiliser la relation suivante
 <div id="outline-container-org43532ea" class="outline-2">
 <h2 id="org43532ea"><span class="section-number-2">6.</span> Application concrete et théorique : extraction d&rsquo;une racine carré</h2>
 <div class="outline-text-2" id="text-6">
-\begin{meth}
+<div class="meth" id="org3288d70">
+<p>
 
-On vient de voir par exemple que $\sqrt{41616} = 204$. Peut-on calculer à la
-main les premieres décimales de $\sqrt{41617}$ ?
+</p>
 
-On sait que $\sqrt{41617} \approx 204$. Que doit-on rajouter à $204$ pour
-s'approcher le plus possible de $\sqrt{41617}$ ?
+<p>
+On vient de voir par exemple que \(\sqrt{41616} = 204\). Peut-on calculer à la
+main les premieres décimales de \(\sqrt{41617}\) ?
+</p>
 
-On pose $h$ le nombre tel que
+<p>
+On sait que \(\sqrt{41617} \approx 204\). Que doit-on rajouter à \(204\) pour
+s&rsquo;approcher le plus possible de \(\sqrt{41617}\) ?
+</p>
+
+<p>
+On pose \(h\) le nombre tel que
+</p>
 \begin{align*}
     \sqrt{41617} = 204 + h
 \end{align*}
+<p>
 On obtient donc
+</p>
 \begin{align*}
   41617 &= (204 + h)^{2} \\
         &= 204^{2} + 2 \times 204 \times h + h^{2}\\
         &= 41616 + 408 \times h + h^{2}
 \end{align*}
 
-Le terme $h^{2}$ devrait être très très petit, donc on va à partir de maintenant
-considérer qu'il est nul (alors qu'il ne l'est pas ! Mais on cherche une approximation !)
+<p>
+Le terme \(h^{2}\) devrait être très très petit, donc on va à partir de maintenant
+considérer qu&rsquo;il est nul (alors qu&rsquo;il ne l&rsquo;est pas ! Mais on cherche une approximation !)
+</p>
 
-On se retrouve ainsi avec l'expression :
+<p>
+On se retrouve ainsi avec l&rsquo;expression :
+</p>
 \begin{align*}
     1 = 408 \times h
 \end{align*}
-Donc, si on considère que $h^{2}$ est négligeable car très petit, on obtient
-finalement $h = \frac{1}{408}$. Il vient :
+<p>
+Donc, si on considère que \(h^{2}\) est négligeable car très petit, on obtient
+finalement \(h = \frac{1}{408}\). Il vient :
+</p>
 \begin{align*}
 \sqrt{41617} &\approx 204 + \frac{1}{408}
 \end{align*}
-\end{meth}
+
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-10-06 mer. 20:00</p>
+<p class="date">Created: 2021-10-06 mer. 20:13</p>
 </div>
 </body>
 </html>

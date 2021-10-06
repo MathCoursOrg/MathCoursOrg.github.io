@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-06 mer. 20:01 -->
+<!-- 2021-10-06 mer. 20:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Suite</title>
@@ -232,15 +232,21 @@
 <div id="outline-container-org81635d1" class="outline-3">
 <h3 id="org81635d1"><span class="section-number-3">1.1.</span> Suite arithmétiques</h3>
 <div class="outline-text-3" id="text-1-1">
-\begin{prop}
-On dit qu'une suite est une suite arithmétique si chaque terme de la suite est égal au terme précédent, ajouté d'un même nombre $r$
-\end{prop}
+<div class="prop" id="org3123288">
+<p>
+On dit qu&rsquo;une suite est une suite arithmétique si chaque terme de la suite est égal au terme précédent, ajouté d&rsquo;un même nombre \(r\)
+</p>
 
-\begin{ex}
-    Si j'ajoute $3$ pour passer d'un terme à un autre à chaque fois, ma suite est arithmétique, de raison $3$.
-\end{ex}
+</div>
 
-<div class="ex" id="orgeccf3d8">
+<div class="ex" id="orgd694b36">
+<p>
+Si j&rsquo;ajoute \(3\) pour passer d&rsquo;un terme à un autre à chaque fois, ma suite est arithmétique, de raison \(3\).
+</p>
+
+</div>
+
+<div class="ex" id="org935b508">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -281,50 +287,63 @@ On dit qu'une suite est une suite arithmétique si chaque terme de la suite est 
 
 </div>
 
-\begin{prop}
-    Pour trouver la raison d'une suite arithmétique, il suffit de calculer la différence de deux termes consécutifs
-\end{prop}
+<div class="prop" id="org73a3e21">
+<p>
+Pour trouver la raison d&rsquo;une suite arithmétique, il suffit de calculer la différence de deux termes consécutifs
+</p>
 
-\begin{ex}
+</div>
+
+<div class="ex" id="orga0f164e">
+<p>
 Dans la suite donnée en exemple, si on calcule, par exemple :
 \[
 u_3 - u_2 = 9 - 6 = 3
 \]
-on retrouve bien la raison de la suite, $r=2$
-\end{ex}
+on retrouve bien la raison de la suite, \(r=2\)
+</p>
 
-\begin{prop}
-    Pour trouver $u_n$ connaissant $u_{n+1}$ et $u_{n-1}$, on peut calculer :
+</div>
+
+<div class="prop" id="org6490236">
+<p>
+    Pour trouver \(u_n\) connaissant \(u_{n+1}\) et \(u_{n-1}\), on peut calculer :
 \[
 u_n = \frac{u_{n+1} + u_n}{2}
 \]
 Autrement dit, chaque terme est la moyenne arithmétique de ses termes voisins
-\end{prop}
+</p>
 
-\begin{ex}
-  \begin{align*}
-    u_3 &= \frac{u_4 + u_2}{2}\\
-        &= \frac{12 + 6}{2} \\
-        &= \frac{18}{2} = 9
-  \end{align*}
-\end{ex}
+</div>
+
+<div class="ex" id="org13ba1b4">
+\begin{align*}
+  u_3 &= \frac{u_4 + u_2}{2}\\
+      &= \frac{12 + 6}{2} \\
+      &= \frac{18}{2} = 9
+\end{align*}
+
+</div>
 </div>
 </div>
 <div id="outline-container-org7d9102e" class="outline-3">
 <h3 id="org7d9102e"><span class="section-number-3">1.2.</span> Suites géométrique</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-\begin{defi}{Suite géométrique}
+#+begin<sub>defi</sub>{Suite géométrique}
 On dit qu&rsquo;une suite est une suite géométrique si chaque terme de la suite est un
 multiple du terme précédent par un nombre \(q\).
-\end{def}
+#+end<sub>def</sub>
 </p>
 
-\begin{ex}
-    Si je multiplie par $3$ pour passer d'un terme à un autre à chaque fois, ma suite est géométrique, de raison $3$
-\end{ex}
+<div class="ex" id="orga76c137">
+<p>
+Si je multiplie par \(3\) pour passer d&rsquo;un terme à un autre à chaque fois, ma suite est géométrique, de raison \(3\)
+</p>
 
-<div class="ex" id="org6e15d13">
+</div>
+
+<div class="ex" id="org8b34115">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -364,85 +383,119 @@ multiple du terme précédent par un nombre \(q\).
 </table>
 
 </div>
-\begin{prop}
-    Pour trouver la raison d'une suite géométrique, il suffit de calculer le quotient de deux termes consécutifs
-\end{prop}
+<div class="prop" id="orgd0d9d7a">
+<p>
+Pour trouver la raison d&rsquo;une suite géométrique, il suffit de calculer le quotient de deux termes consécutifs
+</p>
 
-\begin{ex}
-  Dans la suite précédente, on a bien :
-  \[
+</div>
+
+<div class="ex" id="org20f314d">
+<p>
+Dans la suite précédente, on a bien :
+\[
     \frac{u_3}{u_2} = \frac{9}{3} = 3
   \]
-\end{ex}
+</p>
 
-\begin{prop}
-    Si $(u_n)$ est une suite géométrique, et que l'on connait $u_{n+1}$ et $u_{n-1}$, alors on peut en déduire la raison de la suite géométrique !
-\end{prop}
+</div>
 
-\begin{ex}
-  Si on connait $u_2=9$ et $u_4=81$, puisque l'on a multiplié $u_2$ par $q$ pour trouver $u_3$, et $u_3$ par $q$ pour trouver $u_4$, on peut en déduire que :
-  \[
+<div class="prop" id="orgb914597">
+<p>
+Si \((u_n)\) est une suite géométrique, et que l&rsquo;on connait \(u_{n+1}\) et \(u_{n-1}\), alors on peut en déduire la raison de la suite géométrique !
+</p>
+
+</div>
+
+<div class="ex" id="orged8e417">
+<p>
+Si on connait \(u_2=9\) et \(u_4=81\), puisque l&rsquo;on a multiplié \(u_2\) par \(q\) pour trouver \(u_3\), et \(u_3\) par \(q\) pour trouver \(u_4\), on peut en déduire que :
+\[
     u_2 \times q \times q = u_4
   \]
-  Donc, finalement
-  \begin{align*}
-    u_2 \times q^2 & = u_4                 \\
-    q^{2}          & = \frac{u_{4}}{u_{2}} \\
-    q              & = \sqrt{\frac{u_{4}}{u_{2}}} \quad \text{Fonctionnne même si la suite est négative !}
-  \end{align*}
+Donc, finalement
+</p>
+\begin{align*}
+  u_2 \times q^2 & = u_4                 \\
+  q^{2}          & = \frac{u_{4}}{u_{2}} \\
+  q              & = \sqrt{\frac{u_{4}}{u_{2}}} \quad \text{Fonctionnne même si la suite est négative !}
+\end{align*}
 
-  le calcul donne bien :
-  \begin{align*}
-    q = \sqrt{\frac{81}{9}} = \sqrt{9} = 3
-  \end{align*}
-\end{ex}
+<p>
+le calcul donne bien :
+</p>
+\begin{align*}
+  q = \sqrt{\frac{81}{9}} = \sqrt{9} = 3
+\end{align*}
 
-\begin{prop}
-Si $(u_n)$ est une suite géométrique, et que l'on connait $u_{n+1}$ et $u_{n-1}$, alors on peut en déduire le terme $u_n$
-\end{prop}
+</div>
 
-\begin{ex}
-  Si on reprend l'exemple précédent, on peut s'apercevoir que
-  \begin{align*}
-    u_3 = \sqrt{u_2 \times u_4}
-  \end{align*}
-  En effet, on obtient bien :
-  \begin{align*}
-    u_3 &= \sqrt{9 \times 81} = 3\times 9 = 27
-  \end{align*}
-\end{ex}
+<div class="prop" id="org3ab80a8">
+<p>
+Si \((u_n)\) est une suite géométrique, et que l&rsquo;on connait \(u_{n+1}\) et \(u_{n-1}\), alors on peut en déduire le terme \(u_n\)
+</p>
 
-\begin{prop}
-  Si $a$ et $b$ sont deux nombres positifs, alors :
-  \begin{align*}
-    \sqrt{a \times b} = \sqrt{a} \times \sqrt{b}
-  \end{align*}
-\end{prop}
+</div>
 
-\begin{ex}
-    Voir les calculs faits plus haut.
-\end{ex}
+<div class="ex" id="org6cd27d0">
+<p>
+Si on reprend l&rsquo;exemple précédent, on peut s&rsquo;apercevoir que
+</p>
+\begin{align*}
+  u_3 = \sqrt{u_2 \times u_4}
+\end{align*}
+<p>
+En effet, on obtient bien :
+</p>
+\begin{align*}
+  u_3 &= \sqrt{9 \times 81} = 3\times 9 = 27
+\end{align*}
 
-\begin{prop}
-  On peut calculer directement le $n$-ième terme d'une suite géométrique de raison $q$, par la formule suivante :
-  \[
+</div>
+
+<div class="prop" id="org0c622fe">
+<p>
+Si \(a\) et \(b\) sont deux nombres positifs, alors :
+</p>
+\begin{align*}
+  \sqrt{a \times b} = \sqrt{a} \times \sqrt{b}
+\end{align*}
+
+</div>
+
+<div class="ex" id="org24c7dab">
+<p>
+Voir les calculs faits plus haut.
+</p>
+
+</div>
+
+<div class="prop" id="org90e5ce0">
+<p>
+On peut calculer directement le $n$-ième terme d&rsquo;une suite géométrique de raison \(q\), par la formule suivante :
+\[
     u_n = u_0 \times q^n
   \]
-\end{prop}
+</p>
 
-\begin{ex}
-  Le cinquantième terme de la suite donnée en exemple se calcule par :
-  \[
+</div>
+
+<div class="ex" id="orga7fc30b">
+<p>
+Le cinquantième terme de la suite donnée en exemple se calcule par :
+\[
     u_n = 3^n \times 1
   \]
-\end{ex}
+</p>
+
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-10-06 mer. 20:01</p>
+<p class="date">Created: 2021-10-06 mer. 20:13</p>
 </div>
 </body>
 </html>
