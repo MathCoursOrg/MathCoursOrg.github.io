@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-16 sam. 20:10 -->
+<!-- 2021-10-18 lun. 12:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cours Valeur Absolue</title>
+<title>Recap Demonstration</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -223,86 +223,373 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Cours Valeur Absolue</h1>
-<div id="outline-container-org6c17e75" class="outline-2">
-<h2 id="org6c17e75"><span class="section-number-2">1.</span> Definition</h2>
+<h1 class="title">Recap Demonstration</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd0eefb9">1. Démonstration portant sur la parité</a>
+<ul>
+<li><a href="#org2b1c5de">1.1. Somme de deux entiers, et parité</a></li>
+<li><a href="#org571c2fd">1.2. Carré d&rsquo;entiers, et parité</a></li>
+</ul>
+</li>
+<li><a href="#org77d8092">2. La racine carré de \(2\) est irrationnel</a>
+<ul>
+<li><a href="#org6efafe1">2.1. Rappels sur les racines carrés</a></li>
+<li><a href="#org77b3779">2.2. Définition</a></li>
+<li><a href="#org8054e3d">2.3. Démonstration</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd0eefb9" class="outline-2">
+<h2 id="orgd0eefb9"><span class="section-number-2">1.</span> Démonstration portant sur la parité</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgf45d42b" class="outline-3">
-<h3 id="orgf45d42b"><span class="section-number-3">1.1.</span> Symbolisme</h3>
+<div id="outline-container-org2b1c5de" class="outline-3">
+<h3 id="org2b1c5de"><span class="section-number-3">1.1.</span> Somme de deux entiers, et parité</h3>
 <div class="outline-text-3" id="text-1-1">
+<div class="defi" id="org4232e9a">
 <p>
-La fonction valeur absolue est une fonction qui s&rsquo;écrit \(x \mapsto |x|\).
+La parité d&rsquo;un nombre signifie sa propriété à être pair ou impair.
 </p>
+
+</div>
+
+<div class="ex" id="orgd565751">
+<p>
+La parité de \(132\) est pair. La parité de \(147\) est impair.
+</p>
+
+</div>
+
+<div class="prop" id="org0f5ff51">
+<p>
+Si \(a\) et \(b\) sont deux nombres pairs, alors leur somme est pair aussi
+</p>
+
+</div>
+
+<div class="dem" id="orgdb54871">
+<p>
+Puisque \(a\) et \(b\) sont deux nombres pairs, alors, il existe deux entiers \(k\) et
+\(k'\) tels que :
+\[
+  \left\{
+</p>
+\begin{array}{cc}
+  a &= 2k\\
+  b &=2k'
+\end{array}
+<p>
+  \right.
+\]
+Donc,
+\[
+  a + b = 2k + 2k' = 2 \times (k + k') \quad k \text{ et } k' \text{sont pairs !}
+\]
+</p>
+
+<p>
+Finalement \(a+b\) est pair, puisqu&rsquo;il s&rsquo;écrit comme \(2\) multiplié par un entier.
+</p>
+
+</div>
 </div>
 </div>
 
-<div id="outline-container-org5873bb7" class="outline-3">
-<h3 id="org5873bb7"><span class="section-number-3">1.2.</span> Calcul</h3>
+<div id="outline-container-org571c2fd" class="outline-3">
+<h3 id="org571c2fd"><span class="section-number-3">1.2.</span> Carré d&rsquo;entiers, et parité</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-#+begin<sub>defi</sub>{La valeur absolue}
-La valeur absolue d&rsquo;un nombre correspond exactement a sa distance à \(0\)
-#+end<sub>defi</sub>
+On va montrer qu&rsquo;élever un nombre entier au carré ne change pas sa parité. Par
+exemple :
+\[
+3^{2} = 9
+\]
+On a bien que \(3\) et \(9\) sont impairs.
+\[
+16^{2} = 256
+\]
+On a là encore que \(16\) et \(256\) sont pairs.
 </p>
 
-<div class="ex" id="org344b393">
+
+<div class="prop" id="orgbbf514b">
 <p>
-La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3\) est à distance \(3\) de \(0\).
+Soit \(n\) un entier impair, alors \(n^2\) est impair aussi.
 </p>
 
 </div>
+
+<div class="dem" id="orgce15dde">
+<p>
+Puisque \(n\) est impair, il existe \(k\) un entier tel que
+\[
+n = 2k +1
+\]
+Grâce à l&rsquo;identité remarquable \((a + b)^2 = a^2 + 2ab + b^2\), on sait que :
+\[
+n^2 = (2k + 1)^2= 4k^2 + 2\times 2k \times 1 + 1^{2}
+\]
+Finalement, \(n^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\). Donc \(n\) s&rsquo;écrit comme le
+multiple de \(2\) plus \(1\), donc \(n\) est impair.
+</p>
+
+</div>
+
+<p>
+Montrer que si \(n\) est pair, alors \(n^{2}\) est pair est plus facile. Je vous
+laisse retrouver la démonstration.
+</p>
+
+<p>
+Mais comment montrer que si \(n^{2}\) est impair, alors \(n\) est impair ? Il existe
+plusieurs raisonnements qui fonctionnent. En voici un qui utilise une identité
+remarquable très astucieuse.
+</p>
+
+<div class="prop" id="org23c55d4">
+<p>
+Si \(n^{2}\) est impair, alors \(n\) est impair.
+</p>
+
+</div>
+<div class="dem" id="org59fb76e">
+<p>
+On commence par remarquer que, quelque soit \(n\), on a :
+\[
+    n^2 - 1 = (n+1)(n-1)
+\]
+Cela provient de l&rsquo;identité remarquable \((a+b)(a-b) = a^2 - b^2\), avec \(a = n\)
+et \(b=1\).
+</p>
+
+<p>
+Si \(n^2\) est impair, alors \(n^2 - 1\) est pair. Donc \((n+1)(n-1)\) est pair. Donc,
+\(n+1\) est pair, ou bien \(n-1\) est pair (mais en réalité les deux le sont
+nécessairement, vois-tu pourquoi ?). Dans les deux cas, on retrouve que \(n\) est
+impair, puisque \(n+1\) est pair par exemple.
+</p>
+
+</div>
+
+<p>
+Il ne nous manque plus que la démonstration suivante,
+</p>
+<div class="prop" id="org9952c0e">
+<p>
+Si \(n^2\) est pair, alors \(n\) est pair
+</p>
+
+</div>
+<p>
+On peut donner un argument de logique, puisque les nombres entiers sont soit
+pairs, soit impairs, il n&rsquo;y a pas d&rsquo;autre alternative.
+</p>
+
+<div class="dem" id="org0d45252">
+<p>
+On sait que \(n^2\) est pair. Si jamais \(n\) est impair, alors, d&rsquo;après la
+démonstration vue plus haut, on aurait que \(n^{2}\) est impair. Mais ce n&rsquo;est pas
+le cas, donc \(n\) ne peut pas être impair, donc \(n\) est pair.
+</p>
+
+</div>
+
+<p>
+Pas de calcul, seulement de la logique ici ! Ces deux démonstrations sont
+intéressantes, car elles nous montre qu&rsquo;il existe souvent beaucoup de moyens
+démontrer des résultats en mathématiques. Dans que la démonstration est
+correcte, tous les moyens sont bons ! Il suffit de trouver son propre chemin.
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org70ec89c" class="outline-2">
-<h2 id="org70ec89c"><span class="section-number-2">2.</span> Représentation graphique</h2>
+<div id="outline-container-org77d8092" class="outline-2">
+<h2 id="org77d8092"><span class="section-number-2">2.</span> La racine carré de \(2\) est irrationnel</h2>
 <div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6efafe1" class="outline-3">
+<h3 id="org6efafe1"><span class="section-number-3">2.1.</span> Rappels sur les racines carrés</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
-Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
+#+attr<sub>latex</sub> :options {Racine carré}
+</p>
+<div class="defi" id="orgd9dddbc">
+<p>
+La racine carré peut se comprendre comme une annulation du carré. Plus
+précisement, si \(x\) est un nombre positif, alors :
+\[
+\sqrt{x^{2}} = x
+\]
 </p>
 
-<div id="orgb78b018" class="figure">
-<p><img src="./images/valeurAbsolueGraphe.png" alt="valeurAbsolueGraphe.png" />
+</div>
+<div class="ex" id="org6c087d9">
+<p>
+\[
+\sqrt{3^{2}} = \sqrt{9} = 3
+\]
 </p>
+
+</div>
+
+<p>
+Attention, pour les nombres négatifs on a une petite surprise, par exemple, si
+on prend \(x = -3\), on obtient :
+\[
+\sqrt{(-3)^2} = \sqrt{9} = 3
+\]
+Alors qu&rsquo;on aurait dû obtenir \(-3\) comme résultat, on obtient ici \(3\), autrement
+dit son opposé.
+</p>
+
+<p>
+#+attr<sub>latex</sub> :options {Racine carré, deuxième}
+</p>
+<div class="defi" id="orgfcd9fc6">
+<p>
+Soit \(x\) un nombre positif, alors \(\sqrt{x}\) est le nombre qui, élevé au carré,
+donne \(x\).
+</p>
+
+</div>
+<div class="ex" id="orgfae1b23">
+<p>
+Le nombre \(\sqrt{9} = 3\) est le nombre qui, élevé au carré, donne \(9\).
+</p>
+
+<p>
+Le nombre \(\sqrt{2} \approx 1,4142\ldots\) est le nombre qui, élevé au carré,
+donne \(2\).
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org77b3779" class="outline-3">
+<h3 id="org77b3779"><span class="section-number-3">2.2.</span> Définition</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+#+attr<sub>latex</sub> :options {Nombres rationnels}
+</p>
+<div class="defi" id="orgff3e1b9">
+<p>
+Les nombres rationnels sont les nombres qui s&rsquo;écrivent comme un quotient de
+nombres entiers. Plus précisement, \(x\) est un nombre rationnel si et seulement
+s&rsquo;il existe \(p\) et \(q\) deux nombres entiers, avec \(q \not = 0\) tel que :
+\[
+x = \frac{p}{q}
+\]
+</p>
+
+</div>
+
+<div class="ex" id="org319f85e">
+<p>
+Le nombre \(0,2\) est rationnel, puisque :
+\[
+0,2 = \frac{1}{5}
+\]
+</p>
+
+</div>
+
+<p>
+C&rsquo;est plus difficile de donner un exemple intuitif de nombres qui n&rsquo;est pas
+rationnel. Mais nous allons voir qu&rsquo;effectivement \(\sqrt{2}\) est un exemple de
+nombre non rationnel.
+</p>
+
+<p>
+#+attr<sub>latex</sub> :options {Nombres irrationnels}
+</p>
+<div class="defi" id="orgab8673f">
+<p>
+Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
+</p>
+
 </div>
 </div>
 </div>
 
-<div id="outline-container-org855607a" class="outline-2">
-<h2 id="org855607a"><span class="section-number-2">3.</span> Lien entre la valeur absolue et la distance entre deux nombres</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org8054e3d" class="outline-3">
+<h3 id="org8054e3d"><span class="section-number-3">2.3.</span> Démonstration</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="prop" id="org86daf30">
 <p>
-La valeur absolue d&rsquo;un nombre représente sa distance avec \(0\).
+\(\sqrt{2}\) est irrationnel
+</p>
+
+</div>
+
+<div class="dem" id="org0c0b160">
+<p>
+Cette démonstration est l&rsquo;occasion de voir en pratique un raisonnement logique
+utilisé très souvent en mathématiques : le raisonnement par l&rsquo;absurde.
 </p>
 
 <p>
-Mais la valeur absolue de la différence entre deux nombres représente la
-distance entre ces deux nombres.
+On suppose que \(\sqrt{2}\) est rationnel. D&rsquo;après la définition, cela signifie
+qu&rsquo;il existe \(p\) et \(q\) deux entiers avec \(q\) non nul tels que :
+\[ \sqrt{2} =
+\frac{p}{q} \]
 </p>
-
-<div class="ex" id="org8855b49">
-<p>
-Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre \(3\), qui vaut donc \(1\). Si on fait le calcul, on a :
-</p>
-
-\begin{align*}
-  |2-3| &= |-1| \\
-        &= 1
-\end{align*}
 
 <p>
-On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la distnace entre \(2\) et \(3\) est la même que la distance entre \(3\) et \(2\).
+On peut supposer que la fraction \(\dfrac{p}{q}\) est une fraction
+déjà simplifiée au maximum, c&rsquo;est-à-dire qu&rsquo;il n&rsquo;existe aucun facteur en commun
+entre les entiers \(p\) et \(q\).
 </p>
 
+<p>
+Puisque \(\sqrt{2}^2 = 2\), on en déduit donc que :
+\[
+2 = \frac{p^{2}}{q^{2}}
+\]
+Nous allons voir que cette équation est impossible à satisfaire, ou plutôt nous
+allons voir que s&rsquo;il en existe une, alors on peut en trouver une «plus petite»
+et comme ça à l&rsquo;infini, ce qui n&rsquo;est pas possible.
+</p>
+
+<p>
+En multipliant dans le membre de droite et de gauche par \(q^2\), on aurait alors
+que :
+\[
+2 \times q^2 = p^{2}
+\]
+Mais, alors \(p^2\) est pair. Donc \(p\) est pair d&rsquo;après ce que l&rsquo;on a vu plus
+haut. Et donc, \(p^{2}\) est divisible par \(4\), puisque si \(p = 2k\), alors \(p^{2}
+= 4k^{2}\). Ainsi, le nombre \(\frac{p^{2}}{2}\) est un nombre entier qui est pair.
+</p>
+
+<p>
+Seulement,
+\[
+q^{2} = \frac{p^{2}}{2}
+\]
+Donc \(q^2\) est pair. Ainsi, de nouveau, on applique la proposition précédente,
+et on obtient que \(q\) est pair.
+</p>
+
+<p>
+Finalement, \(p\) et \(q\) sont pairs, mais on avait supposé en même temps qu&rsquo;ils
+n&rsquo;avaient pas de facteurs communs. On est donc confronté à une impossibilité.
+</p>
+
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-10-16 sam. 20:10</p>
+<p class="date">Created: 2021-10-18 lun. 12:02</p>
 </div>
 </body>
 </html>
