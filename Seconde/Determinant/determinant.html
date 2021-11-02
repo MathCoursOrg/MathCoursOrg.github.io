@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-02 mar. 23:22 -->
+<!-- 2021-11-02 mar. 23:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Recap Demonstration</title>
+<title>Déterminant</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -223,373 +223,171 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Recap Demonstration</h1>
+<h1 class="title">Déterminant</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0168ff8">1. Démonstration portant sur la parité</a>
+<li><a href="#org770e753">1. Définition</a>
 <ul>
-<li><a href="#org34ed8e7">1.1. Somme de deux entiers, et parité</a></li>
-<li><a href="#org826761b">1.2. Carré d&rsquo;entiers, et parité</a></li>
+<li><a href="#org0ae1cc1">1.1. <span class="todo TODO">TODO</span> Exemple de calcul simplifié</a></li>
 </ul>
 </li>
-<li><a href="#org2d48904">2. La racine carré de \(2\) est irrationnel</a>
+<li><a href="#org7ff4ebe">2. Mais quel calcul permet de nous donner ce coefficient ?!</a>
 <ul>
-<li><a href="#orga074d55">2.1. Rappels sur les racines carrés</a></li>
-<li><a href="#orga7f2580">2.2. Définition</a></li>
-<li><a href="#org8120c80">2.3. Démonstration</a></li>
+<li><a href="#org8ea6250">2.1. <span class="todo TODO">TODO</span> Exemples</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0168ff8" class="outline-2">
-<h2 id="org0168ff8"><span class="section-number-2">1.</span> Démonstration portant sur la parité</h2>
+<div id="outline-container-org770e753" class="outline-2">
+<h2 id="org770e753"><span class="section-number-2">1.</span> Définition</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org34ed8e7" class="outline-3">
-<h3 id="org34ed8e7"><span class="section-number-3">1.1.</span> Somme de deux entiers, et parité</h3>
-<div class="outline-text-3" id="text-1-1">
-<div class="defi" id="orgf7b87fb">
 <p>
-La parité d&rsquo;un nombre signifie sa propriété à être pair ou impair.
+Nous allons donner la définition, ainsi que les propriétés du déterminant,
+<i>sans</i> donner sa manière de la calculer ! Nous verrons dans la deuxième partie
+comment calculer cette application si pratique.
+</p>
+
+<p>
+Le déterminant prend deux vecteurs et renvoi un nombre.
+</p>
+
+
+<div id="org078fd9e" class="figure">
+<p><img src="schemaDeterminant.png" alt="schemaDeterminant.png" />
+</p>
+</div>
+
+<p>
+Mathématiquement, on le note comme il suit :
+</p>
+
+<div class="defi" id="org2eee6f0">
+<p>
+Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs. On pose alors \(\textrm{det}(\vec{u},
+\vec{v})\) le <b>déterminant</b> des vecteurs \(\vec{u}\) et \(\vec{v}\), qui est un
+nombre réel (c&rsquo;est à dire, négatif, nul, ou positif).
 </p>
 
 </div>
 
-<div class="ex" id="org9158eac">
 <p>
-La parité de \(132\) est pair. La parité de \(147\) est impair.
+Le déterminant est une application qui permet de <b>détecter</b> les vecteurs qui
+sont <b>colinéaires</b>.
+</p>
+
+<div class="prop" id="org95acd49">
+<p>
+Si \(\textrm{det}(\vec{u},\vec{v}) = 0\), alors les deux vecteurs \(\vec{u}\) et
+\(\vec{v}\) sont colinéaires. Inversement, si \(\vec{v}\) et \(\vec{u}\) sont
+colinéaires, alors \(\textrm{det}(\vec{u},\vec{v}) = 0\)
 </p>
 
 </div>
 
-<div class="prop" id="org5678e50">
 <p>
-Si \(a\) et \(b\) sont deux nombres pairs, alors leur somme est pair aussi
+Le déterminant a bien d&rsquo;autres propriétés.
 </p>
 
-</div>
-
-<div class="dem" id="org32b4cec">
+<div class="prop" id="orge4a63db">
 <p>
-Puisque \(a\) et \(b\) sont deux nombres pairs, alors, il existe deux entiers \(k\) et
-\(k'\) tels que :
+Avec deux vecteurs, on dit qu&rsquo;il est
+<b>bilinéaire</b>, c&rsquo;est à dire que par exemple :
 \[
-  \left\{
-</p>
-\begin{array}{cc}
-  a &= 2k\\
-  b &=2k'
-\end{array}
-<p>
-  \right.
+\textrm{det}(k\vec{u},\vec{v}) = k\textrm{det}(\vec{u},\vec{v})
 \]
-Donc,
+avec \(\vec{u}\), \(\vec{v}\) deux vecteurs, et \(k\) un nombre réel.
+</p>
+
+</div>
+<p>
+La proposition précédence permet parfois de simplifier les calculs.
+</p>
+
+
+<div class="prop" id="org32a5ec0">
+<p>
+On peut voir aussi que :
 \[
-  a + b = 2k + 2k' = 2 \times (k + k') \quad k \text{ et } k' \text{sont pairs !}
+    \textrm{det}(\vec{u},\vec{v}) = - \textrm{det}(\vec{v},\vec{u})
 \]
-</p>
-
-<p>
-Finalement \(a+b\) est pair, puisqu&rsquo;il s&rsquo;écrit comme \(2\) multiplié par un entier.
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org826761b" class="outline-3">
-<h3 id="org826761b"><span class="section-number-3">1.2.</span> Carré d&rsquo;entiers, et parité</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-On va montrer qu&rsquo;élever un nombre entier au carré ne change pas sa parité. Par
-exemple :
-\[
-3^{2} = 9
-\]
-On a bien que \(3\) et \(9\) sont impairs.
-\[
-16^{2} = 256
-\]
-On a là encore que \(16\) et \(256\) sont pairs.
-</p>
-
-
-<div class="prop" id="org42bb177">
-<p>
-Soit \(n\) un entier impair, alors \(n^2\) est impair aussi.
+Autrement dit, ça changer l&rsquo;ordre des vecteurs ne change pas trop le calcul du
+déterminant,à part le signe. C&rsquo;est pas très grave, car on va seulement regarder
+si le déterminant est nul. Et dans ce cas, dans les deux sens, (puisque \(0 =
+-0\)) on obtient heureusement la même conclusion.
 </p>
 
 </div>
-
-<div class="dem" id="orgdbc8bd4">
-<p>
-Puisque \(n\) est impair, il existe \(k\) un entier tel que
-\[
-n = 2k +1
-\]
-Grâce à l&rsquo;identité remarquable \((a + b)^2 = a^2 + 2ab + b^2\), on sait que :
-\[
-n^2 = (2k + 1)^2= 4k^2 + 2\times 2k \times 1 + 1^{2}
-\]
-Finalement, \(n^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\). Donc \(n\) s&rsquo;écrit comme le
-multiple de \(2\) plus \(1\), donc \(n\) est impair.
-</p>
-
 </div>
-
-<p>
-Montrer que si \(n\) est pair, alors \(n^{2}\) est pair est plus facile. Je vous
-laisse retrouver la démonstration.
-</p>
-
-<p>
-Mais comment montrer que si \(n^{2}\) est impair, alors \(n\) est impair ? Il existe
-plusieurs raisonnements qui fonctionnent. En voici un qui utilise une identité
-remarquable très astucieuse.
-</p>
-
-<div class="prop" id="org19e716c">
-<p>
-Si \(n^{2}\) est impair, alors \(n\) est impair.
-</p>
-
-</div>
-<div class="dem" id="org566a824">
-<p>
-On commence par remarquer que, quelque soit \(n\), on a :
-\[
-    n^2 - 1 = (n+1)(n-1)
-\]
-Cela provient de l&rsquo;identité remarquable \((a+b)(a-b) = a^2 - b^2\), avec \(a = n\)
-et \(b=1\).
-</p>
-
-<p>
-Si \(n^2\) est impair, alors \(n^2 - 1\) est pair. Donc \((n+1)(n-1)\) est pair. Donc,
-\(n+1\) est pair, ou bien \(n-1\) est pair (mais en réalité les deux le sont
-nécessairement, vois-tu pourquoi ?). Dans les deux cas, on retrouve que \(n\) est
-impair, puisque \(n+1\) est pair par exemple.
-</p>
-
-</div>
-
-<p>
-Il ne nous manque plus que la démonstration suivante,
-</p>
-<div class="prop" id="orgcd9d69d">
-<p>
-Si \(n^2\) est pair, alors \(n\) est pair
-</p>
-
-</div>
-<p>
-On peut donner un argument de logique, puisque les nombres entiers sont soit
-pairs, soit impairs, il n&rsquo;y a pas d&rsquo;autre alternative.
-</p>
-
-<div class="dem" id="orgc732167">
-<p>
-On sait que \(n^2\) est pair. Si jamais \(n\) est impair, alors, d&rsquo;après la
-démonstration vue plus haut, on aurait que \(n^{2}\) est impair. Mais ce n&rsquo;est pas
-le cas, donc \(n\) ne peut pas être impair, donc \(n\) est pair.
-</p>
-
-</div>
-
-<p>
-Pas de calcul, seulement de la logique ici ! Ces deux démonstrations sont
-intéressantes, car elles nous montre qu&rsquo;il existe souvent beaucoup de moyens
-démontrer des résultats en mathématiques. Dans que la démonstration est
-correcte, tous les moyens sont bons ! Il suffit de trouver son propre chemin.
-</p>
-</div>
+<div id="outline-container-org0ae1cc1" class="outline-3">
+<h3 id="org0ae1cc1"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Exemple de calcul simplifié</h3>
 </div>
 </div>
 
-<div id="outline-container-org2d48904" class="outline-2">
-<h2 id="org2d48904"><span class="section-number-2">2.</span> La racine carré de \(2\) est irrationnel</h2>
+<div id="outline-container-org7ff4ebe" class="outline-2">
+<h2 id="org7ff4ebe"><span class="section-number-2">2.</span> Mais quel calcul permet de nous donner ce coefficient ?!</h2>
 <div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orga074d55" class="outline-3">
-<h3 id="orga074d55"><span class="section-number-3">2.1.</span> Rappels sur les racines carrés</h3>
-<div class="outline-text-3" id="text-2-1">
 <p>
-#+attr<sub>latex</sub> :options {Racine carré}
+Dans cette partie, on fixe deux vecteurs \(\vec{u}\) et \(\vec{v}\) de cordonnées
+respectives \(\vec{u} = (x, y)\) et \(\vec{v} = (z, w)\), dans un repère \((O,
+\vec{i}, \vec{j})\) orthonormé.
 </p>
-<div class="defi" id="orgd6ce40f">
+
 <p>
-La racine carré peut se comprendre comme une annulation du carré. Plus
-précisement, si \(x\) est un nombre positif, alors :
+On cherche un calcul qui permette de détecter, uniquement à partir des
+coordonnées de \(\vec{u}\) et \(\vec{v}\), si ces vecteurs sont colinéaires.
+</p>
+
+<p>
+Imaginons qu&rsquo;il soit colinéaires. Alors, cela signifie qu&rsquo;il existe un scalaire
+\(k\) tel que \(\vec{u} = k \vec{v}\).
+</p>
+
+<div id="orge08aa12" class="figure">
+<p><img src="images/vecteursColinaires.png" alt="vecteursColinaires.png" />
+</p>
+</div>
+
+<p>
+Autrement dit, on sait que \(x = kz\) et
+\(y=kw\). Si on suppose qu&rsquo;aucune cordonnées sont nulles (c&rsquo;est à dire ni \(x\),
+\(y\), \(z\), et \(w\) ne sont des nombres nuls.), alors on peut dire que
+\(\frac{x}{z}=k=\frac{y}{w}\). Donc :
 \[
-\sqrt{x^{2}} = x
+\frac{x}{z}=\frac{y}{w}$
+\]
+Pratique, mais cette formule ne marche pas si \(z\) ou \(w\) sont nuls. On aurait pu
+inverser chaque formule, mais là encore il faudrait que \(x\) et \(y\) sont
+différents de \(0\). À la place de ça, on va multiplier la formule précédente par
+\(z\) et \(w\). On obtient :
+\[
+x \times w = z \times y
 \]
 </p>
 
-</div>
-<div class="ex" id="orgd7c90f1">
 <p>
+Si ces deux quantités sont égales, c&rsquo;est que leur différence est nulle ! Donc la
+formule qui peut détecter si deux vecteurs sont colinéaires pourrait être :
 \[
-\sqrt{3^{2}} = \sqrt{9} = 3
+\textrm{det}(\vec{u},\vec{v}) = x\times w - z \times y
 \]
+Ce qui est exactement la définition que l&rsquo;on va retenir pour le déterminant. On
+peut vérifier que cette formule a exactement les propriétés que l&rsquo;on a donné
+plus haut, et quelle fonctionne même si les coordonnées sont nulles.
 </p>
-
 </div>
 
-<p>
-Attention, pour les nombres négatifs on a une petite surprise, par exemple, si
-on prend \(x = -3\), on obtient :
-\[
-\sqrt{(-3)^2} = \sqrt{9} = 3
-\]
-Alors qu&rsquo;on aurait dû obtenir \(-3\) comme résultat, on obtient ici \(3\), autrement
-dit son opposé.
-</p>
-
-<p>
-#+attr<sub>latex</sub> :options {Racine carré, deuxième}
-</p>
-<div class="defi" id="org1c0c3dd">
-<p>
-Soit \(x\) un nombre positif, alors \(\sqrt{x}\) est le nombre qui, élevé au carré,
-donne \(x\).
-</p>
-
-</div>
-<div class="ex" id="orgf589fc9">
-<p>
-Le nombre \(\sqrt{9} = 3\) est le nombre qui, élevé au carré, donne \(9\).
-</p>
-
-<p>
-Le nombre \(\sqrt{2} \approx 1,4142\ldots\) est le nombre qui, élevé au carré,
-donne \(2\).
-</p>
-
-</div>
-</div>
-</div>
-<div id="outline-container-orga7f2580" class="outline-3">
-<h3 id="orga7f2580"><span class="section-number-3">2.2.</span> Définition</h3>
-<div class="outline-text-3" id="text-2-2">
-<p>
-#+attr<sub>latex</sub> :options {Nombres rationnels}
-</p>
-<div class="defi" id="orgb19c43f">
-<p>
-Les nombres rationnels sont les nombres qui s&rsquo;écrivent comme un quotient de
-nombres entiers. Plus précisement, \(x\) est un nombre rationnel si et seulement
-s&rsquo;il existe \(p\) et \(q\) deux nombres entiers, avec \(q \not = 0\) tel que :
-\[
-x = \frac{p}{q}
-\]
-</p>
-
-</div>
-
-<div class="ex" id="org81b0e36">
-<p>
-Le nombre \(0,2\) est rationnel, puisque :
-\[
-0,2 = \frac{1}{5}
-\]
-</p>
-
-</div>
-
-<p>
-C&rsquo;est plus difficile de donner un exemple intuitif de nombres qui n&rsquo;est pas
-rationnel. Mais nous allons voir qu&rsquo;effectivement \(\sqrt{2}\) est un exemple de
-nombre non rationnel.
-</p>
-
-<p>
-#+attr<sub>latex</sub> :options {Nombres irrationnels}
-</p>
-<div class="defi" id="org0e41090">
-<p>
-Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org8120c80" class="outline-3">
-<h3 id="org8120c80"><span class="section-number-3">2.3.</span> Démonstration</h3>
-<div class="outline-text-3" id="text-2-3">
-<div class="prop" id="org08b3ede">
-<p>
-\(\sqrt{2}\) est irrationnel
-</p>
-
-</div>
-
-<div class="dem" id="org916ba50">
-<p>
-Cette démonstration est l&rsquo;occasion de voir en pratique un raisonnement logique
-utilisé très souvent en mathématiques : le raisonnement par l&rsquo;absurde.
-</p>
-
-<p>
-On suppose que \(\sqrt{2}\) est rationnel. D&rsquo;après la définition, cela signifie
-qu&rsquo;il existe \(p\) et \(q\) deux entiers avec \(q\) non nul tels que :
-\[ \sqrt{2} =
-\frac{p}{q} \]
-</p>
-
-<p>
-On peut supposer que la fraction \(\dfrac{p}{q}\) est une fraction
-déjà simplifiée au maximum, c&rsquo;est-à-dire qu&rsquo;il n&rsquo;existe aucun facteur en commun
-entre les entiers \(p\) et \(q\).
-</p>
-
-<p>
-Puisque \(\sqrt{2}^2 = 2\), on en déduit donc que :
-\[
-2 = \frac{p^{2}}{q^{2}}
-\]
-Nous allons voir que cette équation est impossible à satisfaire, ou plutôt nous
-allons voir que s&rsquo;il en existe une, alors on peut en trouver une «plus petite»
-et comme ça à l&rsquo;infini, ce qui n&rsquo;est pas possible.
-</p>
-
-<p>
-En multipliant dans le membre de droite et de gauche par \(q^2\), on aurait alors
-que :
-\[
-2 \times q^2 = p^{2}
-\]
-Mais, alors \(p^2\) est pair. Donc \(p\) est pair d&rsquo;après ce que l&rsquo;on a vu plus
-haut. Et donc, \(p^{2}\) est divisible par \(4\), puisque si \(p = 2k\), alors \(p^{2}
-= 4k^{2}\). Ainsi, le nombre \(\frac{p^{2}}{2}\) est un nombre entier qui est pair.
-</p>
-
-<p>
-Seulement,
-\[
-q^{2} = \frac{p^{2}}{2}
-\]
-Donc \(q^2\) est pair. Ainsi, de nouveau, on applique la proposition précédente,
-et on obtient que \(q\) est pair.
-</p>
-
-<p>
-Finalement, \(p\) et \(q\) sont pairs, mais on avait supposé en même temps qu&rsquo;ils
-n&rsquo;avaient pas de facteurs communs. On est donc confronté à une impossibilité.
-</p>
-
-</div>
-</div>
+<div id="outline-container-org8ea6250" class="outline-3">
+<h3 id="org8ea6250"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> Exemples</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-02 mar. 23:22</p>
+<p class="date">Created: 2021-11-02 mar. 23:32</p>
 </div>
 </body>
 </html>
