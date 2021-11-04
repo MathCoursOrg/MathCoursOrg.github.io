@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-02 mar. 23:32 -->
+<!-- 2021-11-04 jeu. 11:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Déterminant</title>
@@ -228,22 +228,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org770e753">1. Définition</a>
+<li><a href="#org6f4d1e0">1. Définition</a>
 <ul>
-<li><a href="#org0ae1cc1">1.1. <span class="todo TODO">TODO</span> Exemple de calcul simplifié</a></li>
+<li><a href="#org51c4fcf">1.1. <span class="todo TODO">TODO</span> Exemple de calcul simplifié</a></li>
 </ul>
 </li>
-<li><a href="#org7ff4ebe">2. Mais quel calcul permet de nous donner ce coefficient ?!</a>
+<li><a href="#org7edb213">2. Mais quel calcul permet de nous donner ce coefficient ?!</a>
 <ul>
-<li><a href="#org8ea6250">2.1. <span class="todo TODO">TODO</span> Exemples</a></li>
+<li><a href="#org8afb4d6">2.1. <span class="todo TODO">TODO</span> Exemples</a></li>
+</ul>
+</li>
+<li><a href="#org0e6857b">3. Une autre interprétation du déterminant.</a>
+<ul>
+<li><a href="#org80c00bf">3.1. Exemple</a></li>
+<li><a href="#org9a8a7c6">3.2. Exercice</a></li>
+<li><a href="#orgbb397c8">3.3. Pourquoi une valeur absolue ?</a></li>
+<li><a href="#org293e60a">3.4. Mais ça marche tout le temps ?</a></li>
+<li><a href="#orgec38560">3.5. Que se passe-t-il lorsque les vecteurs sont colinéaires ?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org770e753" class="outline-2">
-<h2 id="org770e753"><span class="section-number-2">1.</span> Définition</h2>
+<div id="outline-container-org6f4d1e0" class="outline-2">
+<h2 id="org6f4d1e0"><span class="section-number-2">1.</span> Définition</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Nous allons donner la définition, ainsi que les propriétés du déterminant,
@@ -256,7 +265,7 @@ Le déterminant prend deux vecteurs et renvoi un nombre.
 </p>
 
 
-<div id="org078fd9e" class="figure">
+<div id="org4faca65" class="figure">
 <p><img src="schemaDeterminant.png" alt="schemaDeterminant.png" />
 </p>
 </div>
@@ -265,7 +274,7 @@ Le déterminant prend deux vecteurs et renvoi un nombre.
 Mathématiquement, on le note comme il suit :
 </p>
 
-<div class="defi" id="org2eee6f0">
+<div class="defi" id="org1f736ae">
 <p>
 Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs. On pose alors \(\textrm{det}(\vec{u},
 \vec{v})\) le <b>déterminant</b> des vecteurs \(\vec{u}\) et \(\vec{v}\), qui est un
@@ -279,7 +288,7 @@ Le déterminant est une application qui permet de <b>détecter</b> les vecteurs 
 sont <b>colinéaires</b>.
 </p>
 
-<div class="prop" id="org95acd49">
+<div class="prop" id="orgacd13c4">
 <p>
 Si \(\textrm{det}(\vec{u},\vec{v}) = 0\), alors les deux vecteurs \(\vec{u}\) et
 \(\vec{v}\) sont colinéaires. Inversement, si \(\vec{v}\) et \(\vec{u}\) sont
@@ -292,7 +301,7 @@ colinéaires, alors \(\textrm{det}(\vec{u},\vec{v}) = 0\)
 Le déterminant a bien d&rsquo;autres propriétés.
 </p>
 
-<div class="prop" id="orge4a63db">
+<div class="prop" id="org3d4c558">
 <p>
 Avec deux vecteurs, on dit qu&rsquo;il est
 <b>bilinéaire</b>, c&rsquo;est à dire que par exemple :
@@ -304,11 +313,11 @@ avec \(\vec{u}\), \(\vec{v}\) deux vecteurs, et \(k\) un nombre réel.
 
 </div>
 <p>
-La proposition précédence permet parfois de simplifier les calculs.
+La proposition précédente permet parfois de simplifier les calculs.
 </p>
 
 
-<div class="prop" id="org32a5ec0">
+<div class="prop" id="org7e11d08">
 <p>
 On peut voir aussi que :
 \[
@@ -322,13 +331,13 @@ si le déterminant est nul. Et dans ce cas, dans les deux sens, (puisque \(0 =
 
 </div>
 </div>
-<div id="outline-container-org0ae1cc1" class="outline-3">
-<h3 id="org0ae1cc1"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Exemple de calcul simplifié</h3>
+<div id="outline-container-org51c4fcf" class="outline-3">
+<h3 id="org51c4fcf"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Exemple de calcul simplifié</h3>
 </div>
 </div>
 
-<div id="outline-container-org7ff4ebe" class="outline-2">
-<h2 id="org7ff4ebe"><span class="section-number-2">2.</span> Mais quel calcul permet de nous donner ce coefficient ?!</h2>
+<div id="outline-container-org7edb213" class="outline-2">
+<h2 id="org7edb213"><span class="section-number-2">2.</span> Mais quel calcul permet de nous donner ce coefficient ?!</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Dans cette partie, on fixe deux vecteurs \(\vec{u}\) et \(\vec{v}\) de cordonnées
@@ -346,7 +355,7 @@ Imaginons qu&rsquo;il soit colinéaires. Alors, cela signifie qu&rsquo;il existe
 \(k\) tel que \(\vec{u} = k \vec{v}\).
 </p>
 
-<div id="orge08aa12" class="figure">
+<div id="org3c8944b" class="figure">
 <p><img src="images/vecteursColinaires.png" alt="vecteursColinaires.png" />
 </p>
 </div>
@@ -380,14 +389,155 @@ plus haut, et quelle fonctionne même si les coordonnées sont nulles.
 </p>
 </div>
 
-<div id="outline-container-org8ea6250" class="outline-3">
-<h3 id="org8ea6250"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> Exemples</h3>
+<div id="outline-container-org8afb4d6" class="outline-3">
+<h3 id="org8afb4d6"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> Exemples</h3>
+</div>
+</div>
+
+<div id="outline-container-org0e6857b" class="outline-2">
+<h2 id="org0e6857b"><span class="section-number-2">3.</span> Une autre interprétation du déterminant.</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+S&rsquo;il y a bien quelque chose à retenir du déterminant, la voici :
+</p>
+<div class="prop" id="orga2ca7df">
+<p>
+Le déterminant : c&rsquo;est de la magie.
+</p>
+
+</div>
+
+<p>
+Quelques explications s&rsquo;imposent.
+</p>
+
+<p>
+Lorsque l&rsquo;on se donne deux vecteurs dans le plan, comme les vecteurs \(\vec{u}\)
+et \(\vec{v}\) dans l&rsquo;image ci contre :
+</p>
+
+<div id="orge2a26a5" class="figure">
+<p><img src="images/aireParallelogramme.png" alt="aireParallelogramme.png" />
+</p>
+</div>
+
+<p>
+On peut alors former un parallélogramme, en remarquant que
+\(\overrightarrow{OA}=\overrightarrow{BD} = \vec{u}\), mais aussi
+\(\overrightarrow{OB}=\overrightarrow{BD} = \vec{v}\), donc que
+\(\overrightarrow{OD}= \vec{u} + \vec{v}\).
+</p>
+
+<p>
+On peut se demander comment <b>calculer l&rsquo;aire</b> du parallélogramme \(OADB\). Et
+bien, voici comment on peut faire :
+</p>
+<div class="prop" id="orgd940443">
+<p>
+Soit un parallélogramme dont les cotés sont donnés par deux vecteurs \(\vec{u}\)
+et \(\vec{v}\) du plan.
+</p>
+
+<p>
+Alors :
+\[
+\lvert \textrm{det}(\vec{u},\vec{v}) \lvert = \textrm{Aire du parallélogramme}(OADB)
+\]
+</p>
+
+</div>
+</div>
+
+<div id="outline-container-org80c00bf" class="outline-3">
+<h3 id="org80c00bf"><span class="section-number-3">3.1.</span> Exemple</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Si on a, comme sur le dessin, \(\vec{u} = (2;3)\) et \(\vec{v} = (3;-5)\), alors
+l&rsquo;aire du parallélogramme est donnée par :
+\[
+\lvert \textrm{det}(\vec{u},\vec{v}) \lvert = \lvert 2\times (-5) - 3 \times 3 \lvert = \lvert -10 - 9 \lvert = \lvert -19 \lvert = 19
+\]
+</p>
+
+<p>
+Donc, si on considère que \(\lVert \vec{i} \rVert = \lVert \vec{j} \rVert = 1\)
+cm, autrement dit, si les carreaux sur la grille font \(1cm\) de coté, alors on
+peut en conclure que le déterminant du parallélogramme \(OADB\) est de \(19
+\textrm{cm}^2\) (ou dit autrement que l&rsquo;aire du parallélogramme fait exactement
+\(19\) carreaux).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9a8a7c6" class="outline-3">
+<h3 id="org9a8a7c6"><span class="section-number-3">3.2.</span> Exercice</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Calculer l&rsquo;aire du <b>triangle</b> \(OBC\) ci-dessous.
+</p>
+
+
+<div id="org94d4259" class="figure">
+<p><img src="images/aireTriangle.png" alt="aireTriangle.png" />
+</p>
+</div>
+
+<p>
+<span class="underline">Indice chez vous :</span> Ce triangle a comme aire exactement la moitié qu&rsquo;un
+parallélogramme. Pourriez-vous trouver lequel ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbb397c8" class="outline-3">
+<h3 id="orgbb397c8"><span class="section-number-3">3.3.</span> Pourquoi une valeur absolue ?</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Dans la formule précédente, on voit apparaître une valeur absolue. C&rsquo;est parce
+que le déterminant peut être négatif, alors qu&rsquo;une aire non. En fait, le
+déterminant va compter une aire négative lorsque l&rsquo;on lui donne des vecteurs
+dans le sens horaire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org293e60a" class="outline-3">
+<h3 id="org293e60a"><span class="section-number-3">3.4.</span> Mais ça marche tout le temps ?</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Oui. Même dans des dimensions supérieures (dans le plan, dans l&rsquo;espace, et vers
+l&rsquo;infini et l&rsquo;au delà).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec38560" class="outline-3">
+<h3 id="orgec38560"><span class="section-number-3">3.5.</span> Que se passe-t-il lorsque les vecteurs sont colinéaires ?</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Réfléchissons un peu. Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéaires
+s&rsquo;ils peuvent être placés sur un même droite. Mais alors, le parallélogramme
+formé est plat. Donc son aire est&#x2026; Nulle ! On retrouve la proposition :
+</p>
+<div class="prop" id="orge0ec435">
+<p>
+Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéaires si et seulement si
+\[
+\textrm{det}(\vec{u},\vec{v}) = 0
+\]
+</p>
+
+</div>
+<p>
+Comme les choses sont bien faites !
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-02 mar. 23:32</p>
+<p class="date">Created: 2021-11-04 jeu. 11:23</p>
 </div>
 </body>
 </html>
