@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-12 ven. 11:06 -->
+<!-- 2021-11-11 jeu. 20:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Index</title>
+<title>Cours Probabilités Conditionnelles</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -199,144 +199,279 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Index</h1>
+<h1 class="title">Cours Probabilités Conditionnelles</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org283d3d2">1. Bienvenue !</a></li>
-<li><a href="#org5ad7dc1">2. Liens vers les cours.</a>
+<li><a href="#orgbe651c6">1. Définition des probabilités conditionnelles</a>
 <ul>
-<li><a href="#org8bcca63">2.1. Lien vers les activités de SNT par Capytale</a></li>
-<li><a href="#orgf2978b9">2.2. Lien vers l&rsquo;ensemble des documents</a></li>
-<li><a href="#org01aee60">2.3. <span class="todo TODO">TODO</span> Lien vers l&rsquo;ensemble des QCM</a></li>
+<li><a href="#orgdc132c6">1.1. Définitions</a></li>
+<li><a href="#org76776bb">1.2. Formule de Bayes</a></li>
+<li><a href="#orgde0d91b">1.3. Formule des probabilités totales</a></li>
+<li><a href="#orgf6bae4f">1.4. Exemples pour bien comprendre</a>
+<ul>
+<li><a href="#org17474f7">1.4.1. Des dés cachottiers</a></li>
 </ul>
 </li>
-<li><a href="#org2afefcb">3. Au fait, comment lire un cours de mathématique ?</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org283d3d2" class="outline-2">
-<h2 id="org283d3d2"><span class="section-number-2">1.</span> Bienvenue !</h2>
+<div id="outline-container-orgbe651c6" class="outline-2">
+<h2 id="orgbe651c6"><span class="section-number-2">1.</span> Définition des probabilités conditionnelles</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgdc132c6" class="outline-3">
+<h3 id="orgdc132c6"><span class="section-number-3">1.1.</span> Définitions</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="defi" id="orgf024949">
 <p>
-Sur le site officiel des cours de maths dispensés au lycée Guillaume Buddé !
+Soit \(A\) et \(B\) deux événements, avec \(B\) un événement de probabilité non nulle.
+Alors, on définit \(\mathbb{P}_{B}(A)\) par :
+\[
+\mathbb{P}_{B}(A) = \frac{\mathbb{P}(A \cup B)}{\mathbb{P}(B)}
+\]
 </p>
 
+</div>
+
 <p>
-Vous trouverez ici un ensemble de lien qui vous mène vers les cours de seconde
-et de terminal filière technologique.
+D&rsquo;où vient cette définition ? Et bien, du dessin suivant. Rappelez-vous que,
+dans ces dessins, la probabilité de chaque événement est donnée par <b>l&rsquo;aire</b> des
+patates qui les représentent.
+</p>
+
+
+<div id="orgcc4eac9" class="figure">
+<p><img src="./images/patatoideProbaConditionnelles.png" alt="patatoideProbaConditionnelles.png" />
+</p>
+</div>
+
+<p>
+Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu&rsquo;occupe
+l&rsquo;intersection des deux événements, par rapport à l&rsquo;événement \(A\).
+</p>
+
+<div class="prop" id="org2cd9ca4">
+<p>
+Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
+</p>
+
+</div>
+
+<p>
+En effet, dans ce cas, on effectue une division par \(0\), ce qui n&rsquo;a pas de sens.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5ad7dc1" class="outline-2">
-<h2 id="org5ad7dc1"><span class="section-number-2">2.</span> Liens vers les cours.</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org8bcca63" class="outline-3">
-<h3 id="org8bcca63"><span class="section-number-3">2.1.</span> Lien vers les activités de SNT par Capytale</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org76776bb" class="outline-3">
+<h3 id="org76776bb"><span class="section-number-3">1.2.</span> Formule de Bayes</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-Voici les activités que nous avons faites (de la plus ancienne à la plus
-récente) :
+C&rsquo;est l&rsquo;une des formules les plus puissantes qui existe. Elle est utile dans
+énormément de domaines différents.
 </p>
+
+<div class="prop" id="org10a73f5">
+<p>
+Soit \(A\) et \(B\) deux événements, de probabilités non nulles (pour les deux).
+Alors :
+\[
+\mathbb{P}_{B}(A) = \frac{\mathbb{P}_{A}(B) \times \mathbb{P}(A)}{\mathbb{P}(B)}
+\]
+</p>
+
+</div>
+
+<p>
+Cette formule permet <b>d&rsquo;échanger</b> d&rsquo;une certaine manière les rôles de \(A\) et
+\(B\), c&rsquo;est-à-dire qu&rsquo;elle donne un moyen de calculer \(\mathbb{P}_{B}(A)\) à
+partir de \(\mathbb{P}_{A}(B)\), et vice versa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde0d91b" class="outline-3">
+<h3 id="orgde0d91b"><span class="section-number-3">1.3.</span> Formule des probabilités totales</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Cette formule forme un combo avec la précédente.
+</p>
+
+<div class="prop" id="orgf7a4e97">
+<p>
+Soit \(A\) un événement, et \(B\) un événement de probabilité non nulle. Alors, si
+on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
+\[
+\mathbb{P}(A) = \mathbb{P}(B)\mathbb{P}_{B}(A) + \mathbb{P}(\bar{B})\mathbb{P}_{\bar{B}}(A)
+\]
+</p>
+
+</div>
+
+<p>
+Autrement dit, on disseque l&rsquo;événement \(A\) selon \(B\) ou selon \(\bar{B}\).
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6bae4f" class="outline-3">
+<h3 id="orgf6bae4f"><span class="section-number-3">1.4.</span> Exemples pour bien comprendre</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+La formule de Bayes peut s&rsquo;appliquer dans de très très nombreux exemples. En
+voici quelques uns.
+</p>
+</div>
+
+<div id="outline-container-org17474f7" class="outline-4">
+<h4 id="org17474f7"><span class="section-number-4">1.4.1.</span> Des dés cachottiers</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div>
 <ol class="org-ol">
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/4211-68556">Pierre, feuille, ciseaux</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/677e-78081">Découvertes des boucles</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/85b1-112454">While you&rsquo;re here</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/263d-100816">Des For, des If, des int, et autres joyeusetés</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/291f-127768">Ah, ce bon vieux bill !</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f06-157526">En fonction de vous</a></li>
+<li><a id="org61eb0f3"></a>Énoncé<br />
+<div class="outline-text-5" id="text-1-4-1-1">
+<p>
+Charlie a deux dés de \(6\) faces avec lui. Mais ses dés sont spéciaux. Voici les
+faces du premier dé :
+\[
+\{ 1; 1; 1; 2 ; 2; 3 \}
+\]
+Voici les faces du deuxième dé :
+\[
+\{ 1; 1; 2; 2; 3; 3\}
+\]
+</p>
+
+<p>
+Charlie prend un dé au hasard. Chaque dé a autant de chances d&rsquo;être pris. Il
+lance le dé qu&rsquo;il a pris, et obtient le nombre \(3\). Quelle est la probabilité
+qu&rsquo;il ait pris le premier dé ?
+</p>
+</div>
+</li>
+
+<li><a id="org7f34aed"></a>Correction<br />
+<div class="outline-text-5" id="text-1-4-1-2">
+
+<div id="org1c056df" class="figure">
+<p><img src="desCachotiers.png" alt="desCachotiers.png" />
+</p>
+</div>
+
+<p>
+<a href="desCachotiers">desCachotiers</a>
+On note :
+\[
+A = \textrm{ «Charlie a pris le premier dé» }
+\]
+et
+\[
+B = \textrm{«Charlie obtient le nombre } 3 \textrm{ » }
+\]
+</p>
+
+<p>
+On cherche à calculer le nombre \(\mathbb{P}(A)\).
+</p>
+
+<p>
+Dans cet exemples, on a cette correspondance :
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Symbolisme mathématiques</th>
+<th scope="col" class="org-left">Traduction française dans cet exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(\mathbb{P}_{B}(A)\)</td>
+<td class="org-left">La probabilité d&rsquo;avoir choisi le premier dé sachant que l&rsquo;on a obtenu \(3\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\mathbb{P}_{A}(B)\)</td>
+<td class="org-left">La probabilité d&rsquo;obtenir \(3\) sachant que l&rsquo;on a choisi le premier dé</td>
+</tr>
+
+<tr>
+<td class="org-left">\(P(B)\)</td>
+<td class="org-left">La probabilité d&rsquo;obtenir \(3\) quelque soit le dé considéré</td>
+</tr>
+
+<tr>
+<td class="org-left">\(P(A)\)</td>
+<td class="org-left">La probabilité que Charlie ait pris le premier dé</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\mathbb{P}(A \cap B)\)</td>
+<td class="org-left">La probabilité que Charlie ait pris le premier dé et d&rsquo;obtenir \(3\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+On peut calculer facilement le terme \(\mathbb{P}_{A}(B)\). Si on <i>imagine</i> qu&rsquo;il
+a pris le premier dé, alors il a une seule chance sur six d&rsquo;obtenir \(3\). Donc :
+\[
+\mathbb{P}_{A}(B) = \frac{1}{6}
+\]
+</p>
+
+<p>
+On peut donc utiliser la formule des probabilités totales :
+\[
+\mathbb{P}(A) = \mathbb{P}(B)\mathbb{P}_{B}(A) + \mathbb{P}(\bar{B})\mathbb{P}_{\bar{B}}(A)
+\]
+Il nous faut donc calculer \(\mathbb{P}(B)\), et \(\mathbb{P}_{B}(A)\).
+</p>
+</div>
+</li>
 </ol>
 </div>
-</div>
-
-
-<div id="outline-container-orgf2978b9" class="outline-3">
-<h3 id="orgf2978b9"><span class="section-number-3">2.2.</span> Lien vers l&rsquo;ensemble des documents</h3>
-<div class="outline-text-3" id="text-2-2">
-<p>
-Vous trouverez la liste des cours à l&rsquo;adresse <a href="sitemap.html">suivante</a>. L&rsquo;ensemble des cours de
-seconde sont dans le dossier Seconde. Les cours de terminale sont regroupés dans
-le dossier Term.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org01aee60" class="outline-3">
-<h3 id="org01aee60"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Lien vers l&rsquo;ensemble des QCM</h3>
-</div>
-</div>
-<div id="outline-container-org2afefcb" class="outline-2">
-<h2 id="org2afefcb"><span class="section-number-2">3.</span> Au fait, comment lire un cours de mathématique ?</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-Eh bien, on ne <i>lit</i> pas un cours de mathématiques. On le <i>comprend</i>. Vous
-pouvez passez des heures entières à fixer une formule, vous ne saurez l&rsquo;utiliser
-et l&rsquo;apprécier uniquement lorsque vous l&rsquo;auriez comprise. Chaque formule a sa
-petite explication, son contexte. Les retrouver, c&rsquo;est s&rsquo;approprier une nouvelle
-notion, et gagner en expertise.
-</p>
-
-<p>
-De manière général, il faut toujours être actif pour apprendre. Vous gagnerez
-du temps. Par exemple, lire passivement un cours de mathématiques pendant une
-heure aura autant d&rsquo;efficacité que de passer dix minutes activement sur ce même
-cours.
-</p>
-
-<p>
-Concrètement, comment être actif devant un cours de mathématiques ? Voici
-quelques pistes.
-</p>
-
-<ol class="org-ol">
-<li>Stylo en main, <b>notez les questions que vous vous posez</b> pendant la lecture à
-la marge. Si vous n&rsquo;arrivez pas à y répondre par vous même, demandez autour de
-vous. Souvent, vous serez plusieurs bloqués au même point. C&rsquo;est bon signe !
-Posez moi alors la question pour que je puisse vous aider efficacement.</li>
-<li><b>Créez des cartes mentales</b> à la manière d&rsquo;Anki. Pour les mathématiques, je
-vous recommande de les faire à la main, car entrer des formules mathématiques
-sur un ordinateur n&rsquo;est pas chose aisée.</li>
-<li><b>Prenez des exemples.</b> Si une proposition ou une démonstration utilise des
-lettres pour désigner n&rsquo;importe quel nombre, essayez de remplacer ces lettres
-par des chiffres concrèts. Cela ne marche pas toujours, mais rien que le fait
-d&rsquo;essayer vous permettra de mieux comprendre.</li>
-<li><b>Posez vous des questions.</b> Pourquoi le prof a-t-il montré cette proposition à
-ce moment là ? Très souvent, l&rsquo;ordre du cours a une logique. Essayer de la
-trouver est une manière très concrète pour comprendre le cours.</li>
-<li><b>Trouver des exercices en rapport.</b> Très souvent là encore, nous avons fait des
-exercices qui sont une application directe du cours. Retrouver ces exemples,
-ou si vous êtes confiant, créer les vôtres et corrigez vous à l&rsquo;aide de la
-correction notée sur le cahier, ou votre calculatrice.</li>
-<li><b>Faites des dessins.</b> Souvent, les mathématiques peuvent se comprendre à l&rsquo;aide
-de dessin. Transformer un produit en une aire d&rsquo;un rectangle. Transformer une
-fonction en affichant courbe représentative à l&rsquo;aide de <span class="underline">Geogebra</span> (une
-application qui fonctionne sans installation, directement en ligne).</li>
-<li>Si vraiment vous bloquez, <b>revenez sur une notion plus facile</b>, avec un petit
-exercice simple, avant de repartir sur une notion que vous trouvez
-compliquée. Par exemple, vous avez du mal à développer une expression
-algébrique ? Prenez une petite pause en revoyant un chapitre où vous êtes à
-l&rsquo;aise, pourquoi pas refaire un petit exercice sur les vecteurs par exemple ?</li>
-</ol>
-
-<p>
-Si vraiment vous n&rsquo;avez pas la sensation de progresser, alors il <b>faut venir me
-voir</b> avec une liste de questions précises, qui montre que vous avez passé du
-temps de réflexion autour de vos difficultés. Ce n&rsquo;est qu&rsquo;à ce moment là où vous
-pourrez bénéficier d&rsquo;une explication utile de la part d&rsquo;un professeur.
-</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-12 ven. 11:06</p>
+<p class="date">Created: 2021-11-11 jeu. 20:43</p>
 </div>
 </body>
 </html>
