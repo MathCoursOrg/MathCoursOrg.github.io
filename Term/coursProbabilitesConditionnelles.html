@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-12 ven. 13:11 -->
+<!-- 2021-11-12 ven. 13:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Probabilités Conditionnelles</title>
@@ -236,6 +236,7 @@
 <li><a href="#orgf6bae4f">1.4. Exemples pour bien comprendre</a>
 <ul>
 <li><a href="#org17474f7">1.4.1. Des dés cachottiers</a></li>
+<li><a href="#org4f9f5fd">1.4.2. Qui porte des lunettes ?</a></li>
 </ul>
 </li>
 </ul>
@@ -251,7 +252,7 @@
 <div id="outline-container-orgdc132c6" class="outline-3">
 <h3 id="orgdc132c6"><span class="section-number-3">1.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org62c2c4d">
+<div class="defi" id="orge4be09c">
 <p>
 Soit \(A\) et \(B\) deux événements, avec \(B\) un événement de probabilité non nulle.
 Alors, on définit \(\mathbb{P}_{B}(A)\) par :
@@ -269,7 +270,7 @@ patates qui les représentent.
 </p>
 
 
-<div id="org5082e2b" class="figure">
+<div id="orgb2dcc65" class="figure">
 <p><img src="./images/patatoideProbaConditionnelles.png" alt="patatoideProbaConditionnelles.png" />
 </p>
 </div>
@@ -279,7 +280,7 @@ Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu&rsquo;occupe
 l&rsquo;intersection des deux événements, par rapport à l&rsquo;événement \(A\).
 </p>
 
-<div class="prop" id="org890a2e7">
+<div class="prop" id="orgb444875">
 <p>
 Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
 </p>
@@ -300,7 +301,7 @@ C&rsquo;est l&rsquo;une des formules les plus puissantes qui existe. Elle est ut
 énormément de domaines différents.
 </p>
 
-<div class="prop" id="org0863423">
+<div class="prop" id="org3c1a78a">
 <p>
 Soit \(A\) et \(B\) deux événements, de probabilités non nulles (pour les deux).
 Alors :
@@ -326,7 +327,7 @@ partir de \(\mathbb{P}_{A}(B)\), et vice versa.
 Cette formule forme un combo avec la précédente.
 </p>
 
-<div class="prop" id="org7abf2e1">
+<div class="prop" id="org0abe13c">
 <p>
 Soit \(A\) un événement, et \(B\) un événement de probabilité non nulle. Alors, si
 on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
@@ -381,7 +382,7 @@ qu&rsquo;il ait pris le premier dé ?
 <li><a id="org7f34aed"></a>Correction<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 
-<div id="org987eed6" class="figure">
+<div id="orgfaba4e0" class="figure">
 <p><img src="desCachotiers.png" alt="desCachotiers.png" />
 </p>
 </div>
@@ -466,12 +467,74 @@ Il nous faut donc calculer \(\mathbb{P}(B)\), et \(\mathbb{P}_{B}(A)\).
 </li>
 </ol>
 </div>
+
+<div id="outline-container-org4f9f5fd" class="outline-4">
+<h4 id="org4f9f5fd"><span class="section-number-4">1.4.2.</span> Qui porte des lunettes ?</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+On considère une classe de \(17\) élèves. On compte parmi eux :
+</p>
+<ul class="org-ul">
+<li>\(8\) filles, et \(9\) garçons</li>
+<li>\(12\) personnes qui portent des lunettes, dont \(5\) qui sont des filles.</li>
+</ul>
+
+<p>
+On a donc le tableau suivant .
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">lunettes</th>
+<th scope="col" class="org-right">pas lunettes</th>
+<th scope="col" class="org-right">total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">garçons</td>
+<td class="org-right">7</td>
+<td class="org-right">2</td>
+<td class="org-right">9</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">filles</td>
+<td class="org-right">5</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">12</td>
+<td class="org-right">5</td>
+<td class="org-right">17</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-12 ven. 13:11</p>
+<p class="date">Created: 2021-11-12 ven. 13:17</p>
 </div>
 </body>
 </html>
