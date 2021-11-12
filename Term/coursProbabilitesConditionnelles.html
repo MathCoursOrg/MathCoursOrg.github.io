@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-11 jeu. 20:43 -->
+<!-- 2021-11-12 ven. 13:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Probabilités Conditionnelles</title>
@@ -228,7 +228,7 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbe651c6">1. Définition des probabilités conditionnelles</a>
+<li><a href="#org8ae9e50">1. Les probabilités conditionnelles</a>
 <ul>
 <li><a href="#orgdc132c6">1.1. Définitions</a></li>
 <li><a href="#org76776bb">1.2. Formule de Bayes</a></li>
@@ -244,19 +244,19 @@
 </div>
 </div>
 
-<div id="outline-container-orgbe651c6" class="outline-2">
-<h2 id="orgbe651c6"><span class="section-number-2">1.</span> Définition des probabilités conditionnelles</h2>
+<div id="outline-container-org8ae9e50" class="outline-2">
+<h2 id="org8ae9e50"><span class="section-number-2">1.</span> Les probabilités conditionnelles</h2>
 <div class="outline-text-2" id="text-1">
 </div>
 <div id="outline-container-orgdc132c6" class="outline-3">
 <h3 id="orgdc132c6"><span class="section-number-3">1.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="orgf024949">
+<div class="defi" id="org62c2c4d">
 <p>
 Soit \(A\) et \(B\) deux événements, avec \(B\) un événement de probabilité non nulle.
 Alors, on définit \(\mathbb{P}_{B}(A)\) par :
 \[
-\mathbb{P}_{B}(A) = \frac{\mathbb{P}(A \cup B)}{\mathbb{P}(B)}
+\mathbb{P}_{B}(A) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
 \]
 </p>
 
@@ -269,7 +269,7 @@ patates qui les représentent.
 </p>
 
 
-<div id="orgcc4eac9" class="figure">
+<div id="org5082e2b" class="figure">
 <p><img src="./images/patatoideProbaConditionnelles.png" alt="patatoideProbaConditionnelles.png" />
 </p>
 </div>
@@ -279,7 +279,7 @@ Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu&rsquo;occupe
 l&rsquo;intersection des deux événements, par rapport à l&rsquo;événement \(A\).
 </p>
 
-<div class="prop" id="org2cd9ca4">
+<div class="prop" id="org890a2e7">
 <p>
 Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
 </p>
@@ -300,7 +300,7 @@ C&rsquo;est l&rsquo;une des formules les plus puissantes qui existe. Elle est ut
 énormément de domaines différents.
 </p>
 
-<div class="prop" id="org10a73f5">
+<div class="prop" id="org0863423">
 <p>
 Soit \(A\) et \(B\) deux événements, de probabilités non nulles (pour les deux).
 Alors :
@@ -326,7 +326,7 @@ partir de \(\mathbb{P}_{A}(B)\), et vice versa.
 Cette formule forme un combo avec la précédente.
 </p>
 
-<div class="prop" id="orgf7a4e97">
+<div class="prop" id="org7abf2e1">
 <p>
 Soit \(A\) un événement, et \(B\) un événement de probabilité non nulle. Alors, si
 on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
@@ -381,7 +381,7 @@ qu&rsquo;il ait pris le premier dé ?
 <li><a id="org7f34aed"></a>Correction<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 
-<div id="org1c056df" class="figure">
+<div id="org987eed6" class="figure">
 <p><img src="desCachotiers.png" alt="desCachotiers.png" />
 </p>
 </div>
@@ -471,7 +471,7 @@ Il nous faut donc calculer \(\mathbb{P}(B)\), et \(\mathbb{P}_{B}(A)\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-11 jeu. 20:43</p>
+<p class="date">Created: 2021-11-12 ven. 13:11</p>
 </div>
 </body>
 </html>
