@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-12-03 ven. 11:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fiche Aide Python</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Fiche Aide Python</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3470a23">1. Exprimer une condition</a></li>
+<li><a href="#org8569070">2. Blocs conditions</a>
+<ul>
+<li><a href="#org7821c43">2.1. Syntaxe</a></li>
+<li><a href="#orgefa5b5c">2.2. Exemple</a></li>
+<li><a href="#org36a0b58">2.3. Mises en garde</a></li>
+</ul>
+</li>
+<li><a href="#orgeb2ed81">3. Boucles</a>
+<ul>
+<li><a href="#org9fe58ad">3.1. Les boucles tant que</a>
+<ul>
+<li><a href="#org9d0253c">3.1.1. Syntaxe</a></li>
+<li><a href="#org874eaaa">3.1.2. Exemple</a></li>
+<li><a href="#org99c0784">3.1.3. Mise en garde</a></li>
+</ul>
+</li>
+<li><a href="#orgf4eafec">3.2. Les boucles for</a>
+<ul>
+<li><a href="#org2dc53a3">3.2.1. Syntaxe</a></li>
+<li><a href="#orgcc3a976">3.2.2. Mise en garde</a></li>
+<li><a href="#orgb6c8563">3.2.3. Exemple</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd1bdca7">4. Demander à l&rsquo;utilisateur</a>
+<ul>
+<li><a href="#orgfdde467">4.1. Du texte</a></li>
+<li><a href="#org21ca65f">4.2. Un nombre</a></li>
+</ul>
+</li>
+<li><a href="#org1e5bc18">5. Les fonctions</a>
+<ul>
+<li><a href="#org6b6ec3e">5.1. Syntaxe</a></li>
+<li><a href="#org20b5e82">5.2. Mises en garde</a></li>
+<li><a href="#orgc243b73">5.3. Exemple</a></li>
+</ul>
+</li>
+<li><a href="#org4b4cc8d">6. Autre</a>
+<ul>
+<li><a href="#orgc41edc1">6.1. Tester si \(a\) est divisible par \(b\)</a></li>
+<li><a href="#orgf607a22">6.2. Définir un nombre aléatoire</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3470a23" class="outline-2">
+<h2 id="org3470a23"><span class="section-number-2">1.</span> Exprimer une condition</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Pour tester si <code>a</code> est égal à <code>b</code> : <code>a==b</code></li>
+<li>Pour tester si <code>a</code> est plus strictement plus grand que <code>b</code> : <code>a&gt;b</code></li>
+<li>Pour tester si <code>a</code> est plus strictement plus petit que <code>b</code> : <code>a&lt;b</code></li>
+<li>Pour tester si <code>a</code> est plus strictement plus grand ou égal à <code>b</code> : <code>a&gt;=b</code></li>
+<li>Pour tester si <code>a</code> est plus strictement plus petit ou égal à <code>b</code> : <code>a&lt;=b</code></li>
+<li>Pour tester si <code>a</code> est différent de <code>b</code> : <code>a!=b</code></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8569070" class="outline-2">
+<h2 id="org8569070"><span class="section-number-2">2.</span> Blocs conditions</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7821c43" class="outline-3">
+<h3 id="org7821c43"><span class="section-number-3">2.1.</span> Syntaxe</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">if</span> &lt;condition&gt; :
+    &lt;code&gt;
+<span style="color: #fb2874;">elif</span> &lt;condition&gt; :
+    &lt;code&gt;
+<span style="color: #fb2874;">else</span> :
+    &lt;code&gt;
+</pre>
+</div>
+
+<p>
+<span class="underline">Traduction :</span>
+</p>
+<ol class="org-ol">
+<li><code>if</code> veut dire «si»</li>
+<li><code>elif</code> veut dire «sinon si»</li>
+<li><code>else</code> veut dire «sinon».</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgefa5b5c" class="outline-3">
+<h3 id="orgefa5b5c"><span class="section-number-3">2.2.</span> Exemple</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fd971f;">age</span> = <span style="color: #9c91e4; font-weight: bold;">18</span>
+<span style="color: #fb2874;">if</span> age &gt; <span style="color: #9c91e4; font-weight: bold;">18</span> :
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"Vous &#234;tes majeur"</span>)
+<span style="color: #fb2874;">elif</span> age == <span style="color: #9c91e4; font-weight: bold;">18</span> :
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"Vous venez d'&#234;tre majeur"</span>)
+<span style="color: #fb2874;">else</span> :
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"Vous &#234;tes mineur"</span>)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org36a0b58" class="outline-3">
+<h3 id="org36a0b58"><span class="section-number-3">2.3.</span> Mises en garde</h3>
+<div class="outline-text-3" id="text-2-3">
+<ol class="org-ol">
+<li>On commence toujours par <code>if</code>, puis, si besoin, on place un bloc <code>elif</code>,
+puis, on termine par un <code>else</code>, là encore si besoin</li>
+<li>Pas de condition après <code>else</code>, on rentre dans ce bloc dès que toutes les
+autres conditions données par les blocs <code>if</code> et <code>elif</code> ne sont pas vérifiées</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb2ed81" class="outline-2">
+<h2 id="orgeb2ed81"><span class="section-number-2">3.</span> Boucles</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9fe58ad" class="outline-3">
+<h3 id="org9fe58ad"><span class="section-number-3">3.1.</span> Les boucles tant que</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org9d0253c" class="outline-4">
+<h4 id="org9d0253c"><span class="section-number-4">3.1.1.</span> Syntaxe</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">while</span> &lt;condition&gt; :
+    &lt;code&gt;
+</pre>
+</div>
+
+<p>
+<span class="underline">Traduction</span>:
+</p>
+<ol class="org-ol">
+<li><code>while</code> signifie «Tant que»</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org874eaaa" class="outline-4">
+<h4 id="org874eaaa"><span class="section-number-4">3.1.2.</span> Exemple</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fd971f;">nombre</span> = <span style="color: #9c91e4; font-weight: bold;">1</span>
+<span style="color: #fb2874;">while</span> nombre*nombre &lt; <span style="color: #9c91e4; font-weight: bold;">99</span> :
+    <span style="color: #fd971f;">nombre</span> = nombre + <span style="color: #9c91e4; font-weight: bold;">1</span>
+<span style="color: #555556;"># </span><span style="color: #555556;">&#224; la fin de la boucle, la variable nombre vaut 9, car 10*10 &gt; 99</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99c0784" class="outline-4">
+<h4 id="org99c0784"><span class="section-number-4">3.1.3.</span> Mise en garde</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ol class="org-ol">
+<li>Vérifier que votre condition n&rsquo;est pas respectée indéfiniement, sinon vous
+obtenez une <b>boucle infinie</b>.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4eafec" class="outline-3">
+<h3 id="orgf4eafec"><span class="section-number-3">3.2.</span> Les boucles for</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org2dc53a3" class="outline-4">
+<h4 id="org2dc53a3"><span class="section-number-4">3.2.1.</span> Syntaxe</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">for</span> &lt;variable&gt; <span style="color: #fb2874;">in</span> <span style="color: #fd971f;">range</span>(&lt;nombre&gt;):
+    &lt;code&gt;
+</pre>
+</div>
+
+<p>
+<span class="underline">Traduction :</span>
+</p>
+<ol class="org-ol">
+<li><code>for</code> signifie «Pour»</li>
+<li><code>in</code> signifie «dans»</li>
+<li><code>range</code> signifie «dans l&rsquo;intervalle»</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcc3a976" class="outline-4">
+<h4 id="orgcc3a976"><span class="section-number-4">3.2.2.</span> Mise en garde</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ol class="org-ol">
+<li><code>range(9)</code> correspond à tous les nombres entiers entre \(0\) et \(8\). Cela nous
+donne bien \(9\) répétitions de code, mais en commençant à \(0\).</li>
+<li>Le nom de la variable après votre <code>for</code> n&rsquo;importe pas, mais elle augmente
+toute seule de \(1\) entre différent passage de boucle.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgb6c8563" class="outline-4">
+<h4 id="orgb6c8563"><span class="section-number-4">3.2.3.</span> Exemple</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">for</span> i <span style="color: #fb2874;">in</span> <span style="color: #fd971f;">range</span>(<span style="color: #9c91e4; font-weight: bold;">11</span>):
+    <span style="color: #fb2874;">print</span>(i*i)
+<span style="color: #555556;"># </span><span style="color: #555556;">Affiche tous les carr&#233;s d'entiers de 0 &#224; 10</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1bdca7" class="outline-2">
+<h2 id="orgd1bdca7"><span class="section-number-2">4.</span> Demander à l&rsquo;utilisateur</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgfdde467" class="outline-3">
+<h3 id="orgfdde467"><span class="section-number-3">4.1.</span> Du texte</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fd971f;">texte</span> = <span style="color: #fd971f;">input</span>(<span style="color: #e2c770;">"message affich&#233;"</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org21ca65f" class="outline-3">
+<h3 id="org21ca65f"><span class="section-number-3">4.2.</span> Un nombre</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fd971f;">nombre</span> = <span style="color: #fd971f;">int</span>(<span style="color: #fd971f;">input</span>(<span style="color: #e2c770;">"message affich&#233;"</span>))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1e5bc18" class="outline-2">
+<h2 id="org1e5bc18"><span class="section-number-2">5.</span> Les fonctions</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org6b6ec3e" class="outline-3">
+<h3 id="org6b6ec3e"><span class="section-number-3">5.1.</span> Syntaxe</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">def</span> &lt;nom de la fonction&gt;(&lt;var1&gt;, &lt;var2&gt;, ...):
+    &lt;code&gt;
+    <span style="color: #fb2874;">return</span> &lt;nom de variable&gt;
+</pre>
+</div>
+
+<p>
+<span class="underline">Traduction :</span>
+</p>
+<ol class="org-ol">
+<li><code>def</code> est un raccourci pour <code>definition</code> qui signifie «Définition»</li>
+<li><code>return</code> signifie «Retourner»</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org20b5e82" class="outline-3">
+<h3 id="org20b5e82"><span class="section-number-3">5.2.</span> Mises en garde</h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li>Une fonction peut avoir aucun argument, un seul, ou bien plusieurs.</li>
+<li>Le mot clé <code>return</code> est optionnel, mais si vous ne le mettez pas, vous ne
+pourrez pas récupérer de résultat.</li>
+<li>Pour appeler une fonction, on a besoin de son nom, puis entre parenthèses,
+les arguments qu&rsquo;on lui envoie (regardez les exemples).</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc243b73" class="outline-3">
+<h3 id="orgc243b73"><span class="section-number-3">5.3.</span> Exemple</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">def</span> <span style="color: #b6e63e;">affichage</span>(messages):
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"==========="</span>)
+    <span style="color: #fb2874;">print</span>(message)
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"==========="</span>)
+
+affichage(<span style="color: #e2c770;">"Coucou !"</span>)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">def</span> <span style="color: #b6e63e;">rappel</span>():
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"Pas besoin d'argument"</span>)
+rappel()
+<span style="color: #555556;"># </span><span style="color: #555556;">Affiche : "Pas besoin d'argument"</span>
+<span style="color: #fd971f;">essai</span> = rappel()
+<span style="color: #555556;"># </span><span style="color: #555556;">essai vaut None</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">def</span> <span style="color: #b6e63e;">calcul</span>(variable):
+    <span style="color: #fb2874;">if</span> variable &gt; <span style="color: #9c91e4; font-weight: bold;">3</span> :
+        <span style="color: #fb2874;">return</span> variable * <span style="color: #9c91e4; font-weight: bold;">3</span>
+    <span style="color: #fb2874;">else</span> :
+        <span style="color: #fb2874;">return</span> variable * <span style="color: #9c91e4; font-weight: bold;">2</span>
+
+<span style="color: #fd971f;">res</span> = calcul(<span style="color: #9c91e4; font-weight: bold;">3</span>)
+<span style="color: #555556;"># </span><span style="color: #555556;">res vaut 9</span>
+<span style="color: #fd971f;">autreRes</span> = calcul(<span style="color: #9c91e4; font-weight: bold;">2</span>)
+<span style="color: #555556;"># </span><span style="color: #555556;">autreRes vaut 4</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">def</span> <span style="color: #b6e63e;">minimun</span>(a, b):
+    <span style="color: #fb2874;">if</span> a &gt; b :
+        <span style="color: #fb2874;">return</span> b
+    <span style="color: #fb2874;">else</span> :
+        <span style="color: #fb2874;">return</span> a
+<span style="color: #fd971f;">petit</span> = minimun(<span style="color: #9c91e4; font-weight: bold;">13</span>, <span style="color: #9c91e4; font-weight: bold;">193</span>)
+<span style="color: #555556;"># </span><span style="color: #555556;">petit vaut 13</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4b4cc8d" class="outline-2">
+<h2 id="org4b4cc8d"><span class="section-number-2">6.</span> Autre</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgc41edc1" class="outline-3">
+<h3 id="orgc41edc1"><span class="section-number-3">6.1.</span> Tester si \(a\) est divisible par \(b\)</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">if</span> a % b == <span style="color: #9c91e4; font-weight: bold;">0</span> :
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"a est divisible par b"</span>)
+<span style="color: #fb2874;">else</span> :
+    <span style="color: #fb2874;">print</span>(<span style="color: #e2c770;">"a n'est pas divisible par b"</span>)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf607a22" class="outline-3">
+<h3 id="orgf607a22"><span class="section-number-3">6.2.</span> Définir un nombre aléatoire</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb2874;">from</span> random <span style="color: #fb2874;">import</span> randint
+
+<span style="color: #fd971f;">nombre</span> = randint(<span style="color: #9c91e4; font-weight: bold;">1</span>, <span style="color: #9c91e4; font-weight: bold;">100</span>)
+
+<span style="color: #555556;"># </span><span style="color: #555556;">La variable nombre contient un nombre al&#233;atoire entre 1 et 100</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-12-03 ven. 11:19</p>
+</div>
+</body>
+</html>
