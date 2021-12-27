@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-12-24 ven. 11:57 -->
+<!-- 2021-12-27 lun. 22:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tableaux De Signes</title>
@@ -228,42 +228,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org05c7a39">1. Motivations</a></li>
-<li><a href="#orge31339f">2. Définitions</a></li>
-<li><a href="#orga880635">3. Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></a></li>
-<li><a href="#org8131cd1">4. Étude du signe des fonctions affines</a>
+<li><a href="#orgb188df3">1. Motivations</a></li>
+<li><a href="#org78aaaf1">2. Définitions</a></li>
+<li><a href="#org4602f80">3. Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></a></li>
+<li><a href="#orgffff5a7">4. Étude du signe des fonctions affines</a>
 <ul>
-<li><a href="#org61df6c0">4.1. Motivations</a></li>
-<li><a href="#orgc6cab27">4.2. Théorie</a>
+<li><a href="#orga4e00f3">4.1. Motivations</a></li>
+<li><a href="#org60e5ed7">4.2. Théorie</a>
 <ul>
-<li><a href="#orgd5c6140">4.2.1. Tableau de signes si \(a > 0\)</a></li>
-<li><a href="#org1f5576b">4.2.2. Tableau de signe si \(a < 0\)</a></li>
+<li><a href="#orgec60d6c">4.2.1. Tableau de signes si \(a > 0\)</a></li>
+<li><a href="#org0da8324">4.2.2. Tableau de signe si \(a < 0\)</a></li>
 </ul>
 </li>
-<li><a href="#org52ae6cd">4.3. Pratique</a>
+<li><a href="#orgdf952bd">4.3. Pratique</a>
 <ul>
-<li><a href="#org064208d">4.3.1. Cas d&rsquo;un coefficient directeur positif</a></li>
-<li><a href="#orgd3bda96">4.3.2. Cas d&rsquo;un coefficient directeur négatif</a></li>
+<li><a href="#org539b9b0">4.3.1. Cas d&rsquo;un coefficient directeur positif</a></li>
+<li><a href="#org25162a2">4.3.2. Cas d&rsquo;un coefficient directeur négatif</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf8b2b6c">5. Étude du signe de produit de fonctions affines</a>
+<li><a href="#orgffd8b7e">5. Étude du signe de produit de fonctions affines</a>
 <ul>
-<li><a href="#org6bf3208">5.1. Motivation</a></li>
-<li><a href="#org826fc20">5.2. Étude d&rsquo;un exemple</a></li>
+<li><a href="#org81c6e56">5.1. Motivation</a></li>
+<li><a href="#org8403d5b">5.2. Étude d&rsquo;un exemple</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org05c7a39" class="outline-2">
-<h2 id="org05c7a39"><span class="section-number-2">1.</span> Motivations</h2>
+<div id="outline-container-orgb188df3" class="outline-2">
+<h2 id="orgb188df3"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On a vu en classe comment construire des tableaux de variations de fonction
-définie sur un intervalle. Les tableaux de variations servent à
+définie sur un intervalle réel. Les tableaux de variations servent à
 </p>
 <ol class="org-ol">
 <li>Repérer les intervalles où la fonction croit, et les intervalles où la
@@ -271,7 +271,7 @@ fonction décroît.</li>
 <li>Mettre en évidence les extremums (maximums, ou minimum)</li>
 </ol>
 
-<div class="ex" id="org657a512">
+<div class="ex" id="org711db3a">
 <p>
 Si on sait que le minimum de la fonction \(f : x \mapsto (x-2)^{2} - 3\)
 admet comme minimum \(-3\), c&rsquo;est aussi parce que l&rsquo;on peut construire son tableau
@@ -279,8 +279,8 @@ de variations, pour obtenir le tableau suivant :
 </p>
 
 
-<div id="orgf400e75" class="figure">
-<p><img src="images/motivationsTblSignes.png" alt="motivationsTblSignes.png" />
+<div id="org9972c9a" class="figure">
+<p><img src="images/motivationsTblSignes.svg" alt="motivationsTblSignes.svg" class="org-svg" />
 </p>
 </div>
 
@@ -298,24 +298,24 @@ fonction est négative</li>
 </div>
 </div>
 
-<div id="outline-container-orge31339f" class="outline-2">
-<h2 id="orge31339f"><span class="section-number-2">2.</span> Définitions</h2>
+<div id="outline-container-org78aaaf1" class="outline-2">
+<h2 id="org78aaaf1"><span class="section-number-2">2.</span> Définitions</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="orga7e451d">
+<div class="defi" id="org691313e">
 <p>
 On dit que \(f\) est <b>positive</b> sur \(I\) si pour tout \(x \in I\), on a \(f(x) \geq 0\).
 </p>
 
 </div>
 
-<div class="defi" id="orgda40cb8">
+<div class="defi" id="org09c7407">
 <p>
 On dit que \(f\) est <b>négative</b> sur \(I\) si pour tout \(x \in I\), on a \(f(x) \leq 0\).
 </p>
 
 </div>
 
-<div class="ex" id="org622634d">
+<div class="ex" id="org6b07558">
 <p>
 Pour tout \(x \in \mathbb{R}\), la fonction \(f(x) = -x^{2} - 1\) est négative. On
 dit donc que la fonction \(f\) est négative sur \(\mathbb{R}\).
@@ -328,7 +328,7 @@ donc que la fonction \(f\) est positive sur l&rsquo;intervalle \([0; +\infty]\).
 
 </div>
 
-<div class="defi" id="org1d0a7eb">
+<div class="defi" id="orgef2ccc5">
 <p>
 Soit \(f\) définie sur un intervalle \(I\) de \(\mathbb{R}\), à valeurs réelles. Un
 tableau de variations de \(f\) sur cet intervalle est un tableau qui récapitule
@@ -337,7 +337,7 @@ les intervalles où la fonction est positive, ou négative.
 
 </div>
 
-<div class="ex" id="org03d6a55">
+<div class="ex" id="orgade57db">
 <p>
 Soit \(g\) fonction définie sur \(\mathbb{R}\) par \(g(x) = (x-2)(x+1)\). D&rsquo;après le
 graphe de cette fonction (on verra comment faire algébriquement plus tard), on
@@ -350,8 +350,8 @@ peut conjecturer que :
 </ol>
 
 
-<div id="orgd9436d9" class="figure">
-<p><img src="images/exeTblSign.png" alt="exeTblSign.png" />
+<div id="orgdb9bb20" class="figure">
+<p><img src="images/exeTblSign.svg" alt="exeTblSign.svg" class="org-svg" />
 </p>
 </div>
 
@@ -360,8 +360,8 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </p>
 
 
-<div id="org4d19246" class="figure">
-<p><img src="images/exeTblSignTbl.png" alt="exeTblSignTbl.png" />
+<div id="orged14d82" class="figure">
+<p><img src="images/exeTblSignTbl.svg" alt="exeTblSignTbl.svg" class="org-svg" />
 </p>
 </div>
 
@@ -369,8 +369,8 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </div>
 </div>
 
-<div id="outline-container-orga880635" class="outline-2">
-<h2 id="orga880635"><span class="section-number-2">3.</span> Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></h2>
+<div id="outline-container-org4602f80" class="outline-2">
+<h2 id="org4602f80"><span class="section-number-2">3.</span> Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></h2>
 <div class="outline-text-2" id="text-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -414,12 +414,12 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </div>
 </div>
 
-<div id="outline-container-org8131cd1" class="outline-2">
-<h2 id="org8131cd1"><span class="section-number-2">4.</span> Étude du signe des fonctions affines</h2>
+<div id="outline-container-orgffff5a7" class="outline-2">
+<h2 id="orgffff5a7"><span class="section-number-2">4.</span> Étude du signe des fonctions affines</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org61df6c0" class="outline-3">
-<h3 id="org61df6c0"><span class="section-number-3">4.1.</span> Motivations</h3>
+<div id="outline-container-orga4e00f3" class="outline-3">
+<h3 id="orga4e00f3"><span class="section-number-3">4.1.</span> Motivations</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Les fonctions affines sont les fonctions qui sont à la fois pas évidente, et pas
@@ -431,8 +431,8 @@ techniques pour aborder des fonctions plus compliquées.
 </div>
 
 
-<div id="outline-container-orgc6cab27" class="outline-3">
-<h3 id="orgc6cab27"><span class="section-number-3">4.2.</span> Théorie</h3>
+<div id="outline-container-org60e5ed7" class="outline-3">
+<h3 id="org60e5ed7"><span class="section-number-3">4.2.</span> Théorie</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Soit \(f\) une fonction affine définie sur \(\mathbb{R}\), avec
@@ -440,7 +440,7 @@ Soit \(f\) une fonction affine définie sur \(\mathbb{R}\), avec
 f(x) = ax + b
 \]
 avec \(a \in \mathbb{R}\) non nul le coefficient directeur de la fonction affine
-\(f\), et \(b \in \\mathbb{R}\) l&rsquo;ordonnée à l&rsquo;origine.
+\(f\), et \(b \in \mathbb{R}\) l&rsquo;ordonnée à l&rsquo;origine.
 </p>
 
 <p>
@@ -477,36 +477,36 @@ Autrement dit :
 </p>
 </div>
 
-<div id="outline-container-orgd5c6140" class="outline-4">
-<h4 id="orgd5c6140"><span class="section-number-4">4.2.1.</span> Tableau de signes si \(a > 0\)</h4>
+<div id="outline-container-orgec60d6c" class="outline-4">
+<h4 id="orgec60d6c"><span class="section-number-4">4.2.1.</span> Tableau de signes si \(a > 0\)</h4>
 <div class="outline-text-4" id="text-4-2-1">
 
-<div id="org67b1ba3" class="figure">
-<p><img src="images/tblSigneFctAffineCroiss.png" alt="tblSigneFctAffineCroiss.png" />
+<div id="orgc13c571" class="figure">
+<p><img src="images/tblSigneFctAffineCroiss.svg" alt="tblSigneFctAffineCroiss.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org1f5576b" class="outline-4">
-<h4 id="org1f5576b"><span class="section-number-4">4.2.2.</span> Tableau de signe si \(a < 0\)</h4>
+<div id="outline-container-org0da8324" class="outline-4">
+<h4 id="org0da8324"><span class="section-number-4">4.2.2.</span> Tableau de signe si \(a < 0\)</h4>
 <div class="outline-text-4" id="text-4-2-2">
 
-<div id="orgaf6da58" class="figure">
-<p><img src="images/tblSigneFctAffineDeCroiss.png" alt="tblSigneFctAffineDeCroiss.png" />
+<div id="org81412c4" class="figure">
+<p><img src="images/tblSigneFctAffineDeCroiss.svg" alt="tblSigneFctAffineDeCroiss.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org52ae6cd" class="outline-3">
-<h3 id="org52ae6cd"><span class="section-number-3">4.3.</span> Pratique</h3>
+<div id="outline-container-orgdf952bd" class="outline-3">
+<h3 id="orgdf952bd"><span class="section-number-3">4.3.</span> Pratique</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org064208d" class="outline-4">
-<h4 id="org064208d"><span class="section-number-4">4.3.1.</span> Cas d&rsquo;un coefficient directeur positif</h4>
+<div id="outline-container-org539b9b0" class="outline-4">
+<h4 id="org539b9b0"><span class="section-number-4">4.3.1.</span> Cas d&rsquo;un coefficient directeur positif</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
 Si on veut étudier le signe de la fonction \(f(x) = 2x - 3\), on détermine d&rsquo;abord
@@ -519,15 +519,15 @@ fonction est donné par :
 </p>
 
 
-<div id="org261e9db" class="figure">
-<p><img src="images/tblSigneFctAffinePratique.png" alt="tblSigneFctAffinePratique.png" />
+<div id="orgec8c6d1" class="figure">
+<p><img src="images/tblSigneFctAffinePratique.svg" alt="tblSigneFctAffinePratique.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd3bda96" class="outline-4">
-<h4 id="orgd3bda96"><span class="section-number-4">4.3.2.</span> Cas d&rsquo;un coefficient directeur négatif</h4>
+<div id="outline-container-org25162a2" class="outline-4">
+<h4 id="org25162a2"><span class="section-number-4">4.3.2.</span> Cas d&rsquo;un coefficient directeur négatif</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
 Si on veut étudier le signe de la fonction \(g(x) = -4x +5\), on détermine d&rsquo;abord
@@ -540,8 +540,8 @@ fonction est donné par :
 </p>
 
 
-<div id="orgdd5f431" class="figure">
-<p><img src="images/tblSigneFctAffinePratiqueDecc.png" alt="tblSigneFctAffinePratiqueDecc.png" />
+<div id="orgf997a0b" class="figure">
+<p><img src="images/tblSigneFctAffinePratiqueDecc.svg" alt="tblSigneFctAffinePratiqueDecc.svg" class="org-svg" />
 </p>
 </div>
 </div>
@@ -550,12 +550,12 @@ fonction est donné par :
 </div>
 
 
-<div id="outline-container-orgf8b2b6c" class="outline-2">
-<h2 id="orgf8b2b6c"><span class="section-number-2">5.</span> Étude du signe de produit de fonctions affines</h2>
+<div id="outline-container-orgffd8b7e" class="outline-2">
+<h2 id="orgffd8b7e"><span class="section-number-2">5.</span> Étude du signe de produit de fonctions affines</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org6bf3208" class="outline-3">
-<h3 id="org6bf3208"><span class="section-number-3">5.1.</span> Motivation</h3>
+<div id="outline-container-org81c6e56" class="outline-3">
+<h3 id="org81c6e56"><span class="section-number-3">5.1.</span> Motivation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Si peu de fonctions en mathématiques sont strictement affine, on peut par contre
@@ -570,8 +570,8 @@ déployées plus haut.
 </div>
 </div>
 
-<div id="outline-container-org826fc20" class="outline-3">
-<h3 id="org826fc20"><span class="section-number-3">5.2.</span> Étude d&rsquo;un exemple</h3>
+<div id="outline-container-org8403d5b" class="outline-3">
+<h3 id="org8403d5b"><span class="section-number-3">5.2.</span> Étude d&rsquo;un exemple</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Soit \(f\) la fonction définie sur \(\mathbb{R}\) par \(f(x) = (2x - 3)(-4x + 5)\). On
@@ -582,8 +582,8 @@ seul tableau :
 </p>
 
 
-<div id="org8d174d5" class="figure">
-<p><img src="images/TblProduitFctAffine.png" alt="TblProduitFctAffine.png" />
+<div id="org8c90c13" class="figure">
+<p><img src="images/TblProduitFctAffine.svg" alt="TblProduitFctAffine.svg" class="org-svg" />
 </p>
 </div>
 
@@ -600,8 +600,8 @@ Donc, on peut résumer le signe de la fonction \(g\) sur \(\mathbb{R}\) par le
 tableau suivant :
 </p>
 
-<div id="org3686f6f" class="figure">
-<p><img src="images/TblProduitFctAffineFin.png" alt="TblProduitFctAffineFin.png" />
+<div id="orgd6a0346" class="figure">
+<p><img src="images/TblProduitFctAffineFin.svg" alt="TblProduitFctAffineFin.svg" class="org-svg" />
 </p>
 </div>
 
@@ -612,8 +612,8 @@ fonction :
 </p>
 
 
-<div id="orgb615776" class="figure">
-<p><img src="images/grapheFonctionEtudieTblVariations.png" alt="grapheFonctionEtudieTblVariations.png" />
+<div id="org8b4dc79" class="figure">
+<p><img src="images/grapheFonctionEtudieTblVariations.svg" alt="grapheFonctionEtudieTblVariations.svg" class="org-svg" />
 </p>
 </div>
 </div>
@@ -622,7 +622,7 @@ fonction :
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-12-24 ven. 11:57</p>
+<p class="date">Created: 2021-12-27 lun. 22:28</p>
 </div>
 </body>
 </html>

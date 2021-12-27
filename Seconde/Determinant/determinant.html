@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-05 ven. 09:11 -->
+<!-- 2021-12-27 lun. 22:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Déterminant</title>
@@ -228,39 +228,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5de0084">1. Qu&rsquo;est-ce que le déterminant ?</a>
+<li><a href="#orgb1afb10">1. Qu&rsquo;est-ce que le déterminant ?</a>
 <ul>
-<li><a href="#org2c87cd4">1.1. À quoi ça sert ?</a></li>
-<li><a href="#orgafeb14b">1.2. Quelles en sont les principes fondamentaux ?</a></li>
-<li><a href="#org5725014">1.3. Quelles sont les premières propriétés du déterminant ?</a></li>
+<li><a href="#org888649e">1.1. À quoi ça sert ?</a></li>
+<li><a href="#orge56a0d7">1.2. Quelles en sont les principes fondamentaux ?</a></li>
+<li><a href="#org705f62b">1.3. Quelles sont les premières propriétés du déterminant ?</a></li>
 </ul>
 </li>
-<li><a href="#org7edb213">2. Mais quel calcul permet de nous donner ce coefficient ?!</a>
+<li><a href="#org9a64581">2. Mais quel calcul permet de nous donner ce coefficient ?!</a>
 <ul>
-<li><a href="#org48ef915">2.1. Trouvons une formule qui permette de détecter des vecteurs colinéaires ?</a></li>
-<li><a href="#org699d11f">2.2. Définition du déterminant à partir des coordonnées des vecteurs.</a></li>
-<li><a href="#org8afb4d6">2.3. <span class="todo TODO">TODO</span> Exemples</a></li>
+<li><a href="#org37f6aa3">2.1. Trouvons une formule qui permette de détecter des vecteurs colinéaires ?</a></li>
+<li><a href="#org850d569">2.2. Définition du déterminant à partir des coordonnées des vecteurs.</a></li>
+<li><a href="#orgb21eac6">2.3. <span class="todo TODO">TODO</span> Exemples</a></li>
 </ul>
 </li>
-<li><a href="#org0e6857b">3. Une autre interprétation du déterminant.</a>
+<li><a href="#orge23ba81">3. Une autre interprétation du déterminant.</a>
 <ul>
-<li><a href="#org80c00bf">3.1. Exemple</a></li>
-<li><a href="#org9a8a7c6">3.2. Exercice</a></li>
-<li><a href="#orgbb397c8">3.3. Pourquoi une valeur absolue ?</a></li>
-<li><a href="#org293e60a">3.4. Mais ça marche tout le temps ?</a></li>
-<li><a href="#orgec38560">3.5. Que se passe-t-il lorsque les vecteurs sont colinéaires ?</a></li>
+<li><a href="#org28e77d4">3.1. Exemple</a></li>
+<li><a href="#orgd857fb7">3.2. Exercice</a></li>
+<li><a href="#org2df6476">3.3. Pourquoi une valeur absolue ?</a></li>
+<li><a href="#orgaf98f7a">3.4. Mais ça marche tout le temps ?</a></li>
+<li><a href="#org802b0ec">3.5. Que se passe-t-il lorsque les vecteurs sont colinéaires ?</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5de0084" class="outline-2">
-<h2 id="org5de0084"><span class="section-number-2">1.</span> Qu&rsquo;est-ce que le déterminant ?</h2>
+<div id="outline-container-orgb1afb10" class="outline-2">
+<h2 id="orgb1afb10"><span class="section-number-2">1.</span> Qu&rsquo;est-ce que le déterminant ?</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org2c87cd4" class="outline-3">
-<h3 id="org2c87cd4"><span class="section-number-3">1.1.</span> À quoi ça sert ?</h3>
+<div id="outline-container-org888649e" class="outline-3">
+<h3 id="org888649e"><span class="section-number-3">1.1.</span> À quoi ça sert ?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 En mathématiques, le déterminant joue un rôle fondamental en géométrie et en
@@ -276,8 +276,8 @@ droites du plan.
 </div>
 </div>
 
-<div id="outline-container-orgafeb14b" class="outline-3">
-<h3 id="orgafeb14b"><span class="section-number-3">1.2.</span> Quelles en sont les principes fondamentaux ?</h3>
+<div id="outline-container-orge56a0d7" class="outline-3">
+<h3 id="orge56a0d7"><span class="section-number-3">1.2.</span> Quelles en sont les principes fondamentaux ?</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Le déterminant se calcule à partir des coordonnées de deux vecteurs, et renvoit
@@ -288,8 +288,8 @@ un nombre réel (c&rsquo;est à dire un nombre positif ou négatif).
 Sur un schéma, voici ce que ça donne.
 </p>
 
-<div id="orgd7e55fe" class="figure">
-<p><img src="schemaDeterminant.png" alt="schemaDeterminant.png" />
+<div id="orgcf7442b" class="figure">
+<p><img src="schemaDeterminant.svg" alt="schemaDeterminant.svg" class="org-svg" />
 </p>
 </div>
 
@@ -297,7 +297,7 @@ Sur un schéma, voici ce que ça donne.
 Mathématiquement, on le note comme il suit :
 </p>
 
-<div class="defi" id="org9399574">
+<div class="defi" id="orgb20cb0b">
 <p>
 Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs. On pose alors \(\textrm{det}(\vec{u},
 \vec{v})\) le <b>déterminant</b> des vecteurs \(\vec{u}\) et \(\vec{v}\), qui est un
@@ -308,15 +308,15 @@ nombre réel (c&rsquo;est à dire, négatif, nul, ou positif).
 </div>
 </div>
 
-<div id="outline-container-org5725014" class="outline-3">
-<h3 id="org5725014"><span class="section-number-3">1.3.</span> Quelles sont les premières propriétés du déterminant ?</h3>
+<div id="outline-container-org705f62b" class="outline-3">
+<h3 id="org705f62b"><span class="section-number-3">1.3.</span> Quelles sont les premières propriétés du déterminant ?</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Le déterminant est une application qui permet de <b>détecter</b> les vecteurs qui
 sont <b>colinéaires</b>.
 </p>
 
-<div class="prop" id="orga6a211d">
+<div class="prop" id="org7e08b98">
 <p>
 Si \(\textrm{det}(\vec{u},\vec{v}) = 0\), alors les deux vecteurs \(\vec{u}\) et
 \(\vec{v}\) sont colinéaires. Inversement, si \(\vec{v}\) et \(\vec{u}\) sont
@@ -331,7 +331,7 @@ permettent parfois de simplifier les calculs. Nous nous étendrons pas sur ces
 propriétés, mais elles existent.
 </p>
 
-<div class="prop" id="orga2dcbde">
+<div class="prop" id="org5dccd2b">
 <p>
 Avec deux vecteurs, on dit qu&rsquo;il est
 <b>bilinéaire</b>, c&rsquo;est à dire que par exemple :
@@ -351,7 +351,7 @@ On encore, si \(\vec{w}\) est un vecteur :
 On peut «presque» échanger le rôle du premier et deuxième vecteur, ça ne
 changera pas trop le résultat (seul le signe sera changé).
 </p>
-<div class="prop" id="orgaa21a2e">
+<div class="prop" id="orgf417a83">
 <p>
 Pour \(\vec{v}\) et \(\vec{u}\) deux vecteurs du plan, on a :
 \[
@@ -363,12 +363,12 @@ Pour \(\vec{v}\) et \(\vec{u}\) deux vecteurs du plan, on a :
 </div>
 </div>
 </div>
-<div id="outline-container-org7edb213" class="outline-2">
-<h2 id="org7edb213"><span class="section-number-2">2.</span> Mais quel calcul permet de nous donner ce coefficient ?!</h2>
+<div id="outline-container-org9a64581" class="outline-2">
+<h2 id="org9a64581"><span class="section-number-2">2.</span> Mais quel calcul permet de nous donner ce coefficient ?!</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org48ef915" class="outline-3">
-<h3 id="org48ef915"><span class="section-number-3">2.1.</span> Trouvons une formule qui permette de détecter des vecteurs colinéaires ?</h3>
+<div id="outline-container-org37f6aa3" class="outline-3">
+<h3 id="org37f6aa3"><span class="section-number-3">2.1.</span> Trouvons une formule qui permette de détecter des vecteurs colinéaires ?</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Dans cette partie, on fixe deux vecteurs \(\vec{u}\) et \(\vec{v}\) de cordonnées
@@ -386,8 +386,8 @@ Imaginons qu&rsquo;ils soient colinéaires. Alors, cela signifie qu&rsquo;il exi
 \(k\) tel que \(\vec{u} = k \vec{v}\).
 </p>
 
-<div id="orgc9ebb0f" class="figure">
-<p><img src="images/vecteursColinaires.png" alt="vecteursColinaires.png" />
+<div id="orgf820774" class="figure">
+<p><img src="images/vecteursColinaires.svg" alt="vecteursColinaires.svg" class="org-svg" />
 </p>
 </div>
 
@@ -424,10 +424,10 @@ On résume tout ça dans la partie suivante.
 </p>
 </div>
 </div>
-<div id="outline-container-org699d11f" class="outline-3">
-<h3 id="org699d11f"><span class="section-number-3">2.2.</span> Définition du déterminant à partir des coordonnées des vecteurs.</h3>
+<div id="outline-container-org850d569" class="outline-3">
+<h3 id="org850d569"><span class="section-number-3">2.2.</span> Définition du déterminant à partir des coordonnées des vecteurs.</h3>
 <div class="outline-text-3" id="text-2-2">
-<div class="prop" id="org88ac400">
+<div class="prop" id="org17a8c9e">
 <p>
 Soit \((O, \vec{i}, \vec{j})\) un repère orthonormé, et \(\vec{u}=(x, y)\),
 \(\vec{v}=(w, z)\) deux vecteurs dont on connait les coordonnées dans le repère.
@@ -448,25 +448,25 @@ verticalement : le calcul du déterminant ressemble alors à un produit en croix
 </p>
 
 
-<div id="org0691f9e" class="figure">
-<p><img src="images/memoDeterminant.png" alt="memoDeterminant.png" />
+<div id="org4bbce01" class="figure">
+<p><img src="images/memoDeterminant.svg" alt="memoDeterminant.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8afb4d6" class="outline-3">
-<h3 id="org8afb4d6"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Exemples</h3>
+<div id="outline-container-orgb21eac6" class="outline-3">
+<h3 id="orgb21eac6"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Exemples</h3>
 </div>
 </div>
 
-<div id="outline-container-org0e6857b" class="outline-2">
-<h2 id="org0e6857b"><span class="section-number-2">3.</span> Une autre interprétation du déterminant.</h2>
+<div id="outline-container-orge23ba81" class="outline-2">
+<h2 id="orge23ba81"><span class="section-number-2">3.</span> Une autre interprétation du déterminant.</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 S&rsquo;il y a bien quelque chose à retenir du déterminant, la voici :
 </p>
-<div class="prop" id="org16678fa">
+<div class="prop" id="org5b32a52">
 <p>
 Le déterminant : c&rsquo;est de la magie.
 </p>
@@ -482,8 +482,8 @@ Lorsque l&rsquo;on se donne deux vecteurs dans le plan, comme les vecteurs \(\ve
 et \(\vec{v}\) dans l&rsquo;image ci contre :
 </p>
 
-<div id="org5077269" class="figure">
-<p><img src="images/aireParallelogramme.png" alt="aireParallelogramme.png" />
+<div id="orgbf7e91b" class="figure">
+<p><img src="images/aireParallelogramme.svg" alt="aireParallelogramme.svg" class="org-svg" />
 </p>
 </div>
 
@@ -498,7 +498,7 @@ On peut alors former un parallélogramme, en remarquant que
 On peut se demander comment <b>calculer l&rsquo;aire</b> du parallélogramme \(OADB\). Et
 bien, voici comment on peut faire :
 </p>
-<div class="prop" id="orgd69a608">
+<div class="prop" id="orgf362a18">
 <p>
 Soit un parallélogramme dont les cotés sont donnés par deux vecteurs \(\vec{u}\)
 et \(\vec{v}\) du plan.
@@ -514,8 +514,8 @@ Alors :
 </div>
 </div>
 
-<div id="outline-container-org80c00bf" class="outline-3">
-<h3 id="org80c00bf"><span class="section-number-3">3.1.</span> Exemple</h3>
+<div id="outline-container-org28e77d4" class="outline-3">
+<h3 id="org28e77d4"><span class="section-number-3">3.1.</span> Exemple</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Si on a, comme sur le dessin, \(\vec{u} = (2;3)\) et \(\vec{v} = (3;-5)\), alors
@@ -535,16 +535,16 @@ peut en conclure que le déterminant du parallélogramme \(OADB\) est de \(19
 </div>
 </div>
 
-<div id="outline-container-org9a8a7c6" class="outline-3">
-<h3 id="org9a8a7c6"><span class="section-number-3">3.2.</span> Exercice</h3>
+<div id="outline-container-orgd857fb7" class="outline-3">
+<h3 id="orgd857fb7"><span class="section-number-3">3.2.</span> Exercice</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Calculer l&rsquo;aire du <b>triangle</b> \(OBC\) ci-dessous.
 </p>
 
 
-<div id="org684acf4" class="figure">
-<p><img src="images/aireTriangle.png" alt="aireTriangle.png" />
+<div id="org8f96db0" class="figure">
+<p><img src="images/aireTriangle.svg" alt="aireTriangle.svg" class="org-svg" />
 </p>
 </div>
 
@@ -555,8 +555,8 @@ parallélogramme. Pourriez-vous trouver lequel ?
 </div>
 </div>
 
-<div id="outline-container-orgbb397c8" class="outline-3">
-<h3 id="orgbb397c8"><span class="section-number-3">3.3.</span> Pourquoi une valeur absolue ?</h3>
+<div id="outline-container-org2df6476" class="outline-3">
+<h3 id="org2df6476"><span class="section-number-3">3.3.</span> Pourquoi une valeur absolue ?</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Dans la formule précédente, on voit apparaître une valeur absolue. C&rsquo;est parce
@@ -567,8 +567,8 @@ dans le sens horaire.
 </div>
 </div>
 
-<div id="outline-container-org293e60a" class="outline-3">
-<h3 id="org293e60a"><span class="section-number-3">3.4.</span> Mais ça marche tout le temps ?</h3>
+<div id="outline-container-orgaf98f7a" class="outline-3">
+<h3 id="orgaf98f7a"><span class="section-number-3">3.4.</span> Mais ça marche tout le temps ?</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Oui. Même dans des dimensions supérieures (dans le plan, dans l&rsquo;espace, et vers
@@ -577,15 +577,15 @@ l&rsquo;infini et l&rsquo;au delà).
 </div>
 </div>
 
-<div id="outline-container-orgec38560" class="outline-3">
-<h3 id="orgec38560"><span class="section-number-3">3.5.</span> Que se passe-t-il lorsque les vecteurs sont colinéaires ?</h3>
+<div id="outline-container-org802b0ec" class="outline-3">
+<h3 id="org802b0ec"><span class="section-number-3">3.5.</span> Que se passe-t-il lorsque les vecteurs sont colinéaires ?</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Réfléchissons un peu. Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéaires
 s&rsquo;ils peuvent être placés sur un même droite. Mais alors, le parallélogramme
 formé est plat. Donc son aire est&#x2026; Nulle ! On retrouve la proposition :
 </p>
-<div class="prop" id="org8010d4b">
+<div class="prop" id="orgfef6b46">
 <p>
 Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéaires si et seulement si
 \[
@@ -603,7 +603,7 @@ Comme les choses sont bien faites !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-11-05 ven. 09:11</p>
+<p class="date">Created: 2021-12-27 lun. 22:42</p>
 </div>
 </body>
 </html>
