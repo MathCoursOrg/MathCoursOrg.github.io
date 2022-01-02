@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-12-27 lun. 22:29 -->
+<!-- 2022-01-01 sam. 18:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Triangle Pascal</title>
@@ -201,19 +201,23 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
+</div><div id="content" class="content">
 <h1 class="title">Triangle Pascal</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc92a050">1. Calculer le triangle de Pascal</a></li>
+<li><a href="#orgb8addfa">1. Calculer le triangle de Pascal</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc92a050" class="outline-2">
-<h2 id="orgc92a050"><span class="section-number-2">1.</span> Calculer le triangle de Pascal</h2>
+<div id="outline-container-orgb8addfa" class="outline-2">
+<h2 id="orgb8addfa"><span class="section-number-2">1.</span> Calculer le triangle de Pascal</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On peut calculer le triangle de Pascal à l&rsquo;aide de Python. Cela permet
@@ -222,20 +226,20 @@ supérieures.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python" id="org71c0560"><span style="color: #fb2874;">def</span> <span style="color: #b6e63e;">coefBinom</span>(k, n) :
-    <span style="color: #fb2874;">if</span> k &gt; n <span style="color: #fb2874;">or</span> k &lt; <span style="color: #9c91e4; font-weight: bold;">0</span>:
-        <span style="color: #fb2874;">return</span> <span style="color: #9c91e4; font-weight: bold;">0</span>
-    <span style="color: #fb2874;">elif</span> n &lt; <span style="color: #9c91e4; font-weight: bold;">2</span> :
-        <span style="color: #fb2874;">return</span> <span style="color: #9c91e4; font-weight: bold;">1</span>
-    <span style="color: #fb2874;">else</span> :
-        <span style="color: #fb2874;">return</span> coefBinom(k, n-<span style="color: #9c91e4; font-weight: bold;">1</span>) + coefBinom(k-<span style="color: #9c91e4; font-weight: bold;">1</span>,n-<span style="color: #9c91e4; font-weight: bold;">1</span>)
+<pre class="src src-python" id="orgfb74278"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">coefBinom</span>(k, n) :
+    <span style="font-weight: bold;">if</span> k &gt; n <span style="font-weight: bold;">or</span> k &lt; <span style="font-weight: bold; text-decoration: underline;">0</span>:
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">0</span>
+    <span style="font-weight: bold;">elif</span> n &lt; <span style="font-weight: bold; text-decoration: underline;">2</span> :
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">1</span>
+    <span style="font-weight: bold;">else</span> :
+        <span style="font-weight: bold;">return</span> coefBinom(k, n-<span style="font-weight: bold; text-decoration: underline;">1</span>) + coefBinom(k-<span style="font-weight: bold; text-decoration: underline;">1</span>,n-<span style="font-weight: bold; text-decoration: underline;">1</span>)
 
-<span style="color: #fd971f;">n</span> = <span style="color: #9c91e4; font-weight: bold;">11</span>
-<span style="color: #fb2874;">for</span> i <span style="color: #fb2874;">in</span> <span style="color: #fd971f;">range</span>(<span style="color: #9c91e4; font-weight: bold;">1</span>,n+<span style="color: #9c91e4; font-weight: bold;">1</span>):
-    <span style="color: #fd971f;">txt</span> = <span style="color: #e2c770;">"|"</span>
-    <span style="color: #fb2874;">for</span> j <span style="color: #fb2874;">in</span> <span style="color: #fd971f;">range</span>(i+<span style="color: #9c91e4; font-weight: bold;">1</span>):
-        <span style="color: #fd971f;">txt</span> += <span style="color: #e2c770;">" "</span> + <span style="color: #fd971f;">str</span>(coefBinom(j, i)) + <span style="color: #e2c770;">"|"</span>
-    <span style="color: #fb2874;">print</span>(txt)
+<span style="font-weight: bold; font-style: italic;">n</span> = <span style="font-weight: bold; text-decoration: underline;">11</span>
+<span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold; text-decoration: underline;">1</span>,n+<span style="font-weight: bold; text-decoration: underline;">1</span>):
+    <span style="font-weight: bold; font-style: italic;">txt</span> = <span style="font-style: italic;">"|"</span>
+    <span style="font-weight: bold;">for</span> j <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(i+<span style="font-weight: bold; text-decoration: underline;">1</span>):
+        <span style="font-weight: bold; font-style: italic;">txt</span> += <span style="font-style: italic;">" "</span> + <span style="font-weight: bold;">str</span>(coefBinom(j, i)) + <span style="font-style: italic;">"|"</span>
+    <span style="font-weight: bold;">print</span>(txt)
 </pre>
 </div>
 
@@ -443,7 +447,7 @@ On obtient le résultat suivant :
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-12-27 lun. 22:29</p>
+<p class="date">Created: 2022-01-01 sam. 18:07</p>
 </div>
 </body>
 </html>

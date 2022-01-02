@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-12-27 lun. 22:43 -->
+<!-- 2022-01-01 sam. 18:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Logarithme</title>
@@ -222,47 +222,51 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
+</div><div id="content" class="content">
 <h1 class="title">Cours Logarithme</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org459083f">1. Les puissances</a>
+<li><a href="#org6955687">1. Les puissances</a>
 <ul>
-<li><a href="#orgc4d4ac3">1.1. Definition</a></li>
-<li><a href="#orgb99e088">1.2. Propriétés des puissances</a></li>
-<li><a href="#org0376466">1.3. La fonction puissance</a>
+<li><a href="#org866ac14">1.1. Definition</a></li>
+<li><a href="#orgbe402e3">1.2. Propriétés des puissances</a></li>
+<li><a href="#org3862327">1.3. La fonction puissance</a>
 <ul>
-<li><a href="#org87927bb">1.3.1. Définition</a></li>
-<li><a href="#org6267e8d">1.3.2. Tableau de valeurs de la fonction puissance</a></li>
-<li><a href="#org182daf9">1.3.3. Puissance \(0\) et puissances négatives, comment ça marche ?</a></li>
-<li><a href="#org89a70e1">1.3.4. Puissance non entières</a></li>
+<li><a href="#org7ae6562">1.3.1. Définition</a></li>
+<li><a href="#orgb1777f9">1.3.2. Tableau de valeurs de la fonction puissance</a></li>
+<li><a href="#org5c26449">1.3.3. Puissance \(0\) et puissances négatives, comment ça marche ?</a></li>
+<li><a href="#org017c89e">1.3.4. Puissance non entières</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org15e8950">2. La fonction logarithme décimale</a>
+<li><a href="#orge559e68">2. La fonction logarithme décimale</a>
 <ul>
-<li><a href="#orgf68fa31">2.1. Propriétés magiques du logarithme</a></li>
-<li><a href="#orgdf46960">2.2. Avertissement : on ne peut pas calculer le logarithme de tous les nombres</a></li>
+<li><a href="#org9e71d40">2.1. Propriétés magiques du logarithme</a></li>
+<li><a href="#orgcfc2581">2.2. Avertissement : on ne peut pas calculer le logarithme de tous les nombres</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org459083f" class="outline-2">
-<h2 id="org459083f"><span class="section-number-2">1.</span> Les puissances</h2>
+<div id="outline-container-org6955687" class="outline-2">
+<h2 id="org6955687"><span class="section-number-2">1.</span> Les puissances</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgc4d4ac3" class="outline-3">
-<h3 id="orgc4d4ac3"><span class="section-number-3">1.1.</span> Definition</h3>
+<div id="outline-container-org866ac14" class="outline-3">
+<h3 id="org866ac14"><span class="section-number-3">1.1.</span> Definition</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 #+attr<sub>latex</sub> :options {La notation puissance}
 </p>
-<div class="defi" id="org4d7d8e9">
+<div class="defi" id="org46481e1">
 <p>
 On rappelle que la notation \(a^{n}\) désigne le calcul :
 </p>
@@ -274,15 +278,15 @@ On rappelle que la notation \(a^{n}\) désigne le calcul :
 </div>
 </div>
 
-<div id="outline-container-orgb99e088" class="outline-3">
-<h3 id="orgb99e088"><span class="section-number-3">1.2.</span> Propriétés des puissances</h3>
+<div id="outline-container-orgbe402e3" class="outline-3">
+<h3 id="orgbe402e3"><span class="section-number-3">1.2.</span> Propriétés des puissances</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Voici toutes les propriétés de calcul surs les puissances.
 </p>
 
 
-<div class="prop" id="org1d3d440">
+<div class="prop" id="org98f1a3b">
 <p>
 Soit \(a\) un nombre réel non nul, \(p\) et \(q\) deux nombres quelconque. Alors :
 \[
@@ -310,7 +314,7 @@ Ces propriétés auront des répercussions sur les propriétés du logarithme, q
 nous verrons juste après.
 </p>
 
-<div class="ex" id="orgbd38a23">
+<div class="ex" id="org79d4044">
 <p>
 Le calcul
 \[
@@ -331,7 +335,7 @@ Mais cela fonctionne aussi pour les nombres à virgules, par exemple
 
 </div>
 
-<div class="rem" id="orgb6ada03">
+<div class="rem" id="org24769e5">
 <p>
 On peut donc remarquer que la fonction puissance permet de transformer les
 sommes de puissances en produit. Expliquons cela plus précisemment.
@@ -360,14 +364,14 @@ Autrement dit,
 </div>
 </div>
 
-<div id="outline-container-org0376466" class="outline-3">
-<h3 id="org0376466"><span class="section-number-3">1.3.</span> La fonction puissance</h3>
+<div id="outline-container-org3862327" class="outline-3">
+<h3 id="org3862327"><span class="section-number-3">1.3.</span> La fonction puissance</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org87927bb" class="outline-4">
-<h4 id="org87927bb"><span class="section-number-4">1.3.1.</span> Définition</h4>
+<div id="outline-container-org7ae6562" class="outline-4">
+<h4 id="org7ae6562"><span class="section-number-4">1.3.1.</span> Définition</h4>
 <div class="outline-text-4" id="text-1-3-1">
-<div class="defi" id="org7505e8f">
+<div class="defi" id="orgbe1306d">
 <p>
 On définit la fonction puissance de \(10\) par la fonction qui associe à un nombre
 \(x\) le nombre \(10^{x}\). Si on note \(f\) cette fonction, alors on peut écrire que
@@ -384,8 +388,8 @@ f(x) = 10^x
 </div>
 </div>
 
-<div id="outline-container-org6267e8d" class="outline-4">
-<h4 id="org6267e8d"><span class="section-number-4">1.3.2.</span> Tableau de valeurs de la fonction puissance</h4>
+<div id="outline-container-orgb1777f9" class="outline-4">
+<h4 id="orgb1777f9"><span class="section-number-4">1.3.2.</span> Tableau de valeurs de la fonction puissance</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 Si on construit un tableau avec à gauche des valeurs de \(x\), et à droite les
@@ -477,8 +481,8 @@ La valeurs des puissances <b>entières</b> de \(10\) sont à connaître par cœu
 </div>
 </div>
 
-<div id="outline-container-org182daf9" class="outline-4">
-<h4 id="org182daf9"><span class="section-number-4">1.3.3.</span> Puissance \(0\) et puissances négatives, comment ça marche ?</h4>
+<div id="outline-container-org5c26449" class="outline-4">
+<h4 id="org5c26449"><span class="section-number-4">1.3.3.</span> Puissance \(0\) et puissances négatives, comment ça marche ?</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 Faisons un petit rappel sur les puissances négatifs d&rsquo;un nombre. Regardons par
@@ -527,8 +531,8 @@ Ou encore
 </p>
 </div>
 </div>
-<div id="outline-container-org89a70e1" class="outline-4">
-<h4 id="org89a70e1"><span class="section-number-4">1.3.4.</span> Puissance non entières</h4>
+<div id="outline-container-org017c89e" class="outline-4">
+<h4 id="org017c89e"><span class="section-number-4">1.3.4.</span> Puissance non entières</h4>
 <div class="outline-text-4" id="text-1-3-4">
 <p>
 Bien que cela ne semble pas intuitif, on peut définir mathématiquement (et c&rsquo;est
@@ -542,7 +546,7 @@ programme de calcul en Python. On pourrait le calculer à la main, mais c&rsquo;
 très compliqué.
 </p>
 
-<div class="rem" id="org86a1eb2">
+<div class="rem" id="orgf167be2">
 <p>
 Si vous commencez avec une puissance qui n&rsquo;est pas entière, vous avez peu de
 chance de tomber sur un nombre entier. Ici, on a pris comme puissance \(1.5\), et
@@ -553,7 +557,7 @@ le résultat, \(31,622\) n&rsquo;est pas entier.
 </div>
 
 <ol class="org-ol">
-<li><a id="org3badd2e"></a>Exemple de puissance non entière : la puissance \(\frac{1}{2}\)<br />
+<li><a id="org0af3920"></a>Exemple de puissance non entière : la puissance \(\frac{1}{2}\)<br />
 <div class="outline-text-5" id="text-1-3-4-1">
 <p>
 On peut expliquer par exemple comment calculer le nombre \(10^{\frac{1}{2}}\) (qui
@@ -585,13 +589,13 @@ non entières d&rsquo;un nombre, en mathématiques.
 </div>
 </div>
 
-<div id="outline-container-org15e8950" class="outline-2">
-<h2 id="org15e8950"><span class="section-number-2">2.</span> La fonction logarithme décimale</h2>
+<div id="outline-container-orge559e68" class="outline-2">
+<h2 id="orge559e68"><span class="section-number-2">2.</span> La fonction logarithme décimale</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 #+attr<sub>latex</sub> :options {Fonction logarithme}
 </p>
-<div class="defi" id="orgcd5f8fe">
+<div class="defi" id="orgef05dca">
 <p>
 Cette fonction est la fonction qui «lit» le tableau de la fonction puissance de \(10\)
 dans l&rsquo;autre sens. Cette fonction se note \(\log\).
@@ -668,15 +672,15 @@ Le logarithme décimale permet de «mesurer» entre quelles puissances de dix un
 \end{align*}
 </div>
 
-<div id="outline-container-orgf68fa31" class="outline-3">
-<h3 id="orgf68fa31"><span class="section-number-3">2.1.</span> Propriétés magiques du logarithme</h3>
+<div id="outline-container-org9e71d40" class="outline-3">
+<h3 id="org9e71d40"><span class="section-number-3">2.1.</span> Propriétés magiques du logarithme</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Puisque la fonction puissance a des propriétés, le logarithme qui est exactement
 la fonction «anti-puissance», a aussi des propriétés.
 </p>
 
-<div class="prop" id="orgc19ef83">
+<div class="prop" id="org404d954">
 <p>
 Soit \(a\) et \(b\) des nombres strictement positifs. Alors
 \[
@@ -691,7 +695,7 @@ pratique dans beaucoup de domaines, que ce soit les mathématiques (bien sûr),
 mais aussi la physique, la chimie, l&rsquo;astronomie, l&rsquo;économie, les statistiques, etc..
 </p>
 
-<div class="ex" id="org4d8587e">
+<div class="ex" id="org5a6bb6e">
 <p>
 Un petit exemple pour bien comprendre. Si par exemple je veux calculer
 \[
@@ -720,7 +724,7 @@ bien vous familiarisé avec la propriété fondamentale du logarithme, puis,
 d&rsquo;essayer de vous frotter aux suivantes.
 </p>
 
-<div class="prop" id="orgf61d312">
+<div class="prop" id="org9db7bf3">
 <p>
 Soit \(a\) un nombre strictement positif, et \(p\) un nombre quelconque. alors
 \[
@@ -730,7 +734,7 @@ Soit \(a\) un nombre strictement positif, et \(p\) un nombre quelconque. alors
 
 </div>
 
-<div class="prop" id="org9364140">
+<div class="prop" id="orga136217">
 <p>
 Pour \(a\) et \(b\) deux nombres strictement positifs, on a :
 \[
@@ -743,7 +747,7 @@ produits en sommes.
 
 </div>
 
-<div class="prop" id="org639fa16">
+<div class="prop" id="org2e17847">
 <p>
 Soit \(a\) un nombre strictement positif. Alors :
 \[
@@ -756,7 +760,7 @@ Soit \(a\) un nombre strictement positif. Alors :
 <p>
 Un petit exemple de la dernière proposition.
 </p>
-<div class="ex" id="orge608080">
+<div class="ex" id="org39d3ba1">
 <p>
 \[
 \log(60) = \log(10 \times 6) = 1 + \log(6)
@@ -777,7 +781,7 @@ fait seulement \(12\).
 
 </div>
 
-<div class="prop" id="orgd647dce">
+<div class="prop" id="orge5a5290">
 <p>
 Soit \(a\) un nombre strictement positif. Alors
 \[
@@ -787,7 +791,7 @@ Soit \(a\) un nombre strictement positif. Alors
 
 </div>
 
-<div class="ex" id="org17076cc">
+<div class="ex" id="orgd6a7163">
 <p>
 Un exemple pour la route.
 \[
@@ -801,17 +805,17 @@ C&rsquo;est une manière de voir pourquoi pour un nombre entre \(0\) et \(1\) (c
 </div>
 </div>
 
-<div id="outline-container-orgdf46960" class="outline-3">
-<h3 id="orgdf46960"><span class="section-number-3">2.2.</span> Avertissement : on ne peut pas calculer le logarithme de tous les nombres</h3>
+<div id="outline-container-orgcfc2581" class="outline-3">
+<h3 id="orgcfc2581"><span class="section-number-3">2.2.</span> Avertissement : on ne peut pas calculer le logarithme de tous les nombres</h3>
 <div class="outline-text-3" id="text-2-2">
-<div class="prop" id="org6e981f3">
+<div class="prop" id="orgd7fc7ef">
 <p>
 Le logarithme n&rsquo;est défini <b>que</b> pour les nombres strictement positifs.
 </p>
 
 </div>
 
-<div class="ex" id="org46f1316">
+<div class="ex" id="orgdef3177">
 <p>
 Par exemple, le \(\log(0)\) est un nombre <b>qui n&rsquo;existe pas</b>, dans le sens où l&rsquo;on
 ne peut pas lui donner une valeur qui ait du sens.
@@ -819,7 +823,7 @@ ne peut pas lui donner une valeur qui ait du sens.
 
 </div>
 
-<div class="dem" id="orgf4bd024">
+<div class="dem" id="org373f74c">
 <p>
 Pour donner une explication, il faut se souvenir que le logarithme a été créé
 pour supprimer une «puissance de \(10\)». C&rsquo;est-à-dire, que pour toutes puissances
@@ -839,7 +843,7 @@ graphiquement de toutes ces informations.
 </p>
 
 
-<div id="org27697db" class="figure">
+<div id="org72b0a42" class="figure">
 <p><img src="./images/logarithme.svg" alt="logarithme.svg" class="org-svg" />
 </p>
 </div>
@@ -863,7 +867,7 @@ défini. Donc, il n&rsquo;y a rien à afficher.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2021-12-27 lun. 22:43</p>
+<p class="date">Created: 2022-01-01 sam. 18:07</p>
 </div>
 </body>
 </html>

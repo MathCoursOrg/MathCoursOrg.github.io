@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:04 -->
+<!-- 2022-01-01 sam. 18:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Factorisation et Developpement</title>
+<title>Indicateur Statisque</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -227,114 +227,44 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Factorisation et Developpement</h1>
+<h1 class="title">Indicateur Statisque</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc967f93">1. Reconnaître une forme factorisée et une forme développée</a></li>
-<li><a href="#org5bcf37e">2. Développer</a>
+<li><a href="#org32f379b">1. Série statistique</a>
 <ul>
-<li><a href="#org4260114">2.1. Techniques pour développer un produit de deux facteurs</a></li>
+<li><a href="#orgad93947">1.1. Définition</a></li>
+<li><a href="#orgf8da475">1.2. Moyenne</a></li>
+<li><a href="#org2415564">1.3. Médiane</a></li>
+<li><a href="#org936bb2a">1.4. Quartile</a></li>
+<li><a href="#org5ec5146">1.5. Écart interquartile</a></li>
 </ul>
 </li>
-<li><a href="#org2ccc3f0">3. Factoriser</a>
-<ul>
-<li><a href="#orgf6942bc">3.1. Identités remarquables</a>
-<ul>
-<li><a href="#orgc2d8549">3.1.1. Première identité</a></li>
-<li><a href="#org90aeb0d">3.1.2. Deuxième identité</a></li>
-<li><a href="#org44b1e2d">3.1.3. Troisième identité</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orga27cd48">4. Applications théoriques : résolution d&rsquo;équations</a></li>
-<li><a href="#org969e75f">5. Applications concrètes : calculer mentalement des carrés</a></li>
-<li><a href="#org00d6a55">6. Application concrete et théorique : extraction d&rsquo;une racine carré</a></li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-orgc967f93" class="outline-2">
-<h2 id="orgc967f93"><span class="section-number-2">1.</span> Reconnaître une forme factorisée et une forme développée</h2>
+<div id="outline-container-org32f379b" class="outline-2">
+<h2 id="org32f379b"><span class="section-number-2">1.</span> Série statistique</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgad93947" class="outline-3">
+<h3 id="orgad93947"><span class="section-number-3">1.1.</span> Définition</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="defi" id="org0a27f25">
 <p>
-Certains calculs sont sous forme factorisée.
-</p>
-
-<div class="ex" id="orgf9b0c59">
-<p>
-L&rsquo;expression :
-\[
-(x+7)\times (x - 4)
-\]
-est sous forme factorisée
+Une série statistique est une série de valeurs organisés souvent sous forme de
+tableau.
 </p>
 
 </div>
 
-<div class="ex" id="org00aef8a">
+<div class="ex" id="orge7f7358">
 <p>
-L&rsquo;expression :
-\[
-        x^{2} + 3x
-    \]
-n&rsquo;est pas factorisée, puisque on peut encore trouver des facteurs communs aux différents termes. Cette expression est sous forme développé car il n&rsquo;y a que des produit de termes simples
-</p>
-
-</div>
-
-<div class="ex" id="org0d3f8e6">
-<p>
-   L&rsquo;expression :
-\[
-x(x+1) + 1
-\]
-N&rsquo;est ni sous forme factorisée (car le terme \(1\) n&rsquo;est pas dans un produit) ni sous forme développée (car il existe le terme \(x(x+1)\) qui peut encore être développé
-</p>
-
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org5bcf37e" class="outline-2">
-<h2 id="org5bcf37e"><span class="section-number-2">2.</span> Développer</h2>
-<div class="outline-text-2" id="text-2">
-<p>
- #+begin<sub>defi</sub>{Développement}
-On appelle développement le processus qui permet de passer d&rsquo;une forme développer à une forme factorisée.
- #+end<sub>defi</sub>
-</p>
-
-<div class="ex" id="orgcf06d6f">
-<p>
-\[
-        x \times (x + 5) = x^{2} + 5x
-    \]
-</p>
-
-</div>
-</div>
-
-<div id="outline-container-org4260114" class="outline-3">
-<h3 id="org4260114"><span class="section-number-3">2.1.</span> Techniques pour développer un produit de deux facteurs</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-On peut faire appel à un tableau.
-</p>
-
-<p>
-Si on veut développer le produit suivant :
-</p>
-\begin{align*}
-(x-4)\times (x + 3)
-\end{align*}
-
-<p>
-on peut utiliser le tableau suivant :
+On peut regarder les notes d&rsquo;une classe d&rsquo;élèves. Les notes sont situés sur la
+première ligne, le <b>nombre d&rsquo;élèves</b> qui on eu cette note est sur la deuxième
+ligne.
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -343,325 +273,169 @@ on peut utiliser le tableau suivant :
 <colgroup>
 <col  class="org-left" />
 
-<col  class="org-left" />
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
 
 <col  class="org-right" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">&times;</th>
 <th scope="col" class="org-left">x</th>
+<th scope="col" class="org-right">1</th>
+<th scope="col" class="org-right">2</th>
 <th scope="col" class="org-right">3</th>
+<th scope="col" class="org-right">4</th>
+<th scope="col" class="org-right">5</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">x</td>
-<td class="org-left">x<sup>2</sup></td>
-<td class="org-right">3x</td>
-</tr>
-
-<tr>
-<td class="org-left">-4</td>
-<td class="org-left">-4x</td>
-<td class="org-right">-12</td>
+<td class="org-left">y</td>
+<td class="org-right">3</td>
+<td class="org-right">2</td>
+<td class="org-right">7</td>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
 </tr>
 </tbody>
 </table>
 
-<p>
-Puis faire la somme de tous les termes du tableau :
- \[
-    (x-4)\times (x + 3) =  x^{2} + 3x - 4x -12 = x^{2} -x -12
- \]
-</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2ccc3f0" class="outline-2">
-<h2 id="org2ccc3f0"><span class="section-number-2">3.</span> Factoriser</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-On appelle la factorisation le processus qui permet de passer d&rsquo;une forme développée à une forme factorisée
-</p>
-</div>
 
-<div id="outline-container-orgf6942bc" class="outline-3">
-<h3 id="orgf6942bc"><span class="section-number-3">3.1.</span> Identités remarquables</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-orgf8da475" class="outline-3">
+<h3 id="orgf8da475"><span class="section-number-3">1.2.</span> Moyenne</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="defi" id="orgb078b1d">
 <p>
-Les identités remarquables servent à reconnaitres des expressions pour développer ou factoriser. Il faut donc les connaître dans les deux sens (de gauche à droite du signe égal, mais également de droite à gauche).
-</p>
-</div>
-
-<div id="outline-container-orgc2d8549" class="outline-4">
-<h4 id="orgc2d8549"><span class="section-number-4">3.1.1.</span> Première identité</h4>
-<div class="outline-text-4" id="text-3-1-1">
-<div class="prop" id="orgcc94a7b">
-<p>
-Pour tout nombres réels \(a\) et \(b\), on a l&rsquo;égalité suivante
- \[
-    (a + b)^{2} = a^{2} + 2ab + b^{2}
- \]
-</p>
-
-</div>
-
-<div class="dem" id="orgeee3506">
-<p>
-\textit{Version graphique}
-</p>
-
-<p>
-\textit{Version littérale}
-</p>
-
-<p>
-On développe le carré par :
-</p>
-\begin{align*}
-  (a+b)^{2} &= (a +b) \times (a +b ) \\
-            &= a \times (a +b ) + b \times (a+b)\\
-            &= a\times a + a \times b + b \times a + b \times b \\
-            &= a^{2} + ab + ba + b^{2} \\
-            &= a^{2} + 2 a \times b + b^{2}
-\end{align*}
-<p>
-En on trouve bien l&rsquo;égalité annoncée
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org90aeb0d" class="outline-4">
-<h4 id="org90aeb0d"><span class="section-number-4">3.1.2.</span> Deuxième identité</h4>
-<div class="outline-text-4" id="text-3-1-2">
-<p>
-En partant de la première identité, on peut en déduire la deuxième facilement.
-</p>
-<div class="prop" id="org7d80ace">
-<p>
-Pour tout nombre réel \(a\), \(b\), on a :
+Pour calculer la moyenne \(m\) d&rsquo;une série statistique \((x_{i}, y_{i})_{i}\) :
 \[
-    (a-b)^{2} = a^{2} - 2a \times b + b^{2}
-  \]
+m = \frac{ \sum_{i=0}^{{n}} x_{i}y_{i} }{ n }
+\]
+Où \(n = \sum y_{i}\)
 </p>
 
 </div>
 
-<div class="dem" id="orgd1b8e95">
+<div class="ex" id="orgd0b778d">
 <p>
-Pour montrer cette identité, on peut soit redévelopper comme cela a été fait à
-la démonstration précédente, soit, puisque l&rsquo;identité précédente est valable
-pour tous les nombres \(a\), et \(b\), on peut \emph{remplacer} \(b\) par \(-b\) pour
-obtenir :
+Dans l&rsquo;exemple précédent, le calcul de la moyenne donne :
 \[
-    (a + (-b)) = a^{2} + 2 \times a \times (-b) + (-b)^{2}
-  \]
-Sauf que \((-b)^{2} = b^{2}\), donc on obtient
-\[
-    (a-b) = a^{2} - 2 \times a \times b + b^{2}
-  \]
-</p>
-
-</div>
-
-<div class="ex" id="org3ccc31a">
-<p>
-On peut par exemple calculer \(98^{2}\) en remarquant que \(98= 100 - 2\), et donc :
-\[
-     98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
-   \]
-Finalement :
-\[
-     98^{2} = 10000 - 400 + 4 =  9604
-   \]
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org44b1e2d" class="outline-4">
-<h4 id="org44b1e2d"><span class="section-number-4">3.1.3.</span> Troisième identité</h4>
-<div class="outline-text-4" id="text-3-1-3">
-<p>
-La troisième identité est bien différente des deux autres.
-</p>
-<div class="prop" id="org1c82be1">
-<p>
-Pour tout \(a\) et \(b\) réel, on a l&rsquo;égalité suivante :
-\[
-    (a+b)(a-b) = a^{2} - b^{2}
-  \]
-</p>
-
-</div>
-
-<div class="dem" id="org06c8579">
-<p>
-On démontre cette égalité à l&rsquo;aide d&rsquo;un développement comme pour la première identité
-</p>
-\begin{align*}
-  (a+b)(a-b) &= a\times (a - b) + b \times (a - b)\\
-             &= a\times a - a \times b + b \times a - b \times b \\
-             &= a^{2} - b^{2}
-\end{align*}
-
-</div>
-
-<div class="rem" id="org7763254">
-<p>
-Qu&rsquo;obtient-on lorsque l&rsquo;on remplace \(b\) par \(-b\), quelle nouvelle identité découvre-t-on  ?
-</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orga27cd48" class="outline-2">
-<h2 id="orga27cd48"><span class="section-number-2">4.</span> Applications théoriques : résolution d&rsquo;équations</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-Les identités remarquables permettent de résoudre des équations sans faire
-d&rsquo;erreur. Regardons précisemment l&rsquo;équations :
-\[
-    x^{2} = 49
+m = \frac{1\times3 + 2\times2 + 3\times7 + 4 \times1 + 5\times3}{3 + 2 + 7 + 1 + 3}
 \]
 </p>
 
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2415564" class="outline-3">
+<h3 id="org2415564"><span class="section-number-3">1.3.</span> Médiane</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="defi" id="orgb8f2ebd">
 <p>
-On sait déjà qu&rsquo;une solution est donnée par \(x = 7\), puisque le carré de \(7\)
-fait \(49\). Mais est-ce la seule solution ?
+La médiane d&rsquo;une série statistique, est une valeur \(m\) tel que \(50\%\) des valeurs
+soit en dessous, et \(50\%\) soit au dessus.
 </p>
 
-<p>
-On va utiliser une identité remarquable pour le savoir.
-</p>
+</div>
 
-<div class="meth" id="org2ee01b7">
+<div class="ex" id="org3ee2098">
 <p>
-On soustrait \(49\) à chaque membre de l&rsquo;équation, pour obtenir la nouvelle
-équation (équivalente à la première) suivante :
-</p>
-
-<p>
-\(
-  x^{2} - 49 = 0
-  \)
-</p>
-
-<p>
-On peut
-remplacer 49 par \(7^{2}\), pour obtenir :
-</p>
-
-<p>
-\[
-    x^{2} - 7^{2} = 0
-  \]
-</p>
-
-<p>
-On peut utiliser l&rsquo;identité remarquable \(a^{2} - b^{2} = (a+b)(a-b)\), avec \(a =
-  x\) et \(b = 7\), on obtient donc :
-</p>
-
-<p>
-\(
-    (x-7)(x+7) = 0
-  \)
-</p>
-
-<p>
-Puis, si un produit est nul, c&rsquo;est
-que l&rsquo;un de ses facteurs est nul, donc soit \(x\) vaut \(7\) (on retrouve une
-solution vue précédemment), soit \(x\) vaut \(-7\) (et c&rsquo;est souvent l&rsquo;equation que
-l&rsquo;on oublie !)
+Dans l&rsquo;exemple précédent, on voit qu&rsquo;il y a en tout \(16\) élèves, donc il faut
+regarder la note du $8$-ième élève dans la liste des notes triées. Ici, le
+$8$-ième élève à \(3\) (puisque \(3+2 < 8\), et \(3+2 +7 > 8\)). Donc la médianne de
+la série statistique est \(3\).
 </p>
 
 </div>
 </div>
 </div>
 
-<div id="outline-container-org969e75f" class="outline-2">
-<h2 id="org969e75f"><span class="section-number-2">5.</span> Applications concrètes : calculer mentalement des carrés</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org936bb2a" class="outline-3">
+<h3 id="org936bb2a"><span class="section-number-3">1.4.</span> Quartile</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="defi" id="org787ae6c">
 <p>
-Si on considère le calcul de \(204^{2}\), on peut utiliser la relation suivante :
+On appelle quartile à \(p\) pourcent toutes valeur \(q\) tel que \(p\%\) des valeurs
+soient en dessous, et \(1-p\%\) soit au dessus.
 </p>
-\begin{align*}
-  204^{2} &= (200 + 4)^{2} \\
-          &= 200^{2}+2 \times 200 \times 4 + 4^{2}\\
-          &=  40000 + 1600 + 16 \\
-          &= 41616
-\end{align*}
-</div>
+
 </div>
 
-<div id="outline-container-org00d6a55" class="outline-2">
-<h2 id="org00d6a55"><span class="section-number-2">6.</span> Application concrete et théorique : extraction d&rsquo;une racine carré</h2>
-<div class="outline-text-2" id="text-6">
-<div class="meth" id="org947589c">
+<div class="ex" id="orgcd03d0f">
 <p>
-
+La médianne est un quartile à \(50\%\).
 </p>
 
+</div>
+
+<div class="ex" id="orgff0bb74">
 <p>
-On vient de voir par exemple que \(\sqrt{41616} = 204\). Peut-on calculer à la
-main les premieres décimales de \(\sqrt{41617}\) ?
+Dans l&rsquo;exemple précédent, l&rsquo;élève qui a la note telle que \(25\%\) soit en
+dessous, et \(75\%\) en dessous, est l&rsquo;élève qui se trouve à la $4$ième position
+de la liste des notes triées. La quatrième valeur est donc la note \(2\).
 </p>
 
+</div>
+
+<div class="defi" id="orgb2ec198">
 <p>
-On sait que \(\sqrt{41617} \approx 204\). Que doit-on rajouter à \(204\) pour
-s&rsquo;approcher le plus possible de \(\sqrt{41617}\) ?
+Le premier quartile correspond au quartile à \(25\%\)
 </p>
 
-<p>
-On pose \(h\) le nombre tel que
-</p>
-\begin{align*}
-    \sqrt{41617} = 204 + h
-\end{align*}
-<p>
-On obtient donc
-</p>
-\begin{align*}
-  41617 &= (204 + h)^{2} \\
-        &= 204^{2} + 2 \times 204 \times h + h^{2}\\
-        &= 41616 + 408 \times h + h^{2}
-\end{align*}
+</div>
 
+<div class="defi" id="org845155d">
 <p>
-Le terme \(h^{2}\) devrait être très très petit, donc on va à partir de maintenant
-considérer qu&rsquo;il est nul (alors qu&rsquo;il ne l&rsquo;est pas ! Mais on cherche une approximation !)
+Le troisième quartile correspond au quartile à \(75\%\).
 </p>
 
-<p>
-On se retrouve ainsi avec l&rsquo;expression :
-</p>
-\begin{align*}
-    1 = 408 \times h
-\end{align*}
-<p>
-Donc, si on considère que \(h^{2}\) est négligeable car très petit, on obtient
-finalement \(h = \frac{1}{408}\). Il vient :
-</p>
-\begin{align*}
-\sqrt{41617} &\approx 204 + \frac{1}{408}
-\end{align*}
+</div>
 
+<div class="ex" id="org9ef131c">
+<p>
+Le troisième quartile de l&rsquo;exemple précédent correspond à la $16-4 = 12$ième
+note triés dans l&rsquo;ordre. Ici, \(3+2+7 +1 = 12\), et \(3+2+7+1+3 > 12\). Donc \(4\) est
+la note qui correspond au troisième quartile de notre série statistique.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ec5146" class="outline-3">
+<h3 id="org5ec5146"><span class="section-number-3">1.5.</span> Écart interquartile</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="defi" id="org533ef87">
+<p>
+Un écart interquartile est la différence entre le troisième quartile et le
+premier quartile.
+</p>
+
+</div>
+
+<div class="ex" id="orgcfb57f6">
+<p>
+Dans l&rsquo;exemple précédent, le premier quartile était \(2\), et le troisième
+quartile était \(4\). Donc l&rsquo;écart interquartile est de \(2 = 4-2\).
+</p>
+
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-01 sam. 18:04</p>
+<p class="date">Created: 2022-01-01 sam. 18:06</p>
 </div>
 </body>
 </html>

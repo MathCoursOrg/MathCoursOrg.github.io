@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:05 -->
+<!-- 2022-01-01 sam. 18:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bienvenue dans le dossier des cours de mathématiques de secondes !</title>
+<title>Cours Puissance Fiche</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -193,6 +193,33 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -200,21 +227,132 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Bienvenue dans le dossier des cours de mathématiques de secondes !</h1>
+<h1 class="title">Cours Puissance Fiche</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2561f7b">1. Définition des puissances entières positives d&rsquo;un nombre réel</a></li>
+<li><a href="#orgb44a328">2. Définition des puissances entières négatives d&rsquo;un nombre réel</a></li>
+<li><a href="#orgca20164">3. Propriétés des puissances</a>
+<ul>
+<li><a href="#org5c57de6">3.1. Pour une même base</a></li>
+<li><a href="#org4bc7956">3.2. Pour une même puissance</a></li>
+<li><a href="#orga2a46ac">3.3. Avec les fractions</a></li>
+<li><a href="#org42815a7">3.4. Enchaînement de puissance d&rsquo;une même base</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2561f7b" class="outline-2">
+<h2 id="org2561f7b"><span class="section-number-2">1.</span> Définition des puissances entières positives d&rsquo;un nombre réel</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-Vous trouverez dans ce dossier tous les cours donnés en seconde générale !
+Si \(a\) est un nombre réel, et \(n\) un entier positif alors :
+\[
+a^{n} = \underbrace{a \times a \times a \ldots \times a}_{n \quad \textrm{fois}}
+\]
+Et :
+\[
+a^{0} = 1 \quad \textrm{si} \quad a \not = 0
+\]
 </p>
 
-
-
-<div id="org97876bf" class="figure">
-<p><img src="bienvenue.svg" alt="bienvenue.svg" class="org-svg" />
+<p>
+Attention :
+\[
+0^{0} \quad \textrm{n'existe pas}
+\]
 </p>
+</div>
+</div>
+
+<div id="outline-container-orgb44a328" class="outline-2">
+<h2 id="orgb44a328"><span class="section-number-2">2.</span> Définition des puissances entières négatives d&rsquo;un nombre réel</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Si \(a\) est un nombre réel <b>non nul</b>, et \(-n\) un entier négatif alors :
+\[
+a^{-n} = \frac{1}{a^{n}}
+\]
+Autrement dit, \(a^{-n}\) est l&rsquo;inverse de \(a^{n}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca20164" class="outline-2">
+<h2 id="orgca20164"><span class="section-number-2">3.</span> Propriétés des puissances</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5c57de6" class="outline-3">
+<h3 id="org5c57de6"><span class="section-number-3">3.1.</span> Pour une même base</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Si \(a\) est un nombre réel, et \(p, q\) deux entiers relatifs (s&rsquo;ils sont négatifs,
+il ne faut pas que \(a\) soit nul), alors :
+\[
+a^{p + q} = a^{p} \times a^{q}
+\]
+Le produit de puissance de même base, c&rsquo;est cette base puissance la somme des
+puissances.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4bc7956" class="outline-3">
+<h3 id="org4bc7956"><span class="section-number-3">3.2.</span> Pour une même puissance</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Si \(a\) et \(b\) sont deux nombres réels non nul, et \(p\) un nombre entier relatif :
+\[
+\left(a \times b\right)^{p} = a^{p} \times b^{p}
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga2a46ac" class="outline-3">
+<h3 id="orga2a46ac"><span class="section-number-3">3.3.</span> Avec les fractions</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Si \(a\) et \(b\) sont deux nombres non nul et \(p\) un nombre entier relatif :
+\[
+\left(\frac{a}{b} \right)^{p} = \frac{a^{p}}{b^{p}}
+\]
+</p>
+
+<p>
+\[
+\frac{1}{a^{p}} = \left( \frac{1}{a} \right)^{p}
+\]
+</p>
+
+<p>
+\[
+\left(\frac{a}{b} \right)^{-p} =\left(\frac{b}{a} \right)^{p}
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42815a7" class="outline-3">
+<h3 id="org42815a7"><span class="section-number-3">3.4.</span> Enchaînement de puissance d&rsquo;une même base</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Si \(a\) est un nombre réel non nul, \(p\) et \(q\) deux entiers relatifs, alors :
+\[
+\left(a^{p}\right)^{q} = a^{p\times q}
+\]
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-01 sam. 18:05</p>
+<p class="date">Created: 2022-01-01 sam. 18:06</p>
 </div>
 </body>
 </html>
