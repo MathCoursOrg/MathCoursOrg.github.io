@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:03 -->
+<!-- 2022-01-24 lun. 20:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Valeur Absolue</title>
@@ -193,12 +193,6 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -244,13 +238,15 @@ La fonction valeur absolue est une fonction qui s&rsquo;écrit \(x \mapsto |x|\)
 <div id="outline-container-org928ceef" class="outline-3">
 <h3 id="org928ceef"><span class="section-number-3">1.2.</span> Calcul</h3>
 <div class="outline-text-3" id="text-1-2">
+<div class="defi" id="orgf3c8713">
 <p>
-#+begin<sub>defi</sub>{La valeur absolue}
-La valeur absolue d&rsquo;un nombre correspond exactement a sa distance à \(0\)
-#+end<sub>defi</sub>
+La valeur absolue d&rsquo;un réel \(x\) est définie par \(-x\) si \(x\) est négatif, et \(x\)
+si \(x\) est positif. On remarque que la valeur absolue de \(0\) est bien \(0\). On
+désigne la valeur absolue d&rsquo;un nombre \(x\) avec la notation \(|x|\).
 </p>
 
-<div class="ex" id="org3104ded">
+</div>
+<div class="ex" id="orgfa85f7b">
 <p>
 La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3\) est à distance \(3\) de \(0\).
 </p>
@@ -267,7 +263,7 @@ La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3
 Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
 </p>
 
-<div id="orgee3bf1c" class="figure">
+<div id="orgcd35c32" class="figure">
 <p><img src="./images/valeurAbsolueGraphe.svg" alt="valeurAbsolueGraphe.svg" class="org-svg" />
 </p>
 </div>
@@ -280,14 +276,14 @@ néanmoins, elle est différente.
 
 <p>
 On peut donc confirmer graphiquement que la fonction valeur absolue est une
-fonction <b>pair</b> !
+fonction <b>paire</b> !
 </p>
 
-<div class="prop" id="org4e536df">
+<div class="prop" id="org723c780">
 <p>
 La fonction valeur absolue est une fonction paire. Sa représentation graphique
 est constitué de tous les points du plan qui admettent comme coordonnées
-\((x, |x|)\).
+\((x; |x|)\).
 </p>
 
 </div>
@@ -306,7 +302,7 @@ Mais la valeur absolue de la différence entre deux nombres représente la
 distance entre ces deux nombres.
 </p>
 
-<div class="ex" id="org620c879">
+<div class="ex" id="org3730c20">
 <p>
 Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre \(3\), qui vaut donc \(1\). Si on fait le calcul, on a :
 </p>
@@ -321,12 +317,54 @@ On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la di
 </p>
 
 </div>
+
+<div class="defi" id="org47f15de">
+<p>
+Soient \(a\) et \(b\) deux nombres réels. Alors, la distance \(d(a, b)\) entre ces deux nombres est donnée :
+\[
+d(a, b) = b - a \quad \text{si } b > a
+\]
+et
+\[
+d(a,b) = a - b \quad \text{si } a > b
+\]
+Donc, dans tous les cas :
+\[
+d(a, b) = | b - a | = | a - b |
+\]
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7141feb" class="outline-2">
+<h2 id="org7141feb"><span class="section-number-2">4.</span> Application : chercher une bonne approximation d&rsquo;un nombre réel.</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Lorsque l&rsquo;on va essayer d&rsquo;approximer un nombre réel comme \(x = \sqrt{2}\) à
+l&rsquo;aide d&rsquo;un algorithme, il va falloir écrire une boucle de la forme :
+</p>
+
+<p class="verse">
+TANT QUE d(a, x) &gt; 0.01<br />
+ALORS<br />
+&#xa0;&#xa0;&#xa0;&#xa0;&#x2026;.<br />
+</p>
+
+<p>
+Autrement dit, dans ces codes, l&rsquo;approximation sera donnée par la valeur de la
+variable \(a\), et \(x\) est la valeur que l&rsquo;on essaie d&rsquo;approcher. On demande à
+l&rsquo;algorithme de <b>continuer</b> tant que notre approximation est au dessus d&rsquo;un
+centième. Lorsque l&rsquo;on sortira de la boucle, nous obtiendrons donc une
+approximation telle que la première décimale sera juste !
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-01 sam. 18:03</p>
+<p class="date">Created: 2022-01-24 lun. 20:00</p>
 </div>
 </body>
 </html>
