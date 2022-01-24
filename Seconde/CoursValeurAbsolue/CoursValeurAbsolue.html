@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-24 lun. 20:00 -->
+<!-- 2022-01-24 lun. 20:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Valeur Absolue</title>
@@ -193,6 +193,12 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -222,6 +228,23 @@
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Cours Valeur Absolue</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9af4247">1. Definition</a>
+<ul>
+<li><a href="#org5516a01">1.1. Symbolisme</a></li>
+<li><a href="#org928ceef">1.2. Calcul</a></li>
+</ul>
+</li>
+<li><a href="#org3447f82">2. Représentation graphique</a></li>
+<li><a href="#orgacc0fe8">3. Lien entre la valeur absolue et la distance entre deux nombres</a></li>
+<li><a href="#org7141feb">4. Application : chercher une bonne approximation d&rsquo;un nombre réel.</a></li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-org9af4247" class="outline-2">
 <h2 id="org9af4247"><span class="section-number-2">1.</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
@@ -238,7 +261,7 @@ La fonction valeur absolue est une fonction qui s&rsquo;écrit \(x \mapsto |x|\)
 <div id="outline-container-org928ceef" class="outline-3">
 <h3 id="org928ceef"><span class="section-number-3">1.2.</span> Calcul</h3>
 <div class="outline-text-3" id="text-1-2">
-<div class="defi" id="orgf3c8713">
+<div class="defi" id="org406e8d1">
 <p>
 La valeur absolue d&rsquo;un réel \(x\) est définie par \(-x\) si \(x\) est négatif, et \(x\)
 si \(x\) est positif. On remarque que la valeur absolue de \(0\) est bien \(0\). On
@@ -246,7 +269,7 @@ désigne la valeur absolue d&rsquo;un nombre \(x\) avec la notation \(|x|\).
 </p>
 
 </div>
-<div class="ex" id="orgfa85f7b">
+<div class="ex" id="orge79b779">
 <p>
 La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3\) est à distance \(3\) de \(0\).
 </p>
@@ -263,7 +286,7 @@ La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3
 Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
 </p>
 
-<div id="orgcd35c32" class="figure">
+<div id="org98c30b9" class="figure">
 <p><img src="./images/valeurAbsolueGraphe.svg" alt="valeurAbsolueGraphe.svg" class="org-svg" />
 </p>
 </div>
@@ -279,7 +302,7 @@ On peut donc confirmer graphiquement que la fonction valeur absolue est une
 fonction <b>paire</b> !
 </p>
 
-<div class="prop" id="org723c780">
+<div class="prop" id="org8b4cc04">
 <p>
 La fonction valeur absolue est une fonction paire. Sa représentation graphique
 est constitué de tous les points du plan qui admettent comme coordonnées
@@ -302,7 +325,7 @@ Mais la valeur absolue de la différence entre deux nombres représente la
 distance entre ces deux nombres.
 </p>
 
-<div class="ex" id="org3730c20">
+<div class="ex" id="org11b889f">
 <p>
 Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre \(3\), qui vaut donc \(1\). Si on fait le calcul, on a :
 </p>
@@ -318,7 +341,7 @@ On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la di
 
 </div>
 
-<div class="defi" id="org47f15de">
+<div class="defi" id="orgc04b4cc">
 <p>
 Soient \(a\) et \(b\) deux nombres réels. Alors, la distance \(d(a, b)\) entre ces deux nombres est donnée :
 \[
@@ -364,7 +387,7 @@ approximation telle que la première décimale sera juste !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-24 lun. 20:00</p>
+<p class="date">Created: 2022-01-24 lun. 20:10</p>
 </div>
 </body>
 </html>
