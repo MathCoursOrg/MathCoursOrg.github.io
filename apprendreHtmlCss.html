@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-26 mer. 20:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programmer un site (le début)</title>
+<meta name="author" content="Delhomme Fabien" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Programmer un site (le début)</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga977a63">1. HTML et CSS : ou comment créer son premier un site web</a></li>
+<li><a href="#orged88348">2. Les ressources</a></li>
+<li><a href="#org4823fc4">3. Indiquer la structure de notre document : le HTML</a>
+<ul>
+<li><a href="#org066bb4b">3.1. Ouvrir les outils nécessaires pour commencer</a></li>
+<li><a href="#org5f58d7e">3.2. Mais c&rsquo;est moche ?</a></li>
+<li><a href="#org93ae5be">3.3. Liste des balises du HTML</a>
+<ul>
+<li><a href="#org235e337">3.3.1. Balises simples</a></li>
+<li><a href="#org81c5c08">3.3.2. Rajouter des images</a></li>
+<li><a href="#org439bec4">3.3.3. Rajouter des liens</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2707af1">4. Changer la forme de notre document : le CSS</a>
+<ul>
+<li><a href="#org78fa843">4.1. Se mettre en condition.</a></li>
+<li><a href="#orgbf24066">4.2. Coder en CSS pour rajouter de la couleur.</a></li>
+<li><a href="#org779b705">4.3. Liste propriétés que l&rsquo;on peut changer avec le CSS</a>
+<ul>
+<li><a href="#orgd267797">4.3.1. Les couleurs</a></li>
+<li><a href="#org644ff89">4.3.2. Les bordures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga977a63" class="outline-2">
+<h2 id="orga977a63"><span class="section-number-2">1.</span> HTML et CSS : ou comment créer son premier un site web</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Pour afficher une page internet, votre navigateur (comme Firefox, Edge, Google
+Chrome, etc) envoie une <b>requête</b> à un serveur, qui lui répond avec une page
+contenant un code, code qui sera interprété par votre navigateur, pour
+l&rsquo;afficher sous vos yeux ébahis.
+</p>
+
+<p>
+La page qu&rsquo;envoie un serveur à votre navigateur est en fait constituée de deux
+codes différents :
+</p>
+<ol class="org-ol">
+<li>Le HTML, qui indique la structure (c&rsquo;est le fond de votre document).</li>
+<li>le CSS, qui modifie la forme de votre document.</li>
+</ol>
+
+<p>
+Nous commencerons par apprendre le HTML, puis le CSS.
+</p>
+
+<p>
+Dès que vous avez saisi le principe, votre objectif est de rentrer la
+présentation de votre jeu Python !
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged88348" class="outline-2">
+<h2 id="orged88348"><span class="section-number-2">2.</span> Les ressources</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Il y a beaucoup, beaucoup, de balises (en HTML) et d&rsquo;attributs (en CSS) qui
+existent, et on ne peut pas vraiment faire la liste en une seule activité, ni tous
+les retenir.
+</p>
+
+<p>
+Il <b>faut donc</b> utiliser l&rsquo;internet mondial du satellite pour trouver des
+exemples documentés.
+</p>
+
+<p>
+Un site, en français et une référence en la matière. Commencez vos recherches
+par ces liens si vous voulez aller plus loin pour personnaliser votre site.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML">Pour le HTML</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps">Pour le CSS</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4823fc4" class="outline-2">
+<h2 id="org4823fc4"><span class="section-number-2">3.</span> Indiquer la structure de notre document : le HTML</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org066bb4b" class="outline-3">
+<h3 id="org066bb4b"><span class="section-number-3">3.1.</span> Ouvrir les outils nécessaires pour commencer</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Ouvrez <b>notepad++</b></li>
+<li>Enregistrer un nouveau fichier dans <b>le bureau</b> que vous appelez
+<code>monSite.html</code>. Il est très important que votre fichier <b>termine</b> par
+<code>.html</code>.</li>
+<li><p>
+Inscrivez le code ci-dessous dans le fichier :
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">!doctype</span> html&gt;
+&lt;<span style="font-weight: bold;">html</span> <span style="font-weight: bold; font-style: italic;">lang</span>=<span style="font-style: italic;">"fr"</span>&gt;
+    &lt;<span style="font-weight: bold;">head</span>&gt;
+        &lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">charset</span>=<span style="font-style: italic;">"utf-8"</span>&gt;
+        &lt;<span style="font-weight: bold;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="font-weight: bold;">title</span>&gt;
+    &lt;/<span style="font-weight: bold;">head</span>&gt;
+    &lt;<span style="font-weight: bold;">body</span>&gt;
+        &lt;<span style="font-weight: bold;">p</span>&gt; Voici un &lt;<span style="font-weight: bold;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="font-weight: bold;">strong</span>&gt; !&lt;/<span style="font-weight: bold;">p</span>&gt;
+    &lt;/<span style="font-weight: bold;">body</span>&gt;
+&lt;/<span style="font-weight: bold;">html</span>&gt;
+</pre>
+</div></li>
+<li>Ensuite, ouvrez votre navigateur (par exemple Firefox).</li>
+<li>Depuis le navigateur, ouvrez le fichier <code>monSite.html</code> que vous trouverez
+dans le bureau (souvent on peut le faire
+avec le raccourci <code>Ctrl</code> puis <code>O</code> (le «O» comme «Oh mon site est trop bO»))</li>
+<li>Normalement, votre « site » s&rsquo;affiche.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org5f58d7e" class="outline-3">
+<h3 id="org5f58d7e"><span class="section-number-3">3.2.</span> Mais c&rsquo;est moche ?</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Oui, c&rsquo;est normal, c&rsquo;est le début, le HTML ne permet qu&rsquo;indiquer le <b>fond</b> de
+votre document, sa structure.
+</p>
+
+<p>
+J&rsquo;explique ce code :
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">p</span>&gt; Voici un &lt;<span style="font-weight: bold;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="font-weight: bold;">strong</span>&gt; !&lt;/<span style="font-weight: bold;">p</span>&gt;
+</pre>
+</div>
+
+<p>
+Le langage HTML est un langage dit de « balisage ». L&rsquo;idée est d&rsquo;insérer des
+<b>balises</b> pour indiquer à l&rsquo;ordinateur la <b>structure</b> de notre document.
+</p>
+
+<p>
+Dans l&rsquo;exemple précédent, on a deux balises, l&rsquo;une imbriquée dans l&rsquo;autre.
+</p>
+<ol class="org-ol">
+<li>Une balise <code>p</code> contient du paragraphe. Donc ce que l&rsquo;on place entre <code>&lt;p&gt;</code> et
+<code>&lt;/p&gt;</code> désigne un paragraphe.</li>
+<li>La balise <code>&lt;strong&gt;</code> permet d&rsquo;indiquer à l&rsquo;ordinateur un passage <b>important</b>.</li>
+</ol>
+
+
+<p>
+<b>À PARTIR DE MAINTENANT, VOTRE OBJECTIF EST DE TAPER LA PRÉSENTATION DE VOTRE
+ SITE EN HTML, à l&rsquo;aide de la section qui suit</b>
+</p>
+
+<p>
+<b>Toutes les modifications que vous devrez faire</b> sera entre <code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code>.
+</p>
+
+<ul class="org-ul">
+<li>Quel est le titre de votre site ?</li>
+<li>Quel est le titre de votre page ?</li>
+<li>Quels sont les sections de votre page ?</li>
+<li>Quels sont les paragraphes que vous souhaitez mettre dans votre page ?</li>
+<li>Quelles images voulez-vous ajouter ?</li>
+<li>Quels liens voulez-vous donner ?</li>
+</ul>
+
+<p>
+La <b>section suivante</b> récapitule les balises qui vous permettent de commencer
+à structurer votre présentation en HTML.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93ae5be" class="outline-3">
+<h3 id="org93ae5be"><span class="section-number-3">3.3.</span> Liste des balises du HTML</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org235e337" class="outline-4">
+<h4 id="org235e337"><span class="section-number-4">3.3.1.</span> Balises simples</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Voici une liste de balise que vous pouvez tenter d&rsquo;utiliser dès maintenant !
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Nom de la balise</th>
+<th scope="col" class="org-left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&lt;p&gt; &#x2026; &lt;/p&gt;</td>
+<td class="org-left">Paragraphe</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;strong&gt; &#x2026; &lt;/strong&gt;</td>
+<td class="org-left">Texte important (en gras)</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;em&gt; &#x2026; &lt;/em&gt;</td>
+<td class="org-left">Texte important (en italique)</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;br /&gt;</td>
+<td class="org-left">Balise spéciale de retour à la ligne</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;title&gt;&#x2026;&lt;/title&gt;</td>
+<td class="org-left">Permet d&rsquo;indiquer le nom de votre site (c&rsquo;est ce qui s&rsquo;affichera dans le nom de l&rsquo;onglet de votre navigateur )</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;body&gt;&#x2026;&lt;/body&gt;</td>
+<td class="org-left">Contient l&rsquo;ensemble du <b>corps</b> de votre site. Il n&rsquo;y a qu&rsquo;une seule balise body dans l&rsquo;ensemble de votre page HTML</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;head&gt;&#x2026;&lt;/head&gt;</td>
+<td class="org-left">Permet de paramétrer votre page internet. Il n&rsquo;y a qu&rsquo;une seule balise head dans l&rsquo;ensemble de votre page HTML.</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;h1&gt; &#x2026; &lt;/h1&gt;</td>
+<td class="org-left">Titre d&rsquo;une page entière, il y a généralement qu&rsquo;un seul h1 dans votre document</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;h2&gt; &#x2026; &lt;/h2&gt;</td>
+<td class="org-left">Titre d&rsquo;une section, il peut y en avoir plusieurs, mais toujours après un h1</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;h3&gt; &#x2026; &lt;/h3&gt;</td>
+<td class="org-left">Titre d&rsquo;une sous-section, il peut y en avoir plusieurs, mais après un h2</td>
+</tr>
+
+<tr>
+<td class="org-left">&#x2026;</td>
+<td class="org-left">&#x2026;</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;h6&gt; &#x2026; &lt;/h6&gt;</td>
+<td class="org-left">Titre d&rsquo;une sous-sous-&#x2026;.-sous-section, il peut y en avoir plusieurs, mais après un h5.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org81c5c08" class="outline-4">
+<h4 id="org81c5c08"><span class="section-number-4">3.3.2.</span> Rajouter des images</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+On peut charger des images avec la balise suivante :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">img</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"mon_image.jpg"</span> <span style="font-weight: bold; font-style: italic;">alt</span>=<span style="font-style: italic;">"avion"</span>/&gt;
+</pre>
+</div>
+
+<p>
+Il faut impérativement que votre image (ici mon<sub>image.jpg</sub>) soit dans le <b>même
+dossier</b> que votre page html. Dans cette activité, elle sera donc dans le
+bureau.
+</p>
+
+<p>
+La partie du code <code>src="mon_image.jpg"</code> est ce que l&rsquo;on appelle un <b>attribut</b> de
+la balise <b>img</b>. On reverra les attributs plus tard.
+</p>
+
+<p>
+La partie <code>alt="avion"</code> permet de <b>décrire</b> votre image. Cette description
+apparaît quand votre curseur de souris survole l&rsquo;image sur votre site.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org439bec4" class="outline-4">
+<h4 id="org439bec4"><span class="section-number-4">3.3.3.</span> Rajouter des liens</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Un site ne peut pas exister s&rsquo;il ne tisse pas de lien avec d&rsquo;autres sur la
+toile.
+</p>
+
+<p>
+Pour rajouter un lien (que l&rsquo;on place souvent dans un paragraphe comme dans
+l&rsquo;exemple) on peut entrer :
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">p</span>&gt; Je suis un paragraphe qui contient un &lt;<span style="font-weight: bold;">a</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"www.google.fr"</span>&gt; lien vers
+google ! &lt;/<span style="font-weight: bold;">a</span>&gt;, c'est incroyable&lt;/<span style="font-weight: bold;">p</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2707af1" class="outline-2">
+<h2 id="org2707af1"><span class="section-number-2">4.</span> Changer la forme de notre document : le CSS</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Le CSS permet de modifier la <b>forme</b> de votre document. Commençons par savoir
+comment rajouter ces précisions à notre page internet.
+</p>
+</div>
+
+<div id="outline-container-org78fa843" class="outline-3">
+<h3 id="org78fa843"><span class="section-number-3">4.1.</span> Se mettre en condition.</h3>
+<div class="outline-text-3" id="text-4-1">
+<ol class="org-ol">
+<li>Créez un nouveau fichier avec notepad++ <b>sans fermer l&rsquo;ancien</b>.</li>
+<li>Enregistrez ce fichier au nom de «monStyle.CSS». Là encore <b>l&rsquo;extension
+.CSS de votre fichier est très importante</b>.</li>
+<li>Enregistrez votre fichier «monStyle.CSS» dans <b>le même dossier</b> que celui en
+«.html», c&rsquo;est-à-dire dans le bureau.</li>
+<li><p>
+Dans votre fichier <b>.html</b> rajoutez la ligne suivante :
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"monStyle.CSS"</span>&gt;
+</pre>
+</div>
+<p>
+<b>Entre la fin de la balise title et la fin de la balise head</b> !
+</p></li>
+</ol>
+
+<p>
+Vous obtenez normalement un document semblable à :
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">!doctype</span> html&gt;
+&lt;<span style="font-weight: bold;">html</span> <span style="font-weight: bold; font-style: italic;">lang</span>=<span style="font-style: italic;">"fr"</span>&gt;
+    &lt;<span style="font-weight: bold;">head</span>&gt;
+        &lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">charset</span>=<span style="font-style: italic;">"utf-8"</span>&gt;
+        &lt;<span style="font-weight: bold;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="font-weight: bold;">title</span>&gt; <span style="font-weight: bold; font-style: italic;">&lt;!-- </span><span style="font-weight: bold; font-style: italic;">Cette ligne est nouvelle </span><span style="font-weight: bold; font-style: italic;">--&gt;</span>
+        &lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"monStyle.CSS"</span>&gt;
+    &lt;/<span style="font-weight: bold;">head</span>&gt;
+    &lt;<span style="font-weight: bold;">body</span>&gt;
+      La structure de votre site ici
+    &lt;/<span style="font-weight: bold;">body</span>&gt;
+&lt;/<span style="font-weight: bold;">html</span>&gt;
+</pre>
+</div>
+
+<p>
+Une fois que c&rsquo;est fait, vous pouvez passer à la section suivante.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf24066" class="outline-3">
+<h3 id="orgbf24066"><span class="section-number-3">4.2.</span> Coder en CSS pour rajouter de la couleur.</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Rajouter ce code dans votre fichier <b>monStyle.CSS</b> :
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
+{
+    <span style="font-weight: bold;">text-align</span>: center;
+    <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
+}
+<span style="font-weight: bold;">p</span>
+{
+    <span style="font-weight: bold;">font-family</span>: Verdana;
+    <span style="font-weight: bold;">font-style</span>: italic;
+    <span style="font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
+}
+</pre>
+</div>
+
+<p>
+Enregistrez, puis <b>rechargez</b> votre page sur Firefox pour voir son effet. Que
+constatez-vous ?
+</p>
+
+<p>
+Le code CSS que vous venez d&rsquo;entrer permet de demander à l&rsquo;ordinateur que :
+</p>
+<ol class="org-ol">
+<li><b>tous</b> les textes (les balises h1) pour qu&rsquo;ils soient alignés et un
+arrière-plan rouge (l&rsquo;anglais, ça sert !),</li>
+<li><b>tous</b> les paragraphes ont une police d&rsquo;écriture Verdana, sous forme
+italique, et de couleur verte.</li>
+</ol>
+
+<p>
+<b>Notez les points-virgules</b> à la fin de <b>chaque description</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org779b705" class="outline-3">
+<h3 id="org779b705"><span class="section-number-3">4.3.</span> Liste propriétés que l&rsquo;on peut changer avec le CSS</h3>
+<div class="outline-text-3" id="text-4-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Nom de la propriété</th>
+<th scope="col" class="org-left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">color</td>
+<td class="org-left">La couleur du texte (pour identifier une couleur, regarder la section suivante).</td>
+</tr>
+
+<tr>
+<td class="org-left">font-style</td>
+<td class="org-left">Le style de la police d&rsquo;écriture, on peut indiquer italic, ou «oblique 30deg» si on veut préciser l&rsquo;angle</td>
+</tr>
+
+<tr>
+<td class="org-left">background-color</td>
+<td class="org-left">La couleur en arrière plan</td>
+</tr>
+
+<tr>
+<td class="org-left">border</td>
+<td class="org-left">Permet de gérer la bordure d&rsquo;un élément (pour l&rsquo;encadrer). Voir l&rsquo;exemple ci-dessous</td>
+</tr>
+
+<tr>
+<td class="org-left">padding</td>
+<td class="org-left">Éloigner un contenu du bord (indiquer une mesure en pixel, par exemple 10px).</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgd267797" class="outline-4">
+<h4 id="orgd267797"><span class="section-number-4">4.3.1.</span> Les couleurs</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Pour indiquer des couleurs, vous avez plusieurs méthodes.
+</p>
+<ul class="org-ul">
+<li>Par son nom en anglais,</li>
+<li>Par son code en hexadécimal</li>
+</ul>
+
+<p>
+Les deux dernières méthodes sont des moyens utilisés par l&rsquo;ordinateur pour
+encoder les couleurs.
+</p>
+
+<p>
+Exemple :
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="font-weight: bold;">p</span>
+{
+    <span style="font-weight: bold;">color</span>:<span style="color: #ffffff; background-color: #ff0000;">red</span>;
+}
+</pre>
+</div>
+<p>
+Les paragraphes seront en rouges.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
+{
+    <span style="font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #375e97;">#375e97</span>
+}
+</pre>
+</div>
+<p>
+Les titres seront en bleu légèrement clair.
+</p>
+
+<p>
+Pour avoir le code hexadécimal d&rsquo;une couleur, demandez à Google (tapez
+simplement «#375e97» dans Google pour obtenir automatiquement un outil bien
+pratique).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org644ff89" class="outline-4">
+<h4 id="org644ff89"><span class="section-number-4">4.3.2.</span> Les bordures</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+On peut modifier beaucoup de paramètre d&rsquo;une bordure pour encadrer un texte. Par
+exemple, essayez ce code CSS :
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
+{
+    <span style="font-weight: bold;">border</span> : 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;
+}
+</pre>
+</div>
+
+<p>
+Vous devriez avoir un encadré plutôt fin (un seul pixel) en noir.
+</p>
+
+<p>
+Testez maintenant ce code :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
+{
+    <span style="font-weight: bold;">border-bottom</span> : 10px dotted <span style="color: #000000; background-color: #800080;">purple</span>;
+}
+</pre>
+</div>
+
+<p>
+<code>border-bottom</code> permet de changer uniquement la bordure du dessous (autrement
+dit soulignage).
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-01-26 mer. 20:29</p>
+</div>
+</body>
+</html>
