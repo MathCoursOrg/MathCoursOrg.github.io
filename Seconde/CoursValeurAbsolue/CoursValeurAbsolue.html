@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-24 lun. 20:10 -->
+<!-- 2022-01-30 dim. 20:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Valeur Absolue</title>
@@ -240,11 +240,12 @@
 </li>
 <li><a href="#org3447f82">2. Représentation graphique</a></li>
 <li><a href="#orgacc0fe8">3. Lien entre la valeur absolue et la distance entre deux nombres</a></li>
-<li><a href="#org7141feb">4. Application : chercher une bonne approximation d&rsquo;un nombre réel.</a></li>
+<li><a href="#org48bb710">4. Résolution d&rsquo;équations avec la valeur absolue</a></li>
+<li><a href="#org6a0d611">5. Autre méthode de résolution</a></li>
+<li><a href="#org7141feb">6. Application : chercher une bonne approximation d&rsquo;un nombre réel.</a></li>
 </ul>
 </div>
 </div>
-
 <div id="outline-container-org9af4247" class="outline-2">
 <h2 id="org9af4247"><span class="section-number-2">1.</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
@@ -261,7 +262,7 @@ La fonction valeur absolue est une fonction qui s&rsquo;écrit \(x \mapsto |x|\)
 <div id="outline-container-org928ceef" class="outline-3">
 <h3 id="org928ceef"><span class="section-number-3">1.2.</span> Calcul</h3>
 <div class="outline-text-3" id="text-1-2">
-<div class="defi" id="org406e8d1">
+<div class="defi" id="org612c655">
 <p>
 La valeur absolue d&rsquo;un réel \(x\) est définie par \(-x\) si \(x\) est négatif, et \(x\)
 si \(x\) est positif. On remarque que la valeur absolue de \(0\) est bien \(0\). On
@@ -269,7 +270,7 @@ désigne la valeur absolue d&rsquo;un nombre \(x\) avec la notation \(|x|\).
 </p>
 
 </div>
-<div class="ex" id="orge79b779">
+<div class="ex" id="orgdc461d3">
 <p>
 La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3\) est à distance \(3\) de \(0\).
 </p>
@@ -286,7 +287,7 @@ La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3
 Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
 </p>
 
-<div id="org98c30b9" class="figure">
+<div id="org6530136" class="figure">
 <p><img src="./images/valeurAbsolueGraphe.svg" alt="valeurAbsolueGraphe.svg" class="org-svg" />
 </p>
 </div>
@@ -302,7 +303,7 @@ On peut donc confirmer graphiquement que la fonction valeur absolue est une
 fonction <b>paire</b> !
 </p>
 
-<div class="prop" id="org8b4cc04">
+<div class="prop" id="orgf556f4f">
 <p>
 La fonction valeur absolue est une fonction paire. Sa représentation graphique
 est constitué de tous les points du plan qui admettent comme coordonnées
@@ -325,7 +326,7 @@ Mais la valeur absolue de la différence entre deux nombres représente la
 distance entre ces deux nombres.
 </p>
 
-<div class="ex" id="org11b889f">
+<div class="ex" id="org9a0403b">
 <p>
 Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre \(3\), qui vaut donc \(1\). Si on fait le calcul, on a :
 </p>
@@ -336,12 +337,12 @@ Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre
 \end{align*}
 
 <p>
-On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la distnace entre \(2\) et \(3\) est la même que la distance entre \(3\) et \(2\).
+On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la distance entre \(2\) et \(3\) est la même que la distance entre \(3\) et \(2\).
 </p>
 
 </div>
 
-<div class="defi" id="orgc04b4cc">
+<div class="defi" id="org65ddca2">
 <p>
 Soient \(a\) et \(b\) deux nombres réels. Alors, la distance \(d(a, b)\) entre ces deux nombres est donnée :
 \[
@@ -361,9 +362,140 @@ d(a, b) = | b - a | = | a - b |
 </div>
 </div>
 
-<div id="outline-container-org7141feb" class="outline-2">
-<h2 id="org7141feb"><span class="section-number-2">4.</span> Application : chercher une bonne approximation d&rsquo;un nombre réel.</h2>
+<div id="outline-container-org48bb710" class="outline-2">
+<h2 id="org48bb710"><span class="section-number-2">4.</span> Résolution d&rsquo;équations avec la valeur absolue</h2>
 <div class="outline-text-2" id="text-4">
+<div class="prop" id="orgd212e7f">
+<p>
+Soit \(a\), et \(r\) deux nombres réels, avec \(r > 0\).
+</p>
+
+<p>
+Alors l&rsquo;inéquation :
+\[
+\left| x - a \right| \leq r
+\]
+admet pour solution :
+</p>
+
+<p>
+\[
+    x \in [a - r ; a + r]
+\]
+</p>
+
+</div>
+
+<div class="defi" id="org218fdec">
+<p>
+Un intervalle \(I\) dont les bornes sont de la forme \([a - r; a + r]\) avec \(r>0\)
+et \(a \in \mathbb{R}\) est un intervalle dit <b>centré en \(a\)</b>.
+</p>
+
+</div>
+
+<div class="ex" id="orgc53ba90">
+<p>
+L&rsquo;intervalle \([10; 15]\) est centré en \(12,5\) car :
+\[
+[10; 15] = [12,5 - 2,5; 12,5 + 2,5]
+\]
+</p>
+
+</div>
+
+<p>
+On peut toujours trouver le «centre» d&rsquo;un intervalle, s&rsquo;il est <b>borné</b> (c&rsquo;est à
+dire si ces bornes se sont pas l&rsquo;infini.)
+</p>
+
+<div class="prop" id="org16ef641">
+<p>
+Soit \(I\) un intervalle dont les bornes sont données par \(a<b\) où \(a\) et \(b\) sont
+deux nombres réels.
+</p>
+
+<p>
+Alors, \(I\) est centré autour de \(\frac{a + b}{2}\)
+</p>
+
+</div>
+
+<div class="ex" id="orgd8fdd70">
+<p>
+Dans l&rsquo;exemple précédent, pour trouver le centre de l&rsquo;intervalle, j&rsquo;ai calculé :
+\[
+\frac{10 + 15}{2} = 12,5
+\]
+</p>
+
+</div>
+
+<p>
+On peut alors faire correspondre un intervalle <b>borné</b> à une inéquation avec des
+valeurs absolues :
+</p>
+
+<div class="prop" id="org6d1e013">
+<p>
+Soit \(I\) un intervalle dont les bornes sont données par \(a\) et \(b\) deux nombres
+réels, où \(a < b\). Alors, si \(I\) est fermé en \(a\) et en \(b\), \(I\) désigne
+l&rsquo;ensemble des nombres solutions de l&rsquo;inéquation:
+\(
+\left| x - \frac{a +b}{2}  \right| \leq \frac{b-a}{2}
+\)
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6a0d611" class="outline-2">
+<h2 id="org6a0d611"><span class="section-number-2">5.</span> Autre méthode de résolution</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+En partant de la définition suivante :
+</p>
+<div class="defi" id="org4271eb4">
+<p>
+On peut définir la fonction valeur absolue \(f(x) = |x|\) sous la forme :
+\[
+  f(x) =\left\{\begin{align*}
+                 x \quad \text{Quand } x \ \text{ est positif}\\
+                 -x \quad \text{Quand } x \ \text{ est négatif}
+               \end{align*} \right.
+\]
+</p>
+
+</div>
+
+<p>
+Si on souhaite résoudre
+\[
+\left| 2x - 3 \right| \leq 5
+\]
+Pour que la valeur absolue de \(2x - 3\) soit inférieure à \(5\), cela signifie que
+\(2x - 3\) appartient à l&rsquo;intervalle \([-5; 5]\), ou dit autrement, que \(2x\) est
+compris dans l&rsquo;intervalle \([-2; 8]\)
+</p>
+
+<p>
+On a résolu la double inégalité :
+</p>
+\begin{align*}
+    -5 \leq 2x - 3 &\leq 5 \\
+    -2 \leq 2x &\leq 8 \quad \text{On a ajouté } 3 \\
+    -1 \leq x &\leq 4 \quad \text{On a divisé par } 2 \ \text{qui est strictement positif}
+\end{align*}
+<p>
+Donc \(\left| 2x - 3 \right| \leq 5\) si et seulement si \(x \in [-1; 4]\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7141feb" class="outline-2">
+<h2 id="org7141feb"><span class="section-number-2">6.</span> Application : chercher une bonne approximation d&rsquo;un nombre réel.</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 Lorsque l&rsquo;on va essayer d&rsquo;approximer un nombre réel comme \(x = \sqrt{2}\) à
 l&rsquo;aide d&rsquo;un algorithme, il va falloir écrire une boucle de la forme :
@@ -387,7 +519,7 @@ approximation telle que la première décimale sera juste !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-24 lun. 20:10</p>
+<p class="date">Created: 2022-01-30 dim. 20:31</p>
 </div>
 </body>
 </html>
