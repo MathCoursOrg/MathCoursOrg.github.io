@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-02 mer. 15:29 -->
+<!-- 2022-02-02 mer. 16:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cours Valeur Absolue</title>
+<title>Projete Orthogonal</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -227,303 +227,145 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Cours Valeur Absolue</h1>
+<h1 class="title">Projete Orthogonal</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9af4247">1. Definition</a>
+<li><a href="#org5a154bd">1. Définitions</a></li>
+<li><a href="#org7dea109">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#orgbe84d7d">3. Approche géométrique</a></li>
+<li><a href="#org9597366">4. Trigonométrie</a>
 <ul>
-<li><a href="#org5516a01">1.1. Symbolisme</a></li>
-<li><a href="#org928ceef">1.2. Calcul</a></li>
+<li><a href="#orge6014bc">4.1. Définitions</a></li>
 </ul>
 </li>
-<li><a href="#org3447f82">2. Représentation graphique</a></li>
-<li><a href="#orgacc0fe8">3. Lien entre la valeur absolue et la distance entre deux nombres</a></li>
-<li><a href="#org48bb710">4. Résolution d&rsquo;équations avec la valeur absolue</a></li>
-<li><a href="#org6a0d611">5. Autre méthode de résolution</a></li>
-<li><a href="#org7141feb">6. Application : chercher une bonne approximation d&rsquo;un nombre réel.</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9af4247" class="outline-2">
-<h2 id="org9af4247"><span class="section-number-2">1.</span> Definition</h2>
+
+<div id="outline-container-org5a154bd" class="outline-2">
+<h2 id="org5a154bd"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org5516a01" class="outline-3">
-<h3 id="org5516a01"><span class="section-number-3">1.1.</span> Symbolisme</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-La fonction valeur absolue est une fonction qui s&rsquo;écrit \(x \mapsto |x|\).
+On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
+par \(M\).
 </p>
-</div>
-</div>
 
-<div id="outline-container-org928ceef" class="outline-3">
-<h3 id="org928ceef"><span class="section-number-3">1.2.</span> Calcul</h3>
-<div class="outline-text-3" id="text-1-2">
-<div class="defi" id="org670f68d">
 <p>
-La valeur absolue d&rsquo;un réel \(x\) est définie par \(-x\) si \(x\) est négatif, et \(x\)
-si \(x\) est positif. On remarque que la valeur absolue de \(0\) est bien \(0\). On
-désigne la valeur absolue d&rsquo;un nombre \(x\) avec la notation \(|x|\).
+On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
+</p>
+<div class="defi" id="orgb770de2">
+<p>
+Le projeté orthogonal d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
+que la distance \(MM'\) est minimale.
 </p>
 
 </div>
-<div class="ex" id="orgd0c7b7e">
-<p>
-La valeur absolue de \(-3\) s&rsquo;écrit \(|-3|\), et vaut \(3\), puisque \(-3\) est à distance \(3\) de \(0\).
+
+
+<div id="org83e33a5" class="figure">
+<p><img src="images/projetOrthoIntro.svg" alt="projetOrthoIntro.svg" class="org-svg" />
 </p>
-
-</div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3447f82" class="outline-2">
-<h2 id="org3447f82"><span class="section-number-2">2.</span> Représentation graphique</h2>
+<div id="outline-container-org7dea109" class="outline-2">
+<h2 id="org7dea109"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Voici à quoi ressemble la représentation graphique de la fonction valeur absolue.
-</p>
-
-<div id="orgbf34cba" class="figure">
-<p><img src="./images/valeurAbsolueGraphe.svg" alt="valeurAbsolueGraphe.svg" class="org-svg" />
-</p>
-</div>
-
-<p>
-On remarque que la fonction valeur absolue est sur la partie droite du
-graphique, exactement identique à la fonction identité. Sur la partie gauche
-néanmoins, elle est différente.
+La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
+est une fonction qui dépend de la position de \(M'\) sur la droite.
 </p>
 
 <p>
-On peut donc confirmer graphiquement que la fonction valeur absolue est une
-fonction <b>paire</b> !
+Mais cette fonction ressemble à une parabole, puisque si l&rsquo;on connaît les
+coordonnée de \(M\) et de \(M'\), on sait que :
+\[
+MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
+\]
 </p>
 
-<div class="prop" id="org668ebd4">
 <p>
-La fonction valeur absolue est une fonction paire. Sa représentation graphique
-est constitué de tous les points du plan qui admettent comme coordonnées
-\((x; |x|)\).
+Autrement dit, la fonction \(M' \mapsto MM'^{2}\) ressemble à une parabole (il y a des
+carrés dans la formule, ce n&rsquo;est pas un argument suffisant, c&rsquo;est un argument
+que l&rsquo;on appelle «heuristique», qui repose sur l&rsquo;intuition plutôt que de la
+formalisation pure. Mais vous pouvez me faire confiance ici, cela fonctionne
+bien) ! Donc, cette parabole admet un point minimale atteint pour un certain
+point \(M'_{0}\), qui est le projeté orthogonale de \(M\) sur la droite \(\Delta\).
 </p>
 
-</div>
+<p>
+La puissance de feu des mathématiques en action ! Ce raisonnement se retrouve
+dans de très nombreux domaines, notamment&#x2026; Dans les algorithmes de deep
+learning (!).
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgacc0fe8" class="outline-2">
-<h2 id="orgacc0fe8"><span class="section-number-2">3.</span> Lien entre la valeur absolue et la distance entre deux nombres</h2>
+<div id="outline-container-orgbe84d7d" class="outline-2">
+<h2 id="orgbe84d7d"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
+<div class="defi" id="org39e89a8">
 <p>
-La valeur absolue d&rsquo;un nombre représente sa distance avec \(0\).
-</p>
-
-<p>
-Mais la valeur absolue de la différence entre deux nombres représente la
-distance entre ces deux nombres.
-</p>
-
-<div class="ex" id="org1eb29c6">
-<p>
-Le nombre \(|2 - 3|\) représente la distance entre le nombre \(2\) et le nombre \(3\), qui vaut donc \(1\). Si on fait le calcul, on a :
-</p>
-
-\begin{align*}
-  |2-3| &= |-1| \\
-        &= 1
-\end{align*}
-
-<p>
-On remarque par ailleurs que \(|2 - 3|\) est égal à \(|3 - 2|\), puisque la distance entre \(2\) et \(3\) est la même que la distance entre \(3\) et \(2\).
+Le projeté d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l&rsquo;angle
+entre \(\Delta\) et \(M'M\) est droit.
 </p>
 
 </div>
 
-<div class="defi" id="org9227ded">
+<div class="prop" id="org80d9499">
 <p>
-Soient \(a\) et \(b\) deux nombres réels. Alors, la distance \(d(a, b)\) entre ces deux nombres est donnée :
-\[
-d(a, b) = b - a \quad \text{si } b > a
-\]
-et
-\[
-d(a,b) = a - b \quad \text{si } a > b
-\]
-Donc, dans tous les cas :
-\[
-d(a, b) = | b - a | = | a - b |
-\]
+Les deux définitions sont équivalentes ! C&rsquo;est-à-dire que trouver le point \(M'\) tel
+que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
+la droite \(\Delta\) qui passe par \(M\) !
 </p>
 
 </div>
+
+<p>
+Remarquez l&rsquo;angle droit formé sur la figure ci-contre (qui a la même
+configuration que la figure précédente.)
+</p>
+
+<div id="orga1c696a" class="figure">
+<p><img src="images/projetOrthoIntroAngleDroit.svg" alt="projetOrthoIntroAngleDroit.svg" class="org-svg" />
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org48bb710" class="outline-2">
-<h2 id="org48bb710"><span class="section-number-2">4.</span> Résolution d&rsquo;équations avec la valeur absolue</h2>
+<div id="outline-container-org9597366" class="outline-2">
+<h2 id="org9597366"><span class="section-number-2">4.</span> Trigonométrie</h2>
 <div class="outline-text-2" id="text-4">
-<div class="prop" id="org3fba9bb">
+</div>
+<div id="outline-container-orge6014bc" class="outline-3">
+<h3 id="orge6014bc"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="defi" id="org932f808">
 <p>
-Soit \(a\), et \(r\) deux nombres réels, avec \(r > 0\).
-</p>
-
-<p>
-Alors l&rsquo;inéquation :
+On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
+fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 \[
-\left| x - a \right| \leq r
-\]
-admet pour solution :
-</p>
-
-<p>
-\[
-    x \in [a - r ; a + r]
+\cos(\widehat{ABC}) = \frac{AB}{BC} = \frac{\text{Adjacent}}{\text{Hypoténuse}}
 \]
 </p>
 
 </div>
 
-<div class="defi" id="org14a6a62">
-<p>
-Un intervalle \(I\) dont les bornes sont de la forme \([a - r; a + r]\) avec \(r>0\)
-et \(a \in \mathbb{R}\) est un intervalle dit <b>centré en \(a\)</b>.
-</p>
 
-</div>
-
-<div class="ex" id="org05ce41c">
-<p>
-L&rsquo;intervalle \([10; 15]\) est centré en \(12,5\) car :
-\[
-[10; 15] = [12,5 - 2,5; 12,5 + 2,5]
-\]
-</p>
-
-</div>
-
-<p>
-On peut toujours trouver le «centre» d&rsquo;un intervalle, s&rsquo;il est <b>borné</b> (c&rsquo;est à
-dire si ces bornes se sont pas l&rsquo;infini.)
-</p>
-
-<div class="prop" id="org052db6d">
-<p>
-Soit \(I\) un intervalle dont les bornes sont données par \(a<b\) où \(a\) et \(b\) sont
-deux nombres réels.
-</p>
-
-<p>
-Alors, \(I\) est centré autour de \(\frac{a + b}{2}\)
-</p>
-
-</div>
-
-<div class="ex" id="orge6bb18c">
-<p>
-Dans l&rsquo;exemple précédent, pour trouver le centre de l&rsquo;intervalle, j&rsquo;ai calculé :
-\[
-\frac{10 + 15}{2} = 12,5
-\]
-</p>
-
-</div>
-
-<p>
-On peut alors faire correspondre un intervalle <b>borné</b> à une inéquation avec des
-valeurs absolues :
-</p>
-
-<div class="prop" id="org592604b">
-<p>
-Soit \(I\) un intervalle dont les bornes sont données par \(a\) et \(b\) deux nombres
-réels, où \(a < b\). Alors, si \(I\) est fermé en \(a\) et en \(b\), \(I\) désigne
-l&rsquo;ensemble des nombres solutions de l&rsquo;inéquation:
-\(
-\left| x - \frac{a +b}{2}  \right| \leq \frac{b-a}{2}
-\)
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6a0d611" class="outline-2">
-<h2 id="org6a0d611"><span class="section-number-2">5.</span> Autre méthode de résolution</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-En partant de la définition suivante :
-</p>
-<div class="defi" id="org2419ba5">
-<p>
-On peut définir la fonction valeur absolue sur \(\mathbb{R}\)  \(f(x) = |x|\) avec
-l&rsquo;écriture suivante :
-\[
-  f(x) =\left\{\begin{align*}
-                 x \quad \text{Quand } x \ \text{ est positif}\\
-                 -x \quad \text{Quand } x \ \text{ est négatif}
-               \end{align*} \right.
-\]
-</p>
-
-</div>
-
-<p>
-Si on souhaite résoudre:
-\[
-\left| 2x - 3 \right| \leq 5
-\]
-</p>
-
-<p>
-Pour que la valeur absolue de \(2x - 3\) soit inférieure à \(5\), cela signifie que
-\(2x - 3\) appartient à l&rsquo;intervalle \([-5; 5]\), ou dit autrement, que \(2x\) est
-compris dans l&rsquo;intervalle \([-2; 8]\)
-</p>
-
-<p>
-On a résolu la double inégalité :
-</p>
-\begin{align*}
-    -5 \leq 2x - 3 &\leq 5 \\
-    -2 \leq 2x &\leq 8 \quad \text{On a ajouté } 3 \\
-    -1 \leq x &\leq 4 \quad \text{On a divisé par } 2 \ \text{qui est strictement positif}
-\end{align*}
-<p>
-Donc \(\left| 2x - 3 \right| \leq 5\) si et seulement si \(x \in [-1; 4]\).
+<div id="org27ff7ab" class="figure">
+<p><img src="images/deftrigo.svg" alt="deftrigo.svg" class="org-svg" />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7141feb" class="outline-2">
-<h2 id="org7141feb"><span class="section-number-2">6.</span> Application : chercher une bonne approximation d&rsquo;un nombre réel.</h2>
-<div class="outline-text-2" id="text-6">
-<p>
-Lorsque l&rsquo;on va essayer d&rsquo;approximer un nombre réel comme \(x = \sqrt{2}\) à
-l&rsquo;aide d&rsquo;un algorithme, il va falloir écrire une boucle de la forme :
-</p>
-
-<p class="verse">
-TANT QUE d(a, x) &gt; 0.01<br />
-ALORS<br />
-&#xa0;&#xa0;&#xa0;&#xa0;&#x2026;.<br />
-</p>
-
-<p>
-Autrement dit, dans ces codes, l&rsquo;approximation sera donnée par la valeur de la
-variable \(a\), et \(x\) est la valeur que l&rsquo;on essaie d&rsquo;approcher. On demande à
-l&rsquo;algorithme de <b>continuer</b> tant que notre approximation est au dessus d&rsquo;un
-centième. Lorsque l&rsquo;on sortira de la boucle, nous obtiendrons donc une
-approximation telle que la première décimale sera juste !
-</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-02 mer. 15:29</p>
+<p class="date">Created: 2022-02-02 mer. 16:55</p>
 </div>
 </body>
 </html>
