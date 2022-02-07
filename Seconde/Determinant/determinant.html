@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:04 -->
+<!-- 2022-02-07 lun. 20:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Déterminant</title>
@@ -255,6 +255,7 @@
 <li><a href="#org9dd4fca">3.5. Que se passe-t-il lorsque les vecteurs sont colinéaires ?</a></li>
 </ul>
 </li>
+<li><a href="#org16d0ef1">4. Application : trouver une fonction affine qui passe par deux points du plan.</a></li>
 </ul>
 </div>
 </div>
@@ -292,7 +293,7 @@ un nombre réel (c&rsquo;est à dire un nombre positif ou négatif).
 Sur un schéma, voici ce que ça donne.
 </p>
 
-<div id="org5290443" class="figure">
+<div id="org047eaa6" class="figure">
 <p><img src="schemaDeterminant.svg" alt="schemaDeterminant.svg" class="org-svg" />
 </p>
 </div>
@@ -301,7 +302,7 @@ Sur un schéma, voici ce que ça donne.
 Mathématiquement, on le note comme il suit :
 </p>
 
-<div class="defi" id="org6dd076b">
+<div class="defi" id="orgc704b00">
 <p>
 Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs. On pose alors \(\textrm{det}(\vec{u},
 \vec{v})\) le <b>déterminant</b> des vecteurs \(\vec{u}\) et \(\vec{v}\), qui est un
@@ -320,7 +321,7 @@ Le déterminant est une application qui permet de <b>détecter</b> les vecteurs 
 sont <b>colinéaires</b>.
 </p>
 
-<div class="prop" id="org787c8ed">
+<div class="prop" id="orga43497b">
 <p>
 Si \(\textrm{det}(\vec{u},\vec{v}) = 0\), alors les deux vecteurs \(\vec{u}\) et
 \(\vec{v}\) sont colinéaires. Inversement, si \(\vec{v}\) et \(\vec{u}\) sont
@@ -335,7 +336,7 @@ permettent parfois de simplifier les calculs. Nous nous étendrons pas sur ces
 propriétés, mais elles existent.
 </p>
 
-<div class="prop" id="org797e1ff">
+<div class="prop" id="org0ebeb45">
 <p>
 Avec deux vecteurs, on dit qu&rsquo;il est
 <b>bilinéaire</b>, c&rsquo;est à dire que par exemple :
@@ -355,7 +356,7 @@ On encore, si \(\vec{w}\) est un vecteur :
 On peut «presque» échanger le rôle du premier et deuxième vecteur, ça ne
 changera pas trop le résultat (seul le signe sera changé).
 </p>
-<div class="prop" id="org4a46edf">
+<div class="prop" id="orgeaec034">
 <p>
 Pour \(\vec{v}\) et \(\vec{u}\) deux vecteurs du plan, on a :
 \[
@@ -390,7 +391,7 @@ Imaginons qu&rsquo;ils soient colinéaires. Alors, cela signifie qu&rsquo;il exi
 \(k\) tel que \(\vec{u} = k \vec{v}\).
 </p>
 
-<div id="org8546989" class="figure">
+<div id="orge5c1ead" class="figure">
 <p><img src="images/vecteursColinaires.svg" alt="vecteursColinaires.svg" class="org-svg" />
 </p>
 </div>
@@ -401,7 +402,7 @@ Autrement dit, on sait que \(x = kz\) et
 \(y\), \(z\), et \(w\) ne sont des nombres nuls.), alors on peut dire que
 \(\frac{x}{z}=k=\frac{y}{w}\). Donc :
 \[
-\frac{x}{z}=\frac{y}{w}$
+\frac{x}{z}=\frac{y}{w}
 \]
 Pratique, mais cette formule ne marche pas si \(z\) ou \(w\) sont nuls. On aurait pu
 inverser chaque formule, mais là encore il faudrait que \(x\) et \(y\) sont
@@ -431,7 +432,7 @@ On résume tout ça dans la partie suivante.
 <div id="outline-container-org961e285" class="outline-3">
 <h3 id="org961e285"><span class="section-number-3">2.2.</span> Définition du déterminant à partir des coordonnées des vecteurs.</h3>
 <div class="outline-text-3" id="text-2-2">
-<div class="prop" id="orgf3e5e17">
+<div class="prop" id="orgf2b0e4a">
 <p>
 Soit \((O, \vec{i}, \vec{j})\) un repère orthonormé, et \(\vec{u}=(x, y)\),
 \(\vec{v}=(w, z)\) deux vecteurs dont on connait les coordonnées dans le repère.
@@ -452,7 +453,7 @@ verticalement : le calcul du déterminant ressemble alors à un produit en croix
 </p>
 
 
-<div id="org9fe407c" class="figure">
+<div id="org30d3537" class="figure">
 <p><img src="images/memoDeterminant.svg" alt="memoDeterminant.svg" class="org-svg" />
 </p>
 </div>
@@ -461,6 +462,28 @@ verticalement : le calcul du déterminant ressemble alors à un produit en croix
 
 <div id="outline-container-org1730f02" class="outline-3">
 <h3 id="org1730f02"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Exemples</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Pour calculer le déterminant de deux vecteurs, on peut les placer
+<i>verticalement</i>. Prenons \(\vec{u} = (1;2)\) et \(\vec{v} = (3; 4)\), on calculera
+alors :
+</p>
+\begin{align*}
+  \textrm{det}(\vec{u};\vec{v}) &= \left|
+  \begin{array}{cc}
+    1 & 3 \\
+    2 & 4 \\
+  \end{array}
+  \right| = 1\times 4 - 3 \times 2  \\
+\textrm{det}(\vec{u};\vec{v}) &= 4- 6 = -2
+\end{align*}
+
+<p>
+Donc, ces deux vecteurs ne sont pas colinéaires, et on verra plus tard
+(attention <i>spoiler</i>) que l&rsquo;on peut en déduire que l&rsquo;aire du parallélogramme
+engendré par les vecteurs \(\vec{u}\) et \(\vec{v}\) est de \(2\).
+</p>
+</div>
 </div>
 </div>
 
@@ -470,7 +493,7 @@ verticalement : le calcul du déterminant ressemble alors à un produit en croix
 <p>
 S&rsquo;il y a bien quelque chose à retenir du déterminant, la voici :
 </p>
-<div class="prop" id="org589f9af">
+<div class="prop" id="org609e74f">
 <p>
 Le déterminant : c&rsquo;est de la magie.
 </p>
@@ -486,7 +509,7 @@ Lorsque l&rsquo;on se donne deux vecteurs dans le plan, comme les vecteurs \(\ve
 et \(\vec{v}\) dans l&rsquo;image ci contre :
 </p>
 
-<div id="orga956b73" class="figure">
+<div id="orge231ba9" class="figure">
 <p><img src="images/aireParallelogramme.svg" alt="aireParallelogramme.svg" class="org-svg" />
 </p>
 </div>
@@ -502,7 +525,7 @@ On peut alors former un parallélogramme, en remarquant que
 On peut se demander comment <b>calculer l&rsquo;aire</b> du parallélogramme \(OADB\). Et
 bien, voici comment on peut faire :
 </p>
-<div class="prop" id="org28c3ee6">
+<div class="prop" id="orgfca5150">
 <p>
 Soit un parallélogramme dont les cotés sont donnés par deux vecteurs \(\vec{u}\)
 et \(\vec{v}\) du plan.
@@ -547,7 +570,7 @@ Calculer l&rsquo;aire du <b>triangle</b> \(OBC\) ci-dessous.
 </p>
 
 
-<div id="org473bf7b" class="figure">
+<div id="orgcb77884" class="figure">
 <p><img src="images/aireTriangle.svg" alt="aireTriangle.svg" class="org-svg" />
 </p>
 </div>
@@ -589,7 +612,7 @@ Réfléchissons un peu. Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéair
 s&rsquo;ils peuvent être placés sur un même droite. Mais alors, le parallélogramme
 formé est plat. Donc son aire est&#x2026; Nulle ! On retrouve la proposition :
 </p>
-<div class="prop" id="orgb4bf28d">
+<div class="prop" id="org1437368">
 <p>
 Deux vecteurs \(\vec{u}\) et \(\vec{v}\) sont colinéaires si et seulement si
 \[
@@ -604,10 +627,84 @@ Comme les choses sont bien faites !
 </div>
 </div>
 </div>
+
+<div id="outline-container-org16d0ef1" class="outline-2">
+<h2 id="org16d0ef1"><span class="section-number-2">4.</span> Application : trouver une fonction affine qui passe par deux points du plan.</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+On utilise le déterminant pour trouver l&rsquo;ensemble des points \(M = (x; y)\) qui
+appartiennent à la droite \(A\) et \(B\) dont on connait les coordonnées d&rsquo;un repère
+orthonormé \((O; \vec{\imath}; \vec{\jmath})\).
+</p>
+
+<p>
+Montrons cela avec un exemple, on suppose que \(A = (-5; 1)\) et \(B=(-4; 4)\), dans
+le repère \((O; \vec{\imath}; \vec{\jmath})\).
+</p>
+
+<p>
+Le vecteur \(\overrightarrow{AB}\), appelé vecteur directeur de la droite \((AB)\)
+(mais il en existe d&rsquo;autres), admet comme direction la droite \((AB)\). Tous les
+points \(M\) qui sont sur la droite \((AB)\) respectent la propriété suivante :
+\[
+M \in (AB) \iff \overrightarrow{AB} \text{ est colinéaire avec le vecteur } \overrightarrow{AM}
+\]
+</p>
+
+<div id="orgd789389" class="figure">
+<p><img src="images/equationDroite.svg" alt="equationDroite.svg" class="org-svg" width="300px" />
+</p>
+</div>
+
+<p>
+Mais si \(\overrightarrow{AB}\) est colinéaire avec le vecteur
+\(\overrightarrow{AM}\), alors le déterminant des deux est nul.
+</p>
+
+<p>
+On calcule donc le déterminant des deux vecteurs en question.
+</p>
+
+\begin{align*}
+    \overrightarrow{AB} &= ( -4 + 5; 4-1  ) = (1, 3) \\
+\overrightarrow{AM} &= (x + 5, y - 1)
+\end{align*}
+<p>
+Donc :
+</p>
+\begin{align*}
+  \textrm{det}(\overrightarrow{AB}, \overrightarrow{AM}) = \left|
+  \begin{array}{cc}
+    1 & x + 5 \\
+    3 & y - 1 \\
+  \end{array}
+  \right| = 1\times (y - 1) - (x+5)\times 3 = 0
+\end{align*}
+<p>
+Donc, on obtient l&rsquo;équation suivante (en développant) :
+\[
+y - 3x = 16
+\]
+Ce que l&rsquo;on appelle une <b>équation de droite</b>. Nous, on sait que la fonction
+affine qui nous intéresse s&rsquo;écrit \(f(x) = Ax + B\), et cela correspond à
+l&rsquo;ordonnée du point \(M\) que nous cherchons, autrement dit \(y = f(x)\). Donc,
+ici :
+\[
+    f(x) = 3x + 16
+\]
+</p>
+
+<p>
+On vérifie que l&rsquo;on a bien \(f(-5) = 1\), et \(f(-4) = 4\), donc \(A\) et \(B\) font
+bien partis de la courbe représentative de la fonction affine \(f\), autrement dit
+la courbe représentative de la fonction \(f\) correspond à la droite \((AB)\).
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-01 sam. 18:04</p>
+<p class="date">Created: 2022-02-07 lun. 20:03</p>
 </div>
 </body>
 </html>
