@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:05 -->
+<!-- 2022-02-13 dim. 19:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fiche Aide Python</title>
@@ -192,12 +192,6 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -231,57 +225,57 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org86b1e72">1. Exprimer une condition</a></li>
-<li><a href="#org454ed10">2. Blocs conditions</a>
+<li><a href="#orgfddb960">1. Exprimer une condition</a></li>
+<li><a href="#org6f14060">2. Blocs conditions</a>
 <ul>
-<li><a href="#orgfc128de">2.1. Syntaxe</a></li>
-<li><a href="#orgbf6e683">2.2. Exemple</a></li>
-<li><a href="#org58681de">2.3. Mises en garde</a></li>
+<li><a href="#orgb5eef5f">2.1. Syntaxe</a></li>
+<li><a href="#org217d18d">2.2. Exemple</a></li>
+<li><a href="#orgd1caa30">2.3. Mises en garde</a></li>
 </ul>
 </li>
-<li><a href="#orgf2d9f8c">3. Boucles</a>
+<li><a href="#orgab08f86">3. Boucles</a>
 <ul>
-<li><a href="#org727a074">3.1. Les boucles tant que</a>
+<li><a href="#orgcc018e0">3.1. Les boucles tant que</a>
 <ul>
-<li><a href="#org284f476">3.1.1. Syntaxe</a></li>
-<li><a href="#org3d393dc">3.1.2. Exemple</a></li>
-<li><a href="#org16a3ffc">3.1.3. Mise en garde</a></li>
+<li><a href="#org9650f7d">3.1.1. Syntaxe</a></li>
+<li><a href="#org6759db2">3.1.2. Exemple</a></li>
+<li><a href="#orge0f516e">3.1.3. Mise en garde</a></li>
 </ul>
 </li>
-<li><a href="#orge79e5d1">3.2. Les boucles for</a>
+<li><a href="#orga4505e1">3.2. Les boucles for</a>
 <ul>
-<li><a href="#org40b847e">3.2.1. Syntaxe</a></li>
-<li><a href="#org050a0c7">3.2.2. Mise en garde</a></li>
-<li><a href="#org0a74626">3.2.3. Exemple</a></li>
+<li><a href="#org9f14cd3">3.2.1. Syntaxe</a></li>
+<li><a href="#org7cb8854">3.2.2. Mise en garde</a></li>
+<li><a href="#orgce348d5">3.2.3. Exemple</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb077ff0">4. Demander à l&rsquo;utilisateur</a>
+<li><a href="#org4b9d5bd">4. Demander à l&rsquo;utilisateur</a>
 <ul>
-<li><a href="#org7103acd">4.1. Du texte</a></li>
-<li><a href="#orgaf5f1e9">4.2. Un nombre</a></li>
+<li><a href="#org31cfd6e">4.1. Du texte</a></li>
+<li><a href="#org29829ad">4.2. Un nombre</a></li>
 </ul>
 </li>
-<li><a href="#orgdd2ea75">5. Les fonctions</a>
+<li><a href="#orgf272376">5. Les fonctions</a>
 <ul>
-<li><a href="#org1d76e89">5.1. Syntaxe</a></li>
-<li><a href="#org055bf5b">5.2. Mises en garde</a></li>
-<li><a href="#orgf2efc52">5.3. Exemple</a></li>
+<li><a href="#org4c9730e">5.1. Syntaxe</a></li>
+<li><a href="#org2580223">5.2. Mises en garde</a></li>
+<li><a href="#orgd14da26">5.3. Exemple</a></li>
 </ul>
 </li>
-<li><a href="#org3691863">6. Autre</a>
+<li><a href="#org46abb04">6. Autre</a>
 <ul>
-<li><a href="#org900c62b">6.1. Tester si \(a\) est divisible par \(b\)</a></li>
-<li><a href="#org4861030">6.2. Définir un nombre aléatoire</a></li>
+<li><a href="#org539caaa">6.1. Tester si \(a\) est divisible par \(b\)</a></li>
+<li><a href="#org1528563">6.2. Définir un nombre aléatoire</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org86b1e72" class="outline-2">
-<h2 id="org86b1e72"><span class="section-number-2">1.</span> Exprimer une condition</h2>
+<div id="outline-container-orgfddb960" class="outline-2">
+<h2 id="orgfddb960"><span class="section-number-2">1.</span> Exprimer une condition</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>Pour tester si <code>a</code> est égal à <code>b</code> : <code>a==b</code></li>
@@ -294,12 +288,12 @@
 </div>
 </div>
 
-<div id="outline-container-org454ed10" class="outline-2">
-<h2 id="org454ed10"><span class="section-number-2">2.</span> Blocs conditions</h2>
+<div id="outline-container-org6f14060" class="outline-2">
+<h2 id="org6f14060"><span class="section-number-2">2.</span> Blocs conditions</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgfc128de" class="outline-3">
-<h3 id="orgfc128de"><span class="section-number-3">2.1.</span> Syntaxe</h3>
+<div id="outline-container-orgb5eef5f" class="outline-3">
+<h3 id="orgb5eef5f"><span class="section-number-3">2.1.</span> Syntaxe</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">if</span> &lt;condition&gt; :
@@ -322,8 +316,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgbf6e683" class="outline-3">
-<h3 id="orgbf6e683"><span class="section-number-3">2.2.</span> Exemple</h3>
+<div id="outline-container-org217d18d" class="outline-3">
+<h3 id="org217d18d"><span class="section-number-3">2.2.</span> Exemple</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold; font-style: italic;">age</span> = <span style="font-weight: bold; text-decoration: underline;">18</span>
@@ -338,8 +332,8 @@
 </div>
 </div>
 
-<div id="outline-container-org58681de" class="outline-3">
-<h3 id="org58681de"><span class="section-number-3">2.3.</span> Mises en garde</h3>
+<div id="outline-container-orgd1caa30" class="outline-3">
+<h3 id="orgd1caa30"><span class="section-number-3">2.3.</span> Mises en garde</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>On commence toujours par <code>if</code>, puis, si besoin, on place un bloc <code>elif</code>,
@@ -350,16 +344,16 @@ autres conditions données par les blocs <code>if</code> et <code>elif</code> ne
 </div>
 </div>
 </div>
-<div id="outline-container-orgf2d9f8c" class="outline-2">
-<h2 id="orgf2d9f8c"><span class="section-number-2">3.</span> Boucles</h2>
+<div id="outline-container-orgab08f86" class="outline-2">
+<h2 id="orgab08f86"><span class="section-number-2">3.</span> Boucles</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org727a074" class="outline-3">
-<h3 id="org727a074"><span class="section-number-3">3.1.</span> Les boucles tant que</h3>
+<div id="outline-container-orgcc018e0" class="outline-3">
+<h3 id="orgcc018e0"><span class="section-number-3">3.1.</span> Les boucles tant que</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org284f476" class="outline-4">
-<h4 id="org284f476"><span class="section-number-4">3.1.1.</span> Syntaxe</h4>
+<div id="outline-container-org9650f7d" class="outline-4">
+<h4 id="org9650f7d"><span class="section-number-4">3.1.1.</span> Syntaxe</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">while</span> &lt;condition&gt; :
@@ -376,8 +370,8 @@ autres conditions données par les blocs <code>if</code> et <code>elif</code> ne
 </div>
 </div>
 
-<div id="outline-container-org3d393dc" class="outline-4">
-<h4 id="org3d393dc"><span class="section-number-4">3.1.2.</span> Exemple</h4>
+<div id="outline-container-org6759db2" class="outline-4">
+<h4 id="org6759db2"><span class="section-number-4">3.1.2.</span> Exemple</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold; font-style: italic;">nombre</span> = <span style="font-weight: bold; text-decoration: underline;">1</span>
@@ -389,8 +383,8 @@ autres conditions données par les blocs <code>if</code> et <code>elif</code> ne
 </div>
 </div>
 
-<div id="outline-container-org16a3ffc" class="outline-4">
-<h4 id="org16a3ffc"><span class="section-number-4">3.1.3.</span> Mise en garde</h4>
+<div id="outline-container-orge0f516e" class="outline-4">
+<h4 id="orge0f516e"><span class="section-number-4">3.1.3.</span> Mise en garde</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ol class="org-ol">
 <li>Vérifier que votre condition n&rsquo;est pas respectée indéfiniement, sinon vous
@@ -400,12 +394,12 @@ obtenez une <b>boucle infinie</b>.</li>
 </div>
 </div>
 
-<div id="outline-container-orge79e5d1" class="outline-3">
-<h3 id="orge79e5d1"><span class="section-number-3">3.2.</span> Les boucles for</h3>
+<div id="outline-container-orga4505e1" class="outline-3">
+<h3 id="orga4505e1"><span class="section-number-3">3.2.</span> Les boucles for</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-org40b847e" class="outline-4">
-<h4 id="org40b847e"><span class="section-number-4">3.2.1.</span> Syntaxe</h4>
+<div id="outline-container-org9f14cd3" class="outline-4">
+<h4 id="org9f14cd3"><span class="section-number-4">3.2.1.</span> Syntaxe</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">for</span> &lt;variable&gt; <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(&lt;nombre&gt;):
@@ -424,8 +418,8 @@ obtenez une <b>boucle infinie</b>.</li>
 </div>
 </div>
 
-<div id="outline-container-org050a0c7" class="outline-4">
-<h4 id="org050a0c7"><span class="section-number-4">3.2.2.</span> Mise en garde</h4>
+<div id="outline-container-org7cb8854" class="outline-4">
+<h4 id="org7cb8854"><span class="section-number-4">3.2.2.</span> Mise en garde</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <ol class="org-ol">
 <li><code>range(9)</code> correspond à tous les nombres entiers entre \(0\) et \(8\). Cela nous
@@ -436,8 +430,8 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 
-<div id="outline-container-org0a74626" class="outline-4">
-<h4 id="org0a74626"><span class="section-number-4">3.2.3.</span> Exemple</h4>
+<div id="outline-container-orgce348d5" class="outline-4">
+<h4 id="orgce348d5"><span class="section-number-4">3.2.3.</span> Exemple</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold; text-decoration: underline;">11</span>):
@@ -449,12 +443,12 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb077ff0" class="outline-2">
-<h2 id="orgb077ff0"><span class="section-number-2">4.</span> Demander à l&rsquo;utilisateur</h2>
+<div id="outline-container-org4b9d5bd" class="outline-2">
+<h2 id="org4b9d5bd"><span class="section-number-2">4.</span> Demander à l&rsquo;utilisateur</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org7103acd" class="outline-3">
-<h3 id="org7103acd"><span class="section-number-3">4.1.</span> Du texte</h3>
+<div id="outline-container-org31cfd6e" class="outline-3">
+<h3 id="org31cfd6e"><span class="section-number-3">4.1.</span> Du texte</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold; font-style: italic;">texte</span> = <span style="font-weight: bold;">input</span>(<span style="font-style: italic;">"message affich&#233;"</span>)
@@ -462,8 +456,8 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgaf5f1e9" class="outline-3">
-<h3 id="orgaf5f1e9"><span class="section-number-3">4.2.</span> Un nombre</h3>
+<div id="outline-container-org29829ad" class="outline-3">
+<h3 id="org29829ad"><span class="section-number-3">4.2.</span> Un nombre</h3>
 <div class="outline-text-3" id="text-4-2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold; font-style: italic;">nombre</span> = <span style="font-weight: bold;">int</span>(<span style="font-weight: bold;">input</span>(<span style="font-style: italic;">"message affich&#233;"</span>))
@@ -472,12 +466,12 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdd2ea75" class="outline-2">
-<h2 id="orgdd2ea75"><span class="section-number-2">5.</span> Les fonctions</h2>
+<div id="outline-container-orgf272376" class="outline-2">
+<h2 id="orgf272376"><span class="section-number-2">5.</span> Les fonctions</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org1d76e89" class="outline-3">
-<h3 id="org1d76e89"><span class="section-number-3">5.1.</span> Syntaxe</h3>
+<div id="outline-container-org4c9730e" class="outline-3">
+<h3 id="org4c9730e"><span class="section-number-3">5.1.</span> Syntaxe</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">def</span> &lt;nom de la fonction&gt;(&lt;var1&gt;, &lt;var2&gt;, ...):
@@ -496,8 +490,8 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 
-<div id="outline-container-org055bf5b" class="outline-3">
-<h3 id="org055bf5b"><span class="section-number-3">5.2.</span> Mises en garde</h3>
+<div id="outline-container-org2580223" class="outline-3">
+<h3 id="org2580223"><span class="section-number-3">5.2.</span> Mises en garde</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Une fonction peut avoir aucun argument, un seul, ou bien plusieurs.</li>
@@ -508,8 +502,8 @@ les arguments qu&rsquo;on lui envoie (regardez les exemples).</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf2efc52" class="outline-3">
-<h3 id="orgf2efc52"><span class="section-number-3">5.3.</span> Exemple</h3>
+<div id="outline-container-orgd14da26" class="outline-3">
+<h3 id="orgd14da26"><span class="section-number-3">5.3.</span> Exemple</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">affichage</span>(messages):
@@ -559,12 +553,12 @@ rappel()
 </div>
 </div>
 
-<div id="outline-container-org3691863" class="outline-2">
-<h2 id="org3691863"><span class="section-number-2">6.</span> Autre</h2>
+<div id="outline-container-org46abb04" class="outline-2">
+<h2 id="org46abb04"><span class="section-number-2">6.</span> Autre</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org900c62b" class="outline-3">
-<h3 id="org900c62b"><span class="section-number-3">6.1.</span> Tester si \(a\) est divisible par \(b\)</h3>
+<div id="outline-container-org539caaa" class="outline-3">
+<h3 id="org539caaa"><span class="section-number-3">6.1.</span> Tester si \(a\) est divisible par \(b\)</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">if</span> a % b == <span style="font-weight: bold; text-decoration: underline;">0</span> :
@@ -576,8 +570,8 @@ rappel()
 </div>
 </div>
 
-<div id="outline-container-org4861030" class="outline-3">
-<h3 id="org4861030"><span class="section-number-3">6.2.</span> Définir un nombre aléatoire</h3>
+<div id="outline-container-org1528563" class="outline-3">
+<h3 id="org1528563"><span class="section-number-3">6.2.</span> Définir un nombre aléatoire</h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="font-weight: bold;">from</span> random <span style="font-weight: bold;">import</span> randint
@@ -592,7 +586,7 @@ rappel()
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-01-01 sam. 18:05</p>
+<p class="date">Created: 2022-02-13 dim. 19:17</p>
 </div>
 </body>
 </html>

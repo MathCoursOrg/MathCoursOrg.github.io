@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-01 sam. 18:06 -->
+<!-- 2022-02-13 dim. 19:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Suite</title>
@@ -193,12 +193,6 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -232,38 +226,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org81b8d8d">1. Suites arithmétiques et géométriques : définition et techniques</a>
+<li><a href="#org865612d">1. Suites arithmétiques et géométriques : définition et techniques</a>
 <ul>
-<li><a href="#orgf61dee4">1.1. Suite arithmétiques</a></li>
-<li><a href="#org2e153e5">1.2. Suites géométrique</a></li>
+<li><a href="#org6a0ed20">1.1. Suite arithmétiques</a></li>
+<li><a href="#org18b6713">1.2. Suites géométrique</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org81b8d8d" class="outline-2">
-<h2 id="org81b8d8d"><span class="section-number-2">1.</span> Suites arithmétiques et géométriques : définition et techniques</h2>
+<div id="outline-container-org865612d" class="outline-2">
+<h2 id="org865612d"><span class="section-number-2">1.</span> Suites arithmétiques et géométriques : définition et techniques</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgf61dee4" class="outline-3">
-<h3 id="orgf61dee4"><span class="section-number-3">1.1.</span> Suite arithmétiques</h3>
+<div id="outline-container-org6a0ed20" class="outline-3">
+<h3 id="org6a0ed20"><span class="section-number-3">1.1.</span> Suite arithmétiques</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="prop" id="org2fadfd6">
+<div class="prop" id="org703929e">
 <p>
 On dit qu&rsquo;une suite est une suite arithmétique si chaque terme de la suite est égal au terme précédent, ajouté d&rsquo;un même nombre \(r\)
 </p>
 
 </div>
 
-<div class="ex" id="orgd2802de">
+<div class="ex" id="orgae875f8">
 <p>
 Si j&rsquo;ajoute \(3\) pour passer d&rsquo;un terme à un autre à chaque fois, ma suite est arithmétique, de raison \(3\).
 </p>
 
 </div>
 
-<div class="ex" id="org7b99f35">
+<div class="ex" id="orgb394bc3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -304,14 +298,14 @@ Si j&rsquo;ajoute \(3\) pour passer d&rsquo;un terme à un autre à chaque fois,
 
 </div>
 
-<div class="prop" id="org797c321">
+<div class="prop" id="org781d756">
 <p>
 Pour trouver la raison d&rsquo;une suite arithmétique, il suffit de calculer la différence de deux termes consécutifs
 </p>
 
 </div>
 
-<div class="ex" id="orge5d77e3">
+<div class="ex" id="org3b900f9">
 <p>
 Dans la suite donnée en exemple, si on calcule, par exemple :
 \[
@@ -322,7 +316,7 @@ on retrouve bien la raison de la suite, \(r=2\)
 
 </div>
 
-<div class="prop" id="org003a594">
+<div class="prop" id="orgfc40fbe">
 <p>
     Pour trouver \(u_n\) connaissant \(u_{n+1}\) et \(u_{n-1}\), on peut calculer :
 \[
@@ -333,7 +327,7 @@ Autrement dit, chaque terme est la moyenne arithmétique de ses termes voisins
 
 </div>
 
-<div class="ex" id="org17d05a4">
+<div class="ex" id="orgd9f328d">
 \begin{align*}
   u_3 &= \frac{u_4 + u_2}{2}\\
       &= \frac{12 + 6}{2} \\
@@ -343,8 +337,8 @@ Autrement dit, chaque terme est la moyenne arithmétique de ses termes voisins
 </div>
 </div>
 </div>
-<div id="outline-container-org2e153e5" class="outline-3">
-<h3 id="org2e153e5"><span class="section-number-3">1.2.</span> Suites géométrique</h3>
+<div id="outline-container-org18b6713" class="outline-3">
+<h3 id="org18b6713"><span class="section-number-3">1.2.</span> Suites géométrique</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 #+begin<sub>defi</sub>{Suite géométrique}
@@ -353,14 +347,14 @@ multiple du terme précédent par un nombre \(q\).
 #+end<sub>def</sub>
 </p>
 
-<div class="ex" id="org9f33633">
+<div class="ex" id="org97bab49">
 <p>
 Si je multiplie par \(3\) pour passer d&rsquo;un terme à un autre à chaque fois, ma suite est géométrique, de raison \(3\)
 </p>
 
 </div>
 
-<div class="ex" id="org6cb8d9d">
+<div class="ex" id="orgde35d15">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -400,14 +394,14 @@ Si je multiplie par \(3\) pour passer d&rsquo;un terme à un autre à chaque foi
 </table>
 
 </div>
-<div class="prop" id="org2ca9c18">
+<div class="prop" id="org4b563fe">
 <p>
 Pour trouver la raison d&rsquo;une suite géométrique, il suffit de calculer le quotient de deux termes consécutifs
 </p>
 
 </div>
 
-<div class="ex" id="orge9b9ce9">
+<div class="ex" id="org8834c10">
 <p>
 Dans la suite précédente, on a bien :
 \[
@@ -417,14 +411,14 @@ Dans la suite précédente, on a bien :
 
 </div>
 
-<div class="prop" id="org01c683f">
+<div class="prop" id="org59c0794">
 <p>
 Si \((u_n)\) est une suite géométrique, et que l&rsquo;on connait \(u_{n+1}\) et \(u_{n-1}\), alors on peut en déduire la raison de la suite géométrique !
 </p>
 
 </div>
 
-<div class="ex" id="org43b3c5b">
+<div class="ex" id="org9fcc4c6">
 <p>
 Si on connait \(u_2=9\) et \(u_4=81\), puisque l&rsquo;on a multiplié \(u_2\) par \(q\) pour trouver \(u_3\), et \(u_3\) par \(q\) pour trouver \(u_4\), on peut en déduire que :
 \[
@@ -447,14 +441,14 @@ le calcul donne bien :
 
 </div>
 
-<div class="prop" id="org65cd4ec">
+<div class="prop" id="org54bf098">
 <p>
 Si \((u_n)\) est une suite géométrique, et que l&rsquo;on connait \(u_{n+1}\) et \(u_{n-1}\), alors on peut en déduire le terme \(u_n\)
 </p>
 
 </div>
 
-<div class="ex" id="org1e7df88">
+<div class="ex" id="orgf3023a6">
 <p>
 Si on reprend l&rsquo;exemple précédent, on peut s&rsquo;apercevoir que
 </p>
@@ -470,7 +464,7 @@ En effet, on obtient bien :
 
 </div>
 
-<div class="prop" id="org56df0cf">
+<div class="prop" id="org2e14aff">
 <p>
 Si \(a\) et \(b\) sont deux nombres positifs, alors :
 </p>
@@ -480,14 +474,14 @@ Si \(a\) et \(b\) sont deux nombres positifs, alors :
 
 </div>
 
-<div class="ex" id="org69538b5">
+<div class="ex" id="orgc96ce34">
 <p>
 Voir les calculs faits plus haut.
 </p>
 
 </div>
 
-<div class="prop" id="org3b876fa">
+<div class="prop" id="orgebe2260">
 <p>
 On peut calculer directement le $n$-ième terme d&rsquo;une suite géométrique de raison \(q\), par la formule suivante :
 \[
@@ -497,7 +491,7 @@ On peut calculer directement le $n$-ième terme d&rsquo;une suite géométrique 
 
 </div>
 
-<div class="ex" id="org648adae">
+<div class="ex" id="org60e77ec">
 <p>
 Le cinquantième terme de la suite donnée en exemple se calcule par :
 \[
@@ -512,7 +506,7 @@ Le cinquantième terme de la suite donnée en exemple se calcule par :
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-01-01 sam. 18:06</p>
+<p class="date">Created: 2022-02-13 dim. 19:18</p>
 </div>
 </body>
 </html>

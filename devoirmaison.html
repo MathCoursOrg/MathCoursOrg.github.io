@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-13 dim. 19:18 -->
+<!-- 2022-02-13 dim. 20:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cours Puissance Fiche</title>
+<title>Composition à son domicile.</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -216,137 +216,255 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
- |
- <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
-</div><div id="content" class="content">
-<h1 class="title">Cours Puissance Fiche</h1>
+<div id="content" class="content">
+<h1 class="title">Composition à son domicile.</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org86e8bce">1. Définition des puissances entières positives d&rsquo;un nombre réel</a></li>
-<li><a href="#org17f4464">2. Définition des puissances entières négatives d&rsquo;un nombre réel</a></li>
-<li><a href="#org5b0b154">3. Propriétés des puissances</a>
-<ul>
-<li><a href="#org3ebde32">3.1. Pour une même base</a></li>
-<li><a href="#org6bb4b2d">3.2. Pour une même puissance</a></li>
-<li><a href="#orgee0ee7c">3.3. Avec les fractions</a></li>
-<li><a href="#orge90370e">3.4. Enchaînement de puissance d&rsquo;une même base</a></li>
-</ul>
-</li>
+<li><a href="#org4bae7f4">1. Comment rendre ces devoirs maisons ?</a></li>
+<li><a href="#org600d93a">2. Une trajectoire tu suivras</a></li>
+<li><a href="#org11e1b38">3. Une cible tu viseras</a></li>
+<li><a href="#org05058c9">4. Vedi, vidi, vici.</a></li>
+<li><a href="#org36688ff">5. Le temps tu surveilleras</a></li>
+<li><a href="#org421db6e">6. Une inégalité.</a></li>
+<li><a href="#org1f1fa72">7. Rebond.</a></li>
+<li><a href="#orgd8ae835">8. Un peu de divisibilité.</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org86e8bce" class="outline-2">
-<h2 id="org86e8bce"><span class="section-number-2">1.</span> Définition des puissances entières positives d&rsquo;un nombre réel</h2>
+<div id="outline-container-org4bae7f4" class="outline-2">
+<h2 id="org4bae7f4"><span class="section-number-2">1.</span> Comment rendre ces devoirs maisons ?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Si \(a\) est un nombre réel, et \(n\) un entier positif alors :
-\[
-a^{n} = \underbrace{a \times a \times a \ldots \times a}_{n \quad \textrm{fois}}
-\]
-Et :
-\[
-a^{0} = 1 \quad \textrm{si} \quad a \not = 0
-\]
+Tous ces devoirs maisons sont <b>facultatifs</b>.
 </p>
 
 <p>
-Attention :
-\[
-0^{0} \quad \textrm{n'existe pas}
-\]
+Chaque section de ce document <b>correspond à un seul devoir maison</b>. Ils sont de
+difficultés inégales, mais ils seront tous notés sur 10 points.
+</p>
+
+<p>
+Vous pouvez utilisez Geogebra, ou bien un programme Python pour répondre aux
+questions.
+</p>
+
+<p>
+Dans ce cas, il faut <span class="underline">joindre par mél</span> les documents que vous avez
+écrits, en le nommant sous la forme :
+</p>
+
+<div class="org-center">
+<p>
+Prénom-NomDeFamille-NomDuProbleme.py
+</p>
+</div>
+
+<p>
+Avec l&rsquo;extension adaptée en fonction du type de fichier que vous avez.
+</p>
+
+<p>
+Ce qui comptera le plus dans ces devoirs maisons est <b>la démarche</b>, comment vous
+pouvez <b>montrer</b> et <b>convaincre</b> les autres que votre résultat est le bon.
+</p>
+
+<div class="org-center">
+<p>
+Si cette démarche est absente, il ne faudra pas s&rsquo;étonner de l&rsquo;absence de points.
+</p>
+</div>
+
+<p>
+Vous pouvez rendre ces travaux dans <b>l&rsquo;ordre que vous souhaitez</b>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org17f4464" class="outline-2">
-<h2 id="org17f4464"><span class="section-number-2">2.</span> Définition des puissances entières négatives d&rsquo;un nombre réel</h2>
+<div id="outline-container-org600d93a" class="outline-2">
+<h2 id="org600d93a"><span class="section-number-2">2.</span> Une trajectoire tu suivras</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Si \(a\) est un nombre réel <b>non nul</b>, et \(-n\) un entier négatif alors :
+La trajectoire d&rsquo;un ballon tiré depuis le sol est modélisée par la fonction \(f\)
+suivante :
 \[
-a^{-n} = \frac{1}{a^{n}}
+f(x) = \frac{1}{2}x^{2} - 20,79x
 \]
-Autrement dit, \(a^{-n}\) est l&rsquo;inverse de \(a^{n}\).
 </p>
+
+<ol class="org-ol">
+<li>Pourquoi la fonction qui modélise une telle trajectoire doit s&rsquo;annuler en \(0\) ?</li>
+<li>Quelle est la hauteur maximale atteinte par le ballon ?</li>
+</ol>
 </div>
 </div>
 
-<div id="outline-container-org5b0b154" class="outline-2">
-<h2 id="org5b0b154"><span class="section-number-2">3.</span> Propriétés des puissances</h2>
+<div id="outline-container-org11e1b38" class="outline-2">
+<h2 id="org11e1b38"><span class="section-number-2">3.</span> Une cible tu viseras</h2>
 <div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-org3ebde32" class="outline-3">
-<h3 id="org3ebde32"><span class="section-number-3">3.1.</span> Pour une même base</h3>
-<div class="outline-text-3" id="text-3-1">
 <p>
-Si \(a\) est un nombre réel, et \(p, q\) deux entiers relatifs (s&rsquo;ils sont négatifs,
-il ne faut pas que \(a\) soit nul), alors :
+La trajectoire d&rsquo;une flèche tirée depuis le sol par un archer d&rsquo;une taille de
+\(1,78\textrm{m}\) est donnée par la fonction suivante :
 \[
-a^{p + q} = a^{p} \times a^{q}
-\]
-Le produit de puissance de même base, c&rsquo;est cette base puissance la somme des
-puissances.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6bb4b2d" class="outline-3">
-<h3 id="org6bb4b2d"><span class="section-number-3">3.2.</span> Pour une même puissance</h3>
-<div class="outline-text-3" id="text-3-2">
-<p>
-Si \(a\) et \(b\) sont deux nombres réels non nul, et \(p\) un nombre entier relatif :
-\[
-\left(a \times b\right)^{p} = a^{p} \times b^{p}
-\]
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgee0ee7c" class="outline-3">
-<h3 id="orgee0ee7c"><span class="section-number-3">3.3.</span> Avec les fractions</h3>
-<div class="outline-text-3" id="text-3-3">
-<p>
-Si \(a\) et \(b\) sont deux nombres non nul et \(p\) un nombre entier relatif :
-\[
-\left(\frac{a}{b} \right)^{p} = \frac{a^{p}}{b^{p}}
+g(x) = -0,00444x^{2} + 0.23917x + 1,78
 \]
 </p>
 
 <p>
-\[
-\frac{1}{a^{p}} = \left( \frac{1}{a} \right)^{p}
-\]
-</p>
-
-<p>
-\[
-\left(\frac{a}{b} \right)^{-p} =\left(\frac{b}{a} \right)^{p}
-\]
+La flèche atteint le centre d&rsquo;une cible. Ce centre est à \(1.5\) m du sol. Quelle
+est la distance au sol parcourue par la flèche ?
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge90370e" class="outline-3">
-<h3 id="orge90370e"><span class="section-number-3">3.4.</span> Enchaînement de puissance d&rsquo;une même base</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org05058c9" class="outline-2">
+<h2 id="org05058c9"><span class="section-number-2">4.</span> Vedi, vidi, vici.</h2>
+<div class="outline-text-2" id="text-4">
 <p>
-Si \(a\) est un nombre réel non nul, \(p\) et \(q\) deux entiers relatifs, alors :
-\[
-\left(a^{p}\right)^{q} = a^{p\times q}
-\]
+Vous interceptez un message entre deux espions romains.
+</p>
+
+<blockquote>
+<p>
+NSPC LXT YZECP NZXXLYOLYE PE XZT DZXXPD O LNNZCO AZFC ORNTOPC O FYP NSZDP YZFD
+LEELBFPCZYD OPXLTY
+</p>
+</blockquote>
+<p>
+À vous de le déchiffrer !
 </p>
 </div>
+</div>
+
+<div id="outline-container-org36688ff" class="outline-2">
+<h2 id="org36688ff"><span class="section-number-2">5.</span> Le temps tu surveilleras</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Albert Einstein utilise deux montres inhabituelles qui ont toutes les deux un
+cadran de 24 heures.
+</p>
+
+<p>
+Une montre va deux fois trop vite, et l&rsquo;autre va à la bonne vitesse, mais dans
+le sens inverse.
+</p>
+
+<p>
+Les deux montrent indiquent \(13\) heure.
+</p>
+
+<p>
+Quelle sera la prochaine heure où l&rsquo;affichage sera identique sur les deux
+montres ?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org421db6e" class="outline-2">
+<h2 id="org421db6e"><span class="section-number-2">6.</span> Une inégalité.</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Montrer que, pour n&rsquo;importe quel \(x\) et \(y\) réels, on a toujours l&rsquo;inégalité
+suivante :
+\[
+    \left|xy\right| \leq \frac{x^{2} + y^{2}}{2}
+\]
+</p>
+
+<p>
+Vous pourrez proposer un graphe de différentes fonctions, par exemple en fixant
+une des deux variables (posez par exemple \(y = 5\)).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f1fa72" class="outline-2">
+<h2 id="org1f1fa72"><span class="section-number-2">7.</span> Rebond.</h2>
+<div class="outline-text-2" id="text-7">
+
+<div id="orgcf70a5a" class="figure">
+<p><img src="images/rebondDevoirMaison.svg" alt="rebondDevoirMaison.svg" class="org-svg" />
+</p>
+</div>
+
+<p>
+On considère un point \(A(0; 4)\) et un point \(B(5; 2)\) du plan munit d&rsquo;un repère
+orthonormé \((O; \vec{\imath}; \vec{\jmath})\). On considère un miroir, que l&rsquo;on
+appelle \(\Delta\), placé à l&rsquo;axe des abscisses.
+</p>
+
+<p>
+On considère un rayon lumineux émanant du point \(A\), rebondissant sur la droite
+\(\Delta\), et arrivant en \(B\).
+</p>
+
+<ol class="org-ol">
+<li>Déterminer le point \(C\) sur la droite \(\Delta\), sachant que la trajectoire du
+rayon est celle qui minimise la trajectoire entre \(A\) et \(B\) en passant par
+\(C\).</li>
+<li>Calculer la distance de la trajectoire \(A\), \(C\), \(B\).</li>
+</ol>
+
+
+<p>
+<span class="underline">Indice :</span> Considérer le «reflet» du point \(B\) dans le miroir \(\Delta\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd8ae835" class="outline-2">
+<h2 id="orgd8ae835"><span class="section-number-2">8.</span> Un peu de divisibilité.</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Vous devez servir des jus d&rsquo;oranges sur un stand, et vous avez autant de jus
+d&rsquo;orange que vous le souhaitez, mais vous n&rsquo;avez que deux récipients d&rsquo;une
+contenance précise, et un grand saladier non gradué. Les seules manipulations
+que vous pouvez faire avec vos récipients c&rsquo;est de les vider ou de les remplir
+complètement.
+</p>
+
+<p>
+Un récipient de \(a\textrm{ml}\), et un autre de \(b\textrm{ml}\).
+</p>
+
+<p>
+Des participants (assez exigeants) vont vous demander une quantité précise \(c\)
+de jus d&rsquo;orange dans leur verre.
+</p>
+
+<p>
+Les nombres \(a\), \(b\) et \(c\) sont toujours des nombres entiers positifs non nuls.
+</p>
+
+<p>
+Écrivez une fonction <code>estCePossible(a, b, c)</code> qui détermine s&rsquo;il est possible ou
+non de satisfaire leur commande.
+</p>
+
+<div class="exemple" id="orgfc6429d">
+<p>
+Un exemple. Si vous avez un récipient de \(200\), et \(400\) ml, vous ne pouvez pas
+satisfaire une commande de \(301\) ml précisément. Dans ce cas précis, on peut
+voir que \(200\) et \(400\) sont pairs. Donc, quelque soit les manipulations que
+l&rsquo;on fait avec nos récipients, on ne pourra servir que des contenances d&rsquo;une
+valeur paire. Donc, le code <code>estCePossible(200, 400, 301)</code> devrait alors
+retourner <code>False</code>, ou un message dans ce sens.
+</p>
+
+</div>
+
+<p>
+<span class="underline">Ce sujet est particulièrement difficile. Toutes traces de recherches seront
+très grandement récompensées, même si elles n&rsquo;aboutissent pas.</span>
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:18</p>
+<p class="date">Created: 2022-02-13 dim. 20:04</p>
 </div>
 </body>
 </html>
