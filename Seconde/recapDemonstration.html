@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-14 lun. 19:00 -->
+<!-- 2022-02-14 lun. 19:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Récapitulatif des démonstrations</title>
@@ -250,6 +250,11 @@
 <li><a href="#orgd675354">3.1. La racine carré de somme est plus petite que la somme des racines carrés</a></li>
 </ul>
 </li>
+<li><a href="#org27b126b">4. Vecteurs</a>
+<ul>
+<li><a href="#org5bb473c">4.1. Deux vecteurs sont colinéaires si et seulement si leur déterminant est nul</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -261,28 +266,28 @@
 <div id="outline-container-orga9efd9b" class="outline-3">
 <h3 id="orga9efd9b"><span class="section-number-3">1.1.</span> Somme de deux entiers, et parité</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org87af906">
+<div class="defi" id="org1bbeafe">
 <p>
 La parité d&rsquo;un nombre signifie sa propriété à être pair ou impair.
 </p>
 
 </div>
 
-<div class="ex" id="org69f68ad">
+<div class="ex" id="orge23ae13">
 <p>
 La parité de \(132\) est pair. La parité de \(147\) est impair.
 </p>
 
 </div>
 
-<div class="prop" id="org3ce3508">
+<div class="prop" id="orgd696f50">
 <p>
 Si \(a\) et \(b\) sont deux nombres pairs, alors leur somme est pair aussi
 </p>
 
 </div>
 
-<div class="dem" id="org1d673f9">
+<div class="dem" id="org4047aa4">
 <p>
 Puisque \(a\) et \(b\) sont deux nombres pairs, alors, il existe deux entiers \(k\) et
 \(k'\) tels que :
@@ -327,14 +332,14 @@ On a là encore que \(16\) et \(256\) sont pairs.
 </p>
 
 
-<div class="prop" id="org51b2c1e">
+<div class="prop" id="org306e66b">
 <p>
 Soit \(n\) un entier impair, alors \(n^2\) est impair aussi.
 </p>
 
 </div>
 
-<div class="dem" id="org36eb0b3">
+<div class="dem" id="orgd6b1ee9">
 <p>
 Puisque \(n\) est impair, il existe \(k\) un entier tel que
 \[
@@ -361,13 +366,13 @@ plusieurs raisonnements qui fonctionnent. En voici un qui utilise une identité
 remarquable très astucieuse.
 </p>
 
-<div class="prop" id="org80ccf03">
+<div class="prop" id="org61f38bd">
 <p>
 Si \(n^{2}\) est impair, alors \(n\) est impair.
 </p>
 
 </div>
-<div class="dem" id="orga6c0954">
+<div class="dem" id="org5b29df1">
 <p>
 On commence par remarquer que, quelque soit \(n\), on a :
 \[
@@ -389,7 +394,7 @@ impair, puisque \(n+1\) est pair par exemple.
 <p>
 Il ne nous manque plus que la démonstration suivante,
 </p>
-<div class="prop" id="org26f012c">
+<div class="prop" id="orge25bda9">
 <p>
 Si \(n^2\) est pair, alors \(n\) est pair
 </p>
@@ -401,7 +406,7 @@ On peut donner un argument de logique, puisque les nombres entiers sont soit
 pairs, soit impairs, il n&rsquo;y a pas d&rsquo;autre alternative.
 </p>
 
-<div class="dem" id="orgb3d5b5e">
+<div class="dem" id="org0d04494">
 <p>
 On sait que \(n^2\) est pair. Si jamais \(n\) est impair, alors, d&rsquo;après la
 démonstration vue plus haut, on aurait que \(n^{2}\) est impair. Mais ce n&rsquo;est pas
@@ -427,7 +432,7 @@ correcte, tous les moyens sont bons ! Il suffit de trouver son propre chemin.
 <div id="outline-container-orge6141c8" class="outline-3">
 <h3 id="orge6141c8"><span class="section-number-3">2.1.</span> Rappels sur les racines carrés</h3>
 <div class="outline-text-3" id="text-2-1">
-<div class="defi" id="orge547b04">
+<div class="defi" id="org5961e60">
 <p>
 La racine carré peut se comprendre comme une annulation du carré. Plus
 précisément, si \(x\) est un nombre positif, alors :
@@ -437,7 +442,7 @@ précisément, si \(x\) est un nombre positif, alors :
 </p>
 
 </div>
-<div class="ex" id="org55cbf8d">
+<div class="ex" id="orga7bcd17">
 <p>
 \[
 \sqrt{3^{2}} = \sqrt{9} = 3
@@ -456,14 +461,14 @@ Alors qu&rsquo;on aurait dû obtenir \(-3\) comme résultat, on obtient ici \(3\
 dit son opposé.
 </p>
 
-<div class="defi" id="orgaa58e8c">
+<div class="defi" id="orgcb24a98">
 <p>
 Soit \(x\) un nombre positif, alors \(\sqrt{x}\) est le nombre qui, élevé au carré,
 donne \(x\).
 </p>
 
 </div>
-<div class="ex" id="org02a3bd2">
+<div class="ex" id="org09fde01">
 <p>
 Le nombre \(\sqrt{9} = 3\) est le nombre qui, élevé au carré, donne \(9\).
 </p>
@@ -479,7 +484,7 @@ donne \(2\).
 <div id="outline-container-org1386c0b" class="outline-3">
 <h3 id="org1386c0b"><span class="section-number-3">2.2.</span> Définition</h3>
 <div class="outline-text-3" id="text-2-2">
-<div class="defi" id="org7eda026">
+<div class="defi" id="org802d85a">
 <p>
 Les nombres rationnels sont les nombres qui s&rsquo;écrivent comme un quotient de
 nombres entiers. Plus précisément, \(x\) est un nombre rationnel si et seulement
@@ -491,7 +496,7 @@ x = \frac{p}{q}
 
 </div>
 
-<div class="ex" id="orgd839213">
+<div class="ex" id="org8d86b0d">
 <p>
 Le nombre \(0,2\) est rationnel, puisque :
 \[
@@ -507,10 +512,7 @@ rationnel. Mais nous allons voir qu&rsquo;effectivement \(\sqrt{2}\) est un exem
 nombre non rationnel.
 </p>
 
-<p>
-#+attr<sub>latex</sub> :options {Nombres irrationnels}
-</p>
-<div class="defi" id="org268eff2">
+<div class="defi" id="org35df72a">
 <p>
 Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
 </p>
@@ -522,14 +524,14 @@ Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
 <div id="outline-container-org1a8773c" class="outline-3">
 <h3 id="org1a8773c"><span class="section-number-3">2.3.</span> Démonstration</h3>
 <div class="outline-text-3" id="text-2-3">
-<div class="prop" id="org4b50458">
+<div class="prop" id="org3cefbec">
 <p>
 \(\sqrt{2}\) est irrationnel
 </p>
 
 </div>
 
-<div class="dem" id="org6fb838b">
+<div class="dem" id="orge2d5dc0">
 <p>
 Cette démonstration est l&rsquo;occasion de voir en pratique un raisonnement logique
 utilisé très souvent en mathématiques : le raisonnement par l&rsquo;absurde.
@@ -603,10 +605,10 @@ alors que :
 \]
 </p>
 
-<div class="dem" id="org8ea98bc">
+<div class="dem" id="org8062770">
 <p>
-Premièrement, pour tout \(x, y \in [0; + \infty[\), on a \(x \lt y\) si et seulement si
-\(x^{2} \lt y^{2}\). C&rsquo;est parce que la fonction carré est (strictement) croissante
+Premièrement, pour tout \(x, y \in [0; + \infty[\), on a \(x  <  y\) si et seulement si
+\(x^{2}  <  y^{2}\). C&rsquo;est parce que la fonction carré est (strictement) croissante
 sur \([0;+\infty[\).
 </p>
 
@@ -615,7 +617,7 @@ Si on pose \(x = \sqrt{a+b}\) et \(y=\sqrt{a}+\sqrt{b}\).
 </p>
 
 <p>
-Si on montre que \(x^{2} \lt y^{2}\) alors on aura montré que \(x \lt y\) car \(\sqrt{a
+Si on montre que \(x^{2}  <  y^{2}\) alors on aura montré que \(x  <  y\) car \(\sqrt{a
 +b}\) et \(\sqrt{a} + \sqrt{b}\) sont strictement positifs.
 </p>
 
@@ -637,12 +639,100 @@ Et d&rsquo;autre part :
 \end{align*}
 
 <p>
-Donc \(y^{2} > x^{2}\) car \(\sqrt{a}\sqrt{b} \geq 0\). Donc \(y > x\), et donc \(x \lt y\).
+Donc \(y^{2} > x^{2}\) car \(\sqrt{a}\sqrt{b} \geq 0\). Donc \(y > x\), et donc \(x  <  y\).
 Et finalement :
 \[
     \sqrt{a + b} \leq \sqrt{a} + \sqrt{b}
 \]
 Et voilà !
+</p>
+
+</div>
+
+<p>
+Exemple :
+Quelque soit \(x \geq 1\), on a :
+\[
+    \sqrt{x} < \sqrt{x-1} + 1
+\]
+</p>
+
+<p>
+Pour cela, on écrit \(\sqrt{x} = \sqrt{x + 1 - 1}\), et on pose \(a = x + 1\) et
+\(b=x\) dans l&rsquo;inégalité précédente.
+</p>
+
+<p>
+Par exemple, on sait que \(\sqrt{8} < \sqrt{7} + 1\).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org27b126b" class="outline-2">
+<h2 id="org27b126b"><span class="section-number-2">4.</span> Vecteurs</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org5bb473c" class="outline-3">
+<h3 id="org5bb473c"><span class="section-number-3">4.1.</span> Deux vecteurs sont colinéaires si et seulement si leur déterminant est nul</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Soit \(\vec{u}\) et \(\vec{v}\) deux vecteurs, de coordonnées \((a, b)\) et \((c,d)\)
+dans un repère du plan.
+</p>
+
+<p>
+Montrons que s&rsquo;il sont colinéaires, alors leur déterminant est nul.
+</p>
+
+<div class="dem" id="org32a208a">
+<p>
+Si \(\vec{u}\) est colinéaires à \(\vec{v}\), alors il existe un réel \(k \in
+\mathbb{R}\) tel que \(\vec{u} = k \vec{v}\). Autrement dit, nous avons :
+</p>
+\begin{align*}
+    (a , b) = k \times (c, d) = (k \times c, k \times d)
+\end{align*}
+<p>
+Donc, on a \(a = k \times c\) et \(b = k \times d\).
+</p>
+
+<p>
+Donc, on rappelle que \(\textrm{det}(\vec{u}, \vec{v}) = ad - bc\). On a ainsi :
+</p>
+\begin{align*}
+    \textrm{det}(\vec{u}, \vec{v}) = k \times c \times d - k \times d \times c = 0
+\end{align*}
+<p>
+Le déterminant s&rsquo;annule donc effectivement pour des vecteurs qui sont colinéaires.
+</p>
+
+</div>
+
+<p>
+Il nous reste à montrer l&rsquo;énoncé réciproque (qui nous intéresse presque plus),
+c&rsquo;est-à-dire que si deux vecteurs ont un déterminant nul, alors ils sont
+colinéaires.
+</p>
+
+<div class="dem" id="org13b2b04">
+<p>
+Si \(\textrm{det}(\vec{u}, \vec{v}) = 0\), alors \(ad = bc\). Si l&rsquo;une des valeurs
+\(a\), \(b\), \(c\) ou \(d\) est nulle, alors il existe une deuxième qui est nulle, et
+dans tous les cas on obtient des vecteurs colinéaires.
+</p>
+
+<p>
+On suppose qu&rsquo;aucune des valeurs \(a\), \(b\), \(c\) et \(d\) n&rsquo;est nulle. Ainsi, on a :
+\(a = \frac{b}{d} c\), et \(b = \frac{b}{d} \times d\), donc en posant \(k = \frac{b}{d}\)
+on a effectivement :
+</p>
+\begin{align*}
+    a &= k c \\
+    b &= k d
+\end{align*}
+<p>
+Donc, \(\vec{u} = k \vec{v}\), donc les deux vecteurs sont colinéaires.
 </p>
 
 </div>
@@ -652,7 +742,7 @@ Et voilà !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-14 lun. 19:00</p>
+<p class="date">Created: 2022-02-14 lun. 19:42</p>
 </div>
 </body>
 </html>
