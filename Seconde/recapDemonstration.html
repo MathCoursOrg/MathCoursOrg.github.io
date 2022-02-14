@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-13 dim. 19:17 -->
+<!-- 2022-02-14 lun. 19:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Recap Demonstration</title>
+<title>Récapitulatif des démonstrations</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -193,6 +193,12 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -221,7 +227,7 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Recap Demonstration</h1>
+<h1 class="title">Récapitulatif des démonstrations</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
@@ -239,6 +245,11 @@
 <li><a href="#org1a8773c">2.3. Démonstration</a></li>
 </ul>
 </li>
+<li><a href="#org8a9ead0">3. Inégalités</a>
+<ul>
+<li><a href="#orgd675354">3.1. La racine carré de somme est plus petite que la somme des racines carrés</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -250,41 +261,41 @@
 <div id="outline-container-orga9efd9b" class="outline-3">
 <h3 id="orga9efd9b"><span class="section-number-3">1.1.</span> Somme de deux entiers, et parité</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org765526e">
+<div class="defi" id="org87af906">
 <p>
 La parité d&rsquo;un nombre signifie sa propriété à être pair ou impair.
 </p>
 
 </div>
 
-<div class="ex" id="org322faa6">
+<div class="ex" id="org69f68ad">
 <p>
 La parité de \(132\) est pair. La parité de \(147\) est impair.
 </p>
 
 </div>
 
-<div class="prop" id="orgd86d314">
+<div class="prop" id="org3ce3508">
 <p>
 Si \(a\) et \(b\) sont deux nombres pairs, alors leur somme est pair aussi
 </p>
 
 </div>
 
-<div class="dem" id="orgfa517b7">
+<div class="dem" id="org1d673f9">
 <p>
 Puisque \(a\) et \(b\) sont deux nombres pairs, alors, il existe deux entiers \(k\) et
 \(k'\) tels que :
-\[
-  \left\{
 </p>
-\begin{array}{cc}
-  a &= 2k\\
-  b &=2k'
-\end{array}
-<p>
+\begin{align*}
+  \left\{
+    \begin{array}{cc}
+      a &= 2k\\
+      b &=2k'
+    \end{array}
   \right.
-\]
+\end{align*}
+<p>
 Donc,
 \[
   a + b = 2k + 2k' = 2 \times (k + k') \quad k \text{ et } k' \text{sont pairs !}
@@ -316,14 +327,14 @@ On a là encore que \(16\) et \(256\) sont pairs.
 </p>
 
 
-<div class="prop" id="org0000232">
+<div class="prop" id="org51b2c1e">
 <p>
 Soit \(n\) un entier impair, alors \(n^2\) est impair aussi.
 </p>
 
 </div>
 
-<div class="dem" id="orgfa7552d">
+<div class="dem" id="org36eb0b3">
 <p>
 Puisque \(n\) est impair, il existe \(k\) un entier tel que
 \[
@@ -350,13 +361,13 @@ plusieurs raisonnements qui fonctionnent. En voici un qui utilise une identité
 remarquable très astucieuse.
 </p>
 
-<div class="prop" id="orga71cd4b">
+<div class="prop" id="org80ccf03">
 <p>
 Si \(n^{2}\) est impair, alors \(n\) est impair.
 </p>
 
 </div>
-<div class="dem" id="org30173ee">
+<div class="dem" id="orga6c0954">
 <p>
 On commence par remarquer que, quelque soit \(n\), on a :
 \[
@@ -378,18 +389,19 @@ impair, puisque \(n+1\) est pair par exemple.
 <p>
 Il ne nous manque plus que la démonstration suivante,
 </p>
-<div class="prop" id="org637e892">
+<div class="prop" id="org26f012c">
 <p>
 Si \(n^2\) est pair, alors \(n\) est pair
 </p>
 
 </div>
+
 <p>
 On peut donner un argument de logique, puisque les nombres entiers sont soit
 pairs, soit impairs, il n&rsquo;y a pas d&rsquo;autre alternative.
 </p>
 
-<div class="dem" id="org924c4a8">
+<div class="dem" id="orgb3d5b5e">
 <p>
 On sait que \(n^2\) est pair. Si jamais \(n\) est impair, alors, d&rsquo;après la
 démonstration vue plus haut, on aurait que \(n^{2}\) est impair. Mais ce n&rsquo;est pas
@@ -415,20 +427,17 @@ correcte, tous les moyens sont bons ! Il suffit de trouver son propre chemin.
 <div id="outline-container-orge6141c8" class="outline-3">
 <h3 id="orge6141c8"><span class="section-number-3">2.1.</span> Rappels sur les racines carrés</h3>
 <div class="outline-text-3" id="text-2-1">
-<p>
-#+attr<sub>latex</sub> :options {Racine carré}
-</p>
-<div class="defi" id="org323d166">
+<div class="defi" id="orge547b04">
 <p>
 La racine carré peut se comprendre comme une annulation du carré. Plus
-précisement, si \(x\) est un nombre positif, alors :
+précisément, si \(x\) est un nombre positif, alors :
 \[
 \sqrt{x^{2}} = x
 \]
 </p>
 
 </div>
-<div class="ex" id="orge43a09c">
+<div class="ex" id="org55cbf8d">
 <p>
 \[
 \sqrt{3^{2}} = \sqrt{9} = 3
@@ -447,17 +456,14 @@ Alors qu&rsquo;on aurait dû obtenir \(-3\) comme résultat, on obtient ici \(3\
 dit son opposé.
 </p>
 
-<p>
-#+attr<sub>latex</sub> :options {Racine carré, deuxième}
-</p>
-<div class="defi" id="org166a700">
+<div class="defi" id="orgaa58e8c">
 <p>
 Soit \(x\) un nombre positif, alors \(\sqrt{x}\) est le nombre qui, élevé au carré,
 donne \(x\).
 </p>
 
 </div>
-<div class="ex" id="org2801745">
+<div class="ex" id="org02a3bd2">
 <p>
 Le nombre \(\sqrt{9} = 3\) est le nombre qui, élevé au carré, donne \(9\).
 </p>
@@ -473,13 +479,10 @@ donne \(2\).
 <div id="outline-container-org1386c0b" class="outline-3">
 <h3 id="org1386c0b"><span class="section-number-3">2.2.</span> Définition</h3>
 <div class="outline-text-3" id="text-2-2">
-<p>
-#+attr<sub>latex</sub> :options {Nombres rationnels}
-</p>
-<div class="defi" id="org9362b58">
+<div class="defi" id="org7eda026">
 <p>
 Les nombres rationnels sont les nombres qui s&rsquo;écrivent comme un quotient de
-nombres entiers. Plus précisement, \(x\) est un nombre rationnel si et seulement
+nombres entiers. Plus précisément, \(x\) est un nombre rationnel si et seulement
 s&rsquo;il existe \(p\) et \(q\) deux nombres entiers, avec \(q \not = 0\) tel que :
 \[
 x = \frac{p}{q}
@@ -488,7 +491,7 @@ x = \frac{p}{q}
 
 </div>
 
-<div class="ex" id="orgac47c34">
+<div class="ex" id="orgd839213">
 <p>
 Le nombre \(0,2\) est rationnel, puisque :
 \[
@@ -507,7 +510,7 @@ nombre non rationnel.
 <p>
 #+attr<sub>latex</sub> :options {Nombres irrationnels}
 </p>
-<div class="defi" id="org2ec0742">
+<div class="defi" id="org268eff2">
 <p>
 Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
 </p>
@@ -519,14 +522,14 @@ Un nombre qui n&rsquo;est pas rationnel est dit <i>irrationnel</i>
 <div id="outline-container-org1a8773c" class="outline-3">
 <h3 id="org1a8773c"><span class="section-number-3">2.3.</span> Démonstration</h3>
 <div class="outline-text-3" id="text-2-3">
-<div class="prop" id="org864caa7">
+<div class="prop" id="org4b50458">
 <p>
 \(\sqrt{2}\) est irrationnel
 </p>
 
 </div>
 
-<div class="dem" id="orgcf85767">
+<div class="dem" id="org6fb838b">
 <p>
 Cette démonstration est l&rsquo;occasion de voir en pratique un raisonnement logique
 utilisé très souvent en mathématiques : le raisonnement par l&rsquo;absurde.
@@ -584,10 +587,72 @@ n&rsquo;avaient pas de facteurs communs. On est donc confronté à une impossibi
 </div>
 </div>
 </div>
+
+<div id="outline-container-org8a9ead0" class="outline-2">
+<h2 id="org8a9ead0"><span class="section-number-2">3.</span> Inégalités</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd675354" class="outline-3">
+<h3 id="orgd675354"><span class="section-number-3">3.1.</span> La racine carré de somme est plus petite que la somme des racines carrés</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Soit \(a\) et \(b\) deux nombres réels strictement plus grand que \(0\). On va montrer
+alors que :
+\[
+\sqrt{a + b} \leq \sqrt{a} + \sqrt{b}
+\]
+</p>
+
+<div class="dem" id="org8ea98bc">
+<p>
+Premièrement, pour tout \(x, y \in [0; + \infty[\), on a \(x \lt y\) si et seulement si
+\(x^{2} \lt y^{2}\). C&rsquo;est parce que la fonction carré est (strictement) croissante
+sur \([0;+\infty[\).
+</p>
+
+<p>
+Si on pose \(x = \sqrt{a+b}\) et \(y=\sqrt{a}+\sqrt{b}\).
+</p>
+
+<p>
+Si on montre que \(x^{2} \lt y^{2}\) alors on aura montré que \(x \lt y\) car \(\sqrt{a
++b}\) et \(\sqrt{a} + \sqrt{b}\) sont strictement positifs.
+</p>
+
+<p>
+On a d&rsquo;une part :
+</p>
+\begin{align*}
+  x^2   &= (\sqrt{a + b})^{2} \\
+        &= a + b
+\end{align*}
+
+<p>
+Et d&rsquo;autre part :
+</p>
+\begin{align*}
+  y^{2} &= (\sqrt{a} + \sqrt{b})^{2} \\
+        &= (\sqrt{a})^{2} + (\sqrt{b})^{2} + 2\sqrt{a}\sqrt{b} \\
+        &= a + b + 2\sqrt{a}\sqrt{b}
+\end{align*}
+
+<p>
+Donc \(y^{2} > x^{2}\) car \(\sqrt{a}\sqrt{b} \geq 0\). Donc \(y > x\), et donc \(x \lt y\).
+Et finalement :
+\[
+    \sqrt{a + b} \leq \sqrt{a} + \sqrt{b}
+\]
+Et voilà !
+</p>
+
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:17</p>
+<p class="date">Created: 2022-02-14 lun. 19:00</p>
 </div>
 </body>
 </html>
