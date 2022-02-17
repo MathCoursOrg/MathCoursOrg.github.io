@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-29 sam. 20:31 -->
+<!-- 2022-02-17 jeu. 13:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Programme Pour Les Eleves</title>
-<meta name="author" content="John Doe" />
+<title>Aide pour programmer des jeux pendant les vacances.</title>
+<meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -193,81 +193,87 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Programme Pour Les Eleves</h1>
+<h1 class="title">Aide pour programmer des jeux pendant les vacances.</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8f0c6e8">1. Une fonction actualiser pour les pendus</a></li>
-<li><a href="#orga6107c4">2. Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</a></li>
-<li><a href="#orgff3a109">3. Une carte en deux dimensions pour les plus courageux</a></li>
+<li><a href="#org0360f14">1. Une fonction actualiser pour les pendus</a></li>
+<li><a href="#org7899a15">2. Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</a></li>
+<li><a href="#org8573736">3. Une carte en deux dimensions pour les plus courageux</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org8f0c6e8" class="outline-2">
-<h2 id="org8f0c6e8"><span class="section-number-2">1.</span> Une fonction actualiser pour les pendus</h2>
+<div id="outline-container-org0360f14" class="outline-2">
+<h2 id="org0360f14"><span class="section-number-2">1.</span> Une fonction actualiser pour les pendus</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">actualiserMotCourant</span>(solution, motCourant, lettreTrouveeParLeJoueur):
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">actualiserMotCourant</span>(solution, motCourant, lettreTrouveeParLeJoueur):
 
-    <span style="color: #dcaeea;">nouveauMotCourant</span> = <span style="color: #98be65;">""</span>
+    <span style="font-weight: bold; font-style: italic;">nouveauMotCourant</span> = <span style="font-style: italic;">""</span>
 
-    <span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(solution)) :
-        <span style="color: #51afef;">if</span> lettreTrouveeParLeJoueur == solution[i] :
-            <span style="color: #dcaeea;">nouveauMotCourant</span> += lettreTrouveeParLeJoueur
-        <span style="color: #51afef;">elif</span> motCourant[i] == solution[i] :
-            <span style="color: #dcaeea;">nouveauMotCourant</span> += motCourant[i]
-        <span style="color: #51afef;">else</span> :
-            <span style="color: #dcaeea;">nouveauMotCourant</span> += <span style="color: #98be65;">"_"</span>
+    <span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(solution)) :
+        <span style="font-weight: bold;">if</span> lettreTrouveeParLeJoueur == solution[i] :
+            <span style="font-weight: bold; font-style: italic;">nouveauMotCourant</span> += lettreTrouveeParLeJoueur
+        <span style="font-weight: bold;">elif</span> motCourant[i] == solution[i] :
+            <span style="font-weight: bold; font-style: italic;">nouveauMotCourant</span> += motCourant[i]
+        <span style="font-weight: bold;">else</span> :
+            <span style="font-weight: bold; font-style: italic;">nouveauMotCourant</span> += <span style="font-style: italic;">"_"</span>
 
-    <span style="color: #51afef;">return</span> nouveauMotCourant
+    <span style="font-weight: bold;">return</span> nouveauMotCourant
 
-<span style="color: #dcaeea;">solution</span> = <span style="color: #98be65;">"supertest"</span>
-<span style="color: #dcaeea;">motCourant</span> = <span style="color: #98be65;">"_________"</span>
+<span style="font-weight: bold; font-style: italic;">solution</span> = <span style="font-style: italic;">"supertest"</span>
+<span style="font-weight: bold; font-style: italic;">motCourant</span> = <span style="font-style: italic;">"_________"</span>
 
-<span style="color: #5B6268;">#</span><span style="color: #5B6268;">Imaginons que le joueur trouve la lettre &#171;s&#187;</span>
-<span style="color: #dcaeea;">lettreTrouveeParLeJoueur</span> = <span style="color: #98be65;">"s"</span>
+<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Imaginons que le joueur trouve la lettre &#171;s&#187;</span>
+<span style="font-weight: bold; font-style: italic;">lettreTrouveeParLeJoueur</span> = <span style="font-style: italic;">"s"</span>
 
-<span style="color: #dcaeea;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
-<span style="color: #51afef;">print</span>(motCourant)
+<span style="font-weight: bold; font-style: italic;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+<span style="font-weight: bold;">print</span>(motCourant)
 
-<span style="color: #5B6268;">#</span><span style="color: #5B6268;">Maintenant, imaginons que le joueur trouve la lettre &#171;e&#187;</span>
-<span style="color: #dcaeea;">lettreTrouveeParLeJoueur</span> = <span style="color: #98be65;">"e"</span>
+<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Maintenant, imaginons que le joueur trouve la lettre &#171;e&#187;</span>
+<span style="font-weight: bold; font-style: italic;">lettreTrouveeParLeJoueur</span> = <span style="font-style: italic;">"e"</span>
 
-<span style="color: #dcaeea;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
-<span style="color: #51afef;">print</span>(motCourant)
+<span style="font-weight: bold; font-style: italic;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+<span style="font-weight: bold;">print</span>(motCourant)
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga6107c4" class="outline-2">
-<h2 id="orga6107c4"><span class="section-number-2">2.</span> Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</h2>
+<div id="outline-container-org7899a15" class="outline-2">
+<h2 id="org7899a15"><span class="section-number-2">2.</span> Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">progression</span> = <span style="font-weight: bold; text-decoration: underline;">0</span>
 
-<span style="color: #dcaeea;">numeroCaseFin</span> = <span style="color: #da8548; font-weight: bold;">3</span>
-<span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">True</span>
+<span style="font-weight: bold; font-style: italic;">numeroCaseFin</span> = <span style="font-weight: bold; text-decoration: underline;">3</span>
+<span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">True</span>
 
-<span style="color: #51afef;">while</span> continuer :
-    <span style="color: #51afef;">if</span> progression == <span style="color: #da8548; font-weight: bold;">0</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
-        <span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">1</span>
-    <span style="color: #51afef;">elif</span> progression == <span style="color: #da8548; font-weight: bold;">1</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu sur la case "</span>, progression)
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu n'est pas complet, et vous renvoie directement sur la derni&#232;re case"</span>)
-        <span style="color: #dcaeea;">progression</span> = numeroCaseFin
-    <span style="color: #51afef;">elif</span> progression == numeroCaseFin :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
-        <span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">False</span>
+<span style="font-weight: bold;">while</span> continuer :
+    <span style="font-weight: bold;">if</span> progression == <span style="font-weight: bold; text-decoration: underline;">0</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
+        <span style="font-weight: bold; font-style: italic;">progression</span> = <span style="font-weight: bold; text-decoration: underline;">1</span>
+    <span style="font-weight: bold;">elif</span> progression == <span style="font-weight: bold; text-decoration: underline;">1</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Bienvenu sur la case "</span>, progression)
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Ce jeu n'est pas complet, et vous renvoie directement sur la derni&#232;re case"</span>)
+        <span style="font-weight: bold; font-style: italic;">progression</span> = numeroCaseFin
+    <span style="font-weight: bold;">elif</span> progression == numeroCaseFin :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
+        <span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">False</span>
 
-<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu est termin&#233; !"</span>)
+<span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Ce jeu est termin&#233; !"</span>)
 </pre>
 </div>
 
@@ -276,43 +282,43 @@ Vous pouvez construire des fonctions pour créer des mini-jeux !
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #51afef;">import</span> time
+<pre class="src src-python"><span style="font-weight: bold;">import</span> time
 
-<span style="color: #51afef;">def</span> <span style="color: #c678dd;">questionMultiplication</span>(a, b, reponseJoueur) :
-    <span style="color: #51afef;">if</span> reponseJoueur == a * b :
-        <span style="color: #51afef;">return</span> <span style="color: #a9a1e1;">True</span>
-    <span style="color: #51afef;">else</span> :
-        <span style="color: #51afef;">return</span> <span style="color: #a9a1e1;">False</span>
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">questionMultiplication</span>(a, b, reponseJoueur) :
+    <span style="font-weight: bold;">if</span> reponseJoueur == a * b :
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">True</span>
+    <span style="font-weight: bold;">else</span> :
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">False</span>
 
-<span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+<span style="font-weight: bold; font-style: italic;">progression</span> = <span style="font-weight: bold; text-decoration: underline;">0</span>
 
-<span style="color: #dcaeea;">numeroCaseFin</span> = <span style="color: #da8548; font-weight: bold;">3</span>
-<span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">True</span>
+<span style="font-weight: bold; font-style: italic;">numeroCaseFin</span> = <span style="font-weight: bold; text-decoration: underline;">3</span>
+<span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">True</span>
 
-<span style="color: #51afef;">while</span> continuer :
-    <span style="color: #51afef;">if</span> progression == <span style="color: #da8548; font-weight: bold;">0</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
-        <span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">1</span>
-    <span style="color: #51afef;">elif</span> progression == <span style="color: #da8548; font-weight: bold;">1</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu sur la case "</span>, progression)
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"On va tester vos connaissances des tables de multiplication !"</span>)
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Combien font 7*6 ?"</span>)
-        <span style="color: #dcaeea;">reponseJoueur</span> = <span style="color: #c678dd;">int</span>(<span style="color: #c678dd;">input</span>(<span style="color: #98be65;">"Alors ? "</span>)) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On demande un NOMBRE au joueur</span>
+<span style="font-weight: bold;">while</span> continuer :
+    <span style="font-weight: bold;">if</span> progression == <span style="font-weight: bold; text-decoration: underline;">0</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
+        <span style="font-weight: bold; font-style: italic;">progression</span> = <span style="font-weight: bold; text-decoration: underline;">1</span>
+    <span style="font-weight: bold;">elif</span> progression == <span style="font-weight: bold; text-decoration: underline;">1</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Bienvenu sur la case "</span>, progression)
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"On va tester vos connaissances des tables de multiplication !"</span>)
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Combien font 7*6 ?"</span>)
+        <span style="font-weight: bold; font-style: italic;">reponseJoueur</span> = <span style="font-weight: bold;">int</span>(<span style="font-weight: bold;">input</span>(<span style="font-style: italic;">"Alors ? "</span>)) <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On demande un NOMBRE au joueur</span>
 
-        <span style="color: #dcaeea;">JoueurABienRepondu</span> = questionMultiplication(<span style="color: #da8548; font-weight: bold;">6</span>, <span style="color: #da8548; font-weight: bold;">7</span>, reponseJoueur)
+        <span style="font-weight: bold; font-style: italic;">JoueurABienRepondu</span> = questionMultiplication(<span style="font-weight: bold; text-decoration: underline;">6</span>, <span style="font-weight: bold; text-decoration: underline;">7</span>, reponseJoueur)
 
-        <span style="color: #51afef;">if</span> JoueurABienRepondu :
-            <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"F&#233;licitation ! Vous passez &#224; la fin du jeu !"</span>)
-            <span style="color: #dcaeea;">progression</span> = numeroCaseFin
-        <span style="color: #51afef;">else</span> :
-            <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"D&#233;sol&#233;, vous ne pouvez pas continuer... Retour &#224; la case d&#233;part dans trois secondes !"</span>)
-            time.sleep(<span style="color: #da8548; font-weight: bold;">3</span>)
+        <span style="font-weight: bold;">if</span> JoueurABienRepondu :
+            <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"F&#233;licitation ! Vous passez &#224; la fin du jeu !"</span>)
+            <span style="font-weight: bold; font-style: italic;">progression</span> = numeroCaseFin
+        <span style="font-weight: bold;">else</span> :
+            <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"D&#233;sol&#233;, vous ne pouvez pas continuer... Retour &#224; la case d&#233;part dans trois secondes !"</span>)
+            time.sleep(<span style="font-weight: bold; text-decoration: underline;">3</span>)
 
-    <span style="color: #51afef;">elif</span> progression == numeroCaseFin :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
-        <span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">False</span>
+    <span style="font-weight: bold;">elif</span> progression == numeroCaseFin :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
+        <span style="font-weight: bold; font-style: italic;">continuer</span> = <span style="font-weight: bold; text-decoration: underline;">False</span>
 
-<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu est termin&#233; !"</span>)
+<span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Ce jeu est termin&#233; !"</span>)
 </pre>
 </div>
 
@@ -322,23 +328,23 @@ Vous retrouverez le fichier à télécharger directement ici : <a href="./petit
 </div>
 </div>
 
-<div id="outline-container-orgff3a109" class="outline-2">
-<h2 id="orgff3a109"><span class="section-number-2">3.</span> Une carte en deux dimensions pour les plus courageux</h2>
+<div id="outline-container-org8573736" class="outline-2">
+<h2 id="org8573736"><span class="section-number-2">3.</span> Une carte en deux dimensions pour les plus courageux</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 On peut créer un jeu sur une carte. On peut imaginer la carte suivante.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #dcaeea;">carte</span> = [[<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'A'</span>, <span style="color: #da8548; font-weight: bold;">0</span>],<span style="color: #5B6268;">#</span><span style="color: #5B6268;">A pour le point d'arriv&#233;e</span>
-         [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">0</span>],
-         [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'X'</span>, <span style="color: #da8548; font-weight: bold;">0</span>]] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">X pour le point o&#249; se trouve le joueur</span>
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">carte</span> = [[<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-style: italic;">'A'</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>],<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">A pour le point d'arriv&#233;e</span>
+         [<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>],
+         [<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-style: italic;">'X'</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>]] <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">X pour le point o&#249; se trouve le joueur</span>
 
-<span style="color: #dcaeea;">cartePourLeJoueur</span>= [[<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>],<span style="color: #5B6268;">#</span><span style="color: #5B6268;">A pour le point d'arriv&#233;e</span>
-                    [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>],
-                    [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>]] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">X pour le point o&#249; se trouve le joueur</span>
+<span style="font-weight: bold; font-style: italic;">cartePourLeJoueur</span>= [[<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>],<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">A pour le point d'arriv&#233;e</span>
+                    [<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>],
+                    [<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>]] <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">X pour le point o&#249; se trouve le joueur</span>
 
-<span style="color: #dcaeea;">coordonneesJoueur</span> = [<span style="color: #da8548; font-weight: bold;">2</span>, <span style="color: #da8548; font-weight: bold;">3</span>] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Troisi&#232;me liste, quatri&#232;me &#233;l&#233;ment, avec un d&#233;calage d'indice</span>
+<span style="font-weight: bold; font-style: italic;">coordonneesJoueur</span> = [<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">3</span>] <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Troisi&#232;me liste, quatri&#232;me &#233;l&#233;ment, avec un d&#233;calage d'indice</span>
 </pre>
 </div>
 
@@ -347,42 +353,42 @@ On peut définir des fonctions pour faire interagir notre joueur sur la carte.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">bougerJoueurAdroite</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
-    <span style="color: #51afef;">if</span> coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] + <span style="color: #da8548; font-weight: bold;">1</span> &lt; <span style="color: #c678dd;">len</span>(carte[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]]) : <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Il faut que la liste soit plus grande que l'absicce des coordonn&#233;es du joueur.</span>
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">bougerJoueurAdroite</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
+    <span style="font-weight: bold;">if</span> coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">1</span>] + <span style="font-weight: bold; text-decoration: underline;">1</span> &lt; <span style="font-weight: bold;">len</span>(carte[coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>]]) : <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Il faut que la liste soit plus grande que l'absicce des coordonn&#233;es du joueur.</span>
         ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
-        <span style="color: #51afef;">return</span> [coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>], coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] + <span style="color: #da8548; font-weight: bold;">1</span>]
-    <span style="color: #51afef;">else</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
-        <span style="color: #51afef;">return</span> coordonneesJoueur
+        <span style="font-weight: bold;">return</span> [coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>], coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">1</span>] + <span style="font-weight: bold; text-decoration: underline;">1</span>]
+    <span style="font-weight: bold;">else</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
+        <span style="font-weight: bold;">return</span> coordonneesJoueur
 
-<span style="color: #51afef;">def</span> <span style="color: #c678dd;">bougerJoueurEnHaut</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
-    <span style="color: #51afef;">if</span> coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>] &gt; <span style="color: #da8548; font-weight: bold;">0</span> :
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">bougerJoueurEnHaut</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
+    <span style="font-weight: bold;">if</span> coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>] &gt; <span style="font-weight: bold; text-decoration: underline;">0</span> :
         ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
-        <span style="color: #51afef;">return</span> [coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>] -<span style="color: #da8548; font-weight: bold;">1</span>, coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] ]
-    <span style="color: #51afef;">else</span> :
-        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
-        <span style="color: #51afef;">return</span> coordonneesJoueur
+        <span style="font-weight: bold;">return</span> [coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>] -<span style="font-weight: bold; text-decoration: underline;">1</span>, coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">1</span>] ]
+    <span style="font-weight: bold;">else</span> :
+        <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
+        <span style="font-weight: bold;">return</span> coordonneesJoueur
 
-<span style="color: #51afef;">def</span> <span style="color: #c678dd;">recupererInformationCaseJoueur</span>(coordonneesJoueur, carte):
-    <span style="color: #51afef;">return</span> carte[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]][coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>]]
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">recupererInformationCaseJoueur</span>(coordonneesJoueur, carte):
+    <span style="font-weight: bold;">return</span> carte[coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>]][coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">1</span>]]
 
-<span style="color: #51afef;">def</span> <span style="color: #c678dd;">afficherCartePourLeJoueur</span>(cartePourLeJoueur, coordonneesJoueur):
-    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Voici votre carte :"</span>)
-    <span style="color: #dcaeea;">carte</span> = <span style="color: #98be65;">""</span>
-    <span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(cartePourLeJoueur)): <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On parcourt toute la carte</span>
-        <span style="color: #51afef;">for</span> j <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(cartePourLeJoueur[<span style="color: #da8548; font-weight: bold;">0</span>])):
-            <span style="color: #51afef;">if</span> [i, j] == coordonneesJoueur : <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Si on est sur les coordon&#233;es du joueur</span>
-                <span style="color: #dcaeea;">carte</span> += <span style="color: #98be65;">'X'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On met un X</span>
-            <span style="color: #51afef;">else</span> :
-                <span style="color: #dcaeea;">carte</span> += <span style="color: #c678dd;">str</span>(cartePourLeJoueur[i][j]) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Sinon on affiche le contenu de cartePourLeJoueur</span>
-        <span style="color: #dcaeea;">carte</span> += <span style="color: #98be65;">'\n'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On place un RETOUR &#192; LA LIGNE pour s&#233;parer les diff&#233;rentes lignes de notre carte.</span>
-    <span style="color: #51afef;">print</span>(carte)
-    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"V marque les passages o&#249; vous &#234;tes pass&#233;"</span>)
-    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"X marque votre localisation"</span>)
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">afficherCartePourLeJoueur</span>(cartePourLeJoueur, coordonneesJoueur):
+    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Voici votre carte :"</span>)
+    <span style="font-weight: bold; font-style: italic;">carte</span> = <span style="font-style: italic;">""</span>
+    <span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(cartePourLeJoueur)): <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On parcourt toute la carte</span>
+        <span style="font-weight: bold;">for</span> j <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold;">len</span>(cartePourLeJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>])):
+            <span style="font-weight: bold;">if</span> [i, j] == coordonneesJoueur : <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Si on est sur les coordon&#233;es du joueur</span>
+                <span style="font-weight: bold; font-style: italic;">carte</span> += <span style="font-style: italic;">'X'</span> <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On met un X</span>
+            <span style="font-weight: bold;">else</span> :
+                <span style="font-weight: bold; font-style: italic;">carte</span> += <span style="font-weight: bold;">str</span>(cartePourLeJoueur[i][j]) <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Sinon on affiche le contenu de cartePourLeJoueur</span>
+        <span style="font-weight: bold; font-style: italic;">carte</span> += <span style="font-style: italic;">'\n'</span> <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On place un RETOUR &#192; LA LIGNE pour s&#233;parer les diff&#233;rentes lignes de notre carte.</span>
+    <span style="font-weight: bold;">print</span>(carte)
+    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"V marque les passages o&#249; vous &#234;tes pass&#233;"</span>)
+    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"X marque votre localisation"</span>)
 
-<span style="color: #51afef;">def</span> <span style="color: #c678dd;">ajouterTraceJoueurSurSaCarte</span>( cartePourLeJoueur, coordonneesJoueur ) :
-    cartePourLeJoueur[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]][coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>]] =<span style="color: #98be65;">'V'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On place un V comme &#171;Visit&#233;&#187;</span>
-    <span style="color: #51afef;">return</span> cartePourLeJoueur
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">ajouterTraceJoueurSurSaCarte</span>( cartePourLeJoueur, coordonneesJoueur ) :
+    cartePourLeJoueur[coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">0</span>]][coordonneesJoueur[<span style="font-weight: bold; text-decoration: underline;">1</span>]] =<span style="font-style: italic;">'V'</span> <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On place un V comme &#171;Visit&#233;&#187;</span>
+    <span style="font-weight: bold;">return</span> cartePourLeJoueur
 
 </pre>
 </div>
@@ -392,13 +398,13 @@ On peut simuler une partie avec les commandes suivantes :
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur)
-<span style="color: #51afef;">print</span>(coordonneesJoueur)
-<span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On ne bougera pas</span>
-<span style="color: #51afef;">print</span>(coordonneesJoueur)
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur)
+<span style="font-weight: bold;">print</span>(coordonneesJoueur)
+<span style="font-weight: bold; font-style: italic;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur) <span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">On ne bougera pas</span>
+<span style="font-weight: bold;">print</span>(coordonneesJoueur)
 
-<span style="color: #51afef;">print</span>(recupererInformationCaseJoueur(coordonneesJoueur, carte))
-<span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurEnHaut(coordonneesJoueur, carte, cartePourLeJoueur)
+<span style="font-weight: bold;">print</span>(recupererInformationCaseJoueur(coordonneesJoueur, carte))
+<span style="font-weight: bold; font-style: italic;">coordonneesJoueur</span> =  bougerJoueurEnHaut(coordonneesJoueur, carte, cartePourLeJoueur)
 
 afficherCartePourLeJoueur(cartePourLeJoueur, coordonneesJoueur)
 </pre>
@@ -424,8 +430,8 @@ Si vous voulez plus d&rsquo;information voici <a href="https://fr.wikipedia.org
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: John Doe</p>
-<p class="date">Created: 2022-01-29 sam. 20:31</p>
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-02-17 jeu. 13:08</p>
 </div>
 </body>
 </html>
