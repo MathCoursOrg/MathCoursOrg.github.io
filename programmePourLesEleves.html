@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-29 sam. 20:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programme Pour Les Eleves</title>
+<meta name="author" content="John Doe" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Programme Pour Les Eleves</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8f0c6e8">1. Une fonction actualiser pour les pendus</a></li>
+<li><a href="#orga6107c4">2. Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</a></li>
+<li><a href="#orgff3a109">3. Une carte en deux dimensions pour les plus courageux</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org8f0c6e8" class="outline-2">
+<h2 id="org8f0c6e8"><span class="section-number-2">1.</span> Une fonction actualiser pour les pendus</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">actualiserMotCourant</span>(solution, motCourant, lettreTrouveeParLeJoueur):
+
+    <span style="color: #dcaeea;">nouveauMotCourant</span> = <span style="color: #98be65;">""</span>
+
+    <span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(solution)) :
+        <span style="color: #51afef;">if</span> lettreTrouveeParLeJoueur == solution[i] :
+            <span style="color: #dcaeea;">nouveauMotCourant</span> += lettreTrouveeParLeJoueur
+        <span style="color: #51afef;">elif</span> motCourant[i] == solution[i] :
+            <span style="color: #dcaeea;">nouveauMotCourant</span> += motCourant[i]
+        <span style="color: #51afef;">else</span> :
+            <span style="color: #dcaeea;">nouveauMotCourant</span> += <span style="color: #98be65;">"_"</span>
+
+    <span style="color: #51afef;">return</span> nouveauMotCourant
+
+<span style="color: #dcaeea;">solution</span> = <span style="color: #98be65;">"supertest"</span>
+<span style="color: #dcaeea;">motCourant</span> = <span style="color: #98be65;">"_________"</span>
+
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">Imaginons que le joueur trouve la lettre &#171;s&#187;</span>
+<span style="color: #dcaeea;">lettreTrouveeParLeJoueur</span> = <span style="color: #98be65;">"s"</span>
+
+<span style="color: #dcaeea;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+<span style="color: #51afef;">print</span>(motCourant)
+
+<span style="color: #5B6268;">#</span><span style="color: #5B6268;">Maintenant, imaginons que le joueur trouve la lettre &#171;e&#187;</span>
+<span style="color: #dcaeea;">lettreTrouveeParLeJoueur</span> = <span style="color: #98be65;">"e"</span>
+
+<span style="color: #dcaeea;">motCourant</span> = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+<span style="color: #51afef;">print</span>(motCourant)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6107c4" class="outline-2">
+<h2 id="orga6107c4"><span class="section-number-2">2.</span> Une base pour faire un jeu de l&rsquo;oie, ou tout autre aventure avec une progression.</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+
+<span style="color: #dcaeea;">numeroCaseFin</span> = <span style="color: #da8548; font-weight: bold;">3</span>
+<span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">True</span>
+
+<span style="color: #51afef;">while</span> continuer :
+    <span style="color: #51afef;">if</span> progression == <span style="color: #da8548; font-weight: bold;">0</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
+        <span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">1</span>
+    <span style="color: #51afef;">elif</span> progression == <span style="color: #da8548; font-weight: bold;">1</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu sur la case "</span>, progression)
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu n'est pas complet, et vous renvoie directement sur la derni&#232;re case"</span>)
+        <span style="color: #dcaeea;">progression</span> = numeroCaseFin
+    <span style="color: #51afef;">elif</span> progression == numeroCaseFin :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
+        <span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">False</span>
+
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu est termin&#233; !"</span>)
+</pre>
+</div>
+
+<p>
+Vous pouvez construire des fonctions pour créer des mini-jeux !
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">import</span> time
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">questionMultiplication</span>(a, b, reponseJoueur) :
+    <span style="color: #51afef;">if</span> reponseJoueur == a * b :
+        <span style="color: #51afef;">return</span> <span style="color: #a9a1e1;">True</span>
+    <span style="color: #51afef;">else</span> :
+        <span style="color: #51afef;">return</span> <span style="color: #a9a1e1;">False</span>
+
+<span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">0</span>
+
+<span style="color: #dcaeea;">numeroCaseFin</span> = <span style="color: #da8548; font-weight: bold;">3</span>
+<span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">True</span>
+
+<span style="color: #51afef;">while</span> continuer :
+    <span style="color: #51afef;">if</span> progression == <span style="color: #da8548; font-weight: bold;">0</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu dans notre jeu, vous &#234;tes sur la case "</span>, progression)
+        <span style="color: #dcaeea;">progression</span> = <span style="color: #da8548; font-weight: bold;">1</span>
+    <span style="color: #51afef;">elif</span> progression == <span style="color: #da8548; font-weight: bold;">1</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Bienvenu sur la case "</span>, progression)
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"On va tester vos connaissances des tables de multiplication !"</span>)
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Combien font 7*6 ?"</span>)
+        <span style="color: #dcaeea;">reponseJoueur</span> = <span style="color: #c678dd;">int</span>(<span style="color: #c678dd;">input</span>(<span style="color: #98be65;">"Alors ? "</span>)) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On demande un NOMBRE au joueur</span>
+
+        <span style="color: #dcaeea;">JoueurABienRepondu</span> = questionMultiplication(<span style="color: #da8548; font-weight: bold;">6</span>, <span style="color: #da8548; font-weight: bold;">7</span>, reponseJoueur)
+
+        <span style="color: #51afef;">if</span> JoueurABienRepondu :
+            <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"F&#233;licitation ! Vous passez &#224; la fin du jeu !"</span>)
+            <span style="color: #dcaeea;">progression</span> = numeroCaseFin
+        <span style="color: #51afef;">else</span> :
+            <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"D&#233;sol&#233;, vous ne pouvez pas continuer... Retour &#224; la case d&#233;part dans trois secondes !"</span>)
+            time.sleep(<span style="color: #da8548; font-weight: bold;">3</span>)
+
+    <span style="color: #51afef;">elif</span> progression == numeroCaseFin :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous avez fini le jeu, f&#233;licitation !"</span>)
+        <span style="color: #dcaeea;">continuer</span> = <span style="color: #a9a1e1;">False</span>
+
+<span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Ce jeu est termin&#233; !"</span>)
+</pre>
+</div>
+
+<p>
+Vous retrouverez le fichier à télécharger directement ici : <a href="./petitJeu.py">./petitJeu.py</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff3a109" class="outline-2">
+<h2 id="orgff3a109"><span class="section-number-2">3.</span> Une carte en deux dimensions pour les plus courageux</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+On peut créer un jeu sur une carte. On peut imaginer la carte suivante.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">carte</span> = [[<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'A'</span>, <span style="color: #da8548; font-weight: bold;">0</span>],<span style="color: #5B6268;">#</span><span style="color: #5B6268;">A pour le point d'arriv&#233;e</span>
+         [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">0</span>],
+         [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #98be65;">'X'</span>, <span style="color: #da8548; font-weight: bold;">0</span>]] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">X pour le point o&#249; se trouve le joueur</span>
+
+<span style="color: #dcaeea;">cartePourLeJoueur</span>= [[<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>],<span style="color: #5B6268;">#</span><span style="color: #5B6268;">A pour le point d'arriv&#233;e</span>
+                    [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>],
+                    [<span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>, <span style="color: #da8548; font-weight: bold;">0</span>]] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">X pour le point o&#249; se trouve le joueur</span>
+
+<span style="color: #dcaeea;">coordonneesJoueur</span> = [<span style="color: #da8548; font-weight: bold;">2</span>, <span style="color: #da8548; font-weight: bold;">3</span>] <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Troisi&#232;me liste, quatri&#232;me &#233;l&#233;ment, avec un d&#233;calage d'indice</span>
+</pre>
+</div>
+
+<p>
+On peut définir des fonctions pour faire interagir notre joueur sur la carte.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #51afef;">def</span> <span style="color: #c678dd;">bougerJoueurAdroite</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
+    <span style="color: #51afef;">if</span> coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] + <span style="color: #da8548; font-weight: bold;">1</span> &lt; <span style="color: #c678dd;">len</span>(carte[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]]) : <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Il faut que la liste soit plus grande que l'absicce des coordonn&#233;es du joueur.</span>
+        ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
+        <span style="color: #51afef;">return</span> [coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>], coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] + <span style="color: #da8548; font-weight: bold;">1</span>]
+    <span style="color: #51afef;">else</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
+        <span style="color: #51afef;">return</span> coordonneesJoueur
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">bougerJoueurEnHaut</span>(coordonneesJoueur, carte, cartePourLeJoueur) :
+    <span style="color: #51afef;">if</span> coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>] &gt; <span style="color: #da8548; font-weight: bold;">0</span> :
+        ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
+        <span style="color: #51afef;">return</span> [coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>] -<span style="color: #da8548; font-weight: bold;">1</span>, coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>] ]
+    <span style="color: #51afef;">else</span> :
+        <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Vous ne pouvez pas bouger, vous &#234;tes d&#233;j&#224; au bord de la carte !"</span>)
+        <span style="color: #51afef;">return</span> coordonneesJoueur
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">recupererInformationCaseJoueur</span>(coordonneesJoueur, carte):
+    <span style="color: #51afef;">return</span> carte[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]][coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>]]
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">afficherCartePourLeJoueur</span>(cartePourLeJoueur, coordonneesJoueur):
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"Voici votre carte :"</span>)
+    <span style="color: #dcaeea;">carte</span> = <span style="color: #98be65;">""</span>
+    <span style="color: #51afef;">for</span> i <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(cartePourLeJoueur)): <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On parcourt toute la carte</span>
+        <span style="color: #51afef;">for</span> j <span style="color: #51afef;">in</span> <span style="color: #c678dd;">range</span>(<span style="color: #c678dd;">len</span>(cartePourLeJoueur[<span style="color: #da8548; font-weight: bold;">0</span>])):
+            <span style="color: #51afef;">if</span> [i, j] == coordonneesJoueur : <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Si on est sur les coordon&#233;es du joueur</span>
+                <span style="color: #dcaeea;">carte</span> += <span style="color: #98be65;">'X'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On met un X</span>
+            <span style="color: #51afef;">else</span> :
+                <span style="color: #dcaeea;">carte</span> += <span style="color: #c678dd;">str</span>(cartePourLeJoueur[i][j]) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">Sinon on affiche le contenu de cartePourLeJoueur</span>
+        <span style="color: #dcaeea;">carte</span> += <span style="color: #98be65;">'\n'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On place un RETOUR &#192; LA LIGNE pour s&#233;parer les diff&#233;rentes lignes de notre carte.</span>
+    <span style="color: #51afef;">print</span>(carte)
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"V marque les passages o&#249; vous &#234;tes pass&#233;"</span>)
+    <span style="color: #51afef;">print</span>(<span style="color: #98be65;">"X marque votre localisation"</span>)
+
+<span style="color: #51afef;">def</span> <span style="color: #c678dd;">ajouterTraceJoueurSurSaCarte</span>( cartePourLeJoueur, coordonneesJoueur ) :
+    cartePourLeJoueur[coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">0</span>]][coordonneesJoueur[<span style="color: #da8548; font-weight: bold;">1</span>]] =<span style="color: #98be65;">'V'</span> <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On place un V comme &#171;Visit&#233;&#187;</span>
+    <span style="color: #51afef;">return</span> cartePourLeJoueur
+
+</pre>
+</div>
+
+<p>
+On peut simuler une partie avec les commandes suivantes :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur)
+<span style="color: #51afef;">print</span>(coordonneesJoueur)
+<span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">On ne bougera pas</span>
+<span style="color: #51afef;">print</span>(coordonneesJoueur)
+
+<span style="color: #51afef;">print</span>(recupererInformationCaseJoueur(coordonneesJoueur, carte))
+<span style="color: #dcaeea;">coordonneesJoueur</span> =  bougerJoueurEnHaut(coordonneesJoueur, carte, cartePourLeJoueur)
+
+afficherCartePourLeJoueur(cartePourLeJoueur, coordonneesJoueur)
+</pre>
+</div>
+
+<p>
+Vous trouverez l&rsquo;entiereté du programme sur le lien suivant <a href="./jeuAvecCarte.py">./jeuAvecCarte.py</a>
+</p>
+
+<p>
+Il y a mille manières de produire le même résultat. J&rsquo;ai choisi une approche qui
+s&rsquo;appelle la «programmation fonctionnelle». En gros, les fonctions que j&rsquo;ai
+définie plus haut ne dépendent pas de variable globale, elle ne font appel qu&rsquo;à
+des variables qu&rsquo;elles prennent en argument. C&rsquo;est pour cela que l&rsquo;on redonne à
+chaque fois les variables correspondant aux cartes, et la variable des
+coordonnées du joueur.
+</p>
+
+<p>
+Si vous voulez plus d&rsquo;information voici <a href="https://fr.wikipedia.org/wiki/Programmation_fonctionnelle">la page Wikipedia du principe en question</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2022-01-29 sam. 20:31</p>
+</div>
+</body>
+</html>

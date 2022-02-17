@@ -1,0 +1,197 @@
+#+TITLE: Aide pour programmer des jeux pendant les vacances.
+#+SETUPFILE: /home/fabien/Documents/css/org-html-themes-master/org/theme-readtheorg.setup
+
+
+* Une fonction actualiser pour les pendus
+
+#+begin_src python :session :results output
+def actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur):
+
+    nouveauMotCourant = ""
+
+    for i in range(len(solution)) :
+        if lettreTrouveeParLeJoueur == solution[i] :
+            nouveauMotCourant += lettreTrouveeParLeJoueur
+        elif motCourant[i] == solution[i] :
+            nouveauMotCourant += motCourant[i]
+        else :
+            nouveauMotCourant += "_"
+
+    return nouveauMotCourant
+
+solution = "supertest"
+motCourant = "_________"
+
+#Imaginons que le joueur trouve la lettre «s»
+lettreTrouveeParLeJoueur = "s"
+
+motCourant = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+print(motCourant)
+
+#Maintenant, imaginons que le joueur trouve la lettre «e»
+lettreTrouveeParLeJoueur = "e"
+
+motCourant = actualiserMotCourant(solution, motCourant, lettreTrouveeParLeJoueur)
+print(motCourant)
+#+end_src
+
+#+RESULTS:
+: s______s_
+: s__e__es_
+
+* Une base pour faire un jeu de l'oie, ou tout autre aventure avec une progression.
+
+#+begin_src python :results output
+progression = 0
+
+numeroCaseFin = 3
+continuer = True
+
+while continuer :
+    if progression == 0 :
+        print("Bienvenu dans notre jeu, vous êtes sur la case ", progression)
+        progression = 1
+    elif progression == 1 :
+        print("Bienvenu sur la case ", progression)
+        print("Ce jeu n'est pas complet, et vous renvoie directement sur la dernière case")
+        progression = numeroCaseFin
+    elif progression == numeroCaseFin :
+        print("Vous avez fini le jeu, félicitation !")
+        continuer = False
+
+print("Ce jeu est terminé !")
+#+end_src
+
+#+RESULTS:
+: Bienvenu dans notre jeu, vous êtes sur la case  0
+: Bienvenu sur la case  1
+: Ce jeu n'est pas complet, et vous renvoie directement sur la dernière case
+: Vous avez fini le jeu, félicitation !
+: Ce jeu est terminé !
+
+Vous pouvez construire des fonctions pour créer des mini-jeux !
+
+#+begin_src python :tangle petitJeu.py
+import time
+
+def questionMultiplication(a, b, reponseJoueur) :
+    if reponseJoueur == a * b :
+        return True
+    else :
+        return False
+
+progression = 0
+
+numeroCaseFin = 3
+continuer = True
+
+while continuer :
+    if progression == 0 :
+        print("Bienvenu dans notre jeu, vous êtes sur la case ", progression)
+        progression = 1
+    elif progression == 1 :
+        print("Bienvenu sur la case ", progression)
+        print("On va tester vos connaissances des tables de multiplication !")
+        print("Combien font 7*6 ?")
+        reponseJoueur = int(input("Alors ? ")) #On demande un NOMBRE au joueur
+
+        JoueurABienRepondu = questionMultiplication(6, 7, reponseJoueur)
+
+        if JoueurABienRepondu :
+            print("Félicitation ! Vous passez à la fin du jeu !")
+            progression = numeroCaseFin
+        else :
+            print("Désolé, vous ne pouvez pas continuer... Retour à la case départ dans trois secondes !")
+            time.sleep(3)
+
+    elif progression == numeroCaseFin :
+        print("Vous avez fini le jeu, félicitation !")
+        continuer = False
+
+print("Ce jeu est terminé !")
+#+end_src
+
+Vous retrouverez le fichier à télécharger directement ici : [[file:./petitJeu.py]]
+
+* Une carte en deux dimensions pour les plus courageux
+
+On peut créer un jeu sur une carte. On peut imaginer la carte suivante.
+
+#+begin_src python :tangle jeuAvecCarte.py
+carte = [[0, 0, 0, 'A', 0],#A pour le point d'arrivée
+         [0, 0, 1, 1, 0],
+         [0, 0, 0, 'X', 0]] #X pour le point où se trouve le joueur
+
+cartePourLeJoueur= [[0, 0, 0, 0, 0],#A pour le point d'arrivée
+                    [0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0]] #X pour le point où se trouve le joueur
+
+coordonneesJoueur = [2, 3] #Troisième liste, quatrième élément, avec un décalage d'indice
+#+end_src
+
+On peut définir des fonctions pour faire interagir notre joueur sur la carte.
+
+#+begin_src python :tangle jeuAvecCarte.py
+def bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur) :
+    if coordonneesJoueur[1] + 1 < len(carte[coordonneesJoueur[0]]) : #Il faut que la liste soit plus grande que l'absicce des coordonnées du joueur.
+        ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
+        return [coordonneesJoueur[0], coordonneesJoueur[1] + 1]
+    else :
+        print("Vous ne pouvez pas bouger, vous êtes déjà au bord de la carte !")
+        return coordonneesJoueur
+
+def bougerJoueurEnHaut(coordonneesJoueur, carte, cartePourLeJoueur) :
+    if coordonneesJoueur[0] > 0 :
+        ajouterTraceJoueurSurSaCarte(cartePourLeJoueur, coordonneesJoueur)
+        return [coordonneesJoueur[0] -1, coordonneesJoueur[1] ]
+    else :
+        print("Vous ne pouvez pas bouger, vous êtes déjà au bord de la carte !")
+        return coordonneesJoueur
+
+def recupererInformationCaseJoueur(coordonneesJoueur, carte):
+    return carte[coordonneesJoueur[0]][coordonneesJoueur[1]]
+
+def afficherCartePourLeJoueur(cartePourLeJoueur, coordonneesJoueur):
+    print("Voici votre carte :")
+    carte = ""
+    for i in range(len(cartePourLeJoueur)): #On parcourt toute la carte
+        for j in range(len(cartePourLeJoueur[0])):
+            if [i, j] == coordonneesJoueur : #Si on est sur les coordonées du joueur
+                carte += 'X' #On met un X
+            else :
+                carte += str(cartePourLeJoueur[i][j]) #Sinon on affiche le contenu de cartePourLeJoueur
+        carte += '\n' #On place un RETOUR À LA LIGNE pour séparer les différentes lignes de notre carte.
+    print(carte)
+    print("V marque les passages où vous êtes passé")
+    print("X marque votre localisation")
+
+def ajouterTraceJoueurSurSaCarte( cartePourLeJoueur, coordonneesJoueur ) :
+    cartePourLeJoueur[coordonneesJoueur[0]][coordonneesJoueur[1]] ='V' #On place un V comme «Visité»
+    return cartePourLeJoueur
+
+#+end_src
+
+On peut simuler une partie avec les commandes suivantes :
+
+#+begin_src python :tangle jeuAvecCarte.py
+coordonneesJoueur =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur)
+print(coordonneesJoueur)
+coordonneesJoueur =  bougerJoueurAdroite(coordonneesJoueur, carte, cartePourLeJoueur) #On ne bougera pas
+print(coordonneesJoueur)
+
+print(recupererInformationCaseJoueur(coordonneesJoueur, carte))
+coordonneesJoueur =  bougerJoueurEnHaut(coordonneesJoueur, carte, cartePourLeJoueur)
+
+afficherCartePourLeJoueur(cartePourLeJoueur, coordonneesJoueur)
+#+end_src
+
+Vous trouverez l'entiereté du programme sur le lien suivant [[file:./jeuAvecCarte.py]]
+
+Il y a mille manières de produire le même résultat. J'ai choisi une approche qui
+s'appelle la «programmation fonctionnelle». En gros, les fonctions que j'ai
+définie plus haut ne dépendent pas de variable globale, elle ne font appel qu'à
+des variables qu'elles prennent en argument. C'est pour cela que l'on redonne à
+chaque fois les variables correspondant aux cartes, et la variable des
+coordonnées du joueur.
+
+Si vous voulez plus d'information voici [[https://fr.wikipedia.org/wiki/Programmation_fonctionnelle][la page Wikipedia du principe en question]].
