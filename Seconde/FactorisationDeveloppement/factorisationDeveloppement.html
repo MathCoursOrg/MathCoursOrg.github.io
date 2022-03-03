@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-13 dim. 19:16 -->
+<!-- 2022-02-21 lun. 07:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Factorisation et Developpement</title>
@@ -193,6 +193,12 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -236,7 +242,7 @@
 <ul>
 <li><a href="#orgd378be8">3.1. Identités remarquables</a>
 <ul>
-<li><a href="#org67fca5b">3.1.1. Première identité</a></li>
+<li><a href="#org67fca5b">3.1.1. <span class="todo TODO">TODO</span> Première identité</a></li>
 <li><a href="#orge40b132">3.1.2. Deuxième identité</a></li>
 <li><a href="#orgfb801df">3.1.3. Troisième identité</a></li>
 </ul>
@@ -258,31 +264,34 @@
 Certains calculs sont sous forme factorisée.
 </p>
 
-<div class="ex" id="org10038df">
+<div class="ex" id="org406e177">
 <p>
 L&rsquo;expression :
 \[
-(x+7)\times (x - 4)
+    (x+7)\times (x - 4)
 \]
+</p>
+
+<p>
 est sous forme factorisée
 </p>
 
 </div>
 
-<div class="ex" id="org89a75a5">
+<div class="ex" id="org162c1cd">
 <p>
 L&rsquo;expression :
 \[
-        x^{2} + 3x
-    \]
+x^{2} + 3x
+\]
 n&rsquo;est pas factorisée, puisque on peut encore trouver des facteurs communs aux différents termes. Cette expression est sous forme développé car il n&rsquo;y a que des produit de termes simples
 </p>
 
 </div>
 
-<div class="ex" id="orge7536b2">
+<div class="ex" id="org126afe5">
 <p>
-   L&rsquo;expression :
+L&rsquo;expression :
 \[
 x(x+1) + 1
 \]
@@ -298,16 +307,16 @@ N&rsquo;est ni sous forme factorisée (car le terme \(1\) n&rsquo;est pas dans u
 <h2 id="org277b5e8"><span class="section-number-2">2.</span> Développer</h2>
 <div class="outline-text-2" id="text-2">
 <p>
- #+begin<sub>defi</sub>{Développement}
+#+begin<sub>defi</sub>{Développement}
 On appelle développement le processus qui permet de passer d&rsquo;une forme développer à une forme factorisée.
- #+end<sub>defi</sub>
+#+end<sub>defi</sub>
 </p>
 
-<div class="ex" id="org074c345">
+<div class="ex" id="org1ddc48e">
 <p>
 \[
-        x \times (x + 5) = x^{2} + 5x
-    \]
+x \times (x + 5) = x^{2} + 5x
+\]
 </p>
 
 </div>
@@ -324,7 +333,7 @@ On peut faire appel à un tableau.
 Si on veut développer le produit suivant :
 </p>
 \begin{align*}
-(x-4)\times (x + 3)
+    (x-4)\times (x + 3)
 \end{align*}
 
 <p>
@@ -339,35 +348,36 @@ on peut utiliser le tableau suivant :
 
 <col  class="org-left" />
 
-<col  class="org-right" />
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">&times;</th>
-<th scope="col" class="org-left">x</th>
-<th scope="col" class="org-right">3</th>
+<th scope="col" class="org-left">\(\times\)</th>
+<th scope="col" class="org-left">\(x\)</th>
+<th scope="col" class="org-left">\(3\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">x</td>
-<td class="org-left">x<sup>2</sup></td>
-<td class="org-right">3x</td>
+<td class="org-left">\(x\)</td>
+<td class="org-left">\(x^2\)</td>
+<td class="org-left">\(3x\)</td>
 </tr>
-
+</tbody>
+<tbody>
 <tr>
-<td class="org-left">-4</td>
-<td class="org-left">-4x</td>
-<td class="org-right">-12</td>
+<td class="org-left">\(-4\)</td>
+<td class="org-left">\(-4x\)</td>
+<td class="org-left">\(-12\)</td>
 </tr>
 </tbody>
 </table>
 
 <p>
 Puis faire la somme de tous les termes du tableau :
- \[
+\[
     (x-4)\times (x + 3) =  x^{2} + 3x - 4x -12 = x^{2} -x -12
- \]
+\]
 </p>
 </div>
 </div>
@@ -390,25 +400,29 @@ Les identités remarquables servent à reconnaitres des expressions pour dévelo
 </div>
 
 <div id="outline-container-org67fca5b" class="outline-4">
-<h4 id="org67fca5b"><span class="section-number-4">3.1.1.</span> Première identité</h4>
+<h4 id="org67fca5b"><span class="section-number-4">3.1.1.</span> <span class="todo TODO">TODO</span> Première identité</h4>
 <div class="outline-text-4" id="text-3-1-1">
-<div class="prop" id="orge084a1c">
+<div class="prop" id="org7023e3f">
 <p>
 Pour tout nombres réels \(a\) et \(b\), on a l&rsquo;égalité suivante
- \[
+\[
     (a + b)^{2} = a^{2} + 2ab + b^{2}
- \]
+\]
 </p>
 
 </div>
 
-<div class="dem" id="org202a399">
+<div class="dem" id="org0447a31">
 <p>
-\textit{Version graphique}
+<i>Version graphique :</i>
 </p>
 
 <p>
-\textit{Version littérale}
+À venir !
+</p>
+
+<p>
+<i>Version algébrique :</i>
 </p>
 
 <p>
@@ -435,43 +449,43 @@ En on trouve bien l&rsquo;égalité annoncée
 <p>
 En partant de la première identité, on peut en déduire la deuxième facilement.
 </p>
-<div class="prop" id="org0ccfe5d">
+<div class="prop" id="orga38932e">
 <p>
 Pour tout nombre réel \(a\), \(b\), on a :
 \[
-    (a-b)^{2} = a^{2} - 2a \times b + b^{2}
-  \]
+(a-b)^{2} = a^{2} - 2a \times b + b^{2}
+\]
 </p>
 
 </div>
 
-<div class="dem" id="org8476af2">
+<div class="dem" id="org0a2646a">
 <p>
 Pour montrer cette identité, on peut soit redévelopper comme cela a été fait à
 la démonstration précédente, soit, puisque l&rsquo;identité précédente est valable
 pour tous les nombres \(a\), et \(b\), on peut \emph{remplacer} \(b\) par \(-b\) pour
 obtenir :
 \[
-    (a + (-b)) = a^{2} + 2 \times a \times (-b) + (-b)^{2}
-  \]
+(a + (-b)) = a^{2} + 2 \times a \times (-b) + (-b)^{2}
+\]
 Sauf que \((-b)^{2} = b^{2}\), donc on obtient
 \[
-    (a-b) = a^{2} - 2 \times a \times b + b^{2}
-  \]
+(a-b) = a^{2} - 2 \times a \times b + b^{2}
+\]
 </p>
 
 </div>
 
-<div class="ex" id="orgfd537bd">
+<div class="ex" id="org2e1c90a">
 <p>
 On peut par exemple calculer \(98^{2}\) en remarquant que \(98= 100 - 2\), et donc :
 \[
-     98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
-   \]
+98^{2} = (100-2)^{2} = 100^{2} - 2 \times 100 \times 2 + 2^{2}
+\]
 Finalement :
 \[
-     98^{2} = 10000 - 400 + 4 =  9604
-   \]
+98^{2} = 10000 - 400 + 4 =  9604
+\]
 </p>
 
 </div>
@@ -484,17 +498,17 @@ Finalement :
 <p>
 La troisième identité est bien différente des deux autres.
 </p>
-<div class="prop" id="orgec32fd2">
+<div class="prop" id="org3d2f020">
 <p>
 Pour tout \(a\) et \(b\) réel, on a l&rsquo;égalité suivante :
 \[
-    (a+b)(a-b) = a^{2} - b^{2}
-  \]
+(a+b)(a-b) = a^{2} - b^{2}
+\]
 </p>
 
 </div>
 
-<div class="dem" id="org660ebe3">
+<div class="dem" id="org8b5f305">
 <p>
 On démontre cette égalité à l&rsquo;aide d&rsquo;un développement comme pour la première identité
 </p>
@@ -506,7 +520,7 @@ On démontre cette égalité à l&rsquo;aide d&rsquo;un développement comme pou
 
 </div>
 
-<div class="rem" id="org5f93cab">
+<div class="rem" id="org07cb11c">
 <p>
 Qu&rsquo;obtient-on lorsque l&rsquo;on remplace \(b\) par \(-b\), quelle nouvelle identité découvre-t-on  ?
 </p>
@@ -524,7 +538,7 @@ Qu&rsquo;obtient-on lorsque l&rsquo;on remplace \(b\) par \(-b\), quelle nouvell
 Les identités remarquables permettent de résoudre des équations sans faire
 d&rsquo;erreur. Regardons précisemment l&rsquo;équations :
 \[
-    x^{2} = 49
+x^{2} = 49
 \]
 </p>
 
@@ -537,7 +551,7 @@ fait \(49\). Mais est-ce la seule solution ?
 On va utiliser une identité remarquable pour le savoir.
 </p>
 
-<div class="meth" id="orgbb1e317">
+<div class="meth" id="org4855243">
 <p>
 On soustrait \(49\) à chaque membre de l&rsquo;équation, pour obtenir la nouvelle
 équation (équivalente à la première) suivante :
@@ -545,8 +559,8 @@ On soustrait \(49\) à chaque membre de l&rsquo;équation, pour obtenir la nouve
 
 <p>
 \(
-  x^{2} - 49 = 0
-  \)
+x^{2} - 49 = 0
+\)
 </p>
 
 <p>
@@ -556,20 +570,18 @@ remplacer 49 par \(7^{2}\), pour obtenir :
 
 <p>
 \[
-    x^{2} - 7^{2} = 0
-  \]
+x^{2} - 7^{2} = 0
+\]
 </p>
 
 <p>
 On peut utiliser l&rsquo;identité remarquable \(a^{2} - b^{2} = (a+b)(a-b)\), avec \(a =
-  x\) et \(b = 7\), on obtient donc :
+x\) et \(b = 7\), on obtient donc :
+\[
+  (x-7)(x+7) = 0
+\]
 </p>
 
-<p>
-\(
-    (x-7)(x+7) = 0
-  \)
-</p>
 
 <p>
 Puis, si un produit est nul, c&rsquo;est
@@ -600,7 +612,7 @@ Si on considère le calcul de \(204^{2}\), on peut utiliser la relation suivante
 <div id="outline-container-org7ed669e" class="outline-2">
 <h2 id="org7ed669e"><span class="section-number-2">6.</span> Application concrete et théorique : extraction d&rsquo;une racine carré</h2>
 <div class="outline-text-2" id="text-6">
-<div class="meth" id="org88cf2c8">
+<div class="meth" id="orgb4929de">
 <p>
 
 </p>
@@ -655,7 +667,7 @@ finalement \(h = \frac{1}{408}\). Il vient :
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:16</p>
+<p class="date">Created: 2022-02-21 lun. 07:01</p>
 </div>
 </body>
 </html>
