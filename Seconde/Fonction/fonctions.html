@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-13 dim. 19:16 -->
+<!-- 2022-03-04 ven. 21:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fonctions</title>
@@ -193,6 +193,12 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -226,75 +232,75 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org41e968a">1. Disclaimer</a></li>
-<li><a href="#org48b685e">2. Récapitulatif sur la notion de fonction</a>
+<li><a href="#org93be13c">1. Disclaimer</a></li>
+<li><a href="#org53c34a2">2. Récapitulatif sur la notion de fonction</a>
 <ul>
-<li><a href="#orgece625e">2.1. Vocabulaire</a>
+<li><a href="#org5391c0d">2.1. Vocabulaire</a>
 <ul>
-<li><a href="#org32e4f4d">2.1.1. L&rsquo;image d&rsquo;une fonction</a></li>
-<li><a href="#orgf2a3dc7">2.1.2. Antécédent d&rsquo;une fonction</a></li>
-<li><a href="#orgc883107">2.1.3. Courbe représentative</a></li>
+<li><a href="#org487ad2f">2.1.1. L&rsquo;image d&rsquo;une fonction</a></li>
+<li><a href="#org4ad2b6a">2.1.2. Antécédent d&rsquo;une fonction</a></li>
+<li><a href="#org8317899">2.1.3. Courbe représentative</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org98b5a10">3. Représentation des fonctions usuelles</a>
+<li><a href="#org8af7653">3. Représentation des fonctions usuelles</a>
 <ul>
-<li><a href="#orgf401fe3">3.1. Fonctions paires, fonctions impaires</a></li>
-<li><a href="#org4df1365">3.2. La fonction identité</a></li>
-<li><a href="#org532d60e">3.3. La fonction carré</a>
+<li><a href="#orgea774f1">3.1. Fonctions paires, fonctions impaires</a></li>
+<li><a href="#org146e7df">3.2. La fonction identité</a></li>
+<li><a href="#org8d12e06">3.3. La fonction carré</a>
 <ul>
-<li><a href="#orgd2b0e27">3.3.1. Définition</a></li>
-<li><a href="#orgd0966c6">3.3.2. Représentation graphique</a></li>
+<li><a href="#orgd710c60">3.3.1. Définition</a></li>
+<li><a href="#org92c1bd7">3.3.2. Représentation graphique</a></li>
 </ul>
 </li>
-<li><a href="#orgdce5a64">3.4. La fonction cube</a>
+<li><a href="#org0a032e9">3.4. La fonction cube</a>
 <ul>
-<li><a href="#org5f94ae1">3.4.1. Définition</a></li>
-<li><a href="#orge7258d7">3.4.2. Représentation graphique</a></li>
+<li><a href="#org6ccd4a8">3.4.1. Définition</a></li>
+<li><a href="#org44bde6f">3.4.2. Représentation graphique</a></li>
 </ul>
 </li>
-<li><a href="#org3ede87a">3.5. La fonction inverse</a>
+<li><a href="#orgb7b0acf">3.5. La fonction inverse</a>
 <ul>
-<li><a href="#org2df4cdf">3.5.1. Définition</a></li>
-<li><a href="#org53bd71c">3.5.2. Représentation graphique</a></li>
+<li><a href="#org5e31d96">3.5.1. Définition</a></li>
+<li><a href="#orgf22791f">3.5.2. Représentation graphique</a></li>
 </ul>
 </li>
-<li><a href="#org63ee656">3.6. La fonction racine carrée</a>
+<li><a href="#org0f8abec">3.6. La fonction racine carrée</a>
 <ul>
-<li><a href="#orgf075134">3.6.1. Définition</a></li>
-<li><a href="#orgbf453a0">3.6.2. Représentation graphique</a></li>
+<li><a href="#orga451899">3.6.1. Définition</a></li>
+<li><a href="#org797d84b">3.6.2. Représentation graphique</a></li>
 </ul>
 </li>
-<li><a href="#orged599a8">3.7. Les fonctions affines</a>
+<li><a href="#org98fb955">3.7. Les fonctions affines</a>
 <ul>
-<li><a href="#org74f4193">3.7.1. Fonctions affines avec coefficient positif</a></li>
-<li><a href="#orga93a4d2">3.7.2. Fonctions affines avec coefficient négatif</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgcb5daf9">4. Variations d&rsquo;une fonction</a>
-<ul>
-<li><a href="#org08985d6">4.1. Intervalle</a></li>
-<li><a href="#org2b38e6e">4.2. Croissance et décroissance d&rsquo;une fonction sur un intervalle</a>
-<ul>
-<li><a href="#orgd55111d">4.2.1. Définition</a></li>
-<li><a href="#org5383ffa">4.2.2. Tableau de variation d&rsquo;une fonction</a></li>
-<li><a href="#orgd6c15f8">4.2.3. Application : tableau de variation des fonctions usuelles</a></li>
-<li><a href="#orgcabdc86">4.2.4. Extremums : définition et inégalité</a></li>
+<li><a href="#org04cc85f">3.7.1. Fonctions affines avec coefficient positif</a></li>
+<li><a href="#orgb4227a3">3.7.2. Fonctions affines avec coefficient négatif</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgd08c65a">5. Position relative de courbe</a></li>
-<li><a href="#org43fcfe4">6. Résolution d&rsquo;équation \(f(x) = k\)</a></li>
+<li><a href="#org91f4454">4. Variations d&rsquo;une fonction</a>
+<ul>
+<li><a href="#org47086cf">4.1. Intervalle</a></li>
+<li><a href="#orgf3e5741">4.2. Croissance et décroissance d&rsquo;une fonction sur un intervalle</a>
+<ul>
+<li><a href="#org1e44b2b">4.2.1. Définition</a></li>
+<li><a href="#orge1461cf">4.2.2. Tableau de variation d&rsquo;une fonction</a></li>
+<li><a href="#org7846b20">4.2.3. Application : tableau de variation des fonctions usuelles</a></li>
+<li><a href="#orgaa914a6">4.2.4. Extremums : définition et inégalité</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6625607">5. Position relative de courbe</a></li>
+<li><a href="#orgf7a78e0">6. Résolution d&rsquo;équation \(f(x) = k\)</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org41e968a" class="outline-2">
-<h2 id="org41e968a"><span class="section-number-2">1.</span> Disclaimer</h2>
+<div id="outline-container-org93be13c" class="outline-2">
+<h2 id="org93be13c"><span class="section-number-2">1.</span> Disclaimer</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Le cours suivant ne suit peut-être pas exactement le cours donné en classe.
@@ -303,8 +309,8 @@ changé.
 </p>
 </div>
 </div>
-<div id="outline-container-org48b685e" class="outline-2">
-<h2 id="org48b685e"><span class="section-number-2">2.</span> Récapitulatif sur la notion de fonction</h2>
+<div id="outline-container-org53c34a2" class="outline-2">
+<h2 id="org53c34a2"><span class="section-number-2">2.</span> Récapitulatif sur la notion de fonction</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 On considère des fonctions numériques, c&rsquo;est-à-dire des fonctions qui associent
@@ -312,14 +318,14 @@ On considère des fonctions numériques, c&rsquo;est-à-dire des fonctions qui a
 </p>
 </div>
 
-<div id="outline-container-orgece625e" class="outline-3">
-<h3 id="orgece625e"><span class="section-number-3">2.1.</span> Vocabulaire</h3>
+<div id="outline-container-org5391c0d" class="outline-3">
+<h3 id="org5391c0d"><span class="section-number-3">2.1.</span> Vocabulaire</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org32e4f4d" class="outline-4">
-<h4 id="org32e4f4d"><span class="section-number-4">2.1.1.</span> L&rsquo;image d&rsquo;une fonction</h4>
+<div id="outline-container-org487ad2f" class="outline-4">
+<h4 id="org487ad2f"><span class="section-number-4">2.1.1.</span> L&rsquo;image d&rsquo;une fonction</h4>
 <div class="outline-text-4" id="text-2-1-1">
-<div class="defi" id="orge2b9d0d">
+<div class="defi" id="org7b1b740">
 <p>
 Soit \(x\) un nombre réel. On appelle \(f(x)\) l&rsquo;image du nombre \(x\) par la fonction \(f\). Autrement dit :
 \[f : x \longmapsto f(x)\]
@@ -327,7 +333,7 @@ Soit \(x\) un nombre réel. On appelle \(f(x)\) l&rsquo;image du nombre \(x\) pa
 
 </div>
 
-<div class="rem" id="org04f193b">
+<div class="rem" id="orgc29a790">
 <p>
 On désigne les fonctions par des lettres, comme \(f\). À l&rsquo;inverse l&rsquo;image d&rsquo;une fonction par un nombre \(x\) est notée \(f(x)\)
 </p>
@@ -341,10 +347,10 @@ Donc, on fera la distinction entre \(f(x)\), qui est un nombre, et \(f\), qui d�
 </div>
 
 
-<div id="outline-container-orgf2a3dc7" class="outline-4">
-<h4 id="orgf2a3dc7"><span class="section-number-4">2.1.2.</span> Antécédent d&rsquo;une fonction</h4>
+<div id="outline-container-org4ad2b6a" class="outline-4">
+<h4 id="org4ad2b6a"><span class="section-number-4">2.1.2.</span> Antécédent d&rsquo;une fonction</h4>
 <div class="outline-text-4" id="text-2-1-2">
-<div class="defi" id="orgd7ab08d">
+<div class="defi" id="org1fbf17c">
 <p>
 L&rsquo;antécédent de \(y\) est un nombre \(x\) tel que \(f(x) = y\).
 </p>
@@ -366,15 +372,15 @@ Schématiquement, on peut donc retenir :
 </div>
 </div>
 
-<div id="outline-container-orgc883107" class="outline-4">
-<h4 id="orgc883107"><span class="section-number-4">2.1.3.</span> Courbe représentative</h4>
+<div id="outline-container-org8317899" class="outline-4">
+<h4 id="org8317899"><span class="section-number-4">2.1.3.</span> Courbe représentative</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <p>
 Pour représenter une fonction, on place les antécédents sur la courbe des
 abscisses et les images sur l&rsquo;axe des ordonnées.
 </p>
 
-<div class="defi" id="org9f3342e">
+<div class="defi" id="org6a3b16b">
 <p>
 On appelle courbe représentative d&rsquo;une fonction l&rsquo;ensemble des points du plan
 ainsi formé
@@ -382,7 +388,7 @@ ainsi formé
 
 </div>
 
-<div class="rem" id="org4cf64f0">
+<div class="rem" id="org22ae8b3">
 <p>
 Un nombre ne peut avoir qu&rsquo;une seule image par une fonction, mais une image peut avoir plusieurs antécédents.
 </p>
@@ -392,14 +398,14 @@ Un nombre ne peut avoir qu&rsquo;une seule image par une fonction, mais une imag
 </div>
 </div>
 </div>
-<div id="outline-container-org98b5a10" class="outline-2">
-<h2 id="org98b5a10"><span class="section-number-2">3.</span> Représentation des fonctions usuelles</h2>
+<div id="outline-container-org8af7653" class="outline-2">
+<h2 id="org8af7653"><span class="section-number-2">3.</span> Représentation des fonctions usuelles</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgf401fe3" class="outline-3">
-<h3 id="orgf401fe3"><span class="section-number-3">3.1.</span> Fonctions paires, fonctions impaires</h3>
+<div id="outline-container-orgea774f1" class="outline-3">
+<h3 id="orgea774f1"><span class="section-number-3">3.1.</span> Fonctions paires, fonctions impaires</h3>
 <div class="outline-text-3" id="text-3-1">
-<div class="defi" id="org2d1a755">
+<div class="defi" id="org4e7c68d">
 <p>
 Une fonction est dite paire si sa courbe représentative présente une symétrie
 axiale par rapport à l&rsquo;axe des ordonnées.
@@ -408,7 +414,7 @@ axiale par rapport à l&rsquo;axe des ordonnées.
 </div>
 
 
-<div class="defi" id="orgd78e344">
+<div class="defi" id="orgf652b9c">
 <p>
 Une fonction est dite impaire si sa courbe représentative présente une symétrie
 centrale, de centre l&rsquo;origine du repère.
@@ -416,7 +422,7 @@ centrale, de centre l&rsquo;origine du repère.
 
 </div>
 
-<div class="rem" id="org76f8a23">
+<div class="rem" id="orge4a1782">
 <p>
 Il existe des fonctions qui ne sont ni paires, ni impaires.
 </p>
@@ -424,10 +430,10 @@ Il existe des fonctions qui ne sont ni paires, ni impaires.
 </div>
 </div>
 </div>
-<div id="outline-container-org4df1365" class="outline-3">
-<h3 id="org4df1365"><span class="section-number-3">3.2.</span> La fonction identité</h3>
+<div id="outline-container-org146e7df" class="outline-3">
+<h3 id="org146e7df"><span class="section-number-3">3.2.</span> La fonction identité</h3>
 <div class="outline-text-3" id="text-3-2">
-<div class="defi" id="org4a901a5">
+<div class="defi" id="orge52b3f2">
 <p>
 La fonction identité est la fonction qui associe a \(x\) le nombre réel \(x\). C&rsquo;est-à-dire qu&rsquo;elle associe à un nombre ce nombre lui-même.
 </p>
@@ -435,12 +441,12 @@ La fonction identité est la fonction qui associe a \(x\) le nombre réel \(x\).
 </div>
 
 
-<div id="org579cc92" class="figure">
+<div id="orga5bad76" class="figure">
 <p><img src="./images/identite.svg" alt="identite.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="org74e7c2e">
+<div class="prop" id="org7a8ec79">
 <p>
 La courbe représentative de la fonction identité est une droite. Cette droite
 passe par l&rsquo;origine du repère, puisque l&rsquo;image de \(0\) par la fonction identité
@@ -459,14 +465,14 @@ La fonction identité est une fonction impaire.
 </div>
 </div>
 </div>
-<div id="outline-container-org532d60e" class="outline-3">
-<h3 id="org532d60e"><span class="section-number-3">3.3.</span> La fonction carré</h3>
+<div id="outline-container-org8d12e06" class="outline-3">
+<h3 id="org8d12e06"><span class="section-number-3">3.3.</span> La fonction carré</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-orgd2b0e27" class="outline-4">
-<h4 id="orgd2b0e27"><span class="section-number-4">3.3.1.</span> Définition</h4>
+<div id="outline-container-orgd710c60" class="outline-4">
+<h4 id="orgd710c60"><span class="section-number-4">3.3.1.</span> Définition</h4>
 <div class="outline-text-4" id="text-3-3-1">
-<div class="defi" id="org4dfaff9">
+<div class="defi" id="orgd79c32c">
 <p>
 La fonction  carre est la fonction qui associe à tout réel \(x\) positif
 ou nul le nombre \(x^{2}\). Autrement dit,
@@ -478,16 +484,16 @@ ou nul le nombre \(x^{2}\). Autrement dit,
 </div>
 </div>
 </div>
-<div id="outline-container-orgd0966c6" class="outline-4">
-<h4 id="orgd0966c6"><span class="section-number-4">3.3.2.</span> Représentation graphique</h4>
+<div id="outline-container-org92c1bd7" class="outline-4">
+<h4 id="org92c1bd7"><span class="section-number-4">3.3.2.</span> Représentation graphique</h4>
 <div class="outline-text-4" id="text-3-3-2">
 
-<div id="orgc1efabf" class="figure">
+<div id="org6980f2a" class="figure">
 <p><img src="./images/carre.svg" alt="carre.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="orga98ab05">
+<div class="prop" id="orgb743103">
 <p>
 Sa courbe représentative est une parabole. Cette parabole passe par l&rsquo;origine du
 repère, puisque l&rsquo;image de \(0\) par la fonction identité est \(0\).
@@ -502,14 +508,14 @@ Tous les points de la courbe représentative de la fonction identité sont de la
 </div>
 </div>
 
-<div id="outline-container-orgdce5a64" class="outline-3">
-<h3 id="orgdce5a64"><span class="section-number-3">3.4.</span> La fonction cube</h3>
+<div id="outline-container-org0a032e9" class="outline-3">
+<h3 id="org0a032e9"><span class="section-number-3">3.4.</span> La fonction cube</h3>
 <div class="outline-text-3" id="text-3-4">
 </div>
-<div id="outline-container-org5f94ae1" class="outline-4">
-<h4 id="org5f94ae1"><span class="section-number-4">3.4.1.</span> Définition</h4>
+<div id="outline-container-org6ccd4a8" class="outline-4">
+<h4 id="org6ccd4a8"><span class="section-number-4">3.4.1.</span> Définition</h4>
 <div class="outline-text-4" id="text-3-4-1">
-<div class="defi" id="org2e368ce">
+<div class="defi" id="org4190aa2">
 <p>
 La fonction cube est la fonction qui associe à tout réel \(x\) positif
 ou nul le nombre \(x^{3}\). Autrement dit,
@@ -521,16 +527,16 @@ ou nul le nombre \(x^{3}\). Autrement dit,
 </div>
 </div>
 </div>
-<div id="outline-container-orge7258d7" class="outline-4">
-<h4 id="orge7258d7"><span class="section-number-4">3.4.2.</span> Représentation graphique</h4>
+<div id="outline-container-org44bde6f" class="outline-4">
+<h4 id="org44bde6f"><span class="section-number-4">3.4.2.</span> Représentation graphique</h4>
 <div class="outline-text-4" id="text-3-4-2">
 
-<div id="org8b62589" class="figure">
+<div id="org20fa556" class="figure">
 <p><img src="./images/Cube.svg" alt="Cube.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="orge9244ea">
+<div class="prop" id="orgdcc9f5d">
 <p>
 Cette courbe passe par l&rsquo;origine du repère, puisque si on appelle \(f\) la
 fonction cube, on a \(f(0) = 0\), donc l&rsquo;image de \(0\) par la fonction \(f\) est bien \(0\).
@@ -549,14 +555,14 @@ La fonction cube est une fonction impaire.
 </div>
 </div>
 
-<div id="outline-container-org3ede87a" class="outline-3">
-<h3 id="org3ede87a"><span class="section-number-3">3.5.</span> La fonction inverse</h3>
+<div id="outline-container-orgb7b0acf" class="outline-3">
+<h3 id="orgb7b0acf"><span class="section-number-3">3.5.</span> La fonction inverse</h3>
 <div class="outline-text-3" id="text-3-5">
 </div>
-<div id="outline-container-org2df4cdf" class="outline-4">
-<h4 id="org2df4cdf"><span class="section-number-4">3.5.1.</span> Définition</h4>
+<div id="outline-container-org5e31d96" class="outline-4">
+<h4 id="org5e31d96"><span class="section-number-4">3.5.1.</span> Définition</h4>
 <div class="outline-text-4" id="text-3-5-1">
-<div class="defi" id="org4f6fb18">
+<div class="defi" id="orge6e9002">
 <p>
 La fonction inverse est la fonction qui associe à tout réel \(x\) positif
 ou nul le nombre \(\frac{1}{x}\). Autrement dit,
@@ -568,16 +574,16 @@ ou nul le nombre \(\frac{1}{x}\). Autrement dit,
 </div>
 </div>
 </div>
-<div id="outline-container-org53bd71c" class="outline-4">
-<h4 id="org53bd71c"><span class="section-number-4">3.5.2.</span> Représentation graphique</h4>
+<div id="outline-container-orgf22791f" class="outline-4">
+<h4 id="orgf22791f"><span class="section-number-4">3.5.2.</span> Représentation graphique</h4>
 <div class="outline-text-4" id="text-3-5-2">
 
-<div id="org032e314" class="figure">
+<div id="org5a20220" class="figure">
 <p><img src="./images/inverse.svg" alt="inverse.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="org01cd057">
+<div class="prop" id="org4ff40d4">
 <p>
 La courbe représentative de la fonction inverse est une hyperbole.
 </p>
@@ -596,14 +602,14 @@ La fonction inverse est une fonction impaire.
 </div>
 </div>
 </div>
-<div id="outline-container-org63ee656" class="outline-3">
-<h3 id="org63ee656"><span class="section-number-3">3.6.</span> La fonction racine carrée</h3>
+<div id="outline-container-org0f8abec" class="outline-3">
+<h3 id="org0f8abec"><span class="section-number-3">3.6.</span> La fonction racine carrée</h3>
 <div class="outline-text-3" id="text-3-6">
 </div>
-<div id="outline-container-orgf075134" class="outline-4">
-<h4 id="orgf075134"><span class="section-number-4">3.6.1.</span> Définition</h4>
+<div id="outline-container-orga451899" class="outline-4">
+<h4 id="orga451899"><span class="section-number-4">3.6.1.</span> Définition</h4>
 <div class="outline-text-4" id="text-3-6-1">
-<div class="defi" id="org154c2e2">
+<div class="defi" id="org82894db">
 <p>
 La fonction racine carré est la fonction qui associe à tout réel \(x\) positif
 ou nul le nombre \(\sqrt{x}\). Autrement dit,
@@ -616,16 +622,16 @@ ou nul le nombre \(\sqrt{x}\). Autrement dit,
 </div>
 </div>
 
-<div id="outline-container-orgbf453a0" class="outline-4">
-<h4 id="orgbf453a0"><span class="section-number-4">3.6.2.</span> Représentation graphique</h4>
+<div id="outline-container-org797d84b" class="outline-4">
+<h4 id="org797d84b"><span class="section-number-4">3.6.2.</span> Représentation graphique</h4>
 <div class="outline-text-4" id="text-3-6-2">
 
-<div id="org664a81f" class="figure">
+<div id="org61cebd2" class="figure">
 <p><img src="./images/racineCarre.svg" alt="racineCarre.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="orgea685e5">
+<div class="prop" id="orgb1e74c4">
 <p>
 La courbe de la fonction racine carrée passe par l&rsquo;origine du repère, puisque si on appelle \(f\) la
 fonction racine carrée, on a \(f(0) = 0\).
@@ -648,7 +654,7 @@ ordonnées) qui a subi une rotation de \(90\) dans le sens horaire,
 
 </div>
 
-<div class="ex" id="orgaa804c8">
+<div class="ex" id="orga92de5f">
 <ol class="org-ol">
 <li>\(f(0) = \sqrt{0} = 0\)</li>
 <li>\(f(4) = \sqrt{4} = 2\) car le carré de \(2\) est \(4\)</li>
@@ -662,20 +668,20 @@ ordonnées) qui a subi une rotation de \(90\) dans le sens horaire,
 </div>
 </div>
 
-<div id="outline-container-orged599a8" class="outline-3">
-<h3 id="orged599a8"><span class="section-number-3">3.7.</span> Les fonctions affines</h3>
+<div id="outline-container-org98fb955" class="outline-3">
+<h3 id="org98fb955"><span class="section-number-3">3.7.</span> Les fonctions affines</h3>
 <div class="outline-text-3" id="text-3-7">
 </div>
-<div id="outline-container-org74f4193" class="outline-4">
-<h4 id="org74f4193"><span class="section-number-4">3.7.1.</span> Fonctions affines avec coefficient positif</h4>
+<div id="outline-container-org04cc85f" class="outline-4">
+<h4 id="org04cc85f"><span class="section-number-4">3.7.1.</span> Fonctions affines avec coefficient positif</h4>
 <div class="outline-text-4" id="text-3-7-1">
 
-<div id="orgd4f3451" class="figure">
+<div id="org1f8aae9" class="figure">
 <p><img src="./images/affinecoefPositif.svg" alt="affinecoefPositif.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="rem" id="orgd01ea8b">
+<div class="rem" id="org313ab7b">
 <p>
 La fonction identité est une fonction affine avec un coefficient positif
 particulière (le coefficient est égal à \(1\), et l&rsquo;ordonnée à l&rsquo;origine est
@@ -685,16 +691,16 @@ nulle).
 </div>
 </div>
 </div>
-<div id="outline-container-orga93a4d2" class="outline-4">
-<h4 id="orga93a4d2"><span class="section-number-4">3.7.2.</span> Fonctions affines avec coefficient négatif</h4>
+<div id="outline-container-orgb4227a3" class="outline-4">
+<h4 id="orgb4227a3"><span class="section-number-4">3.7.2.</span> Fonctions affines avec coefficient négatif</h4>
 <div class="outline-text-4" id="text-3-7-2">
 
-<div id="org2b10a70" class="figure">
+<div id="org81b826a" class="figure">
 <p><img src="./images/affinecoefNegatif.svg" alt="affinecoefNegatif.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="prop" id="orgc8ff4b9">
+<div class="prop" id="orgf229112">
 <p>
 La courbe représentative des fonctions affines ou linéaires est une droite.
 Inversement, toutes droites dans un rèpère, représente une fonction affine
@@ -716,12 +722,12 @@ Les fonctions affines ne sont ni paires, ni impaires dès que \(a \not = 0\)
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb5daf9" class="outline-2">
-<h2 id="orgcb5daf9"><span class="section-number-2">4.</span> Variations d&rsquo;une fonction</h2>
+<div id="outline-container-org91f4454" class="outline-2">
+<h2 id="org91f4454"><span class="section-number-2">4.</span> Variations d&rsquo;une fonction</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org08985d6" class="outline-3">
-<h3 id="org08985d6"><span class="section-number-3">4.1.</span> Intervalle</h3>
+<div id="outline-container-org47086cf" class="outline-3">
+<h3 id="org47086cf"><span class="section-number-3">4.1.</span> Intervalle</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Un intervalle désigne un ensemble de nombre réel. On distingue les intervalles
@@ -730,34 +736,34 @@ ouverts des intervalles fermés lorsque l&rsquo;on veut exclure ou non les extr�
 </div>
 </div>
 
-<div id="outline-container-org2b38e6e" class="outline-3">
-<h3 id="org2b38e6e"><span class="section-number-3">4.2.</span> Croissance et décroissance d&rsquo;une fonction sur un intervalle</h3>
+<div id="outline-container-orgf3e5741" class="outline-3">
+<h3 id="orgf3e5741"><span class="section-number-3">4.2.</span> Croissance et décroissance d&rsquo;une fonction sur un intervalle</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-orgd55111d" class="outline-4">
-<h4 id="orgd55111d"><span class="section-number-4">4.2.1.</span> Définition</h4>
+<div id="outline-container-org1e44b2b" class="outline-4">
+<h4 id="org1e44b2b"><span class="section-number-4">4.2.1.</span> Définition</h4>
 </div>
-<div id="outline-container-org5383ffa" class="outline-4">
-<h4 id="org5383ffa"><span class="section-number-4">4.2.2.</span> Tableau de variation d&rsquo;une fonction</h4>
+<div id="outline-container-orge1461cf" class="outline-4">
+<h4 id="orge1461cf"><span class="section-number-4">4.2.2.</span> Tableau de variation d&rsquo;une fonction</h4>
 </div>
-<div id="outline-container-orgd6c15f8" class="outline-4">
-<h4 id="orgd6c15f8"><span class="section-number-4">4.2.3.</span> Application : tableau de variation des fonctions usuelles</h4>
+<div id="outline-container-org7846b20" class="outline-4">
+<h4 id="org7846b20"><span class="section-number-4">4.2.3.</span> Application : tableau de variation des fonctions usuelles</h4>
 </div>
-<div id="outline-container-orgcabdc86" class="outline-4">
-<h4 id="orgcabdc86"><span class="section-number-4">4.2.4.</span> Extremums : définition et inégalité</h4>
+<div id="outline-container-orgaa914a6" class="outline-4">
+<h4 id="orgaa914a6"><span class="section-number-4">4.2.4.</span> Extremums : définition et inégalité</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd08c65a" class="outline-2">
-<h2 id="orgd08c65a"><span class="section-number-2">5.</span> Position relative de courbe</h2>
+<div id="outline-container-org6625607" class="outline-2">
+<h2 id="org6625607"><span class="section-number-2">5.</span> Position relative de courbe</h2>
 </div>
-<div id="outline-container-org43fcfe4" class="outline-2">
-<h2 id="org43fcfe4"><span class="section-number-2">6.</span> Résolution d&rsquo;équation \(f(x) = k\)</h2>
+<div id="outline-container-orgf7a78e0" class="outline-2">
+<h2 id="orgf7a78e0"><span class="section-number-2">6.</span> Résolution d&rsquo;équation \(f(x) = k\)</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:16</p>
+<p class="date">Created: 2022-03-04 ven. 21:37</p>
 </div>
 </body>
 </html>

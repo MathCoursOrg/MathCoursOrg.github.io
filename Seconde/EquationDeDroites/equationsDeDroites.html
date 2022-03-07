@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-07 lun. 22:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Equations De Droites</title>
+<meta name="author" content="Delhomme Fabien" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Equations De Droites</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3d4ec9a">1. Motivations</a></li>
+<li><a href="#org7e8c1ef">2. Définition.</a></li>
+<li><a href="#orgc170d44">3. Exemples</a>
+<ul>
+<li><a href="#orgb1e5a9f">3.1. Une droite telle que \(a = 0\)</a></li>
+<li><a href="#org619ed76">3.2. Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</a></li>
+<li><a href="#org19f7539">3.3. Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</a></li>
+<li><a href="#orgb66be69">3.4. Hors programme : un vecteur orthogonal à la droite.</a></li>
+</ul>
+</li>
+<li><a href="#orga18ce2e">4. Combien d&rsquo;équations pour décrire une droite ?</a></li>
+<li><a href="#org0d20c15">5. Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</a>
+<ul>
+<li><a href="#org3d52204">5.1. Définition</a></li>
+<li><a href="#org9518b18">5.2. Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</a>
+<ul>
+<li><a href="#org72e4f74">5.2.1. Exemple.</a></li>
+</ul>
+</li>
+<li><a href="#orgf8339db">5.3. Hors programme : un vecteur orthogonal à un autre</a></li>
+</ul>
+</li>
+<li><a href="#org7804d06">6. Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</a>
+<ul>
+<li><a href="#orge25ec44">6.1. Motivations</a></li>
+<li><a href="#org505875b">6.2. Première méthode : la substitution</a></li>
+<li><a href="#org1cc2aab">6.3. Méthode du pivot de Gauss</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3d4ec9a" class="outline-2">
+<h2 id="org3d4ec9a"><span class="section-number-2">1.</span> Motivations</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Nous avons vu dans le cours les notions suivantes :
+</p>
+<ol class="org-ol">
+<li>Les vecteurs</li>
+<li>Le déterminant</li>
+<li>Les fonctions affines.</li>
+</ol>
+
+<p>
+Ces trois notions sont très liées à ce cours, puisque nos allons décrire <b>toutes
+les droites du plan</b> à l&rsquo;aide d&rsquo;équations.
+</p>
+
+<p>
+Avoir une <b>équation</b> qui décrit un objet mathématiques permet de résoudre la
+plupart des problèmes qui lui sont associés. Par exemple, nous verrons que nous
+pourront déterminer le point d&rsquo;intersection de deux droites à l&rsquo;aide de leur
+équation respectives. Nous avons déjà vu comment calculer le projeté d&rsquo;un point
+sur une droite en utilisant une équation de droite, avec le déterminant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e8c1ef" class="outline-2">
+<h2 id="org7e8c1ef"><span class="section-number-2">2.</span> Définition.</h2>
+<div class="outline-text-2" id="text-2">
+<div class="defi" id="orgb85bd32">
+<p>
+Soit \(a\) et \(b\), et \(c\) trois nombres réels. On appelle <b>une</b> équation de droite, une
+équation de la forme suivante :
+\[
+ax + by = d
+\]
+</p>
+
+</div>
+
+<p>
+Pourquoi cette équation ? C&rsquo;est précisé par la proposition ci-dessous.
+</p>
+
+<div class="prop" id="orgb2c0cb4">
+<p>
+Soit \((D)\) une droite du plan, avec \((O, \vec{\imath}, \vec{\jmath})\) un repère
+orthonormé. Alors, il existe \(a\), \(b\), et \(c\) trois nombres réels, avec \(a\) et
+\(b\) non simultanément nuls, tels que pour tout point du plan \(M\) de coordonnées
+\((x;y)\), avec \(x \in \mathbb{R}\) et \(y \in \mathbb{R}\), on ait : \[ M \in (D) \quad
+\text{Si et seulement si} \quad ax +by =c \]
+</p>
+
+</div>
+
+<p>
+Ce qu&rsquo;il faut retenir, c&rsquo;est donc :
+</p>
+<ol class="org-ol">
+<li>Pour toute droite du plan, on peut trouver \(a\), \(b\), et \(c\) pour que
+l&rsquo;équation \(ax + by=c\) ait pour ensemble solution exactement cette droite</li>
+<li>et vice versa, pour chaque \(a, b, c\), l&rsquo;ensemble solution de l&rsquo;équation
+\(ax+by=d\) est une droite.</li>
+</ol>
+
+<p>
+La démonstration de se résultat repose sur le déterminant, et quelques part,
+nous avons traités des cas particulier qui se transposent en une démonstration
+formelle correcte.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc170d44" class="outline-2">
+<h2 id="orgc170d44"><span class="section-number-2">3.</span> Exemples</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb1e5a9f" class="outline-3">
+<h3 id="orgb1e5a9f"><span class="section-number-3">3.1.</span> Une droite telle que \(a = 0\)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Dans la partie précédente, nous avons vu que les équations :
+\[
+ax + by = c
+\]
+admet comme ensemble de solution une droite, et vice versa, une droite admet au
+moins une équation pour la représenter. Mais \(a\), \(b\) ou \(c\) sont des nombres
+réels, donc peuvent par exemple être nul !
+</p>
+
+<p>
+Si \(a = 0\), on peut essayer de voir quelle droite est représentée par exemple
+par l&rsquo;équation :
+\[
+    3y = 6
+\]
+Cela correspond donc l&rsquo;ensemble des points \(M(x;y)\) du plan, tel que l&rsquo;ordonnée
+\(y\) multiplié par \(3\) donne \(6\). Donc \(A=(1, 2)\) fait partie des solutions,
+puisque \(3 \times 2 = 6\), mais aussi \(B=(10, 2)\). Par contre \(C=(1, -2)\) n&rsquo;en fait
+pas partie.
+</p>
+
+
+<div id="org41edd9a" class="figure">
+<p><img src="images/premierExempleEquaDroite.svg" alt="premierExempleEquaDroite.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org619ed76" class="outline-3">
+<h3 id="org619ed76"><span class="section-number-3">3.2.</span> Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Regardons maintenant deux équations de droites :
+\[
+(E_1) \quad 3x + 2y = 2
+\]
+</p>
+
+<p>
+\[
+(E_2) \quad 3x + 2y = 0
+\]
+</p>
+
+<p>
+Ce sont deux équations qui semblent similaires, et pour cause, la seule
+différence est la valeur de la constante \(c\), qui vaut dans la première \(2\) et
+dans la deuxième \(0\).
+</p>
+
+<p>
+Affichons ces deux droites dans le plan, à l&rsquo;aide de l&rsquo;ordinateur.
+</p>
+
+
+<div id="orgf5af942" class="figure">
+<p><img src="images/deuxiemeExempleEquaDroite.svg" alt="deuxiemeExempleEquaDroite.svg" class="org-svg" />
+</p>
+</div>
+
+<p>
+On obtient deux droites que j&rsquo;ai colorié de couleurs différentes. On remarque
+deux choses :
+</p>
+<ol class="org-ol">
+<li>Les deux droites sont parallèles</li>
+<li>L&rsquo;une des droites passent par l&rsquo;origine du repère.</li>
+</ol>
+
+<p>
+Sauriez-vous associer à chaque droite son équation ?
+</p>
+
+<p>
+<span class="underline">Réponse :</span> \((E_2)\) est une équation de la droite bleu, et \((E_1)\) est une
+équation de la droite verte.
+</p>
+
+<p>
+En effet, le point \(O(x=0, y=0)\) est bien solution de l&rsquo;équation \(3x + 2y =0\),
+car \(3\times 0 + 2 \times 0 = 0\), et seule la droite bleue passe par l&rsquo;origine du repère.
+</p>
+
+<p>
+Conclusion : le paramètre \(c\) permet de faire varier le moment où là droite
+coupe l&rsquo;axe des ordonnées.
+</p>
+
+<div class="prop" id="org7eac847">
+<p>
+Avec les conditions données dans les propositions précédentes, le nombre \(c\) est
+nul si et seulement si la droite passe par l&rsquo;origine du repère.
+</p>
+
+</div>
+
+<div class="dem" id="orgb8bb15f">
+<p>
+Si la droite passe par l&rsquo;origine du repère, alors \(a\times 0 + b\times 0 = 0 = c\) donc \(c\)
+est nul.
+</p>
+
+<p>
+Si \(c\) est nul, alors l&rsquo;origine est une solution de l&rsquo;équation \(ax + by
+= 0\), donc l&rsquo;origine fait partie des points sur la droite.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org19f7539" class="outline-3">
+<h3 id="org19f7539"><span class="section-number-3">3.3.</span> Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Pour trouver les paramètres d&rsquo;une équation d&rsquo;une droite qui passe par deux
+points, il faut utiliser le déterminant. Relisez le cours associés.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb66be69" class="outline-3">
+<h3 id="orgb66be69"><span class="section-number-3">3.4.</span> Hors programme : un vecteur orthogonal à la droite.</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+On considère une équation \(ax+by=c\) d&rsquo;une droite dans le plan. À quoi correspond
+le vecteur \(\vec{u} = (a, b)\) pour cette droite ?
+</p>
+
+<p>
+Voici un exemple :
+</p>
+
+<div id="org9c35cb0" class="figure">
+<p><img src="images/exempleDroiteOrthogonaleVecteurEqua.svg" alt="exempleDroiteOrthogonaleVecteurEqua.svg" class="org-svg" />
+</p>
+</div>
+
+<p>
+Le vecteur \(\vec{u} = (a; b)\) est un vecteur dont la direction est <b>orthogonal</b>
+à la droite ! Pour démontrer ce résultat, vous aurez besoin du <b>produit
+scalaire</b> introduit l&rsquo;an prochain. Mais cela permet déjà de tracer très
+rapidemment une droite en connaissant une de ses équations.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga18ce2e" class="outline-2">
+<h2 id="orga18ce2e"><span class="section-number-2">4.</span> Combien d&rsquo;équations pour décrire une droite ?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Il existe une infinité d&rsquo;équations «différentes» pour décrire la même droite du
+plan. En effet, regardez les deux équations suivantes :
+\[
+-2x + 5y = 9 \quad 4x - 10y = -18
+\]
+Clairement, on obtient la deuxième équation en multipliant par \(-2\) la première.
+Donc, les deux admettent le même ensemble solution. Mais c&rsquo;est techniquement
+deux équations différentes.
+</p>
+
+<p>
+C&rsquo;est pour cela que l&rsquo;on ne peut <b>pas</b> parler de <b>l&rsquo;</b> équation d&rsquo;une droite.
+Mais on dira <b>une</b> (attention à l&rsquo;article) équation de la droite, car, si on en
+trouve une, on en trouve une <b>infinité</b>.
+</p>
+
+<div class="prop" id="orgf2f6a9d">
+<p>
+Deux équations désignent la même droite si et seulement si elles sont proportionnelles.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d20c15" class="outline-2">
+<h2 id="org0d20c15"><span class="section-number-2">5.</span> Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org3d52204" class="outline-3">
+<h3 id="org3d52204"><span class="section-number-3">5.1.</span> Définition</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="defi" id="org8a0ea9a">
+<p>
+Soit \(\mathcal{D}\) une droite dans le plan. On dit que \(\vec{u}\) est <b>un</b>
+vecteur directeur de la droite \(\mathcal{D}\) si et seulement si la direction du
+vecteur \(\vec{u}\) est parallèle à la droite \(\mathcal{D}\).
+</p>
+
+</div>
+
+<p>
+Dans la définition, on demande simplement à la direction d&rsquo;être parallèle à la
+droite \(\mathcal{D}\), mais ce qu&rsquo;il faut garder en tête, c&rsquo;est plutôt le dessin
+suivant (avec le vecteur «sur» la droite \(\mathcal{D}\)):
+</p>
+
+<p>
+Voici une exemple de vecteur directeur \(\vec{u}\) de la droite (en orange) du plan \(\mathcal{D}\).
+</p>
+
+<div id="org3d91dbd" class="figure">
+<p><img src="images/vecteurDirecteurDroite.svg" alt="vecteurDirecteurDroite.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org9518b18" class="outline-3">
+<h3 id="org9518b18"><span class="section-number-3">5.2.</span> Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Soit \(\vec{u} = (a;b)\) un vecteur dont les coordonnées sont données dans un
+repère orthonormé du plan. Qu&rsquo;elles serait les équations des droites qui
+admettent comme direction ce vecteur ?
+</p>
+
+<div class="prop" id="org49d29c6">
+<p>
+Toutes les droites qui admettent comme direction le vecteur \(\vec{u} = (a;b)\)
+admettent comme équations :
+\[
+bx - ay = c
+\]
+</p>
+
+</div>
+<p>
+Pour retrouver la formule, il suffit de remplacer \(x\) par \(a\) et \(b\) par \(y\).
+</p>
+</div>
+
+<div id="outline-container-org72e4f74" class="outline-4">
+<h4 id="org72e4f74"><span class="section-number-4">5.2.1.</span> Exemple.</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+On considère le vecteur \(\vec{u} = (3; 2)\). D&rsquo;après la proposition précédente,
+la droite \(\mathcal{D}\) d&rsquo;équation :
+\[
+2x - 3y = 0
+\]
+Fait partie des droites qui sont parallèles à la direction de \(\vec{u}\).
+</p>
+
+<p>
+Vérifions tout cela.
+</p>
+
+
+<div id="orgcab657f" class="figure">
+<p><img src="images/vecteurDirecteurDroiteDirection.svg" alt="vecteurDirecteurDroiteDirection.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf8339db" class="outline-3">
+<h3 id="orgf8339db"><span class="section-number-3">5.3.</span> Hors programme : un vecteur orthogonal à un autre</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="prop" id="orgaa52025">
+<p>
+Si on applique ce que l&rsquo;on a vu précédemment, on peut en déduire que le vecteur
+de coordonnées \((b, -a)\) est toujours orthogonal au vecteur de coordonnées \((a ,
+b)\). Par exemple, dans la situation précédente, le vecteur \((2, -3)\) est
+orthogonal au vecteur \(\vec{u}\).
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7804d06" class="outline-2">
+<h2 id="org7804d06"><span class="section-number-2">6.</span> Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge25ec44" class="outline-3">
+<h3 id="orge25ec44"><span class="section-number-3">6.1.</span> Motivations</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Si on souhaite trouver un point qui appartiennent à deux droites en même temps
+(autrement dit, un point d&rsquo;intersection des deux droites), alors il faut
+résoudre un système comme il suit :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{ll}
+            ax + by &=c \\
+            a'x + b'y &=c'
+            \end{array}\right.
+\end{align*}
+
+<p>
+Il existe plusieurs méthodes pour résoudre ce type de système, que l&rsquo;on appelle
+un <b>système linéaire de deux équations à deux inconnues</b>. Décortiquons ce nom :
+</p>
+<ul class="org-ul">
+<li>système : ensemble de deux ou plusieurs équations</li>
+<li>liéaire : les inconnues sont «simplement» multipliées par des constantes et
+ajoutées entre elles. Par exemple, nous n&rsquo;auront pas des \(x\) multipliés par
+des \(y\), ou bien des \(x^2\) dans ces systèmes.</li>
+<li>deux équations à deux inconnues : les inconnues sont \(x\) et \(y\), et il y a
+deux équations (deux lignes dans notre système).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org505875b" class="outline-3">
+<h3 id="org505875b"><span class="section-number-3">6.2.</span> Première méthode : la substitution</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+La substution n&rsquo;est pas une méthode qui marche toujours le mieux, mais parfois,
+elle permet de résoudre rapidement des systèmes linéaires de deux équations à
+deux inconnues.
+</p>
+
+<p>
+L&rsquo;idée est d&rsquo;exprimée une variable par rapport à une autre à partir d&rsquo;une ligne,
+et injecter le tout dans l&rsquo;autre ligne.
+</p>
+
+<p>
+Voici un exemple. On considère le système suivant :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{ll}
+            x + 3y &= 5 \\
+            -2x + y &= 1 \\
+            \end{array} \right.
+\end{align*}
+
+<p>
+On voit que la deuxième ligne permet de remplacer \(x\) par \(5-3y\). On peut donc
+injecter cette nouvelle donnée dans la deuxième ligne :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{ll}
+            x  &= 5 - 3y\\
+            -2(5 - 3y)+ y &= 1 \\
+            \end{array} \right.
+\end{align*}
+<p>
+En simplifiant, on obtient :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{ll}
+            x  &= 5 - 3y\\
+            -10 + 6y+ y &= 1 \\
+            \end{array} \right.
+\end{align*}
+<p>
+autrement dit :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{ll}
+            x  &= 5 - 3y\\
+            -10 + 7y &= 1 \\
+            \end{array} \right.
+\end{align*}
+<p>
+Finalement, \(7y = 11\), donc \(y = \frac{11}{7}\). Une fois que l&rsquo;on a trouvé, \(y\),
+on peut trouver \(x\) en remplaçant, dans la première ligne, \(y\) par sa valeur
+trouvée :
+</p>
+\begin{align*}
+  x &= 5 - 3y \\
+  x &= 5 - 3\times \frac{11}{7} \\
+  x &= \frac{35 - 33}{7}\\
+  x &= \frac{2}{7}
+\end{align*}
+
+<p>
+On obtient finalement comme solution \(x = \frac{2}{7}\), et \(y = \frac{11}{7}\),
+et on peut vérifier notre résultat en affichant les deux droites par ordinateur.
+</p>
+
+
+<div id="org8a78592" class="figure">
+<p><img src="images/verificationsolutionintersectiondroite.svg" alt="verificationsolutionintersectiondroite.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1cc2aab" class="outline-3">
+<h3 id="org1cc2aab"><span class="section-number-3">6.3.</span> Méthode du pivot de Gauss</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Cette méthode est celle qui fonctionne à «tous les coups», et qui est
+généralisable à plusieurs équations linéaires à plusieurs inconnues (pas que
+\(2\)). L&rsquo;idée est de manipuler les lignes entre elles pour éliminer les variables
+les unes après les autres. Reprenons l&rsquo;exemple précédent, et regardons ce que
+donne la résolution du système. J&rsquo;ai noté \((L_1)\) et \((L_2)\) pour numéroté les
+lignes du système.
+</p>
+\begin{align*}
+  \left\{ \begin{array}{lll}
+            (L_1) & x + 3y &= 5 \\
+            (L_2) & -2x + y &= 1 \\
+            \end{array} \right.
+\end{align*}
+
+<p>
+On voit que la ligne \(2\), qui est \(-2x + y = 1\), a un coefficient \(-2\) devant le
+\(x\). Donc, si on multiplie \((L_1)\) par \(2\), on obtient l&rsquo;équation \(2x +6y = 10\),
+et dans cette situation, le \(2x\) et le \(-2x\) vont donc s&rsquo;annuler. On remplace
+donc la ligne \((L_2)\) par la ligne \((L_2) + 2(L_1)\). On obtient :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{lll}
+            (L_1) & x + 3y &= 5 \\
+            (L_2) + 2(L_1) & -2x + y + 2(x + 3y ) &= 1 + 2\times (5)\\
+            \end{array} \right.
+\end{align*}
+<p>
+La ligne \((L_1)\) reste inchangée. On obtient finalement :
+</p>
+\begin{align*}
+  \left\{ \begin{array}{lll}
+            (L_1) & x + 3y &= 5 \\
+            (L_2) - 2(L_1) & 7y &= 11\\
+            \end{array} \right.
+\end{align*}
+<p>
+Finalement, on retrouve <b>directement</b> la valeur de \(y = \frac{11}{7}\). Une fois
+que l&rsquo;on a trouvé \(y\), on prodèce exactement de la même manière que lors de la
+méthode précédente pour trouver \(x = \frac{2}{7}\).
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-03-07 lun. 22:42</p>
+</div>
+</body>
+</html>

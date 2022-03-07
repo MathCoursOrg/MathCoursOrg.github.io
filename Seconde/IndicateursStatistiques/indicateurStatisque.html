@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-13 dim. 19:18 -->
+<!-- 2022-03-04 ven. 21:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Indicateur Statisque</title>
+<title>&lrm;</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -193,27 +193,6 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -221,215 +200,10 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Indicateur Statisque</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgb384d20">1. Série statistique</a>
-<ul>
-<li><a href="#org8849217">1.1. Définition</a></li>
-<li><a href="#org469953a">1.2. Moyenne</a></li>
-<li><a href="#org8adb13c">1.3. Médiane</a></li>
-<li><a href="#org5db2493">1.4. Quartile</a></li>
-<li><a href="#org7310166">1.5. Écart interquartile</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgb384d20" class="outline-2">
-<h2 id="orgb384d20"><span class="section-number-2">1.</span> Série statistique</h2>
-<div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org8849217" class="outline-3">
-<h3 id="org8849217"><span class="section-number-3">1.1.</span> Définition</h3>
-<div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org8459429">
-<p>
-Une série statistique est une série de valeurs organisés souvent sous forme de
-tableau.
-</p>
-
-</div>
-
-<div class="ex" id="org17c5790">
-<p>
-On peut regarder les notes d&rsquo;une classe d&rsquo;élèves. Les notes sont situés sur la
-première ligne, le <b>nombre d&rsquo;élèves</b> qui on eu cette note est sur la deuxième
-ligne.
-</p>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">x</th>
-<th scope="col" class="org-right">1</th>
-<th scope="col" class="org-right">2</th>
-<th scope="col" class="org-right">3</th>
-<th scope="col" class="org-right">4</th>
-<th scope="col" class="org-right">5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">y</td>
-<td class="org-right">3</td>
-<td class="org-right">2</td>
-<td class="org-right">7</td>
-<td class="org-right">1</td>
-<td class="org-right">3</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org469953a" class="outline-3">
-<h3 id="org469953a"><span class="section-number-3">1.2.</span> Moyenne</h3>
-<div class="outline-text-3" id="text-1-2">
-<div class="defi" id="orga3ae313">
-<p>
-Pour calculer la moyenne \(m\) d&rsquo;une série statistique \((x_{i}, y_{i})_{i}\) :
-\[
-m = \frac{ \sum_{i=0}^{{n}} x_{i}y_{i} }{ n }
-\]
-Où \(n = \sum y_{i}\)
-</p>
-
-</div>
-
-<div class="ex" id="orgd9b46e5">
-<p>
-Dans l&rsquo;exemple précédent, le calcul de la moyenne donne :
-\[
-m = \frac{1\times3 + 2\times2 + 3\times7 + 4 \times1 + 5\times3}{3 + 2 + 7 + 1 + 3}
-\]
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org8adb13c" class="outline-3">
-<h3 id="org8adb13c"><span class="section-number-3">1.3.</span> Médiane</h3>
-<div class="outline-text-3" id="text-1-3">
-<div class="defi" id="org4dc7922">
-<p>
-La médiane d&rsquo;une série statistique, est une valeur \(m\) tel que \(50\%\) des valeurs
-soit en dessous, et \(50\%\) soit au dessus.
-</p>
-
-</div>
-
-<div class="ex" id="org27d5741">
-<p>
-Dans l&rsquo;exemple précédent, on voit qu&rsquo;il y a en tout \(16\) élèves, donc il faut
-regarder la note du $8$-ième élève dans la liste des notes triées. Ici, le
-$8$-ième élève à \(3\) (puisque \(3+2 < 8\), et \(3+2 +7 > 8\)). Donc la médianne de
-la série statistique est \(3\).
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org5db2493" class="outline-3">
-<h3 id="org5db2493"><span class="section-number-3">1.4.</span> Quartile</h3>
-<div class="outline-text-3" id="text-1-4">
-<div class="defi" id="orgc71e0a1">
-<p>
-On appelle quartile à \(p\) pourcent toutes valeur \(q\) tel que \(p\%\) des valeurs
-soient en dessous, et \(1-p\%\) soit au dessus.
-</p>
-
-</div>
-
-<div class="ex" id="org10a6fb5">
-<p>
-La médianne est un quartile à \(50\%\).
-</p>
-
-</div>
-
-<div class="ex" id="orgfd4707b">
-<p>
-Dans l&rsquo;exemple précédent, l&rsquo;élève qui a la note telle que \(25\%\) soit en
-dessous, et \(75\%\) en dessous, est l&rsquo;élève qui se trouve à la $4$ième position
-de la liste des notes triées. La quatrième valeur est donc la note \(2\).
-</p>
-
-</div>
-
-<div class="defi" id="org7c8c4eb">
-<p>
-Le premier quartile correspond au quartile à \(25\%\)
-</p>
-
-</div>
-
-<div class="defi" id="orgacc5761">
-<p>
-Le troisième quartile correspond au quartile à \(75\%\).
-</p>
-
-</div>
-
-<div class="ex" id="orgbf4cd13">
-<p>
-Le troisième quartile de l&rsquo;exemple précédent correspond à la $16-4 = 12$ième
-note triés dans l&rsquo;ordre. Ici, \(3+2+7 +1 = 12\), et \(3+2+7+1+3 > 12\). Donc \(4\) est
-la note qui correspond au troisième quartile de notre série statistique.
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-org7310166" class="outline-3">
-<h3 id="org7310166"><span class="section-number-3">1.5.</span> Écart interquartile</h3>
-<div class="outline-text-3" id="text-1-5">
-<div class="defi" id="org88c7272">
-<p>
-Un écart interquartile est la différence entre le troisième quartile et le
-premier quartile.
-</p>
-
-</div>
-
-<div class="ex" id="org142a74b">
-<p>
-Dans l&rsquo;exemple précédent, le premier quartile était \(2\), et le troisième
-quartile était \(4\). Donc l&rsquo;écart interquartile est de \(2 = 4-2\).
-</p>
-
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:18</p>
+<p class="date">Created: 2022-03-04 ven. 21:40</p>
 </div>
 </body>
 </html>

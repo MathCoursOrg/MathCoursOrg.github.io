@@ -6,7 +6,7 @@
 <!-- 2022-03-04 ven. 21:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cours Puissance Fiche</title>
+<title>Projete Orthogonal</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -227,126 +227,246 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Cours Puissance Fiche</h1>
+<h1 class="title">Projete Orthogonal</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgebbd8b4">1. Définition des puissances entières positives d&rsquo;un nombre réel</a></li>
-<li><a href="#org53929ab">2. Définition des puissances entières négatives d&rsquo;un nombre réel</a></li>
-<li><a href="#org2145643">3. Propriétés des puissances</a>
+<li><a href="#orge442fa8">1. Définitions</a></li>
+<li><a href="#org5592755">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#orgb4f90b3">3. Approche géométrique</a></li>
+<li><a href="#org9222469">4. Trigonométrie</a>
 <ul>
-<li><a href="#orgdc2d971">3.1. Pour une même base</a></li>
-<li><a href="#orgf25c779">3.2. Pour une même puissance</a></li>
-<li><a href="#orga58ba56">3.3. Avec les fractions</a></li>
-<li><a href="#orgc33e9cc">3.4. Enchaînement de puissance d&rsquo;une même base</a></li>
+<li><a href="#org2233191">4.1. Définitions</a></li>
+</ul>
+</li>
+<li><a href="#orgcfcc591">5. Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</a>
+<ul>
+<li><a href="#org2cd0a45">5.1. Première étape, trouver l&rsquo;équation de la droite \((AB)\)</a></li>
+<li><a href="#org8fc0c21">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
+<li><a href="#org97b001f">5.3. Rappeler que \(M \in (AB)\)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<p>
-fs m
-</p>
-<div id="outline-container-orgebbd8b4" class="outline-2">
-<h2 id="orgebbd8b4"><span class="section-number-2">1.</span> Définition des puissances entières positives d&rsquo;un nombre réel</h2>
+
+<div id="outline-container-orge442fa8" class="outline-2">
+<h2 id="orge442fa8"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Si \(a\) est un nombre réel, et \(n\) un entier positif alors :
-\[
-a^{n} = \underbrace{a \times a \times a \ldots \times a}_{n \quad \textrm{fois}}
-\]
-Et :
-\[
-a^{0} = 1 \quad \textrm{si} \quad a \not = 0
-\]
+On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
+par \(M\).
 </p>
 
 <p>
-Attention :
-\[
-0^{0} \quad \textrm{n'existe pas}
-\]
+On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
+</p>
+<div class="defi" id="org440e00c">
+<p>
+Le projeté orthogonal d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
+que la distance \(MM'\) est minimale.
+</p>
+
+</div>
+
+
+<div id="org1c2ff39" class="figure">
+<p><img src="images/projetOrthoIntro.svg" alt="projetOrthoIntro.svg" class="org-svg" />
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org53929ab" class="outline-2">
-<h2 id="org53929ab"><span class="section-number-2">2.</span> Définition des puissances entières négatives d&rsquo;un nombre réel</h2>
+<div id="outline-container-org5592755" class="outline-2">
+<h2 id="org5592755"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Si \(a\) est un nombre réel <b>non nul</b>, et \(-n\) un entier négatif alors :
+La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
+est une fonction qui dépend de la position de \(M'\) sur la droite.
+</p>
+
+<p>
+Mais cette fonction ressemble à une parabole, puisque si l&rsquo;on connaît les
+coordonnée de \(M\) et de \(M'\), on sait que :
 \[
-a^{-n} = \frac{1}{a^{n}}
+MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
 \]
-Autrement dit, \(a^{-n}\) est l&rsquo;inverse de \(a^{n}\).
+</p>
+
+<p>
+Autrement dit, la fonction \(M' \mapsto MM'^{2}\) ressemble à une parabole (il y a des
+carrés dans la formule, ce n&rsquo;est pas un argument suffisant, c&rsquo;est un argument
+que l&rsquo;on appelle «heuristique», qui repose sur l&rsquo;intuition plutôt que de la
+formalisation pure. Mais vous pouvez me faire confiance ici, cela fonctionne
+bien) ! Donc, cette parabole admet un point minimale atteint pour un certain
+point \(M'_{0}\), qui est le projeté orthogonale de \(M\) sur la droite \(\Delta\).
+</p>
+
+<p>
+La puissance de feu des mathématiques en action ! Ce raisonnement se retrouve
+dans de très nombreux domaines, notamment&#x2026; Dans les algorithmes de deep
+learning (!).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2145643" class="outline-2">
-<h2 id="org2145643"><span class="section-number-2">3.</span> Propriétés des puissances</h2>
+<div id="outline-container-orgb4f90b3" class="outline-2">
+<h2 id="orgb4f90b3"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-orgdc2d971" class="outline-3">
-<h3 id="orgdc2d971"><span class="section-number-3">3.1.</span> Pour une même base</h3>
-<div class="outline-text-3" id="text-3-1">
+<div class="defi" id="orgaa985eb">
 <p>
-Si \(a\) est un nombre réel, et \(p, q\) deux entiers relatifs (s&rsquo;ils sont négatifs,
-il ne faut pas que \(a\) soit nul), alors :
+Le projeté d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l&rsquo;angle
+entre \(\Delta\) et \(M'M\) est droit.
+</p>
+
+</div>
+
+<div class="prop" id="orgb877c83">
+<p>
+Les deux définitions sont équivalentes ! C&rsquo;est-à-dire que trouver le point \(M'\) tel
+que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
+la droite \(\Delta\) qui passe par \(M\) !
+</p>
+
+</div>
+
+<p>
+Remarquez l&rsquo;angle droit formé sur la figure ci-contre (qui a la même
+configuration que la figure précédente.)
+</p>
+
+<div id="orgea81676" class="figure">
+<p><img src="images/projetOrthoIntroAngleDroit.svg" alt="projetOrthoIntroAngleDroit.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9222469" class="outline-2">
+<h2 id="org9222469"><span class="section-number-2">4.</span> Trigonométrie</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2233191" class="outline-3">
+<h3 id="org2233191"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="defi" id="orgbffef53">
+<p>
+On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
+fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 \[
-a^{p + q} = a^{p} \times a^{q}
+\cos(\widehat{ABC}) = \frac{AB}{BC} = \frac{\text{Adjacent}}{\text{Hypoténuse}}
 \]
-Le produit de puissance de même base, c&rsquo;est cette base puissance la somme des
-puissances.
+</p>
+
+</div>
+
+
+<div id="orgf99552b" class="figure">
+<p><img src="images/deftrigo.svg" alt="deftrigo.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcfcc591" class="outline-2">
+<h2 id="orgcfcc591"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+On considère le problème suivant. On connaît \(A(2, 3)\) et \(B(4;5)\) les
+coordonnées de deux points dans le plan. Soit \(C(4, 6)\) un point qui n&rsquo;est pas
+sur la droite \((AB)\) (ça se voit, puisque \(C\) a la même abscisse que \(B\), mais
+pas la même ordonnées). Comment calculer les coordonnées de \(I\) le projeté de \(C\)
+sur la droite \((AB)\) ?
+</p>
+
+<p>
+Si on demande à l&rsquo;ordinateur de représenter la situation, voici ce que l&rsquo;on
+obtient :
+</p>
+
+<div id="org4355060" class="figure">
+<p><img src="images/chemindiffProjete.svg" alt="chemindiffProjete.svg" class="org-svg" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf25c779" class="outline-3">
-<h3 id="orgf25c779"><span class="section-number-3">3.2.</span> Pour une même puissance</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org2cd0a45" class="outline-3">
+<h3 id="org2cd0a45"><span class="section-number-3">5.1.</span> Première étape, trouver l&rsquo;équation de la droite \((AB)\)</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
-Si \(a\) et \(b\) sont deux nombres réels non nul, et \(p\) un nombre entier relatif :
+On a déjà vu avec le chapitre sur le déterminant comment déterminer une équation
+de droite. Ici, elle est simple, puisque l&rsquo;on remarque que l&rsquo;ordonnée des points
+\(A\) et \(B\) est égale à \(1\) ajouté aux abscisses de ces points. Donc si \((x;y)\)
+représente les coordonnées d&rsquo;un point sur \((AB)\), on a :
 \[
-\left(a \times b\right)^{p} = a^{p} \times b^{p}
+(AB) \quad : \quad x - y = -1
 \]
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga58ba56" class="outline-3">
-<h3 id="orga58ba56"><span class="section-number-3">3.3.</span> Avec les fractions</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org8fc0c21" class="outline-3">
+<h3 id="org8fc0c21"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
-Si \(a\) et \(b\) sont deux nombres non nul et \(p\) un nombre entier relatif :
-\[
-\left(\frac{a}{b} \right)^{p} = \frac{a^{p}}{b^{p}}
-\]
+D&rsquo;après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
+un point \(M=(x;y)\). On va calculer cette distance au carré pour éviter d&rsquo;être
+embêté avec d&rsquo;éventuelles racines carrés :
 </p>
-
-<p>
-\[
-\frac{1}{a^{p}} = \left( \frac{1}{a} \right)^{p}
-\]
-</p>
-
-<p>
-\[
-\left(\frac{a}{b} \right)^{-p} =\left(\frac{b}{a} \right)^{p}
-\]
-</p>
+\begin{align*}
+  CM^2 &= \lVert CM \rVert^{2} = (x -4)^{2} + (y - 6)^{2} \\
+       &= x^{2} + y^{2} -8x - 12y + 52
+\end{align*}
 </div>
 </div>
 
-<div id="outline-container-orgc33e9cc" class="outline-3">
-<h3 id="orgc33e9cc"><span class="section-number-3">3.4.</span> Enchaînement de puissance d&rsquo;une même base</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org97b001f" class="outline-3">
+<h3 id="org97b001f"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
+<div class="outline-text-3" id="text-5-3">
 <p>
-Si \(a\) est un nombre réel non nul, \(p\) et \(q\) deux entiers relatifs, alors :
+On rappelle que l&rsquo;on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
+remplacer chaque \(y\) par \(x + 1\) dans la formule suivante :
 \[
-\left(a^{p}\right)^{q} = a^{p\times q}
+  CM^2= x^{2} + y^{2} -8x - 12y + 52
 \]
+Et on obtient :
+\[
+CM^{2} = x^{2} + (x + 1)^{2} - 8x - 12(x + 1) + 52
+\]
+Finalement, après développement et simplification (il y a donc quelques lignes
+de calculs qu&rsquo;il faut compléter) :
+\[
+    CM^{2} = 2x^{2} -18x + 41 = 2 \times (x^{2} - 9x + 20,5)
+\]
+On peut donc poser \(f\) la fonction :
+\[
+  f(x) = x^{2} - 9x + 20,5
+\]
+Et il s&rsquo;agit de trouver le minimum de cette fonction. Si on représente cette
+fonction par ordinateur, on observe la courbe suivante :
+</p>
+<p>
+<img src="images/courbeDistanceCM.svg" alt="courbeDistanceCM.svg" class="org-svg" />
+On voit que le minimum semble être atteint en \(x =4,5\). Pour le démontrer, on
+calcule alors :
+</p>
+\begin{align*}
+  f(x) - f(4,5) &= x^{2} - 9x + 20,5 - 0,25 \\
+                &= x^{2} - 9x + 20,25 \\
+  &= (x - 4,5)^{2}
+\end{align*}
+<p>
+Car il se trouve que \(f(4,5) = 0,25\) et \(4,5^{2} = 20,25\). Donc \(f(x)\) est un
+nombre toujours plus grand que le nombre \(f(4,5)\) car \((x-4,5)^{2}\) est un
+nombre toujours positif !
+</p>
+
+<p>
+Donc le minimum est atteint en \(x = 4,5\), ce qui est l&rsquo;absicce du point \(I\),
+projeté orthogonal de \(C\) sur la droite \((AB)\). Le point \(I\) est donc de
+coordonnées \(I = (4,5;5,5)\).
 </p>
 </div>
 </div>
