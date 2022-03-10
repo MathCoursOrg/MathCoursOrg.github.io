@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-04 ven. 21:40 -->
+<!-- 2022-03-10 jeu. 18:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projete Orthogonal</title>
@@ -232,27 +232,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge442fa8">1. Définitions</a></li>
-<li><a href="#org5592755">2. Pourquoi ce point existe ?</a></li>
-<li><a href="#orgb4f90b3">3. Approche géométrique</a></li>
-<li><a href="#org9222469">4. Trigonométrie</a>
+<li><a href="#org460722f">1. Définitions</a></li>
+<li><a href="#orgd106d10">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#org08d53a3">3. Approche géométrique</a></li>
+<li><a href="#org156db67">4. Trigonométrie</a>
 <ul>
-<li><a href="#org2233191">4.1. Définitions</a></li>
+<li><a href="#orgb5bd7f2">4.1. Définitions</a></li>
 </ul>
 </li>
-<li><a href="#orgcfcc591">5. Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</a>
+<li><a href="#orgeab5d54">5. Le chemin difficile : trouver les coordonnées d'un projeté.</a>
 <ul>
-<li><a href="#org2cd0a45">5.1. Première étape, trouver l&rsquo;équation de la droite \((AB)\)</a></li>
-<li><a href="#org8fc0c21">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
-<li><a href="#org97b001f">5.3. Rappeler que \(M \in (AB)\)</a></li>
+<li><a href="#org57cdea7">5.1. Première étape, trouver l'équation de la droite \((AB)\)</a></li>
+<li><a href="#org01f7598">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
+<li><a href="#orgf6bbc68">5.3. Rappeler que \(M \in (AB)\)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge442fa8" class="outline-2">
-<h2 id="orge442fa8"><span class="section-number-2">1.</span> Définitions</h2>
+<div id="outline-container-org460722f" class="outline-2">
+<h2 id="org460722f"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
@@ -262,24 +262,24 @@ par \(M\).
 <p>
 On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
 </p>
-<div class="defi" id="org440e00c">
+<div class="defi" id="org7341aa1">
 <p>
-Le projeté orthogonal d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
+Le projeté orthogonal d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
 que la distance \(MM'\) est minimale.
 </p>
 
 </div>
 
 
-<div id="org1c2ff39" class="figure">
+<div id="orgc5037ed" class="figure">
 <p><img src="images/projetOrthoIntro.svg" alt="projetOrthoIntro.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5592755" class="outline-2">
-<h2 id="org5592755"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
+<div id="outline-container-orgd106d10" class="outline-2">
+<h2 id="orgd106d10"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
@@ -287,7 +287,7 @@ est une fonction qui dépend de la position de \(M'\) sur la droite.
 </p>
 
 <p>
-Mais cette fonction ressemble à une parabole, puisque si l&rsquo;on connaît les
+Mais cette fonction ressemble à une parabole, puisque si l'on connaît les
 coordonnée de \(M\) et de \(M'\), on sait que :
 \[
 MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
@@ -296,8 +296,8 @@ MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
 
 <p>
 Autrement dit, la fonction \(M' \mapsto MM'^{2}\) ressemble à une parabole (il y a des
-carrés dans la formule, ce n&rsquo;est pas un argument suffisant, c&rsquo;est un argument
-que l&rsquo;on appelle «heuristique», qui repose sur l&rsquo;intuition plutôt que de la
+carrés dans la formule, ce n'est pas un argument suffisant, c'est un argument
+que l'on appelle «heuristique», qui repose sur l'intuition plutôt que de la
 formalisation pure. Mais vous pouvez me faire confiance ici, cela fonctionne
 bien) ! Donc, cette parabole admet un point minimale atteint pour un certain
 point \(M'_{0}\), qui est le projeté orthogonale de \(M\) sur la droite \(\Delta\).
@@ -311,20 +311,20 @@ learning (!).
 </div>
 </div>
 
-<div id="outline-container-orgb4f90b3" class="outline-2">
-<h2 id="orgb4f90b3"><span class="section-number-2">3.</span> Approche géométrique</h2>
+<div id="outline-container-org08d53a3" class="outline-2">
+<h2 id="org08d53a3"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
-<div class="defi" id="orgaa985eb">
+<div class="defi" id="orgc3db493">
 <p>
-Le projeté d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l&rsquo;angle
+Le projeté d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l'angle
 entre \(\Delta\) et \(M'M\) est droit.
 </p>
 
 </div>
 
-<div class="prop" id="orgb877c83">
+<div class="prop" id="org64fb3ef">
 <p>
-Les deux définitions sont équivalentes ! C&rsquo;est-à-dire que trouver le point \(M'\) tel
+Les deux définitions sont équivalentes ! C'est-à-dire que trouver le point \(M'\) tel
 que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
 la droite \(\Delta\) qui passe par \(M\) !
 </p>
@@ -332,28 +332,28 @@ la droite \(\Delta\) qui passe par \(M\) !
 </div>
 
 <p>
-Remarquez l&rsquo;angle droit formé sur la figure ci-contre (qui a la même
+Remarquez l'angle droit formé sur la figure ci-contre (qui a la même
 configuration que la figure précédente.)
 </p>
 
-<div id="orgea81676" class="figure">
+<div id="org2830867" class="figure">
 <p><img src="images/projetOrthoIntroAngleDroit.svg" alt="projetOrthoIntroAngleDroit.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9222469" class="outline-2">
-<h2 id="org9222469"><span class="section-number-2">4.</span> Trigonométrie</h2>
+<div id="outline-container-org156db67" class="outline-2">
+<h2 id="org156db67"><span class="section-number-2">4.</span> Trigonométrie</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org2233191" class="outline-3">
-<h3 id="org2233191"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div id="outline-container-orgb5bd7f2" class="outline-3">
+<h3 id="orgb5bd7f2"><span class="section-number-3">4.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="defi" id="orgbffef53">
+<div class="defi" id="orgabf5e84">
 <p>
 On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
-fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
+fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
 \[
 \cos(\widehat{ABC}) = \frac{AB}{BC} = \frac{\text{Adjacent}}{\text{Hypoténuse}}
 \]
@@ -362,7 +362,7 @@ fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 </div>
 
 
-<div id="orgf99552b" class="figure">
+<div id="org2262971" class="figure">
 <p><img src="images/deftrigo.svg" alt="deftrigo.svg" class="org-svg" />
 </p>
 </div>
@@ -370,36 +370,36 @@ fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 </div>
 </div>
 
-<div id="outline-container-orgcfcc591" class="outline-2">
-<h2 id="orgcfcc591"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</h2>
+<div id="outline-container-orgeab5d54" class="outline-2">
+<h2 id="orgeab5d54"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d'un projeté.</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 On considère le problème suivant. On connaît \(A(2, 3)\) et \(B(4;5)\) les
-coordonnées de deux points dans le plan. Soit \(C(4, 6)\) un point qui n&rsquo;est pas
+coordonnées de deux points dans le plan. Soit \(C(4, 6)\) un point qui n'est pas
 sur la droite \((AB)\) (ça se voit, puisque \(C\) a la même abscisse que \(B\), mais
 pas la même ordonnées). Comment calculer les coordonnées de \(I\) le projeté de \(C\)
 sur la droite \((AB)\) ?
 </p>
 
 <p>
-Si on demande à l&rsquo;ordinateur de représenter la situation, voici ce que l&rsquo;on
+Si on demande à l'ordinateur de représenter la situation, voici ce que l'on
 obtient :
 </p>
 
-<div id="org4355060" class="figure">
+<div id="org2c21d44" class="figure">
 <p><img src="images/chemindiffProjete.svg" alt="chemindiffProjete.svg" class="org-svg" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2cd0a45" class="outline-3">
-<h3 id="org2cd0a45"><span class="section-number-3">5.1.</span> Première étape, trouver l&rsquo;équation de la droite \((AB)\)</h3>
+<div id="outline-container-org57cdea7" class="outline-3">
+<h3 id="org57cdea7"><span class="section-number-3">5.1.</span> Première étape, trouver l'équation de la droite \((AB)\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 On a déjà vu avec le chapitre sur le déterminant comment déterminer une équation
-de droite. Ici, elle est simple, puisque l&rsquo;on remarque que l&rsquo;ordonnée des points
+de droite. Ici, elle est simple, puisque l'on remarque que l'ordonnée des points
 \(A\) et \(B\) est égale à \(1\) ajouté aux abscisses de ces points. Donc si \((x;y)\)
-représente les coordonnées d&rsquo;un point sur \((AB)\), on a :
+représente les coordonnées d'un point sur \((AB)\), on a :
 \[
 (AB) \quad : \quad x - y = -1
 \]
@@ -407,13 +407,13 @@ représente les coordonnées d&rsquo;un point sur \((AB)\), on a :
 </div>
 </div>
 
-<div id="outline-container-org8fc0c21" class="outline-3">
-<h3 id="org8fc0c21"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
+<div id="outline-container-org01f7598" class="outline-3">
+<h3 id="org01f7598"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
-D&rsquo;après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
-un point \(M=(x;y)\). On va calculer cette distance au carré pour éviter d&rsquo;être
-embêté avec d&rsquo;éventuelles racines carrés :
+D'après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
+un point \(M=(x;y)\). On va calculer cette distance au carré pour éviter d'être
+embêté avec d'éventuelles racines carrés :
 </p>
 \begin{align*}
   CM^2 &= \lVert CM \rVert^{2} = (x -4)^{2} + (y - 6)^{2} \\
@@ -422,11 +422,11 @@ embêté avec d&rsquo;éventuelles racines carrés :
 </div>
 </div>
 
-<div id="outline-container-org97b001f" class="outline-3">
-<h3 id="org97b001f"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
+<div id="outline-container-orgf6bbc68" class="outline-3">
+<h3 id="orgf6bbc68"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
-On rappelle que l&rsquo;on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
+On rappelle que l'on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
 remplacer chaque \(y\) par \(x + 1\) dans la formule suivante :
 \[
   CM^2= x^{2} + y^{2} -8x - 12y + 52
@@ -436,7 +436,7 @@ Et on obtient :
 CM^{2} = x^{2} + (x + 1)^{2} - 8x - 12(x + 1) + 52
 \]
 Finalement, après développement et simplification (il y a donc quelques lignes
-de calculs qu&rsquo;il faut compléter) :
+de calculs qu'il faut compléter) :
 \[
     CM^{2} = 2x^{2} -18x + 41 = 2 \times (x^{2} - 9x + 20,5)
 \]
@@ -444,7 +444,7 @@ On peut donc poser \(f\) la fonction :
 \[
   f(x) = x^{2} - 9x + 20,5
 \]
-Et il s&rsquo;agit de trouver le minimum de cette fonction. Si on représente cette
+Et il s'agit de trouver le minimum de cette fonction. Si on représente cette
 fonction par ordinateur, on observe la courbe suivante :
 </p>
 <p>
@@ -464,7 +464,7 @@ nombre toujours positif !
 </p>
 
 <p>
-Donc le minimum est atteint en \(x = 4,5\), ce qui est l&rsquo;absicce du point \(I\),
+Donc le minimum est atteint en \(x = 4,5\), ce qui est l'absicce du point \(I\),
 projeté orthogonal de \(C\) sur la droite \((AB)\). Le point \(I\) est donc de
 coordonnées \(I = (4,5;5,5)\).
 </p>
@@ -474,7 +474,7 @@ coordonnées \(I = (4,5;5,5)\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-03-04 ven. 21:40</p>
+<p class="date">Created: 2022-03-10 jeu. 18:41</p>
 </div>
 </body>
 </html>
