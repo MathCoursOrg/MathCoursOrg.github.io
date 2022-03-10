@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-10 jeu. 18:41 -->
+<!-- 2022-03-10 jeu. 19:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ensemble De Nombres</title>
@@ -234,6 +234,7 @@
 <ul>
 <li><a href="#org7907e03">1. Motivations</a></li>
 <li><a href="#org3da6dba">2. Définition</a></li>
+<li><a href="#org37565cd">3. Ensembles de référence</a></li>
 </ul>
 </div>
 </div>
@@ -252,30 +253,37 @@ exprimer des propriétés sur les nombres, par exemple.
 <div id="outline-container-org3da6dba" class="outline-2">
 <h2 id="org3da6dba"><span class="section-number-2">2.</span> Définition</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="org175792e">
+<div class="defi" id="org125589d">
 <p>
-Un ensemble est constitué d'élément. On dit que l'élément \(x\) <i>appartient</i> à
+Un ensemble est constitué d'éléments. On dit que l'élément \(x\) <i>appartient</i> à
 l'ensemble \(A\) par l'écriture \(x \in A\).
 </p>
 
 </div>
 
-<div class="ex" id="orgc1608db">
+<div class="ex" id="orgf806a0e">
 <p>
-On sait par exemple que \(\sqrt{2} \in [0; 10]\).
+On sait par exemple que \(\sqrt{2} \in [0; 10]\). L'intervalle \([0;10]\) est un
+ensemble de nombre, et \(\sqrt{2}\) est l'un de ses éléments.
 </p>
 
 </div>
 
-<div class="defi" id="orge9fd9d1">
+<div class="defi" id="org2b42887">
 <p>
-On dit que \(B\) est un sous-ensemble de \(A\) lorsque tous les éléments de \(B\) sont
-aussi des éléments de \(A\). On notera alors \(B \subset A\)
+On dit que \(B\) est un sous-ensemble de \(A\) lorsque <b>tous</b> les éléments de \(B\) sont
+aussi des éléments de \(A\). On notera alors \(B \subset A\), et on dira aussi que \(B\) est
+<b>inclus</b> dans \(A\).
 </p>
 
 </div>
+</div>
+</div>
 
-<div class="defi" id="orge7c91b3">
+<div id="outline-container-org37565cd" class="outline-2">
+<h2 id="org37565cd"><span class="section-number-2">3.</span> Ensembles de référence</h2>
+<div class="outline-text-2" id="text-3">
+<div class="defi" id="org4aebe60">
 <p>
 On note \(\mathbb{N}\) l'ensemble des entiers naturels, autrement dit,
 \(\mathbb{N}\) est constitué de :
@@ -293,7 +301,7 @@ les cas, ça ne change pas vraiment la structure de \(\mathbb{N}\).
 
 </div>
 
-<div class="defi" id="orgc170508">
+<div class="defi" id="orgd3a2faf">
 <p>
 Vous savez depuis la cinquième qu'il existe pour tout nombre naturel, son opposé
 relatif. On note \(\mathbb{Z}\) l'ensemble constitué de :
@@ -304,7 +312,7 @@ relatif. On note \(\mathbb{Z}\) l'ensemble constitué de :
 
 </div>
 
-<div class="prop" id="org6c42657">
+<div class="prop" id="org353f37d">
 <p>
 On a donc que \(\mathbb{N} \subset \mathbb{Z}\), autrement dit, tous les entiers
 naturels sont des entiers relatifs, mais l'inverse n'est pas toujours vrai.
@@ -312,7 +320,7 @@ naturels sont des entiers relatifs, mais l'inverse n'est pas toujours vrai.
 
 </div>
 
-<div class="defi" id="org7a2b647">
+<div class="defi" id="org01bdf2a">
 <p>
 On dit que \(x\) est un nombre décimal s'il existe \(a\) un entier relatif, et \(p\)
 un entier naturel, tel que :
@@ -323,7 +331,7 @@ x = \frac{a}{10^{p}}
 
 </div>
 
-<div class="ex" id="org45f6686">
+<div class="ex" id="orgcd2e84f">
 <p>
 Les nombres \(0,23\), \(80123,29791230\) sont décimaux. Plus généralement, tous les
 nombres qui admettent une partie décimale <i>finie</i> est un nombre décimal.
@@ -331,7 +339,7 @@ nombres qui admettent une partie décimale <i>finie</i> est un nombre décimal.
 
 </div>
 
-<div class="ex" id="org519310e">
+<div class="ex" id="org6132a05">
 <p>
 Il existe aussi des nombres qui ne sont pas décimaux, par exemple, nous avons
 déjà vu que \(\frac{1}{3}\) n'est pas un nombre décimal. Mais on peut en trouver
@@ -340,21 +348,21 @@ une infinité. Par exemple, \(\sqrt{2}\) n'est pas décimal.
 
 </div>
 
-<div class="defi" id="org0a7000d">
+<div class="defi" id="orge479992">
 <p>
 On note \(\mathbb{D}\) l'ensemble des entiers décimaux.
 </p>
 
 </div>
 
-<div class="prop" id="org6a9f6fb">
+<div class="prop" id="org5dd0f88">
 <p>
 On obtient pour l'instant que \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D}\)
 </p>
 
 </div>
 
-<div class="defi" id="orgce836b8">
+<div class="defi" id="org3af3f78">
 <p>
 On dit que \(x\) est un nombre rationnel s'il existe \(p\) un entiers relatif, et
 \(q\) un entier naturel non nul tel que :
@@ -365,28 +373,28 @@ x = \frac{p}{q}
 
 </div>
 
-<div class="defi" id="org2ff9af7">
+<div class="defi" id="orgace19fc">
 <p>
 On note \(\mathbb{Q}\) l'ensemble des nombres rationnels.
 </p>
 
 </div>
 
-<div class="prop" id="org9b60043">
+<div class="prop" id="org0880e96">
 <p>
 On obtient pour l'instant que \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q}\)
 </p>
 
 </div>
 
-<div class="ex" id="org607995c">
+<div class="ex" id="orgf3635ad">
 <p>
 On a déjà vu que \(\sqrt{2} \not \in \mathbb{Q}\).
 </p>
 
 </div>
 
-<div class="defi" id="org617c0a1">
+<div class="defi" id="org914d227">
 <p>
 Il serait bien difficile de donner une définition mathématiquement exacte des
 nombres réels&#x2026; Vous verrez une définition en première année de licence ou de
@@ -396,7 +404,7 @@ des nombres que l'on connaît, et que l'on peut situer sur la «droite réelle»
 
 </div>
 
-<div class="defi" id="org7a8994c">
+<div class="defi" id="org52f02b8">
 <p>
 On note \(\mathbb{R}\) l'ensemble des nombres réels. Oui, c'est bien la droite
 réelle, que l'on utilise très souvent pour définir nos fonctions numériques de
@@ -405,11 +413,12 @@ référence que l'on étudie depuis le début de l'année.
 
 </div>
 
-<div class="prop" id="orgfa93781">
+<div class="prop" id="org32f8d46">
 <p>
 On obtient finalement : \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q} \subset
 \mathbb{R}\). Intuitivement, gardez en tête que \(\mathbb{R}\) est infiniement plus
-«gros» que \(\mathbb{N}\).
+«gros» que \(\mathbb{N}\) (on pourra préciser un peu plus en classe, si on a le
+temps).
 </p>
 
 </div>
@@ -417,14 +426,14 @@ On obtient finalement : \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subs
 <p>
 Il existe bien d'autres ensembles de nombres en mathématiques. On peut même en
 inventer une infinité, qui auront des propriétés bien différentes des nombres
-que l'on utilise en seconde.
+que l'on utilise en seconde, mais ne divulgâchons rien !
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-03-10 jeu. 18:41</p>
+<p class="date">Created: 2022-03-10 jeu. 19:06</p>
 </div>
 </body>
 </html>
