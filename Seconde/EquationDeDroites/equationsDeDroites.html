@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-07 lun. 22:42 -->
+<!-- 2022-03-10 jeu. 18:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Equations De Droites</title>
@@ -225,48 +225,48 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
+ <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Equations De Droites</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3d4ec9a">1. Motivations</a></li>
-<li><a href="#org7e8c1ef">2. Définition.</a></li>
-<li><a href="#orgc170d44">3. Exemples</a>
+<li><a href="#org1956f42">1. Motivations</a></li>
+<li><a href="#org41caf46">2. Définition.</a></li>
+<li><a href="#orgf59b174">3. Exemples</a>
 <ul>
-<li><a href="#orgb1e5a9f">3.1. Une droite telle que \(a = 0\)</a></li>
-<li><a href="#org619ed76">3.2. Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</a></li>
-<li><a href="#org19f7539">3.3. Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</a></li>
-<li><a href="#orgb66be69">3.4. Hors programme : un vecteur orthogonal à la droite.</a></li>
+<li><a href="#org8322c84">3.1. Une droite telle que \(a = 0\)</a></li>
+<li><a href="#org2b00d8d">3.2. Qu'est-ce qui se passe si on change le paramètre \(c\)?</a></li>
+<li><a href="#orgdafb7e0">3.3. Trouver les paramètres \(a\), \(b\) et \(c\) d'une droite.</a></li>
+<li><a href="#orgc2831b2">3.4. Hors programme : un vecteur orthogonal à la droite.</a></li>
 </ul>
 </li>
-<li><a href="#orga18ce2e">4. Combien d&rsquo;équations pour décrire une droite ?</a></li>
-<li><a href="#org0d20c15">5. Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</a>
+<li><a href="#org52da795">4. Combien d'équations pour décrire une droite ?</a></li>
+<li><a href="#org83aa0fa">5. Lien entre une équation de droite et le vecteur directeur d'une droite.</a>
 <ul>
-<li><a href="#org3d52204">5.1. Définition</a></li>
-<li><a href="#org9518b18">5.2. Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</a>
+<li><a href="#org9947525">5.1. Définition</a></li>
+<li><a href="#org74dc791">5.2. Trouver les coefficients \(a\) et \(b\) à partir d'un vecteur directeur.</a>
 <ul>
-<li><a href="#org72e4f74">5.2.1. Exemple.</a></li>
+<li><a href="#org7012e07">5.2.1. Exemple.</a></li>
 </ul>
 </li>
-<li><a href="#orgf8339db">5.3. Hors programme : un vecteur orthogonal à un autre</a></li>
+<li><a href="#org7d435c2">5.3. Hors programme : un vecteur orthogonal à un autre</a></li>
 </ul>
 </li>
-<li><a href="#org7804d06">6. Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</a>
+<li><a href="#org4947cc3">6. Point d'intersection de deux droites : résolution de systèmes linéaires.</a>
 <ul>
-<li><a href="#orge25ec44">6.1. Motivations</a></li>
-<li><a href="#org505875b">6.2. Première méthode : la substitution</a></li>
-<li><a href="#org1cc2aab">6.3. Méthode du pivot de Gauss</a></li>
+<li><a href="#org10d4c74">6.1. Motivations</a></li>
+<li><a href="#orgca8bf4a">6.2. Première méthode : la substitution</a></li>
+<li><a href="#org1853698">6.3. Méthode du pivot de Gauss</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3d4ec9a" class="outline-2">
-<h2 id="org3d4ec9a"><span class="section-number-2">1.</span> Motivations</h2>
+<div id="outline-container-org1956f42" class="outline-2">
+<h2 id="org1956f42"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Nous avons vu dans le cours les notions suivantes :
@@ -279,23 +279,23 @@ Nous avons vu dans le cours les notions suivantes :
 
 <p>
 Ces trois notions sont très liées à ce cours, puisque nos allons décrire <b>toutes
-les droites du plan</b> à l&rsquo;aide d&rsquo;équations.
+les droites du plan</b> à l'aide d'équations.
 </p>
 
 <p>
 Avoir une <b>équation</b> qui décrit un objet mathématiques permet de résoudre la
 plupart des problèmes qui lui sont associés. Par exemple, nous verrons que nous
-pourront déterminer le point d&rsquo;intersection de deux droites à l&rsquo;aide de leur
-équation respectives. Nous avons déjà vu comment calculer le projeté d&rsquo;un point
+pourront déterminer le point d'intersection de deux droites à l'aide de leur
+équation respectives. Nous avons déjà vu comment calculer le projeté d'un point
 sur une droite en utilisant une équation de droite, avec le déterminant.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7e8c1ef" class="outline-2">
-<h2 id="org7e8c1ef"><span class="section-number-2">2.</span> Définition.</h2>
+<div id="outline-container-org41caf46" class="outline-2">
+<h2 id="org41caf46"><span class="section-number-2">2.</span> Définition.</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="orgb85bd32">
+<div class="defi" id="org5fa100d">
 <p>
 Soit \(a\) et \(b\), et \(c\) trois nombres réels. On appelle <b>une</b> équation de droite, une
 équation de la forme suivante :
@@ -307,10 +307,10 @@ ax + by = d
 </div>
 
 <p>
-Pourquoi cette équation ? C&rsquo;est précisé par la proposition ci-dessous.
+Pourquoi cette équation ? C'est précisé par la proposition ci-dessous.
 </p>
 
-<div class="prop" id="orgb2c0cb4">
+<div class="prop" id="org31975eb">
 <p>
 Soit \((D)\) une droite du plan, avec \((O, \vec{\imath}, \vec{\jmath})\) un repère
 orthonormé. Alors, il existe \(a\), \(b\), et \(c\) trois nombres réels, avec \(a\) et
@@ -322,12 +322,12 @@ orthonormé. Alors, il existe \(a\), \(b\), et \(c\) trois nombres réels, avec 
 </div>
 
 <p>
-Ce qu&rsquo;il faut retenir, c&rsquo;est donc :
+Ce qu'il faut retenir, c'est donc :
 </p>
 <ol class="org-ol">
 <li>Pour toute droite du plan, on peut trouver \(a\), \(b\), et \(c\) pour que
-l&rsquo;équation \(ax + by=c\) ait pour ensemble solution exactement cette droite</li>
-<li>et vice versa, pour chaque \(a, b, c\), l&rsquo;ensemble solution de l&rsquo;équation
+l'équation \(ax + by=c\) ait pour ensemble solution exactement cette droite</li>
+<li>et vice versa, pour chaque \(a, b, c\), l'ensemble solution de l'équation
 \(ax+by=d\) est une droite.</li>
 </ol>
 
@@ -339,12 +339,12 @@ formelle correcte.
 </div>
 </div>
 
-<div id="outline-container-orgc170d44" class="outline-2">
-<h2 id="orgc170d44"><span class="section-number-2">3.</span> Exemples</h2>
+<div id="outline-container-orgf59b174" class="outline-2">
+<h2 id="orgf59b174"><span class="section-number-2">3.</span> Exemples</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgb1e5a9f" class="outline-3">
-<h3 id="orgb1e5a9f"><span class="section-number-3">3.1.</span> Une droite telle que \(a = 0\)</h3>
+<div id="outline-container-org8322c84" class="outline-3">
+<h3 id="org8322c84"><span class="section-number-3">3.1.</span> Une droite telle que \(a = 0\)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Dans la partie précédente, nous avons vu que les équations :
@@ -358,26 +358,26 @@ réels, donc peuvent par exemple être nul !
 
 <p>
 Si \(a = 0\), on peut essayer de voir quelle droite est représentée par exemple
-par l&rsquo;équation :
+par l'équation :
 \[
     3y = 6
 \]
-Cela correspond donc l&rsquo;ensemble des points \(M(x;y)\) du plan, tel que l&rsquo;ordonnée
+Cela correspond donc l'ensemble des points \(M(x;y)\) du plan, tel que l'ordonnée
 \(y\) multiplié par \(3\) donne \(6\). Donc \(A=(1, 2)\) fait partie des solutions,
-puisque \(3 \times 2 = 6\), mais aussi \(B=(10, 2)\). Par contre \(C=(1, -2)\) n&rsquo;en fait
+puisque \(3 \times 2 = 6\), mais aussi \(B=(10, 2)\). Par contre \(C=(1, -2)\) n'en fait
 pas partie.
 </p>
 
 
-<div id="org41edd9a" class="figure">
+<div id="orga4c428e" class="figure">
 <p><img src="images/premierExempleEquaDroite.svg" alt="premierExempleEquaDroite.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org619ed76" class="outline-3">
-<h3 id="org619ed76"><span class="section-number-3">3.2.</span> Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</h3>
+<div id="outline-container-org2b00d8d" class="outline-3">
+<h3 id="org2b00d8d"><span class="section-number-3">3.2.</span> Qu'est-ce qui se passe si on change le paramètre \(c\)?</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Regardons maintenant deux équations de droites :
@@ -399,22 +399,22 @@ dans la deuxième \(0\).
 </p>
 
 <p>
-Affichons ces deux droites dans le plan, à l&rsquo;aide de l&rsquo;ordinateur.
+Affichons ces deux droites dans le plan, à l'aide de l'ordinateur.
 </p>
 
 
-<div id="orgf5af942" class="figure">
+<div id="org20ffc06" class="figure">
 <p><img src="images/deuxiemeExempleEquaDroite.svg" alt="deuxiemeExempleEquaDroite.svg" class="org-svg" />
 </p>
 </div>
 
 <p>
-On obtient deux droites que j&rsquo;ai colorié de couleurs différentes. On remarque
+On obtient deux droites que j'ai colorié de couleurs différentes. On remarque
 deux choses :
 </p>
 <ol class="org-ol">
 <li>Les deux droites sont parallèles</li>
-<li>L&rsquo;une des droites passent par l&rsquo;origine du repère.</li>
+<li>L'une des droites passent par l'origine du repère.</li>
 </ol>
 
 <p>
@@ -427,51 +427,51 @@ Sauriez-vous associer à chaque droite son équation ?
 </p>
 
 <p>
-En effet, le point \(O(x=0, y=0)\) est bien solution de l&rsquo;équation \(3x + 2y =0\),
-car \(3\times 0 + 2 \times 0 = 0\), et seule la droite bleue passe par l&rsquo;origine du repère.
+En effet, le point \(O(x=0, y=0)\) est bien solution de l'équation \(3x + 2y =0\),
+car \(3\times 0 + 2 \times 0 = 0\), et seule la droite bleue passe par l'origine du repère.
 </p>
 
 <p>
 Conclusion : le paramètre \(c\) permet de faire varier le moment où là droite
-coupe l&rsquo;axe des ordonnées.
+coupe l'axe des ordonnées.
 </p>
 
-<div class="prop" id="org7eac847">
+<div class="prop" id="org1c77d19">
 <p>
 Avec les conditions données dans les propositions précédentes, le nombre \(c\) est
-nul si et seulement si la droite passe par l&rsquo;origine du repère.
+nul si et seulement si la droite passe par l'origine du repère.
 </p>
 
 </div>
 
-<div class="dem" id="orgb8bb15f">
+<div class="dem" id="orgd3c01f1">
 <p>
-Si la droite passe par l&rsquo;origine du repère, alors \(a\times 0 + b\times 0 = 0 = c\) donc \(c\)
+Si la droite passe par l'origine du repère, alors \(a\times 0 + b\times 0 = 0 = c\) donc \(c\)
 est nul.
 </p>
 
 <p>
-Si \(c\) est nul, alors l&rsquo;origine est une solution de l&rsquo;équation \(ax + by
-= 0\), donc l&rsquo;origine fait partie des points sur la droite.
+Si \(c\) est nul, alors l'origine est une solution de l'équation \(ax + by
+= 0\), donc l'origine fait partie des points sur la droite.
 </p>
 
 </div>
 </div>
 </div>
-<div id="outline-container-org19f7539" class="outline-3">
-<h3 id="org19f7539"><span class="section-number-3">3.3.</span> Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</h3>
+<div id="outline-container-orgdafb7e0" class="outline-3">
+<h3 id="orgdafb7e0"><span class="section-number-3">3.3.</span> Trouver les paramètres \(a\), \(b\) et \(c\) d'une droite.</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
-Pour trouver les paramètres d&rsquo;une équation d&rsquo;une droite qui passe par deux
+Pour trouver les paramètres d'une équation d'une droite qui passe par deux
 points, il faut utiliser le déterminant. Relisez le cours associés.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb66be69" class="outline-3">
-<h3 id="orgb66be69"><span class="section-number-3">3.4.</span> Hors programme : un vecteur orthogonal à la droite.</h3>
+<div id="outline-container-orgc2831b2" class="outline-3">
+<h3 id="orgc2831b2"><span class="section-number-3">3.4.</span> Hors programme : un vecteur orthogonal à la droite.</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
-On considère une équation \(ax+by=c\) d&rsquo;une droite dans le plan. À quoi correspond
+On considère une équation \(ax+by=c\) d'une droite dans le plan. À quoi correspond
 le vecteur \(\vec{u} = (a, b)\) pour cette droite ?
 </p>
 
@@ -479,7 +479,7 @@ le vecteur \(\vec{u} = (a, b)\) pour cette droite ?
 Voici un exemple :
 </p>
 
-<div id="org9c35cb0" class="figure">
+<div id="orgc1eb319" class="figure">
 <p><img src="images/exempleDroiteOrthogonaleVecteurEqua.svg" alt="exempleDroiteOrthogonaleVecteurEqua.svg" class="org-svg" />
 </p>
 </div>
@@ -487,34 +487,34 @@ Voici un exemple :
 <p>
 Le vecteur \(\vec{u} = (a; b)\) est un vecteur dont la direction est <b>orthogonal</b>
 à la droite ! Pour démontrer ce résultat, vous aurez besoin du <b>produit
-scalaire</b> introduit l&rsquo;an prochain. Mais cela permet déjà de tracer très
+scalaire</b> introduit l'an prochain. Mais cela permet déjà de tracer très
 rapidemment une droite en connaissant une de ses équations.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga18ce2e" class="outline-2">
-<h2 id="orga18ce2e"><span class="section-number-2">4.</span> Combien d&rsquo;équations pour décrire une droite ?</h2>
+<div id="outline-container-org52da795" class="outline-2">
+<h2 id="org52da795"><span class="section-number-2">4.</span> Combien d'équations pour décrire une droite ?</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Il existe une infinité d&rsquo;équations «différentes» pour décrire la même droite du
+Il existe une infinité d'équations «différentes» pour décrire la même droite du
 plan. En effet, regardez les deux équations suivantes :
 \[
 -2x + 5y = 9 \quad 4x - 10y = -18
 \]
 Clairement, on obtient la deuxième équation en multipliant par \(-2\) la première.
-Donc, les deux admettent le même ensemble solution. Mais c&rsquo;est techniquement
+Donc, les deux admettent le même ensemble solution. Mais c'est techniquement
 deux équations différentes.
 </p>
 
 <p>
-C&rsquo;est pour cela que l&rsquo;on ne peut <b>pas</b> parler de <b>l&rsquo;</b> équation d&rsquo;une droite.
-Mais on dira <b>une</b> (attention à l&rsquo;article) équation de la droite, car, si on en
+C'est pour cela que l'on ne peut <b>pas</b> parler de <b>l'</b> équation d'une droite.
+Mais on dira <b>une</b> (attention à l'article) équation de la droite, car, si on en
 trouve une, on en trouve une <b>infinité</b>.
 </p>
 
-<div class="prop" id="orgf2f6a9d">
+<div class="prop" id="orgf5bd20e">
 <p>
 Deux équations désignent la même droite si et seulement si elles sont proportionnelles.
 </p>
@@ -523,14 +523,14 @@ Deux équations désignent la même droite si et seulement si elles sont proport
 </div>
 </div>
 
-<div id="outline-container-org0d20c15" class="outline-2">
-<h2 id="org0d20c15"><span class="section-number-2">5.</span> Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</h2>
+<div id="outline-container-org83aa0fa" class="outline-2">
+<h2 id="org83aa0fa"><span class="section-number-2">5.</span> Lien entre une équation de droite et le vecteur directeur d'une droite.</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org3d52204" class="outline-3">
-<h3 id="org3d52204"><span class="section-number-3">5.1.</span> Définition</h3>
+<div id="outline-container-org9947525" class="outline-3">
+<h3 id="org9947525"><span class="section-number-3">5.1.</span> Définition</h3>
 <div class="outline-text-3" id="text-5-1">
-<div class="defi" id="org8a0ea9a">
+<div class="defi" id="org25ad04c">
 <p>
 Soit \(\mathcal{D}\) une droite dans le plan. On dit que \(\vec{u}\) est <b>un</b>
 vecteur directeur de la droite \(\mathcal{D}\) si et seulement si la direction du
@@ -540,8 +540,8 @@ vecteur \(\vec{u}\) est parallèle à la droite \(\mathcal{D}\).
 </div>
 
 <p>
-Dans la définition, on demande simplement à la direction d&rsquo;être parallèle à la
-droite \(\mathcal{D}\), mais ce qu&rsquo;il faut garder en tête, c&rsquo;est plutôt le dessin
+Dans la définition, on demande simplement à la direction d'être parallèle à la
+droite \(\mathcal{D}\), mais ce qu'il faut garder en tête, c'est plutôt le dessin
 suivant (avec le vecteur «sur» la droite \(\mathcal{D}\)):
 </p>
 
@@ -549,7 +549,7 @@ suivant (avec le vecteur «sur» la droite \(\mathcal{D}\)):
 Voici une exemple de vecteur directeur \(\vec{u}\) de la droite (en orange) du plan \(\mathcal{D}\).
 </p>
 
-<div id="org3d91dbd" class="figure">
+<div id="org08feb9f" class="figure">
 <p><img src="images/vecteurDirecteurDroite.svg" alt="vecteurDirecteurDroite.svg" class="org-svg" />
 </p>
 </div>
@@ -557,16 +557,16 @@ Voici une exemple de vecteur directeur \(\vec{u}\) de la droite (en orange) du p
 </div>
 
 
-<div id="outline-container-org9518b18" class="outline-3">
-<h3 id="org9518b18"><span class="section-number-3">5.2.</span> Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</h3>
+<div id="outline-container-org74dc791" class="outline-3">
+<h3 id="org74dc791"><span class="section-number-3">5.2.</span> Trouver les coefficients \(a\) et \(b\) à partir d'un vecteur directeur.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Soit \(\vec{u} = (a;b)\) un vecteur dont les coordonnées sont données dans un
-repère orthonormé du plan. Qu&rsquo;elles serait les équations des droites qui
+repère orthonormé du plan. Qu'elles serait les équations des droites qui
 admettent comme direction ce vecteur ?
 </p>
 
-<div class="prop" id="org49d29c6">
+<div class="prop" id="org917820c">
 <p>
 Toutes les droites qui admettent comme direction le vecteur \(\vec{u} = (a;b)\)
 admettent comme équations :
@@ -581,12 +581,12 @@ Pour retrouver la formule, il suffit de remplacer \(x\) par \(a\) et \(b\) par \
 </p>
 </div>
 
-<div id="outline-container-org72e4f74" class="outline-4">
-<h4 id="org72e4f74"><span class="section-number-4">5.2.1.</span> Exemple.</h4>
+<div id="outline-container-org7012e07" class="outline-4">
+<h4 id="org7012e07"><span class="section-number-4">5.2.1.</span> Exemple.</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
-On considère le vecteur \(\vec{u} = (3; 2)\). D&rsquo;après la proposition précédente,
-la droite \(\mathcal{D}\) d&rsquo;équation :
+On considère le vecteur \(\vec{u} = (3; 2)\). D'après la proposition précédente,
+la droite \(\mathcal{D}\) d'équation :
 \[
 2x - 3y = 0
 \]
@@ -598,7 +598,7 @@ Vérifions tout cela.
 </p>
 
 
-<div id="orgcab657f" class="figure">
+<div id="orge36062f" class="figure">
 <p><img src="images/vecteurDirecteurDroiteDirection.svg" alt="vecteurDirecteurDroiteDirection.svg" class="org-svg" />
 </p>
 </div>
@@ -607,12 +607,12 @@ Vérifions tout cela.
 </div>
 
 
-<div id="outline-container-orgf8339db" class="outline-3">
-<h3 id="orgf8339db"><span class="section-number-3">5.3.</span> Hors programme : un vecteur orthogonal à un autre</h3>
+<div id="outline-container-org7d435c2" class="outline-3">
+<h3 id="org7d435c2"><span class="section-number-3">5.3.</span> Hors programme : un vecteur orthogonal à un autre</h3>
 <div class="outline-text-3" id="text-5-3">
-<div class="prop" id="orgaa52025">
+<div class="prop" id="org934c330">
 <p>
-Si on applique ce que l&rsquo;on a vu précédemment, on peut en déduire que le vecteur
+Si on applique ce que l'on a vu précédemment, on peut en déduire que le vecteur
 de coordonnées \((b, -a)\) est toujours orthogonal au vecteur de coordonnées \((a ,
 b)\). Par exemple, dans la situation précédente, le vecteur \((2, -3)\) est
 orthogonal au vecteur \(\vec{u}\).
@@ -623,16 +623,16 @@ orthogonal au vecteur \(\vec{u}\).
 </div>
 </div>
 
-<div id="outline-container-org7804d06" class="outline-2">
-<h2 id="org7804d06"><span class="section-number-2">6.</span> Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</h2>
+<div id="outline-container-org4947cc3" class="outline-2">
+<h2 id="org4947cc3"><span class="section-number-2">6.</span> Point d'intersection de deux droites : résolution de systèmes linéaires.</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orge25ec44" class="outline-3">
-<h3 id="orge25ec44"><span class="section-number-3">6.1.</span> Motivations</h3>
+<div id="outline-container-org10d4c74" class="outline-3">
+<h3 id="org10d4c74"><span class="section-number-3">6.1.</span> Motivations</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Si on souhaite trouver un point qui appartiennent à deux droites en même temps
-(autrement dit, un point d&rsquo;intersection des deux droites), alors il faut
+(autrement dit, un point d'intersection des deux droites), alors il faut
 résoudre un système comme il suit :
 </p>
 \begin{align*}
@@ -643,13 +643,13 @@ résoudre un système comme il suit :
 \end{align*}
 
 <p>
-Il existe plusieurs méthodes pour résoudre ce type de système, que l&rsquo;on appelle
+Il existe plusieurs méthodes pour résoudre ce type de système, que l'on appelle
 un <b>système linéaire de deux équations à deux inconnues</b>. Décortiquons ce nom :
 </p>
 <ul class="org-ul">
 <li>système : ensemble de deux ou plusieurs équations</li>
 <li>liéaire : les inconnues sont «simplement» multipliées par des constantes et
-ajoutées entre elles. Par exemple, nous n&rsquo;auront pas des \(x\) multipliés par
+ajoutées entre elles. Par exemple, nous n'auront pas des \(x\) multipliés par
 des \(y\), ou bien des \(x^2\) dans ces systèmes.</li>
 <li>deux équations à deux inconnues : les inconnues sont \(x\) et \(y\), et il y a
 deux équations (deux lignes dans notre système).</li>
@@ -657,18 +657,18 @@ deux équations (deux lignes dans notre système).</li>
 </div>
 </div>
 
-<div id="outline-container-org505875b" class="outline-3">
-<h3 id="org505875b"><span class="section-number-3">6.2.</span> Première méthode : la substitution</h3>
+<div id="outline-container-orgca8bf4a" class="outline-3">
+<h3 id="orgca8bf4a"><span class="section-number-3">6.2.</span> Première méthode : la substitution</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
-La substution n&rsquo;est pas une méthode qui marche toujours le mieux, mais parfois,
+La substution n'est pas une méthode qui marche toujours le mieux, mais parfois,
 elle permet de résoudre rapidement des systèmes linéaires de deux équations à
 deux inconnues.
 </p>
 
 <p>
-L&rsquo;idée est d&rsquo;exprimée une variable par rapport à une autre à partir d&rsquo;une ligne,
-et injecter le tout dans l&rsquo;autre ligne.
+L'idée est d'exprimée une variable par rapport à une autre à partir d'une ligne,
+et injecter le tout dans l'autre ligne.
 </p>
 
 <p>
@@ -710,7 +710,7 @@ autrement dit :
             \end{array} \right.
 \end{align*}
 <p>
-Finalement, \(7y = 11\), donc \(y = \frac{11}{7}\). Une fois que l&rsquo;on a trouvé, \(y\),
+Finalement, \(7y = 11\), donc \(y = \frac{11}{7}\). Une fois que l'on a trouvé, \(y\),
 on peut trouver \(x\) en remplaçant, dans la première ligne, \(y\) par sa valeur
 trouvée :
 </p>
@@ -727,22 +727,22 @@ et on peut vérifier notre résultat en affichant les deux droites par ordinateu
 </p>
 
 
-<div id="org8a78592" class="figure">
+<div id="org559da0c" class="figure">
 <p><img src="images/verificationsolutionintersectiondroite.svg" alt="verificationsolutionintersectiondroite.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1cc2aab" class="outline-3">
-<h3 id="org1cc2aab"><span class="section-number-3">6.3.</span> Méthode du pivot de Gauss</h3>
+<div id="outline-container-org1853698" class="outline-3">
+<h3 id="org1853698"><span class="section-number-3">6.3.</span> Méthode du pivot de Gauss</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Cette méthode est celle qui fonctionne à «tous les coups», et qui est
 généralisable à plusieurs équations linéaires à plusieurs inconnues (pas que
-\(2\)). L&rsquo;idée est de manipuler les lignes entre elles pour éliminer les variables
-les unes après les autres. Reprenons l&rsquo;exemple précédent, et regardons ce que
-donne la résolution du système. J&rsquo;ai noté \((L_1)\) et \((L_2)\) pour numéroté les
+\(2\)). L'idée est de manipuler les lignes entre elles pour éliminer les variables
+les unes après les autres. Reprenons l'exemple précédent, et regardons ce que
+donne la résolution du système. J'ai noté \((L_1)\) et \((L_2)\) pour numéroté les
 lignes du système.
 </p>
 \begin{align*}
@@ -754,8 +754,8 @@ lignes du système.
 
 <p>
 On voit que la ligne \(2\), qui est \(-2x + y = 1\), a un coefficient \(-2\) devant le
-\(x\). Donc, si on multiplie \((L_1)\) par \(2\), on obtient l&rsquo;équation \(2x +6y = 10\),
-et dans cette situation, le \(2x\) et le \(-2x\) vont donc s&rsquo;annuler. On remplace
+\(x\). Donc, si on multiplie \((L_1)\) par \(2\), on obtient l'équation \(2x +6y = 10\),
+et dans cette situation, le \(2x\) et le \(-2x\) vont donc s'annuler. On remplace
 donc la ligne \((L_2)\) par la ligne \((L_2) + 2(L_1)\). On obtient :
 </p>
 \begin{align*}
@@ -775,7 +775,7 @@ La ligne \((L_1)\) reste inchangée. On obtient finalement :
 \end{align*}
 <p>
 Finalement, on retrouve <b>directement</b> la valeur de \(y = \frac{11}{7}\). Une fois
-que l&rsquo;on a trouvé \(y\), on prodèce exactement de la même manière que lors de la
+que l'on a trouvé \(y\), on prodèce exactement de la même manière que lors de la
 méthode précédente pour trouver \(x = \frac{2}{7}\).
 </p>
 </div>
@@ -784,7 +784,7 @@ méthode précédente pour trouver \(x = \frac{2}{7}\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-03-07 lun. 22:42</p>
+<p class="date">Created: 2022-03-10 jeu. 18:41</p>
 </div>
 </body>
 </html>
