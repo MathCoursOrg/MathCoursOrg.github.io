@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-10 jeu. 18:41 -->
+<!-- 2022-03-18 ven. 10:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projete Orthogonal</title>
-<meta name="author" content="Delhomme Fabien" />
+<meta name="author" content="John Doe" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -232,27 +232,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org460722f">1. Définitions</a></li>
-<li><a href="#orgd106d10">2. Pourquoi ce point existe ?</a></li>
-<li><a href="#org08d53a3">3. Approche géométrique</a></li>
-<li><a href="#org156db67">4. Trigonométrie</a>
+<li><a href="#orgfda2e46">1. Définitions</a></li>
+<li><a href="#org4831097">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#orgeee35cf">3. Approche géométrique</a></li>
+<li><a href="#orgdbcf995">4. Trigonométrie</a>
 <ul>
-<li><a href="#orgb5bd7f2">4.1. Définitions</a></li>
+<li><a href="#org5a9fe6f">4.1. Définitions</a></li>
 </ul>
 </li>
-<li><a href="#orgeab5d54">5. Le chemin difficile : trouver les coordonnées d'un projeté.</a>
+<li><a href="#org02def15">5. Le chemin difficile : trouver les coordonnées d'un projeté.</a>
 <ul>
-<li><a href="#org57cdea7">5.1. Première étape, trouver l'équation de la droite \((AB)\)</a></li>
-<li><a href="#org01f7598">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
-<li><a href="#orgf6bbc68">5.3. Rappeler que \(M \in (AB)\)</a></li>
+<li><a href="#org206f054">5.1. Première étape, trouver l'équation de la droite \((AB)\)</a></li>
+<li><a href="#org2e5aadd">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
+<li><a href="#org86ca9f7">5.3. Rappeler que \(M \in (AB)\)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org460722f" class="outline-2">
-<h2 id="org460722f"><span class="section-number-2">1.</span> Définitions</h2>
+<div id="outline-container-orgfda2e46" class="outline-2">
+<h2 id="orgfda2e46"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
@@ -262,7 +262,7 @@ par \(M\).
 <p>
 On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
 </p>
-<div class="defi" id="org7341aa1">
+<div class="defi" id="org39db76a">
 <p>
 Le projeté orthogonal d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
 que la distance \(MM'\) est minimale.
@@ -271,15 +271,15 @@ que la distance \(MM'\) est minimale.
 </div>
 
 
-<div id="orgc5037ed" class="figure">
+<div id="orgf486707" class="figure">
 <p><img src="images/projetOrthoIntro.svg" alt="projetOrthoIntro.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd106d10" class="outline-2">
-<h2 id="orgd106d10"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
+<div id="outline-container-org4831097" class="outline-2">
+<h2 id="org4831097"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
@@ -311,10 +311,10 @@ learning (!).
 </div>
 </div>
 
-<div id="outline-container-org08d53a3" class="outline-2">
-<h2 id="org08d53a3"><span class="section-number-2">3.</span> Approche géométrique</h2>
+<div id="outline-container-orgeee35cf" class="outline-2">
+<h2 id="orgeee35cf"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
-<div class="defi" id="orgc3db493">
+<div class="defi" id="orgcbbd995">
 <p>
 Le projeté d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l'angle
 entre \(\Delta\) et \(M'M\) est droit.
@@ -322,7 +322,7 @@ entre \(\Delta\) et \(M'M\) est droit.
 
 </div>
 
-<div class="prop" id="org64fb3ef">
+<div class="prop" id="org815af88">
 <p>
 Les deux définitions sont équivalentes ! C'est-à-dire que trouver le point \(M'\) tel
 que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
@@ -336,21 +336,21 @@ Remarquez l'angle droit formé sur la figure ci-contre (qui a la même
 configuration que la figure précédente.)
 </p>
 
-<div id="org2830867" class="figure">
+<div id="org876cb74" class="figure">
 <p><img src="images/projetOrthoIntroAngleDroit.svg" alt="projetOrthoIntroAngleDroit.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org156db67" class="outline-2">
-<h2 id="org156db67"><span class="section-number-2">4.</span> Trigonométrie</h2>
+<div id="outline-container-orgdbcf995" class="outline-2">
+<h2 id="orgdbcf995"><span class="section-number-2">4.</span> Trigonométrie</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgb5bd7f2" class="outline-3">
-<h3 id="orgb5bd7f2"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div id="outline-container-org5a9fe6f" class="outline-3">
+<h3 id="org5a9fe6f"><span class="section-number-3">4.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="defi" id="orgabf5e84">
+<div class="defi" id="org1250489">
 <p>
 On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
 fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
@@ -362,7 +362,7 @@ fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
 </div>
 
 
-<div id="org2262971" class="figure">
+<div id="org094ffa6" class="figure">
 <p><img src="images/deftrigo.svg" alt="deftrigo.svg" class="org-svg" />
 </p>
 </div>
@@ -370,8 +370,8 @@ fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
 </div>
 </div>
 
-<div id="outline-container-orgeab5d54" class="outline-2">
-<h2 id="orgeab5d54"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d'un projeté.</h2>
+<div id="outline-container-org02def15" class="outline-2">
+<h2 id="org02def15"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d'un projeté.</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 On considère le problème suivant. On connaît \(A(2, 3)\) et \(B(4;5)\) les
@@ -386,14 +386,14 @@ Si on demande à l'ordinateur de représenter la situation, voici ce que l'on
 obtient :
 </p>
 
-<div id="org2c21d44" class="figure">
+<div id="org6165be4" class="figure">
 <p><img src="images/chemindiffProjete.svg" alt="chemindiffProjete.svg" class="org-svg" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org57cdea7" class="outline-3">
-<h3 id="org57cdea7"><span class="section-number-3">5.1.</span> Première étape, trouver l'équation de la droite \((AB)\)</h3>
+<div id="outline-container-org206f054" class="outline-3">
+<h3 id="org206f054"><span class="section-number-3">5.1.</span> Première étape, trouver l'équation de la droite \((AB)\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 On a déjà vu avec le chapitre sur le déterminant comment déterminer une équation
@@ -407,8 +407,8 @@ représente les coordonnées d'un point sur \((AB)\), on a :
 </div>
 </div>
 
-<div id="outline-container-org01f7598" class="outline-3">
-<h3 id="org01f7598"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
+<div id="outline-container-org2e5aadd" class="outline-3">
+<h3 id="org2e5aadd"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 D'après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
@@ -422,8 +422,8 @@ embêté avec d'éventuelles racines carrés :
 </div>
 </div>
 
-<div id="outline-container-orgf6bbc68" class="outline-3">
-<h3 id="orgf6bbc68"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
+<div id="outline-container-org86ca9f7" class="outline-3">
+<h3 id="org86ca9f7"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 On rappelle que l'on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
@@ -473,8 +473,8 @@ coordonnées \(I = (4,5;5,5)\).
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-03-10 jeu. 18:41</p>
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2022-03-18 ven. 10:32</p>
 </div>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-04 ven. 21:41 -->
+<!-- 2022-03-18 ven. 10:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Se localiser avec Python</title>
-<meta name="author" content="Delhomme Fabien" />
+<meta name="author" content="John Doe" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -211,21 +211,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbaf3246">1. Se localiser avec Python</a></li>
-<li><a href="#orgd670f58">2. Préparation</a></li>
-<li><a href="#orga2e9d73">3. Ce qu&rsquo;il faut faire</a>
+<li><a href="#org785afe4">1. Se localiser avec Python</a></li>
+<li><a href="#org852c97f">2. Préparation</a></li>
+<li><a href="#org8d3a6a0">3. Ce qu'il faut faire</a>
 <ul>
-<li><a href="#orgba1e7d3">3.1. Premières consignes</a></li>
-<li><a href="#orgbd4bc12">3.2. Deuxième consignes</a></li>
-<li><a href="#org9bbf819">3.3. Troisième consignes</a></li>
+<li><a href="#orgddda738">3.1. Premières consignes</a></li>
+<li><a href="#org0e092f7">3.2. Deuxième consignes</a></li>
+<li><a href="#org01e06c2">3.3. Troisième consignes</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgbaf3246" class="outline-2">
-<h2 id="orgbaf3246"><span class="section-number-2">1.</span> Se localiser avec Python</h2>
+<div id="outline-container-org785afe4" class="outline-2">
+<h2 id="org785afe4"><span class="section-number-2">1.</span> Se localiser avec Python</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Objectif : Quelle est la trajectoire la plus courte entre le lycée et la Tour
@@ -238,19 +238,19 @@ Eiffel ?
 
 <ol class="org-ol">
 <li><a href="https://pixees.fr/informatiquelycee/n_site/asset/pyroutelib3.py">Lien vers le fichier python pyroutelib3</a></li>
-<li><a href="https://www.openstreetmap.org/#map=5/47.591/8.833">Carte d&rsquo;OpenStreepMap</a></li>
-<li><a href="http://bboxfinder.com">Site pour trouver les coordonnées d&rsquo;un point</a> <b><b>Attention</b></b> il faut cliquer
-sur l&rsquo;option «Lat/Lng» pour avoir d&rsquo;abord la Lattitude, puis la Longitude du
+<li><a href="https://www.openstreetmap.org/#map=5/47.591/8.833">Carte d'OpenStreepMap</a></li>
+<li><a href="http://bboxfinder.com">Site pour trouver les coordonnées d'un point</a> <b><b>Attention</b></b> il faut cliquer
+sur l'option «Lat/Lng» pour avoir d'abord la Lattitude, puis la Longitude du
 point.</li>
-<li><a href="https://youtu.be/JPeCmKFrKio">Lien vers la vidéo vue en cours sur l&rsquo;algorithme de Dijkstra</a>, pour les
+<li><a href="https://youtu.be/JPeCmKFrKio">Lien vers la vidéo vue en cours sur l'algorithme de Dijkstra</a>, pour les
 curieux qui voudraient la revoir.</li>
 </ol>
 </div>
 </div>
 
 
-<div id="outline-container-orgd670f58" class="outline-2">
-<h2 id="orgd670f58"><span class="section-number-2">2.</span> Préparation</h2>
+<div id="outline-container-org852c97f" class="outline-2">
+<h2 id="org852c97f"><span class="section-number-2">2.</span> Préparation</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>Dans le bureau, créer un nouveau dossier, appelé «Itineraire» (sans accent).</li>
@@ -261,29 +261,29 @@ Ouvrir <code>Notepad++</code>, et crée un nouveau fichier, appelé «itineraire
 le dossier «Itineraire». Dans ce fichier, entrez le code suivant :
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #D83441;">from</span> pyroutelib3 <span style="color: #D83441;">import</span> Router
-<span style="color: #767676; font-style: italic;">####</span><span style="color: #767676; font-style: italic;">ATTENTION : les 4 lignes suivantes sont &#224; conserver uniquement si vous ex&#233;cutez ce programme depuis le lyc&#233;e#####</span>
-<span style="color: #D83441;">import</span> urllib.request
-<span style="color: #86e7d7;">proxy</span> = urllib.request.ProxyHandler({<span style="color: #79D836;">'https'</span>:<span style="color: #79D836;">'172.16.0.1:3128'</span>})
-<span style="color: #86e7d7;">opener</span> = urllib.request.build_opener(proxy)
+<pre class="src src-python"><span style="color: #51afef;">from</span> pyroutelib3 <span style="color: #51afef;">import</span> Router
+<span style="color: #5B6268;">####</span><span style="color: #5B6268;">ATTENTION : les 4 lignes suivantes sont &#224; conserver uniquement si vous ex&#233;cutez ce programme depuis le lyc&#233;e#####</span>
+<span style="color: #51afef;">import</span> urllib.request
+<span style="color: #dcaeea;">proxy</span> = urllib.request.ProxyHandler({<span style="color: #98be65;">'https'</span>:<span style="color: #98be65;">'172.16.0.1:3128'</span>})
+<span style="color: #dcaeea;">opener</span> = urllib.request.build_opener(proxy)
 urllib.request.install_opener(opener)
-<span style="color: #767676; font-style: italic;">#################</span>
-<span style="color: #86e7d7;">router</span> = Router(<span style="color: #79D836;">"car"</span>)
+<span style="color: #5B6268;">#################</span>
+<span style="color: #dcaeea;">router</span> = Router(<span style="color: #98be65;">"car"</span>)
 
-<span style="color: #86e7d7;">depart</span> = router.findNode(<span style="color: #D85F00; font-weight: bold;">48.746936</span>,<span style="color: #D85F00; font-weight: bold;">2.489830</span>) <span style="color: #767676; font-style: italic;">#</span><span style="color: #767676; font-style: italic;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DU D&#201;PART</span>
-<span style="color: #86e7d7;">arrivee</span> = router.findNode(<span style="color: #D85F00; font-weight: bold;">48.749087</span>,<span style="color: #D85F00; font-weight: bold;">2.513359</span>)<span style="color: #767676; font-style: italic;">#</span><span style="color: #767676; font-style: italic;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DE L'ARRIV&#201;E</span>
-<span style="color: #86e7d7;">status</span>, <span style="color: #86e7d7;">route</span> = router.doRoute(depart, arrivee)
-<span style="color: #D83441;">if</span> status == <span style="color: #79D836;">'success'</span>:
-    <span style="color: #86e7d7;">routeLatLons</span> = <span style="color: #3679D8;">list</span>(<span style="color: #3679D8;">map</span>(router.nodeLatLon, route))
+<span style="color: #dcaeea;">depart</span> = router.findNode(<span style="color: #da8548; font-weight: bold;">48.746936</span>,<span style="color: #da8548; font-weight: bold;">2.489830</span>) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DU D&#201;PART</span>
+<span style="color: #dcaeea;">arrivee</span> = router.findNode(<span style="color: #da8548; font-weight: bold;">48.749087</span>,<span style="color: #da8548; font-weight: bold;">2.513359</span>)<span style="color: #5B6268;">#</span><span style="color: #5B6268;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DE L'ARRIV&#201;E</span>
+<span style="color: #dcaeea;">status</span>, <span style="color: #dcaeea;">route</span> = router.doRoute(depart, arrivee)
+<span style="color: #51afef;">if</span> status == <span style="color: #98be65;">'success'</span>:
+    <span style="color: #dcaeea;">routeLatLons</span> = <span style="color: #c678dd;">list</span>(<span style="color: #c678dd;">map</span>(router.nodeLatLon, route))
 </pre>
 </div></li>
-<li>Appuyez sur «Ctrl-r» sur votre ordinateur. Une fenêtre s&rsquo;ouvre en bas à
+<li>Appuyez sur «Ctrl-r» sur votre ordinateur. Une fenêtre s'ouvre en bas à
 gauche. Tapez «cmd», puis, appuyez sur la touche «Entrée».</li>
 <li><p>
-Dans la console qui vient de s&rsquo;ouvrir, tapez :
+Dans la console qui vient de s'ouvrir, tapez :
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #3679D8;">cd</span> Desktop/Itineraire
+<pre class="src src-bash"><span style="color: #ECBE7B;">cd</span> Desktop/Itineraire
 </pre>
 </div>
 <p>
@@ -301,74 +301,74 @@ Une fois cette commande réalisée, vous pouvez taper
 
 
 <p>
-<span class="underline">Quelques explications sur le programme que l&rsquo;on vient de taper :</span>
+<span class="underline">Quelques explications sur le programme que l'on vient de taper :</span>
 </p>
 
 <ol class="org-ol">
-<li>Nous commençons par importer la bibliothèque &ldquo;pyroutelib3&rdquo; avec la première
+<li>Nous commençons par importer la bibliothèque "pyroutelib3" avec la première
 ligne <code>from pyroutelib3 import Router</code></li>
 <li>La deuxième ligne permet de définir le véhicule qui sera utilisé pour
 effectuer le trajet. Dans notre cas, nous utilisons une voiture (<code>car</code>), mais
-il est possible de choisir d&rsquo;autres moyens de transport : cycle, foot, horse,
+il est possible de choisir d'autres moyens de transport : cycle, foot, horse,
 tram, train</li>
 <li>Les 2 lignes suivantes permettent de définir le point de départ et le point
-d&rsquo;arrivée. Nous avons <code>router.findNode(latitude, longitude)</code>, il suffit de
+d'arrivée. Nous avons <code>router.findNode(latitude, longitude)</code>, il suffit de
 renseigner la latitude et la longitude du lieu.</li>
-<li>La ligne <code>status, route = router.doRoute(depart, arrivee)</code> permet d&rsquo;effectuer
-le calcul de l&rsquo;itinéraire.</li>
+<li>La ligne <code>status, route = router.doRoute(depart, arrivee)</code> permet d'effectuer
+le calcul de l'itinéraire.</li>
 <li>La dernière ligne est exécutée uniquement si le calcul est mené à son terme
-(&ldquo;if&rdquo; de la ligne précédente). La variable <code>routeLatLons</code> contient la liste
+("if" de la ligne précédente). La variable <code>routeLatLons</code> contient la liste
 des coordonnées des points de cheminement (points qui constituent le chemin
-entre le point de départ et le point d&rsquo;arrivée)</li>
+entre le point de départ et le point d'arrivée)</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orga2e9d73" class="outline-2">
-<h2 id="orga2e9d73"><span class="section-number-2">3.</span> Ce qu&rsquo;il faut faire</h2>
+<div id="outline-container-org8d3a6a0" class="outline-2">
+<h2 id="org8d3a6a0"><span class="section-number-2">3.</span> Ce qu'il faut faire</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgba1e7d3" class="outline-3">
-<h3 id="orgba1e7d3"><span class="section-number-3">3.1.</span> Premières consignes</h3>
+<div id="outline-container-orgddda738" class="outline-3">
+<h3 id="orgddda738"><span class="section-number-3">3.1.</span> Premières consignes</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Écrivez un court texte sur une demie feuille qui résume le fonctionnement de
-l&rsquo;algorithme de Dijkstra. Seuls les principes généraux sont attendus.
+l'algorithme de Dijkstra. Seuls les principes généraux sont attendus.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbd4bc12" class="outline-3">
-<h3 id="orgbd4bc12"><span class="section-number-3">3.2.</span> Deuxième consignes</h3>
+<div id="outline-container-org0e092f7" class="outline-3">
+<h3 id="org0e092f7"><span class="section-number-3">3.2.</span> Deuxième consignes</h3>
 <div class="outline-text-3" id="text-3-2">
 <ol class="org-ol">
 <li>Changer les coordonnées pour trouver le meilleur chemin de son propre
-itinéraire. Quel est l&rsquo;itinéraire entre le lycée et la tour Eiffel ?</li>
+itinéraire. Quel est l'itinéraire entre le lycée et la tour Eiffel ?</li>
 <li>Changer le moyen de locomotion.</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org9bbf819" class="outline-3">
-<h3 id="org9bbf819"><span class="section-number-3">3.3.</span> Troisième consignes</h3>
+<div id="outline-container-org01e06c2" class="outline-3">
+<h3 id="org01e06c2"><span class="section-number-3">3.3.</span> Troisième consignes</h3>
 <div class="outline-text-3" id="text-3-3">
 <ol class="org-ol">
 <li><p>
 Ajouter la ligne de code suivant en <b>haut</b> du fichier itineraire.py :
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #D83441;">import</span> folium
+<pre class="src src-python"><span style="color: #51afef;">import</span> folium
 </pre>
 </div></li>
 <li><p>
 À la <b>fin</b> du fichier, vous ajoutez le code suivant :
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #86e7d7;">c</span>= folium.Map(location=[<span style="color: #D85F00; font-weight: bold;">48.746936</span>,<span style="color: #D85F00; font-weight: bold;">2.489830</span>],zoom_start=<span style="color: #D85F00; font-weight: bold;">10</span>)
-<span style="color: #D83441;">for</span> coord <span style="color: #D83441;">in</span> routeLatLons:
-    <span style="color: #86e7d7;">coord</span>=<span style="color: #3679D8;">list</span>(coord)
+<pre class="src src-python"><span style="color: #dcaeea;">c</span>= folium.Map(location=[<span style="color: #da8548; font-weight: bold;">48.746936</span>,<span style="color: #da8548; font-weight: bold;">2.489830</span>],zoom_start=<span style="color: #da8548; font-weight: bold;">10</span>)
+<span style="color: #51afef;">for</span> coord <span style="color: #51afef;">in</span> routeLatLons:
+    <span style="color: #dcaeea;">coord</span>=<span style="color: #c678dd;">list</span>(coord)
     folium.Marker(coord).add_to(c)
-c.save(<span style="color: #79D836;">'maCarte.html'</span>)
+c.save(<span style="color: #98be65;">'maCarte.html'</span>)
 </pre>
 </div></li>
 <li>Si votre code fonction, vous pouvez ouvrir avec votre navigateur favori par
@@ -379,8 +379,8 @@ exemple Firefox, le fichier <code>maCarte.html</code> présent dans le dossier I
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-03-04 ven. 21:41</p>
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2022-03-18 ven. 10:33</p>
 </div>
 </body>
 </html>
