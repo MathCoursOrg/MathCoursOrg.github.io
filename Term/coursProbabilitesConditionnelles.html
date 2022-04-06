@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-02-13 dim. 19:18 -->
+<!-- 2022-03-18 ven. 10:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Probabilités Conditionnelles</title>
-<meta name="author" content="Delhomme Fabien" />
+<meta name="author" content="John Doe" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -226,15 +226,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge0217ba">1. Les probabilités conditionnelles</a>
+<li><a href="#org9c012d6">1. Les probabilités conditionnelles</a>
 <ul>
-<li><a href="#org6504cd1">1.1. Définitions</a></li>
-<li><a href="#org511f314">1.2. Formule de Bayes</a></li>
-<li><a href="#org2b2bdee">1.3. Formule des probabilités totales</a></li>
-<li><a href="#orgbfb8f38">1.4. Exemples pour bien comprendre</a>
+<li><a href="#org2fdf2b7">1.1. Définitions</a></li>
+<li><a href="#orgab0c8ed">1.2. Formule de Bayes</a></li>
+<li><a href="#orgad2ea57">1.3. Formule des probabilités totales</a></li>
+<li><a href="#orge2f20f9">1.4. Exemples pour bien comprendre</a>
 <ul>
-<li><a href="#org4d606c6">1.4.1. Des dés cachottiers</a></li>
-<li><a href="#orgf51fb42">1.4.2. Qui porte des lunettes ?</a></li>
+<li><a href="#org1395806">1.4.1. Des dés cachottiers</a></li>
+<li><a href="#org0ba454c">1.4.2. Qui porte des lunettes ?</a></li>
 </ul>
 </li>
 </ul>
@@ -243,14 +243,14 @@
 </div>
 </div>
 
-<div id="outline-container-orge0217ba" class="outline-2">
-<h2 id="orge0217ba"><span class="section-number-2">1.</span> Les probabilités conditionnelles</h2>
+<div id="outline-container-org9c012d6" class="outline-2">
+<h2 id="org9c012d6"><span class="section-number-2">1.</span> Les probabilités conditionnelles</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org6504cd1" class="outline-3">
-<h3 id="org6504cd1"><span class="section-number-3">1.1.</span> Définitions</h3>
+<div id="outline-container-org2fdf2b7" class="outline-3">
+<h3 id="org2fdf2b7"><span class="section-number-3">1.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org2b7b02f">
+<div class="defi" id="org403c4dc">
 <p>
 Soit \(A\) et \(B\) deux événements, avec \(B\) un événement de probabilité non nulle.
 Alors, on définit \(\mathbb{P}_{B}(A)\) par :
@@ -262,23 +262,23 @@ Alors, on définit \(\mathbb{P}_{B}(A)\) par :
 </div>
 
 <p>
-D&rsquo;où vient cette définition ? Et bien, du dessin suivant. Rappelez-vous que,
-dans ces dessins, la probabilité de chaque événement est donnée par <b>l&rsquo;aire</b> des
+D'où vient cette définition ? Et bien, du dessin suivant. Rappelez-vous que,
+dans ces dessins, la probabilité de chaque événement est donnée par <b>l'aire</b> des
 patates qui les représentent.
 </p>
 
 
-<div id="org7e103a6" class="figure">
+<div id="orgd4b2c4d" class="figure">
 <p><img src="./images/patatoideProbaConditionnelles.svg" alt="patatoideProbaConditionnelles.svg" class="org-svg" />
 </p>
 </div>
 
 <p>
-Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu&rsquo;occupe
-l&rsquo;intersection des deux événements, par rapport à l&rsquo;événement \(A\).
+Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu'occupe
+l'intersection des deux événements, par rapport à l'événement \(A\).
 </p>
 
-<div class="prop" id="orga93f4cc">
+<div class="prop" id="orga53bc42">
 <p>
 Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
 </p>
@@ -286,20 +286,20 @@ Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
 </div>
 
 <p>
-En effet, dans ce cas, on effectue une division par \(0\), ce qui n&rsquo;a pas de sens.
+En effet, dans ce cas, on effectue une division par \(0\), ce qui n'a pas de sens.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org511f314" class="outline-3">
-<h3 id="org511f314"><span class="section-number-3">1.2.</span> Formule de Bayes</h3>
+<div id="outline-container-orgab0c8ed" class="outline-3">
+<h3 id="orgab0c8ed"><span class="section-number-3">1.2.</span> Formule de Bayes</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-C&rsquo;est l&rsquo;une des formules les plus puissantes qui existe. Elle est utile dans
+C'est l'une des formules les plus puissantes qui existe. Elle est utile dans
 énormément de domaines différents.
 </p>
 
-<div class="prop" id="org0a171d6">
+<div class="prop" id="org54faa17">
 <p>
 Soit \(A\) et \(B\) deux événements, de probabilités non nulles (pour les deux).
 Alors :
@@ -311,24 +311,24 @@ Alors :
 </div>
 
 <p>
-Cette formule permet <b>d&rsquo;échanger</b> d&rsquo;une certaine manière les rôles de \(A\) et
-\(B\), c&rsquo;est-à-dire qu&rsquo;elle donne un moyen de calculer \(\mathbb{P}_{B}(A)\) à
+Cette formule permet <b>d'échanger</b> d'une certaine manière les rôles de \(A\) et
+\(B\), c'est-à-dire qu'elle donne un moyen de calculer \(\mathbb{P}_{B}(A)\) à
 partir de \(\mathbb{P}_{A}(B)\), et vice versa.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2b2bdee" class="outline-3">
-<h3 id="org2b2bdee"><span class="section-number-3">1.3.</span> Formule des probabilités totales</h3>
+<div id="outline-container-orgad2ea57" class="outline-3">
+<h3 id="orgad2ea57"><span class="section-number-3">1.3.</span> Formule des probabilités totales</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Cette formule forme un combo avec la précédente.
 </p>
 
-<div class="prop" id="org518383d">
+<div class="prop" id="org8995166">
 <p>
 Soit \(A\) un événement, et \(B\) un événement de probabilité non nulle. Alors, si
-on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
+on note \(\bar{B}\) l'événement contraire à \(B\) on a :
 \[
 \mathbb{P}(A) = \mathbb{P}(B)\mathbb{P}_{B}(A) + \mathbb{P}(\bar{B})\mathbb{P}_{\bar{B}}(A)
 \]
@@ -337,25 +337,25 @@ on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
 </div>
 
 <p>
-Autrement dit, on disseque l&rsquo;événement \(A\) selon \(B\) ou selon \(\bar{B}\).
+Autrement dit, on disseque l'événement \(A\) selon \(B\) ou selon \(\bar{B}\).
 </p>
 </div>
 </div>
-<div id="outline-container-orgbfb8f38" class="outline-3">
-<h3 id="orgbfb8f38"><span class="section-number-3">1.4.</span> Exemples pour bien comprendre</h3>
+<div id="outline-container-orge2f20f9" class="outline-3">
+<h3 id="orge2f20f9"><span class="section-number-3">1.4.</span> Exemples pour bien comprendre</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
-La formule de Bayes peut s&rsquo;appliquer dans de très très nombreux exemples. En
+La formule de Bayes peut s'appliquer dans de très très nombreux exemples. En
 voici quelques uns.
 </p>
 </div>
 
-<div id="outline-container-org4d606c6" class="outline-4">
-<h4 id="org4d606c6"><span class="section-number-4">1.4.1.</span> Des dés cachottiers</h4>
+<div id="outline-container-org1395806" class="outline-4">
+<h4 id="org1395806"><span class="section-number-4">1.4.1.</span> Des dés cachottiers</h4>
 <div class="outline-text-4" id="text-1-4-1">
 </div>
 <ol class="org-ol">
-<li><a id="org6dadecf"></a>Énoncé<br />
+<li><a id="orgb614ef6"></a>Énoncé<br />
 <div class="outline-text-5" id="text-1-4-1-1">
 <p>
 Charlie a deux dés de \(6\) faces avec lui. Mais ses dés sont spéciaux. Voici les
@@ -370,17 +370,17 @@ Voici les faces du deuxième dé :
 </p>
 
 <p>
-Charlie prend un dé au hasard. Chaque dé a autant de chances d&rsquo;être pris. Il
-lance le dé qu&rsquo;il a pris, et obtient le nombre \(3\). Quelle est la probabilité
-qu&rsquo;il ait pris le premier dé ?
+Charlie prend un dé au hasard. Chaque dé a autant de chances d'être pris. Il
+lance le dé qu'il a pris, et obtient le nombre \(3\). Quelle est la probabilité
+qu'il ait pris le premier dé ?
 </p>
 </div>
 </li>
 
-<li><a id="org982adc0"></a>Correction<br />
+<li><a id="org20445f4"></a>Correction<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 
-<div id="orgb31cab0" class="figure">
+<div id="org737763b" class="figure">
 <p><img src="desCachotiers.svg" alt="desCachotiers.svg" class="org-svg" />
 </p>
 </div>
@@ -421,17 +421,17 @@ Dans cet exemples, on a cette correspondance :
 <tbody>
 <tr>
 <td class="org-left">\(\mathbb{P}_{B}(A)\)</td>
-<td class="org-left">La probabilité d&rsquo;avoir choisi le premier dé sachant que l&rsquo;on a obtenu \(3\)</td>
+<td class="org-left">La probabilité d'avoir choisi le premier dé sachant que l'on a obtenu \(3\)</td>
 </tr>
 
 <tr>
 <td class="org-left">\(\mathbb{P}_{A}(B)\)</td>
-<td class="org-left">La probabilité d&rsquo;obtenir \(3\) sachant que l&rsquo;on a choisi le premier dé</td>
+<td class="org-left">La probabilité d'obtenir \(3\) sachant que l'on a choisi le premier dé</td>
 </tr>
 
 <tr>
 <td class="org-left">\(\mathbb{P}(B)\)</td>
-<td class="org-left">La probabilité d&rsquo;obtenir \(3\) quelque soit le dé considéré</td>
+<td class="org-left">La probabilité d'obtenir \(3\) quelque soit le dé considéré</td>
 </tr>
 
 <tr>
@@ -441,14 +441,14 @@ Dans cet exemples, on a cette correspondance :
 
 <tr>
 <td class="org-left">\(\mathbb{P}(A \cap B)\)</td>
-<td class="org-left">La probabilité que Charlie ait pris le premier dé et d&rsquo;obtenir \(3\)</td>
+<td class="org-left">La probabilité que Charlie ait pris le premier dé et d'obtenir \(3\)</td>
 </tr>
 </tbody>
 </table>
 
 <p>
-On peut calculer facilement le terme \(\mathbb{P}_{A}(B)\). Si on <i>imagine</i> qu&rsquo;il
-a pris le premier dé, alors il a une seule chance sur six d&rsquo;obtenir \(3\). Donc :
+On peut calculer facilement le terme \(\mathbb{P}_{A}(B)\). Si on <i>imagine</i> qu'il
+a pris le premier dé, alors il a une seule chance sur six d'obtenir \(3\). Donc :
 \[
 \mathbb{P}_{A}(B) = \frac{1}{6}
 \]
@@ -466,8 +466,8 @@ Il nous faut donc calculer \(\mathbb{P}(B)\), et \(\mathbb{P}_{B}(A)\).
 </ol>
 </div>
 
-<div id="outline-container-orgf51fb42" class="outline-4">
-<h4 id="orgf51fb42"><span class="section-number-4">1.4.2.</span> Qui porte des lunettes ?</h4>
+<div id="outline-container-org0ba454c" class="outline-4">
+<h4 id="org0ba454c"><span class="section-number-4">1.4.2.</span> Qui porte des lunettes ?</h4>
 <div class="outline-text-4" id="text-1-4-2">
 <p>
 On considère une classe de \(17\) élèves. On compte parmi eux :
@@ -531,8 +531,8 @@ On a donc le tableau suivant .
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-02-13 dim. 19:18</p>
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2022-03-18 ven. 10:33</p>
 </div>
 </body>
 </html>

@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
 <head>
-<!-- 2022-03-18 ven. 10:33 -->
+<!-- 2022-03-18 ven. 10:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Se localiser avec Python</title>
+<title>Ensemble De Nombres</title>
 <meta name="author" content="John Doe" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -199,6 +199,27 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -206,181 +227,213 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Se localiser avec Python</h1>
+<h1 class="title">Ensemble De Nombres</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org785afe4">1. Se localiser avec Python</a></li>
-<li><a href="#org852c97f">2. Préparation</a></li>
-<li><a href="#org8d3a6a0">3. Ce qu'il faut faire</a>
-<ul>
-<li><a href="#orgddda738">3.1. Premières consignes</a></li>
-<li><a href="#org0e092f7">3.2. Deuxième consignes</a></li>
-<li><a href="#org01e06c2">3.3. Troisième consignes</a></li>
-</ul>
-</li>
+<li><a href="#org76bbb40">1. Motivations</a></li>
+<li><a href="#orgaa0d981">2. Définition</a></li>
+<li><a href="#org55eb4d4">3. Ensembles de référence</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org785afe4" class="outline-2">
-<h2 id="org785afe4"><span class="section-number-2">1.</span> Se localiser avec Python</h2>
+<div id="outline-container-org76bbb40" class="outline-2">
+<h2 id="org76bbb40"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Objectif : Quelle est la trajectoire la plus courte entre le lycée et la Tour
-Eiffel ?
+Les mathématiques n'ont pas toujours été construite autour de la notion
+d'<b>ensemble</b>, mais c'est un formalisme utile dans la plupart des cas pour
+exprimer des propriétés sur les nombres, par exemple.
 </p>
-
-<p>
-<b>Ressources :</b>
-</p>
-
-<ol class="org-ol">
-<li><a href="https://pixees.fr/informatiquelycee/n_site/asset/pyroutelib3.py">Lien vers le fichier python pyroutelib3</a></li>
-<li><a href="https://www.openstreetmap.org/#map=5/47.591/8.833">Carte d'OpenStreepMap</a></li>
-<li><a href="http://bboxfinder.com">Site pour trouver les coordonnées d'un point</a> <b><b>Attention</b></b> il faut cliquer
-sur l'option «Lat/Lng» pour avoir d'abord la Lattitude, puis la Longitude du
-point.</li>
-<li><a href="https://youtu.be/JPeCmKFrKio">Lien vers la vidéo vue en cours sur l'algorithme de Dijkstra</a>, pour les
-curieux qui voudraient la revoir.</li>
-</ol>
 </div>
 </div>
 
-
-<div id="outline-container-org852c97f" class="outline-2">
-<h2 id="org852c97f"><span class="section-number-2">2.</span> Préparation</h2>
+<div id="outline-container-orgaa0d981" class="outline-2">
+<h2 id="orgaa0d981"><span class="section-number-2">2.</span> Définition</h2>
 <div class="outline-text-2" id="text-2">
-<ol class="org-ol">
-<li>Dans le bureau, créer un nouveau dossier, appelé «Itineraire» (sans accent).</li>
-<li>Télécharger le fichier python pyroutelib3 (lien à retrouver plus haut), et
-placer ce fichier dans le dossier «Itineraire», créé juste avant.</li>
-<li><p>
-Ouvrir <code>Notepad++</code>, et crée un nouveau fichier, appelé «itineraire.py» dans
-le dossier «Itineraire». Dans ce fichier, entrez le code suivant :
-</p>
-<div class="org-src-container">
-<pre class="src src-python"><span style="color: #51afef;">from</span> pyroutelib3 <span style="color: #51afef;">import</span> Router
-<span style="color: #5B6268;">####</span><span style="color: #5B6268;">ATTENTION : les 4 lignes suivantes sont &#224; conserver uniquement si vous ex&#233;cutez ce programme depuis le lyc&#233;e#####</span>
-<span style="color: #51afef;">import</span> urllib.request
-<span style="color: #dcaeea;">proxy</span> = urllib.request.ProxyHandler({<span style="color: #98be65;">'https'</span>:<span style="color: #98be65;">'172.16.0.1:3128'</span>})
-<span style="color: #dcaeea;">opener</span> = urllib.request.build_opener(proxy)
-urllib.request.install_opener(opener)
-<span style="color: #5B6268;">#################</span>
-<span style="color: #dcaeea;">router</span> = Router(<span style="color: #98be65;">"car"</span>)
-
-<span style="color: #dcaeea;">depart</span> = router.findNode(<span style="color: #da8548; font-weight: bold;">48.746936</span>,<span style="color: #da8548; font-weight: bold;">2.489830</span>) <span style="color: #5B6268;">#</span><span style="color: #5B6268;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DU D&#201;PART</span>
-<span style="color: #dcaeea;">arrivee</span> = router.findNode(<span style="color: #da8548; font-weight: bold;">48.749087</span>,<span style="color: #da8548; font-weight: bold;">2.513359</span>)<span style="color: #5B6268;">#</span><span style="color: #5B6268;">IL FAUT COMPL&#201;TER PAR LES COORDON&#201;ES DE L'ARRIV&#201;E</span>
-<span style="color: #dcaeea;">status</span>, <span style="color: #dcaeea;">route</span> = router.doRoute(depart, arrivee)
-<span style="color: #51afef;">if</span> status == <span style="color: #98be65;">'success'</span>:
-    <span style="color: #dcaeea;">routeLatLons</span> = <span style="color: #c678dd;">list</span>(<span style="color: #c678dd;">map</span>(router.nodeLatLon, route))
-</pre>
-</div></li>
-<li>Appuyez sur «Ctrl-r» sur votre ordinateur. Une fenêtre s'ouvre en bas à
-gauche. Tapez «cmd», puis, appuyez sur la touche «Entrée».</li>
-<li><p>
-Dans la console qui vient de s'ouvrir, tapez :
-</p>
-<div class="org-src-container">
-<pre class="src src-bash"><span style="color: #ECBE7B;">cd</span> Desktop/Itineraire
-</pre>
-</div>
+<div class="defi" id="orgc5ffeb8">
 <p>
-Confirmer votre commande par «Entrée». Vous pouvez tapez «Des» puis appuyez
-sur «Tab» pour autocompléter le nom du dossier.
-</p></li>
-<li><p>
-Une fois cette commande réalisée, vous pouvez taper
+Un ensemble est constitué d'éléments. On dit que l'élément \(x\) <i>appartient</i> à
+l'ensemble \(A\) par l'écriture \(x \in A\).
 </p>
-<div class="org-src-container">
-<pre class="src src-bash">python itineraire.py
-</pre>
-</div></li>
-</ol>
 
+</div>
 
+<div class="ex" id="org6c97d84">
 <p>
-<span class="underline">Quelques explications sur le programme que l'on vient de taper :</span>
+On sait par exemple que \(\sqrt{2} \in [0; 10]\). L'intervalle \([0;10]\) est un
+ensemble de nombre, et \(\sqrt{2}\) est l'un de ses éléments.
 </p>
 
-<ol class="org-ol">
-<li>Nous commençons par importer la bibliothèque "pyroutelib3" avec la première
-ligne <code>from pyroutelib3 import Router</code></li>
-<li>La deuxième ligne permet de définir le véhicule qui sera utilisé pour
-effectuer le trajet. Dans notre cas, nous utilisons une voiture (<code>car</code>), mais
-il est possible de choisir d'autres moyens de transport : cycle, foot, horse,
-tram, train</li>
-<li>Les 2 lignes suivantes permettent de définir le point de départ et le point
-d'arrivée. Nous avons <code>router.findNode(latitude, longitude)</code>, il suffit de
-renseigner la latitude et la longitude du lieu.</li>
-<li>La ligne <code>status, route = router.doRoute(depart, arrivee)</code> permet d'effectuer
-le calcul de l'itinéraire.</li>
-<li>La dernière ligne est exécutée uniquement si le calcul est mené à son terme
-("if" de la ligne précédente). La variable <code>routeLatLons</code> contient la liste
-des coordonnées des points de cheminement (points qui constituent le chemin
-entre le point de départ et le point d'arrivée)</li>
-</ol>
+</div>
+
+<div class="defi" id="orgd51c876">
+<p>
+On dit que \(B\) est un sous-ensemble de \(A\) lorsque <b>tous</b> les éléments de \(B\) sont
+aussi des éléments de \(A\). On notera alors \(B \subset A\), et on dira aussi que \(B\) est
+<b>inclus</b> dans \(A\).
+</p>
+
+</div>
 </div>
 </div>
 
-<div id="outline-container-org8d3a6a0" class="outline-2">
-<h2 id="org8d3a6a0"><span class="section-number-2">3.</span> Ce qu'il faut faire</h2>
+<div id="outline-container-org55eb4d4" class="outline-2">
+<h2 id="org55eb4d4"><span class="section-number-2">3.</span> Ensembles de référence</h2>
 <div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-orgddda738" class="outline-3">
-<h3 id="orgddda738"><span class="section-number-3">3.1.</span> Premières consignes</h3>
-<div class="outline-text-3" id="text-3-1">
+<div class="defi" id="org9066079">
 <p>
-Écrivez un court texte sur une demie feuille qui résume le fonctionnement de
-l'algorithme de Dijkstra. Seuls les principes généraux sont attendus.
+On note \(\mathbb{N}\) l'ensemble des entiers naturels, autrement dit,
+\(\mathbb{N}\) est constitué de :
+\[
+\mathbb{N} = \{ 0, 1, 2, 3, 4, \ldots \}
+\]
 </p>
-</div>
+
+<p>
+<i>Parfois, certains manuels de mathématiques</i> préfèrent omettre \(0\) des entiers
+naturels. Mais depuis que l'on programme en Python et que nos tableaux
+commencent à l'indice \(0\), on peut bien dire que \(0\) est naturel non ? Dans tous
+les cas, ça ne change pas vraiment la structure de \(\mathbb{N}\).
+</p>
+
 </div>
 
-<div id="outline-container-org0e092f7" class="outline-3">
-<h3 id="org0e092f7"><span class="section-number-3">3.2.</span> Deuxième consignes</h3>
-<div class="outline-text-3" id="text-3-2">
-<ol class="org-ol">
-<li>Changer les coordonnées pour trouver le meilleur chemin de son propre
-itinéraire. Quel est l'itinéraire entre le lycée et la tour Eiffel ?</li>
-<li>Changer le moyen de locomotion.</li>
-</ol>
-</div>
+<div class="defi" id="org2728757">
+<p>
+Vous savez depuis la cinquième qu'il existe pour tout nombre naturel, son opposé
+relatif. On note \(\mathbb{Z}\) l'ensemble constitué de :
+\[
+\mathbb{Z} = \{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots  \}
+\]
+</p>
+
 </div>
 
-<div id="outline-container-org01e06c2" class="outline-3">
-<h3 id="org01e06c2"><span class="section-number-3">3.3.</span> Troisième consignes</h3>
-<div class="outline-text-3" id="text-3-3">
-<ol class="org-ol">
-<li><p>
-Ajouter la ligne de code suivant en <b>haut</b> du fichier itineraire.py :
+<div class="prop" id="org77e35e6">
+<p>
+On a donc que \(\mathbb{N} \subset \mathbb{Z}\), autrement dit, tous les entiers
+naturels sont des entiers relatifs, mais l'inverse n'est pas toujours vrai.
 </p>
-<div class="org-src-container">
-<pre class="src src-python"><span style="color: #51afef;">import</span> folium
-</pre>
-</div></li>
-<li><p>
-À la <b>fin</b> du fichier, vous ajoutez le code suivant :
-</p>
-<div class="org-src-container">
-<pre class="src src-python"><span style="color: #dcaeea;">c</span>= folium.Map(location=[<span style="color: #da8548; font-weight: bold;">48.746936</span>,<span style="color: #da8548; font-weight: bold;">2.489830</span>],zoom_start=<span style="color: #da8548; font-weight: bold;">10</span>)
-<span style="color: #51afef;">for</span> coord <span style="color: #51afef;">in</span> routeLatLons:
-    <span style="color: #dcaeea;">coord</span>=<span style="color: #c678dd;">list</span>(coord)
-    folium.Marker(coord).add_to(c)
-c.save(<span style="color: #98be65;">'maCarte.html'</span>)
-</pre>
-</div></li>
-<li>Si votre code fonction, vous pouvez ouvrir avec votre navigateur favori par
-exemple Firefox, le fichier <code>maCarte.html</code> présent dans le dossier Itineraire.</li>
-</ol>
+
 </div>
+
+<div class="defi" id="org01d981a">
+<p>
+On dit que \(x\) est un nombre décimal s'il existe \(a\) un entier relatif, et \(p\)
+un entier naturel, tel que :
+\[
+x = \frac{a}{10^{p}}
+\]
+</p>
+
+</div>
+
+<div class="ex" id="org96af6ec">
+<p>
+Les nombres \(0,23\), \(80123,29791230\) sont décimaux. Plus généralement, tous les
+nombres qui admettent une partie décimale <i>finie</i> est un nombre décimal.
+</p>
+
+</div>
+
+<div class="ex" id="org70e9ea9">
+<p>
+Il existe aussi des nombres qui ne sont pas décimaux, par exemple, nous avons
+déjà vu que \(\frac{1}{3}\) n'est pas un nombre décimal. Mais on peut en trouver
+une infinité. Par exemple, \(\sqrt{2}\) n'est pas décimal.
+</p>
+
+</div>
+
+<div class="defi" id="orgc3ba9e1">
+<p>
+On note \(\mathbb{D}\) l'ensemble des entiers décimaux.
+</p>
+
+</div>
+
+<div class="prop" id="org9cf5432">
+<p>
+On obtient pour l'instant que \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D}\)
+</p>
+
+</div>
+
+<div class="defi" id="org60f277e">
+<p>
+On dit que \(x\) est un nombre rationnel s'il existe \(p\) un entiers relatif, et
+\(q\) un entier naturel non nul tel que :
+\[
+x = \frac{p}{q}
+\]
+</p>
+
+</div>
+
+<div class="defi" id="org47a1a14">
+<p>
+On note \(\mathbb{Q}\) l'ensemble des nombres rationnels.
+</p>
+
+</div>
+
+<div class="prop" id="org1a03b95">
+<p>
+On obtient pour l'instant que \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q}\)
+</p>
+
+</div>
+
+<div class="ex" id="orgaa64d96">
+<p>
+On a déjà vu que \(\sqrt{2} \not \in \mathbb{Q}\).
+</p>
+
+</div>
+
+<div class="defi" id="orgbf545e4">
+<p>
+Il serait bien difficile de donner une définition mathématiquement exacte des
+nombres réels&#x2026; Vous verrez une définition en première année de licence ou de
+prépa. On se contentera en seconde de définir les nombres réels comme l'ensemble
+des nombres que l'on connaît, et que l'on peut situer sur la «droite réelle».
+</p>
+
+</div>
+
+<div class="defi" id="org8f2038e">
+<p>
+On note \(\mathbb{R}\) l'ensemble des nombres réels. Oui, c'est bien la droite
+réelle, que l'on utilise très souvent pour définir nos fonctions numériques de
+référence que l'on étudie depuis le début de l'année.
+</p>
+
+</div>
+
+<div class="prop" id="org20b5f0c">
+<p>
+On obtient finalement : \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q} \subset
+\mathbb{R}\). Intuitivement, gardez en tête que \(\mathbb{R}\) est infiniement plus
+«gros» que \(\mathbb{N}\) (on pourra préciser un peu plus en classe, si on a le
+temps).
+</p>
+
+</div>
+
+<p>
+Il existe bien d'autres ensembles de nombres en mathématiques. On peut même en
+inventer une infinité, qui auront des propriétés bien différentes des nombres
+que l'on utilise en seconde, mais ne divulgâchons rien !
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: John Doe</p>
-<p class="date">Created: 2022-03-18 ven. 10:33</p>
+<p class="date">Created: 2022-03-18 ven. 10:32</p>
 </div>
 </body>
 </html>
