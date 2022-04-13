@@ -6,7 +6,7 @@
 <!-- 2022-04-10 dim. 23:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cours de mathématiques et de SNT</title>
+<title>Proportionnalite</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -193,12 +193,27 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
 </style>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -206,107 +221,153 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Cours de mathématiques et de SNT</h1>
+<h1 class="title">Proportionnalite</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1416963">1. Bienvenue !</a></li>
-<li><a href="#org56b742f">2. Lien vers l&rsquo;ensemble des ressources associées au cours</a></li>
-<li><a href="#orge405453">3. Du python en cours de maths.</a></li>
-<li><a href="#org0e3edef">4. Liens vers les activités de SNT par Capytale</a></li>
-<li><a href="#org8b01b7e">5. Liens vers les liens pix.</a></li>
-<li><a href="#org005c81b">6. Liens vers les cartes Anki</a></li>
+<li><a href="#orgd784565">1. Signification du symbole pourcentage</a></li>
+<li><a href="#orgaacf8ad">2. Calculer les proportions d&rsquo;un nombre</a></li>
+<li><a href="#org9d11c2f">3. Augmentation et réduction</a></li>
+<li><a href="#orgdb37bf0">4. Évolution</a>
+<ul>
+<li><a href="#org166c5aa">4.1. Variations absolues</a></li>
+<li><a href="#orgbaaf507">4.2. Variations relatives</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1416963" class="outline-2">
-<h2 id="org1416963"><span class="section-number-2">1.</span> Bienvenue !</h2>
+<div id="outline-container-orgd784565" class="outline-2">
+<h2 id="orgd784565"><span class="section-number-2">1.</span> Signification du symbole pourcentage</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Bienvenue sur le site officiel des cours de maths dispensés au lycée Guillaume Buddé !
+Le symbole \(\%\) désigne simplement une <b>division par 100</b>.
 </p>
+
+<pre class="example" id="orgf4f8696">
+$30 \%$ correspond exactement à $\frac{30}{100} = 0,3$
+
+$2$ correspond exactement à $200 \%$
+</pre>
 </div>
 </div>
 
-<div id="outline-container-org56b742f" class="outline-2">
-<h2 id="org56b742f"><span class="section-number-2">2.</span> Lien vers l&rsquo;ensemble des ressources associées au cours</h2>
+<div id="outline-container-orgaacf8ad" class="outline-2">
+<h2 id="orgaacf8ad"><span class="section-number-2">2.</span> Calculer les proportions d&rsquo;un nombre</h2>
 <div class="outline-text-2" id="text-2">
+<pre class="example" id="org9948828">
+Combien représente $40\%$ de $30$ ?
+</pre>
+
 <p>
-Vous trouverez la liste des cours à l&rsquo;adresse <a href="sitemap.html">suivante</a>.
+Lorsque vous calculer la proportion \(p \%\) d&rsquo;un nombre \(x\), il suffit de calculer \(p \% \times x\).
 </p>
+
+<pre class="example" id="org3c02d53">
+$40\%$ de $30$ est égal à $40\% \times 30 = 0,4 \times 30 = 12$. Donc $40\%$ de $30$ représente $12$.
+</pre>
 </div>
 </div>
 
-<div id="outline-container-orge405453" class="outline-2">
-<h2 id="orge405453"><span class="section-number-2">3.</span> Du python en cours de maths.</h2>
+<div id="outline-container-org9d11c2f" class="outline-2">
+<h2 id="org9d11c2f"><span class="section-number-2">3.</span> Augmentation et réduction</h2>
 <div class="outline-text-2" id="text-3">
-<ol class="org-ol">
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/879d-308472">Tracer des fonctions</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/f104-364025">Les vecteurs dans tous leurs états.</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/f316-502190">Dichotomie</a></li>
-</ol>
+<p>
+Lorsque l&rsquo;on calcule une augmentation ou une réduction, on calcule un
+pourcentage qui <b>s&rsquo;ajoute</b> ou se <b>déduit</b> d&rsquo;un nombre de départ.
+</p>
+
+<pre class="example" id="orge361d35">
+Combien représente une augmentation de $40\%$ de $30$ ?
+
+Puisqu'on l'a vu, $40\%$ de $30$ représente $12$, alors une augmentation de $40\%$ du nombre $30$ correspond au calcul $30 + 12 = 42$.
+</pre>
+
+<p>
+Le raisonnement ci-dessus fonctionne, mais on peut aller bien plus vite.
+</p>
+
+<p>
+En effet, si \(x\) est le nombre que l&rsquo;on souhaite augmenter de \(p\%\), alors le
+calcul que l&rsquo;on a effectué est en fait le suivant. On note \(A\) le résultat.
+</p>
+
+<p>
+\[
+A = x + p\% \times x = x( 1 + p\% )
+\]
+On a factorisé par le nombre \(x\).
+</p>
+
+<pre class="example" id="org287561c">
+Combien représente une augmentation de $40\%$ de $30$ ?
+
+Cela revient, d'après le calcul précédent, à calculer $140\%$ de $30$, autrement dit, on a procéder au calcul $1,40 \times 30 = 42$
+</pre>
+
+<p>
+Il faut s&rsquo;habituer dès maintenant à calculer une augmentation et une réduction
+avec ce principe, beaucoup plus rapide que le premier exposé.
+</p>
+
+<p>
+Pour une réduction, la démarche est la même :
+</p>
+
+<p>
+\[
+R = x - p\% \times x = x( 1 - p\% )
+\]
+</p>
+
+<pre class="example" id="orgeaa3466">
+Combien représente une réduction de $40\%$ de $30$ ?
+
+Cela revient, d'après le calcul précédent, à calculer $60\%$ de $30$, autrement dit, on a procéder au calcul $0,6 \times 30 = 18$
+</pre>
 </div>
 </div>
 
-<div id="outline-container-org0e3edef" class="outline-2">
-<h2 id="org0e3edef"><span class="section-number-2">4.</span> Liens vers les activités de SNT par Capytale</h2>
+<div id="outline-container-orgdb37bf0" class="outline-2">
+<h2 id="orgdb37bf0"><span class="section-number-2">4.</span> Évolution</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Voici les activités que nous avons faites (de la plus ancienne à la plus
-récente) :
+Lorsqu&rsquo;une quantité passe d&rsquo;une valeur à une autre, on peut quantifier son évolution de différentes manières :
 </p>
 <ol class="org-ol">
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/4211-68556">Pierre, feuille, ciseaux</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/677e-78081">Découvertes des boucles</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/85b1-112454">While you&rsquo;re here</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/263d-100816">Des For, des If, des int, et autres joyeusetés</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/291f-127768">Ah, ce bon vieux bill !</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/6f06-157526">En fonction de vous</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2820-177817">À fond&#x2026; Ction !</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/36ee-180000">Déchainés</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/bfd8-192194">Les fonctions vues rapidement</a></li>
-<li>S&rsquo;entraîner sur le site d&rsquo;algorithmie <a href="https://www.algorea.org/#/preparation">algorea</a></li>
-<li>Coder le jeu <a href="https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/827e-212755">«plus ou moins»</a></li>
-<li>Parcours «Graphe» sur le site de nos amis les castors :<a href="https://concours.castor-informatique.fr/?team=SNTgr1">Introduction aux graphes</a></li>
-<li><a href="https://concours.castor-informatique.fr/?team=SNTturtp">Des castors et des tortues</a></li>
-<li><a href="https://concours.castor-informatique.fr/?team=SNTgr2">Parcours Graphe, la suite.</a></li>
-<li><a href="selocaliserAvecPython.html">Se localiser avec Python</a></li>
-<li><a href="apprendreHtmlCss.html">Créer un site</a></li>
-<li><a href="https://concours.castor-informatique.fr/?team=SNTin1">Comment l&rsquo;ordinateur gère les images ?</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/cf6a-367879">Ok, et donc les images avec Python ça donne quoi ?</a></li>
-<li><a href="https://concours.castor-informatique.fr/?team=SNTin2">Comment l&rsquo;ordinateur gère les images ? Deuxième partie.</a> Ne faites que le 1,
-2, 3 et 4. Ensuite, vous pourrez continuer vos projets pythons et de site web.</li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/10ff-418951">Jouer aux espions romains.</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/f712-425031">Comment classer des sites web ?</a></li>
-<li><a href="https://capytale2.ac-paris.fr/web/c/0c6c-437690">Culture pythonesque</a></li>
-<li><a href="https://concours.castor-informatique.fr/?team=SNTds1">Données structurées</a></li>
+<li>En regardant sa variation absolue,</li>
+<li>En regardant sa variation relative.</li>
 </ol>
 </div>
-</div>
 
-<div id="outline-container-org8b01b7e" class="outline-2">
-<h2 id="org8b01b7e"><span class="section-number-2">5.</span> Liens vers les liens pix.</h2>
-<div class="outline-text-2" id="text-5">
-<ol class="org-ol">
-<li><a href="https://app.pix.fr/campagnes/LFSTDL788">Lien vers le pacours PIX en SNT</a></li>
-<li><a href="https://app.pix.fr/campagnes/LSFKPZ265">Lien vers le parcours PIX en Mathématiques</a></li>
-</ol>
-</div>
-</div>
+<div id="outline-container-org166c5aa" class="outline-3">
+<h3 id="org166c5aa"><span class="section-number-3">4.1.</span> Variations absolues</h3>
+<div class="outline-text-3" id="text-4-1">
+<pre class="example" id="orgbacb319">
+Une valeur passe de $400$ à $289$. On dira qu'elle a eu une variation absolue de $|400 - 289| = 111$
+</pre>
 
-<div id="outline-container-org005c81b" class="outline-2">
-<h2 id="org005c81b"><span class="section-number-2">6.</span> Liens vers les cartes Anki</h2>
-<div class="outline-text-2" id="text-6">
 <p>
-Vous retrouvez ici les cartes qui ont été conçues pour accompagner le cours.
+Une variation absolue se calcule par la valeur absolue de la différence entre
+les deux valeurs. On obtient donc un résultat tout le temps positif, qui
+quantifie l&rsquo;écart entre les deux valeurs.
 </p>
+</div>
+</div>
 
-<ol class="org-ol">
-<li><a href="./CartesAnki/Secondes/mathseconde1.apkg">Premier paquet</a></li>
-<li><a href="./CartesAnki/Secondes/mathseconde2.apkg">Deuxième paquet</a></li>
-</ol>
+<div id="outline-container-orgbaaf507" class="outline-3">
+<h3 id="orgbaaf507"><span class="section-number-3">4.2.</span> Variations relatives</h3>
+<div class="outline-text-3" id="text-4-2">
+<pre class="example" id="org258fd57">
+Une valeur passe de $400$ à $289$. On dira que la variation relative est de $\frac{400 - 289}{400} = 27,75\%$. Autrement dit, la valeur a subit une *réduction* de $27,75\%$.
+</pre>
+
+<p>
+Une variation relative permet de comparer la différence entre la valeur de départ et la valeur d&rsquo;arrivée,  avec la valeur de départ. Cela donne un aperçu relativisé de l&rsquo;évolution (dans le sens où le \(27,75\%\) dans l&rsquo;exemple précédent <b>se rapporte</b> à la valeur \(400\)).
+</p>
+</div>
 </div>
 </div>
 </div>
