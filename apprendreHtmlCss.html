@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 ven. 10:33 -->
+<!-- 2022-04-14 jeu. 00:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Programmer un site (le début)</title>
-<meta name="author" content="John Doe" />
+<meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -204,36 +204,36 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
+ <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Programmer un site (le début)</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0f52e06">1. HTML et CSS : ou comment créer son premier site web</a></li>
-<li><a href="#org95b2fea">2. Les ressources</a></li>
-<li><a href="#orgd7e22ec">3. Indiquer la structure de notre document : le HTML</a>
+<li><a href="#org6b43c4c">1. HTML et CSS : ou comment créer son premier site web</a></li>
+<li><a href="#org21e0aa2">2. Les ressources</a></li>
+<li><a href="#org9026f35">3. Indiquer la structure de notre document : le HTML</a>
 <ul>
-<li><a href="#org9ad6ec6">3.1. Ouvrir les outils nécessaires pour commencer</a></li>
-<li><a href="#org8940c27">3.2. Mais c'est moche ?</a></li>
-<li><a href="#org5ba9d6e">3.3. Liste des balises du HTML</a>
+<li><a href="#org329e3d5">3.1. Ouvrir les outils nécessaires pour commencer</a></li>
+<li><a href="#org0deb50d">3.2. Mais c&rsquo;est moche ?</a></li>
+<li><a href="#org0d6f399">3.3. Liste des balises du HTML</a>
 <ul>
-<li><a href="#org8b229cc">3.3.1. Balises simples</a></li>
-<li><a href="#org90aab57">3.3.2. Rajouter des images</a></li>
-<li><a href="#org7a2a282">3.3.3. Rajouter des liens</a></li>
+<li><a href="#org9618c46">3.3.1. Balises simples</a></li>
+<li><a href="#orgb0e7de7">3.3.2. Rajouter des images</a></li>
+<li><a href="#org798f558">3.3.3. Rajouter des liens</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgeca91eb">4. Changer la forme de notre document : le CSS</a>
+<li><a href="#orgd861d1c">4. Changer la forme de notre document : le CSS</a>
 <ul>
-<li><a href="#orgb5afd9e">4.1. Se mettre en condition.</a></li>
-<li><a href="#orgd7e33c0">4.2. Coder en CSS pour rajouter de la couleur.</a></li>
-<li><a href="#orgf3804a9">4.3. Liste propriétés que l'on peut changer avec le CSS</a>
+<li><a href="#orgecc21fe">4.1. Se mettre en condition.</a></li>
+<li><a href="#org3813fae">4.2. Coder en CSS pour rajouter de la couleur.</a></li>
+<li><a href="#org53a1130">4.3. Liste propriétés que l&rsquo;on peut changer avec le CSS</a>
 <ul>
-<li><a href="#org7203f02">4.3.1. Les couleurs</a></li>
-<li><a href="#orged31a59">4.3.2. Les bordures</a></li>
+<li><a href="#org2e67e6b">4.3.1. Les couleurs</a></li>
+<li><a href="#orgad54640">4.3.2. Les bordures</a></li>
 </ul>
 </li>
 </ul>
@@ -242,22 +242,22 @@
 </div>
 </div>
 
-<div id="outline-container-org0f52e06" class="outline-2">
-<h2 id="org0f52e06"><span class="section-number-2">1.</span> HTML et CSS : ou comment créer son premier site web</h2>
+<div id="outline-container-org6b43c4c" class="outline-2">
+<h2 id="org6b43c4c"><span class="section-number-2">1.</span> HTML et CSS : ou comment créer son premier site web</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Pour afficher une page internet, votre navigateur (comme Firefox, Edge, Google
 Chrome, etc) envoie une <b>requête</b> à un serveur, qui lui répond avec une page
 contenant un code, code qui sera interprété par votre navigateur, pour
-l'afficher sous vos yeux ébahis.
+l&rsquo;afficher sous vos yeux ébahis.
 </p>
 
 <p>
-La page qu'envoie un serveur à votre navigateur est en fait constituée de deux
+La page qu&rsquo;envoie un serveur à votre navigateur est en fait constituée de deux
 codes différents :
 </p>
 <ol class="org-ol">
-<li>Le HTML, qui indique la structure (c'est le fond de votre document).</li>
+<li>Le HTML, qui indique la structure (c&rsquo;est le fond de votre document).</li>
 <li>le CSS, qui modifie la forme de votre document.</li>
 </ol>
 
@@ -272,17 +272,17 @@ présentation de votre jeu Python !
 </div>
 </div>
 
-<div id="outline-container-org95b2fea" class="outline-2">
-<h2 id="org95b2fea"><span class="section-number-2">2.</span> Les ressources</h2>
+<div id="outline-container-org21e0aa2" class="outline-2">
+<h2 id="org21e0aa2"><span class="section-number-2">2.</span> Les ressources</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Il y a beaucoup, beaucoup, de balises (en HTML) et d'attributs (en CSS) qui
+Il y a beaucoup, beaucoup, de balises (en HTML) et d&rsquo;attributs (en CSS) qui
 existent, et on ne peut pas vraiment faire la liste en une seule activité, ni tous
 les retenir.
 </p>
 
 <p>
-Il <b>faut donc</b> utiliser l'internet mondial du satellite pour trouver des
+Il <b>faut donc</b> utiliser l&rsquo;internet mondial du satellite pour trouver des
 exemples documentés.
 </p>
 
@@ -298,12 +298,12 @@ par ces liens si vous voulez aller plus loin pour personnaliser votre site.
 </div>
 </div>
 
-<div id="outline-container-orgd7e22ec" class="outline-2">
-<h2 id="orgd7e22ec"><span class="section-number-2">3.</span> Indiquer la structure de notre document : le HTML</h2>
+<div id="outline-container-org9026f35" class="outline-2">
+<h2 id="org9026f35"><span class="section-number-2">3.</span> Indiquer la structure de notre document : le HTML</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org9ad6ec6" class="outline-3">
-<h3 id="org9ad6ec6"><span class="section-number-3">3.1.</span> Ouvrir les outils nécessaires pour commencer</h3>
+<div id="outline-container-org329e3d5" class="outline-3">
+<h3 id="org329e3d5"><span class="section-number-3">3.1.</span> Ouvrir les outils nécessaires pour commencer</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>Ouvrez <b>notepad++</b></li>
@@ -314,61 +314,61 @@ par ces liens si vous voulez aller plus loin pour personnaliser votre site.
 Inscrivez le code ci-dessous dans le fichier :
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #51afef;">!doctype</span> html&gt;
-&lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"fr"</span>&gt;
-    &lt;<span style="color: #c678dd;">head</span>&gt;
-        &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"utf-8"</span>&gt;
-        &lt;<span style="color: #c678dd;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="color: #c678dd;">title</span>&gt;
-    &lt;/<span style="color: #c678dd;">head</span>&gt;
-    &lt;<span style="color: #c678dd;">body</span>&gt;
-        &lt;<span style="color: #c678dd;">p</span>&gt; Voici un &lt;<span style="color: #c678dd;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="color: #c678dd;">strong</span>&gt; !&lt;/<span style="color: #c678dd;">p</span>&gt;
-    &lt;/<span style="color: #c678dd;">body</span>&gt;
-&lt;/<span style="color: #c678dd;">html</span>&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">!doctype</span> html&gt;
+&lt;<span style="font-weight: bold;">html</span> <span style="font-weight: bold; font-style: italic;">lang</span>=<span style="font-style: italic;">"fr"</span>&gt;
+    &lt;<span style="font-weight: bold;">head</span>&gt;
+        &lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">charset</span>=<span style="font-style: italic;">"utf-8"</span>&gt;
+        &lt;<span style="font-weight: bold;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="font-weight: bold;">title</span>&gt;
+    &lt;/<span style="font-weight: bold;">head</span>&gt;
+    &lt;<span style="font-weight: bold;">body</span>&gt;
+        &lt;<span style="font-weight: bold;">p</span>&gt; Voici un &lt;<span style="font-weight: bold;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="font-weight: bold;">strong</span>&gt; !&lt;/<span style="font-weight: bold;">p</span>&gt;
+    &lt;/<span style="font-weight: bold;">body</span>&gt;
+&lt;/<span style="font-weight: bold;">html</span>&gt;
 </pre>
 </div></li>
 <li>Ensuite, ouvrez votre navigateur (par exemple Firefox).</li>
 <li>Depuis le navigateur, ouvrez le fichier <code>monSite.html</code> que vous trouverez
 dans le bureau (souvent on peut le faire
 avec le raccourci <code>Ctrl</code> puis <code>O</code> (le «O» comme «Oh mon site est trop bO»))</li>
-<li>Normalement, votre « site » s'affiche.</li>
+<li>Normalement, votre « site » s&rsquo;affiche.</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org8940c27" class="outline-3">
-<h3 id="org8940c27"><span class="section-number-3">3.2.</span> Mais c'est moche ?</h3>
+<div id="outline-container-org0deb50d" class="outline-3">
+<h3 id="org0deb50d"><span class="section-number-3">3.2.</span> Mais c&rsquo;est moche ?</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
-Oui, c'est normal, c'est le début, le HTML ne permet qu'indiquer le <b>fond</b> de
+Oui, c&rsquo;est normal, c&rsquo;est le début, le HTML ne permet qu&rsquo;indiquer le <b>fond</b> de
 votre document, sa structure.
 </p>
 
 <p>
-J'explique ce code :
+J&rsquo;explique ce code :
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #c678dd;">p</span>&gt; Voici un &lt;<span style="color: #c678dd;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="color: #c678dd;">strong</span>&gt; !&lt;/<span style="color: #c678dd;">p</span>&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">p</span>&gt; Voici un &lt;<span style="font-weight: bold;">strong</span>&gt;<span style="font-weight: bold;">paragraphe</span>&lt;/<span style="font-weight: bold;">strong</span>&gt; !&lt;/<span style="font-weight: bold;">p</span>&gt;
 </pre>
 </div>
 
 <p>
-Le langage HTML est un langage dit de « balisage ». L'idée est d'insérer des
-<b>balises</b> pour indiquer à l'ordinateur la <b>structure</b> de notre document.
+Le langage HTML est un langage dit de « balisage ». L&rsquo;idée est d&rsquo;insérer des
+<b>balises</b> pour indiquer à l&rsquo;ordinateur la <b>structure</b> de notre document.
 </p>
 
 <p>
-Dans l'exemple précédent, on a deux balises, l'une imbriquée dans l'autre.
+Dans l&rsquo;exemple précédent, on a deux balises, l&rsquo;une imbriquée dans l&rsquo;autre.
 </p>
 <ol class="org-ol">
-<li>Une balise <code>p</code> contient du paragraphe. Donc ce que l'on place entre <code>&lt;p&gt;</code> et
+<li>Une balise <code>p</code> contient du paragraphe. Donc ce que l&rsquo;on place entre <code>&lt;p&gt;</code> et
 <code>&lt;/p&gt;</code> désigne un paragraphe.</li>
-<li>La balise <code>&lt;strong&gt;</code> permet d'indiquer à l'ordinateur un passage <b>important</b>.</li>
+<li>La balise <code>&lt;strong&gt;</code> permet d&rsquo;indiquer à l&rsquo;ordinateur un passage <b>important</b>.</li>
 </ol>
 
 
 <p>
 <b>À PARTIR DE MAINTENANT, VOTRE OBJECTIF EST DE TAPER LA PRÉSENTATION DE VOTRE
- SITE EN HTML, à l'aide de la section qui suit</b>
+ SITE EN HTML, à l&rsquo;aide de la section qui suit</b>
 </p>
 
 <p>
@@ -391,15 +391,15 @@ La <b>section suivante</b> récapitule les balises qui vous permettent de commen
 </div>
 </div>
 
-<div id="outline-container-org5ba9d6e" class="outline-3">
-<h3 id="org5ba9d6e"><span class="section-number-3">3.3.</span> Liste des balises du HTML</h3>
+<div id="outline-container-org0d6f399" class="outline-3">
+<h3 id="org0d6f399"><span class="section-number-3">3.3.</span> Liste des balises du HTML</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-org8b229cc" class="outline-4">
-<h4 id="org8b229cc"><span class="section-number-4">3.3.1.</span> Balises simples</h4>
+<div id="outline-container-org9618c46" class="outline-4">
+<h4 id="org9618c46"><span class="section-number-4">3.3.1.</span> Balises simples</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
-Voici une liste de balise que vous pouvez tenter d'utiliser dès maintenant !
+Voici une liste de balise que vous pouvez tenter d&rsquo;utiliser dès maintenant !
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -439,32 +439,32 @@ Voici une liste de balise que vous pouvez tenter d'utiliser dès maintenant !
 
 <tr>
 <td class="org-left">&lt;title&gt;&#x2026;&lt;/title&gt;</td>
-<td class="org-left">Permet d'indiquer le nom de votre site (c'est ce qui s'affichera dans le nom de l'onglet de votre navigateur )</td>
+<td class="org-left">Permet d&rsquo;indiquer le nom de votre site (c&rsquo;est ce qui s&rsquo;affichera dans le nom de l&rsquo;onglet de votre navigateur )</td>
 </tr>
 
 <tr>
 <td class="org-left">&lt;body&gt;&#x2026;&lt;/body&gt;</td>
-<td class="org-left">Contient l'ensemble du <b>corps</b> de votre site. Il n'y a qu'une seule balise body dans l'ensemble de votre page HTML</td>
+<td class="org-left">Contient l&rsquo;ensemble du <b>corps</b> de votre site. Il n&rsquo;y a qu&rsquo;une seule balise body dans l&rsquo;ensemble de votre page HTML</td>
 </tr>
 
 <tr>
 <td class="org-left">&lt;head&gt;&#x2026;&lt;/head&gt;</td>
-<td class="org-left">Permet de paramétrer votre page internet. Il n'y a qu'une seule balise head dans l'ensemble de votre page HTML.</td>
+<td class="org-left">Permet de paramétrer votre page internet. Il n&rsquo;y a qu&rsquo;une seule balise head dans l&rsquo;ensemble de votre page HTML.</td>
 </tr>
 
 <tr>
 <td class="org-left">&lt;h1&gt; &#x2026; &lt;/h1&gt;</td>
-<td class="org-left">Titre d'une page entière, il y a généralement qu'un seul h1 dans votre document</td>
+<td class="org-left">Titre d&rsquo;une page entière, il y a généralement qu&rsquo;un seul h1 dans votre document</td>
 </tr>
 
 <tr>
 <td class="org-left">&lt;h2&gt; &#x2026; &lt;/h2&gt;</td>
-<td class="org-left">Titre d'une section, il peut y en avoir plusieurs, mais toujours après un h1</td>
+<td class="org-left">Titre d&rsquo;une section, il peut y en avoir plusieurs, mais toujours après un h1</td>
 </tr>
 
 <tr>
 <td class="org-left">&lt;h3&gt; &#x2026; &lt;/h3&gt;</td>
-<td class="org-left">Titre d'une sous-section, il peut y en avoir plusieurs, mais après un h2</td>
+<td class="org-left">Titre d&rsquo;une sous-section, il peut y en avoir plusieurs, mais après un h2</td>
 </tr>
 
 <tr>
@@ -474,22 +474,22 @@ Voici une liste de balise que vous pouvez tenter d'utiliser dès maintenant !
 
 <tr>
 <td class="org-left">&lt;h6&gt; &#x2026; &lt;/h6&gt;</td>
-<td class="org-left">Titre d'une sous-sous-&#x2026;.-sous-section, il peut y en avoir plusieurs, mais après un h5.</td>
+<td class="org-left">Titre d&rsquo;une sous-sous-&#x2026;.-sous-section, il peut y en avoir plusieurs, mais après un h5.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-org90aab57" class="outline-4">
-<h4 id="org90aab57"><span class="section-number-4">3.3.2.</span> Rajouter des images</h4>
+<div id="outline-container-orgb0e7de7" class="outline-4">
+<h4 id="orgb0e7de7"><span class="section-number-4">3.3.2.</span> Rajouter des images</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <p>
 On peut charger des images avec la balise suivante :
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #c678dd;">img</span> <span style="color: #dcaeea;">src</span>=<span style="color: #98be65;">"mon_image.jpg"</span> <span style="color: #dcaeea;">alt</span>=<span style="color: #98be65;">"avion"</span>/&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">img</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"mon_image.jpg"</span> <span style="font-weight: bold; font-style: italic;">alt</span>=<span style="font-style: italic;">"avion"</span>/&gt;
 </pre>
 </div>
 
@@ -500,32 +500,32 @@ bureau.
 </p>
 
 <p>
-La partie du code <code>src="mon_image.jpg"</code> est ce que l'on appelle un <b>attribut</b> de
+La partie du code <code>src="mon_image.jpg"</code> est ce que l&rsquo;on appelle un <b>attribut</b> de
 la balise <b>img</b>. On reverra les attributs plus tard.
 </p>
 
 <p>
 La partie <code>alt="avion"</code> permet de <b>décrire</b> votre image. Cette description
-apparaît quand votre curseur de souris survole l'image sur votre site.
+apparaît quand votre curseur de souris survole l&rsquo;image sur votre site.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7a2a282" class="outline-4">
-<h4 id="org7a2a282"><span class="section-number-4">3.3.3.</span> Rajouter des liens</h4>
+<div id="outline-container-org798f558" class="outline-4">
+<h4 id="org798f558"><span class="section-number-4">3.3.3.</span> Rajouter des liens</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <p>
-Un site ne peut pas exister s'il ne tisse pas de lien avec d'autres sur la
+Un site ne peut pas exister s&rsquo;il ne tisse pas de lien avec d&rsquo;autres sur la
 toile.
 </p>
 
 <p>
-Pour rajouter un lien (que l'on place souvent dans un paragraphe comme dans
-l'exemple) on peut entrer :
+Pour rajouter un lien (que l&rsquo;on place souvent dans un paragraphe comme dans
+l&rsquo;exemple) on peut entrer :
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #c678dd;">p</span>&gt; Je suis un paragraphe qui contient un &lt;<span style="color: #c678dd;">a</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"www.google.fr"</span>&gt; lien vers
-google ! &lt;/<span style="color: #c678dd;">a</span>&gt;, c'est incroyable&lt;/<span style="color: #c678dd;">p</span>&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">p</span>&gt; Je suis un paragraphe qui contient un &lt;<span style="font-weight: bold;">a</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"www.google.fr"</span>&gt; lien vers
+google ! &lt;/<span style="font-weight: bold;">a</span>&gt;, c'est incroyable&lt;/<span style="font-weight: bold;">p</span>&gt;
 </pre>
 </div>
 </div>
@@ -533,8 +533,8 @@ google ! &lt;/<span style="color: #c678dd;">a</span>&gt;, c'est incroyable&lt;/<
 </div>
 </div>
 
-<div id="outline-container-orgeca91eb" class="outline-2">
-<h2 id="orgeca91eb"><span class="section-number-2">4.</span> Changer la forme de notre document : le CSS</h2>
+<div id="outline-container-orgd861d1c" class="outline-2">
+<h2 id="orgd861d1c"><span class="section-number-2">4.</span> Changer la forme de notre document : le CSS</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Le CSS permet de modifier la <b>forme</b> de votre document. Commençons par savoir
@@ -542,20 +542,20 @@ comment rajouter ces précisions à notre page internet.
 </p>
 </div>
 
-<div id="outline-container-orgb5afd9e" class="outline-3">
-<h3 id="orgb5afd9e"><span class="section-number-3">4.1.</span> Se mettre en condition.</h3>
+<div id="outline-container-orgecc21fe" class="outline-3">
+<h3 id="orgecc21fe"><span class="section-number-3">4.1.</span> Se mettre en condition.</h3>
 <div class="outline-text-3" id="text-4-1">
 <ol class="org-ol">
-<li>Créez un nouveau fichier avec notepad++ <b>sans fermer l'ancien</b>.</li>
-<li>Enregistrez ce fichier au nom de «monStyle.CSS». Là encore <b>l'extension
+<li>Créez un nouveau fichier avec notepad++ <b>sans fermer l&rsquo;ancien</b>.</li>
+<li>Enregistrez ce fichier au nom de «monStyle.CSS». Là encore <b>l&rsquo;extension
 .CSS de votre fichier est très importante</b>.</li>
 <li>Enregistrez votre fichier «monStyle.CSS» dans <b>le même dossier</b> que celui en
-«.html», c'est-à-dire dans le bureau.</li>
+«.html», c&rsquo;est-à-dire dans le bureau.</li>
 <li><p>
 Dans votre fichier <b>.html</b> rajoutez la ligne suivante :
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #c678dd;">link</span> <span style="color: #dcaeea;">rel</span>=<span style="color: #98be65;">"stylesheet"</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"monStyle.CSS"</span>&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"monStyle.CSS"</span>&gt;
 </pre>
 </div>
 <p>
@@ -567,43 +567,43 @@ Dans votre fichier <b>.html</b> rajoutez la ligne suivante :
 Vous obtenez normalement un document semblable à :
 </p>
 <div class="org-src-container">
-<pre class="src src-html">&lt;<span style="color: #51afef;">!doctype</span> html&gt;
-&lt;<span style="color: #c678dd;">html</span> <span style="color: #dcaeea;">lang</span>=<span style="color: #98be65;">"fr"</span>&gt;
-    &lt;<span style="color: #c678dd;">head</span>&gt;
-        &lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"utf-8"</span>&gt;
-        &lt;<span style="color: #c678dd;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="color: #c678dd;">title</span>&gt; <span style="color: #5B6268;">&lt;!-- </span><span style="color: #5B6268;">Cette ligne est nouvelle </span><span style="color: #5B6268;">--&gt;</span>
-        &lt;<span style="color: #c678dd;">link</span> <span style="color: #dcaeea;">rel</span>=<span style="color: #98be65;">"stylesheet"</span> <span style="color: #dcaeea;">href</span>=<span style="color: #98be65;">"monStyle.CSS"</span>&gt;
-    &lt;/<span style="color: #c678dd;">head</span>&gt;
-    &lt;<span style="color: #c678dd;">body</span>&gt;
+<pre class="src src-html">&lt;<span style="font-weight: bold;">!doctype</span> html&gt;
+&lt;<span style="font-weight: bold;">html</span> <span style="font-weight: bold; font-style: italic;">lang</span>=<span style="font-style: italic;">"fr"</span>&gt;
+    &lt;<span style="font-weight: bold;">head</span>&gt;
+        &lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">charset</span>=<span style="font-style: italic;">"utf-8"</span>&gt;
+        &lt;<span style="font-weight: bold;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Voici mon site</span>&lt;/<span style="font-weight: bold;">title</span>&gt; <span style="font-weight: bold; font-style: italic;">&lt;!-- </span><span style="font-weight: bold; font-style: italic;">Cette ligne est nouvelle</span><span style="font-weight: bold; font-style: italic;"> --&gt;</span>
+        &lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"monStyle.CSS"</span>&gt;
+    &lt;/<span style="font-weight: bold;">head</span>&gt;
+    &lt;<span style="font-weight: bold;">body</span>&gt;
       La structure de votre site ici
-    &lt;/<span style="color: #c678dd;">body</span>&gt;
-&lt;/<span style="color: #c678dd;">html</span>&gt;
+    &lt;/<span style="font-weight: bold;">body</span>&gt;
+&lt;/<span style="font-weight: bold;">html</span>&gt;
 </pre>
 </div>
 
 <p>
-Une fois que c'est fait, vous pouvez passer à la section suivante.
+Une fois que c&rsquo;est fait, vous pouvez passer à la section suivante.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgd7e33c0" class="outline-3">
-<h3 id="orgd7e33c0"><span class="section-number-3">4.2.</span> Coder en CSS pour rajouter de la couleur.</h3>
+<div id="outline-container-org3813fae" class="outline-3">
+<h3 id="org3813fae"><span class="section-number-3">4.2.</span> Coder en CSS pour rajouter de la couleur.</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Rajouter ce code dans votre fichier <b>monStyle.CSS</b> :
 </p>
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">h1</span>
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
 {
-    <span style="color: #98be65;">text-align</span>: center;
-    <span style="color: #98be65;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
+    <span style="font-weight: bold;">text-align</span>: center;
+    <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;
 }
-<span style="color: #51afef;">p</span>
+<span style="font-weight: bold;">p</span>
 {
-    <span style="color: #98be65;">font-family</span>: Verdana;
-    <span style="color: #98be65;">font-style</span>: italic;
-    <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>;
+    <span style="font-weight: bold;">font-family</span>: Verdana;
+    <span style="font-weight: bold;">font-style</span>: italic;
+    <span style="font-weight: bold;">color</span>: <span style="color: #000000; background-color: #008000;">green</span>;
 }
 </pre>
 </div>
@@ -614,12 +614,12 @@ constatez-vous ?
 </p>
 
 <p>
-Le code CSS que vous venez d'entrer permet de demander à l'ordinateur que :
+Le code CSS que vous venez d&rsquo;entrer permet de demander à l&rsquo;ordinateur que :
 </p>
 <ol class="org-ol">
-<li><b>tous</b> les textes (les balises h1) pour qu'ils soient alignés et un
-arrière-plan rouge (l'anglais, ça sert !),</li>
-<li><b>tous</b> les paragraphes ont une police d'écriture Verdana, sous forme
+<li><b>tous</b> les textes (les balises h1) pour qu&rsquo;ils soient alignés et un
+arrière-plan rouge (l&rsquo;anglais, ça sert !),</li>
+<li><b>tous</b> les paragraphes ont une police d&rsquo;écriture Verdana, sous forme
 italique, et de couleur verte.</li>
 </ol>
 
@@ -629,8 +629,8 @@ italique, et de couleur verte.</li>
 </div>
 </div>
 
-<div id="outline-container-orgf3804a9" class="outline-3">
-<h3 id="orgf3804a9"><span class="section-number-3">4.3.</span> Liste propriétés que l'on peut changer avec le CSS</h3>
+<div id="outline-container-org53a1130" class="outline-3">
+<h3 id="org53a1130"><span class="section-number-3">4.3.</span> Liste propriétés que l&rsquo;on peut changer avec le CSS</h3>
 <div class="outline-text-3" id="text-4-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -654,7 +654,7 @@ italique, et de couleur verte.</li>
 
 <tr>
 <td class="org-left">font-style</td>
-<td class="org-left">Le style de la police d'écriture, on peut indiquer italic, ou «oblique 30deg» si on veut préciser l'angle</td>
+<td class="org-left">Le style de la police d&rsquo;écriture, on peut indiquer italic, ou «oblique 30deg» si on veut préciser l&rsquo;angle</td>
 </tr>
 
 <tr>
@@ -664,7 +664,7 @@ italique, et de couleur verte.</li>
 
 <tr>
 <td class="org-left">border</td>
-<td class="org-left">Permet de gérer la bordure d'un élément (pour l'encadrer). Voir l'exemple ci-dessous</td>
+<td class="org-left">Permet de gérer la bordure d&rsquo;un élément (pour l&rsquo;encadrer). Voir l&rsquo;exemple ci-dessous</td>
 </tr>
 
 <tr>
@@ -675,8 +675,8 @@ italique, et de couleur verte.</li>
 </table>
 </div>
 
-<div id="outline-container-org7203f02" class="outline-4">
-<h4 id="org7203f02"><span class="section-number-4">4.3.1.</span> Les couleurs</h4>
+<div id="outline-container-org2e67e6b" class="outline-4">
+<h4 id="org2e67e6b"><span class="section-number-4">4.3.1.</span> Les couleurs</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
 Pour indiquer des couleurs, vous avez plusieurs méthodes.
@@ -687,7 +687,7 @@ Pour indiquer des couleurs, vous avez plusieurs méthodes.
 </ul>
 
 <p>
-Les deux dernières méthodes sont des moyens utilisés par l'ordinateur pour
+Les deux dernières méthodes sont des moyens utilisés par l&rsquo;ordinateur pour
 encoder les couleurs.
 </p>
 
@@ -695,9 +695,9 @@ encoder les couleurs.
 Exemple :
 </p>
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">p</span>
+<pre class="src src-css"><span style="font-weight: bold;">p</span>
 {
-    <span style="color: #98be65;">color</span>:<span style="color: #ffffff; background-color: #ff0000;">red</span>;
+    <span style="font-weight: bold;">color</span>:<span style="color: #ffffff; background-color: #ff0000;">red</span>;
 }
 </pre>
 </div>
@@ -706,9 +706,9 @@ Les paragraphes seront en rouges.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">h1</span>
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
 {
-    <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #375e97;">#375e97</span>
+    <span style="font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #375e97;">#375e97</span>
 }
 </pre>
 </div>
@@ -717,24 +717,24 @@ Les titres seront en bleu légèrement clair.
 </p>
 
 <p>
-Pour avoir le code hexadécimal d'une couleur, demandez à Google (tapez
+Pour avoir le code hexadécimal d&rsquo;une couleur, demandez à Google (tapez
 simplement «#375e97» dans Google pour obtenir automatiquement un outil bien
 pratique).
 </p>
 </div>
 </div>
 
-<div id="outline-container-orged31a59" class="outline-4">
-<h4 id="orged31a59"><span class="section-number-4">4.3.2.</span> Les bordures</h4>
+<div id="outline-container-orgad54640" class="outline-4">
+<h4 id="orgad54640"><span class="section-number-4">4.3.2.</span> Les bordures</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
-On peut modifier beaucoup de paramètre d'une bordure pour encadrer un texte. Par
+On peut modifier beaucoup de paramètre d&rsquo;une bordure pour encadrer un texte. Par
 exemple, essayez ce code CSS :
 </p>
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">h1</span>
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
 {
-    <span style="color: #98be65;">border</span> : 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;
+    <span style="font-weight: bold;">border</span> : 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;
 }
 </pre>
 </div>
@@ -748,9 +748,9 @@ Testez maintenant ce code :
 </p>
 
 <div class="org-src-container">
-<pre class="src src-css"><span style="color: #51afef;">h1</span>
+<pre class="src src-css"><span style="font-weight: bold;">h1</span>
 {
-    <span style="color: #98be65;">border-bottom</span> : 10px dotted <span style="color: #ffffff; background-color: #800080;">purple</span>;
+    <span style="font-weight: bold;">border-bottom</span> : 10px dotted <span style="color: #ffffff; background-color: #800080;">purple</span>;
 }
 </pre>
 </div>
@@ -765,8 +765,8 @@ dit soulignage).
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: John Doe</p>
-<p class="date">Created: 2022-03-18 ven. 10:33</p>
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-04-14 jeu. 00:51</p>
 </div>
 </body>
 </html>

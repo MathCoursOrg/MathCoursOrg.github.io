@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 ven. 10:31 -->
+<!-- 2022-04-14 jeu. 00:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tableaux De Signes</title>
-<meta name="author" content="John Doe" />
+<meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -225,45 +225,45 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
+ <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Tableaux De Signes</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge8a3ce5">1. Motivations</a></li>
-<li><a href="#orgcb26d38">2. Définitions</a></li>
-<li><a href="#orgde5b039">3. Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></a></li>
-<li><a href="#orge968fa5">4. Étude du signe des fonctions affines</a>
+<li><a href="#org2c414fd">1. Motivations</a></li>
+<li><a href="#orgce30a35">2. Définitions</a></li>
+<li><a href="#orgbf62b0b">3. Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></a></li>
+<li><a href="#org9f6a488">4. Étude du signe des fonctions affines</a>
 <ul>
-<li><a href="#org3059713">4.1. Motivations</a></li>
-<li><a href="#org11eb246">4.2. Théorie</a>
+<li><a href="#orgf1fe048">4.1. Motivations</a></li>
+<li><a href="#orgf7ac5a7">4.2. Théorie</a>
 <ul>
-<li><a href="#org77566f9">4.2.1. Tableau de signes si \(a > 0\)</a></li>
-<li><a href="#org5eff17f">4.2.2. Tableau de signe si \(a < 0\)</a></li>
+<li><a href="#orgc7118ee">4.2.1. Tableau de signes si \(a > 0\)</a></li>
+<li><a href="#org345aa13">4.2.2. Tableau de signe si \(a < 0\)</a></li>
 </ul>
 </li>
-<li><a href="#orge5f80fb">4.3. Pratique</a>
+<li><a href="#orge2aa76c">4.3. Pratique</a>
 <ul>
-<li><a href="#orgb3289e2">4.3.1. Cas d'un coefficient directeur positif</a></li>
-<li><a href="#orgc97e09c">4.3.2. Cas d'un coefficient directeur négatif</a></li>
+<li><a href="#org9a76309">4.3.1. Cas d&rsquo;un coefficient directeur positif</a></li>
+<li><a href="#org1fdd7dc">4.3.2. Cas d&rsquo;un coefficient directeur négatif</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org20ea92a">5. Étude du signe de produit de fonctions affines</a>
+<li><a href="#orgf0f3531">5. Étude du signe de produit de fonctions affines</a>
 <ul>
-<li><a href="#orgc2b2316">5.1. Motivation</a></li>
-<li><a href="#org35a44c9">5.2. Étude d'un exemple</a></li>
+<li><a href="#org5aff2d4">5.1. Motivation</a></li>
+<li><a href="#org2ea3be2">5.2. Étude d&rsquo;un exemple</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge8a3ce5" class="outline-2">
-<h2 id="orge8a3ce5"><span class="section-number-2">1.</span> Motivations</h2>
+<div id="outline-container-org2c414fd" class="outline-2">
+<h2 id="org2c414fd"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On a vu en classe comment construire des tableaux de variations de fonction
@@ -275,19 +275,30 @@ fonction décroît.</li>
 <li>Mettre en évidence les extremums (maximums, ou minimum)</li>
 </ol>
 
-<div class="ex" id="org3f3ea29">
+<div class="ex" id="orgdfb2344">
 <p>
 Si on sait que le minimum de la fonction \(f : x \mapsto (x-2)^{2} - 3\)
-admet comme minimum \(-3\), c'est aussi parce que l'on peut construire son tableau
+admet comme minimum \(-3\), c&rsquo;est aussi parce que l&rsquo;on peut construire son tableau
 de variations, pour obtenir le tableau suivant :
 </p>
 
-
-<div id="org3e14179" class="figure">
-<p><img src="images/motivationsTblSignes.svg" alt="motivationsTblSignes.svg" class="org-svg" />
-</p>
 </div>
 
+
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org96b93c2"><span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">size</span>(<span style="font-weight: bold; text-decoration: underline;">7</span>.5<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; text-decoration: underline;">string</span>[] x={<span style="font-style: italic;">"-inf"</span>,<span style="font-style: italic;">"2"</span>, <span style="font-style: italic;">"+inf"</span>},
+         y={<span style="font-style: italic;">""</span>, <span style="font-style: italic;">"-3"</span>, <span style="font-style: italic;">""</span>};
+
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabvar(x,y,decr);
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>,<span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 
 
@@ -297,29 +308,29 @@ Les tableaux de <b>signes</b> pourront nous aider à
 <ol class="org-ol">
 <li>Repérer les intervalles où la fonction est positive, et les intervalles ou la
 fonction est négative</li>
-<li>Mettre en évidence les nombres pour lesquels la fonction s'annule.</li>
+<li>Mettre en évidence les nombres pour lesquels la fonction s&rsquo;annule.</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orgcb26d38" class="outline-2">
-<h2 id="orgcb26d38"><span class="section-number-2">2.</span> Définitions</h2>
+<div id="outline-container-orgce30a35" class="outline-2">
+<h2 id="orgce30a35"><span class="section-number-2">2.</span> Définitions</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="orgf04a63d">
+<div class="defi" id="org41b4505">
 <p>
 On dit que \(f\) est <b>positive</b> sur \(I\) si pour tout \(x \in I\), on a \(f(x) \geq 0\).
 </p>
 
 </div>
 
-<div class="defi" id="org1da5316">
+<div class="defi" id="orgbfe2a63">
 <p>
 On dit que \(f\) est <b>négative</b> sur \(I\) si pour tout \(x \in I\), on a \(f(x) \leq 0\).
 </p>
 
 </div>
 
-<div class="ex" id="org80b90f2">
+<div class="ex" id="org7a395cb">
 <p>
 Pour tout \(x \in \mathbb{R}\), la fonction \(f(x) = -x^{2} - 1\) est négative. On
 dit donc que la fonction \(f\) est négative sur \(\mathbb{R}\).
@@ -327,12 +338,12 @@ dit donc que la fonction \(f\) est négative sur \(\mathbb{R}\).
 
 <p>
 Pour tout \(x \in [0; +\infty]\), la fonction \(f(x) = x^{3}\) est positive. On dit
-donc que la fonction \(f\) est positive sur l'intervalle \([0; +\infty]\).
+donc que la fonction \(f\) est positive sur l&rsquo;intervalle \([0; +\infty]\).
 </p>
 
 </div>
 
-<div class="defi" id="orgb359790">
+<div class="defi" id="org23612e2">
 <p>
 Soit \(f\) définie sur un intervalle \(I\) de \(\mathbb{R}\), à valeurs réelles. Un
 tableau de variations de \(f\) sur cet intervalle est un tableau qui récapitule
@@ -341,40 +352,65 @@ les intervalles où la fonction est positive, ou négative.
 
 </div>
 
-<div class="ex" id="org1d57876">
+<div class="ex" id="org3bcd425">
 <p>
-Soit \(g\) fonction définie sur \(\mathbb{R}\) par \(g(x) = (x-2)(x+1)\). D'après le
+Soit \(g\) fonction définie sur \(\mathbb{R}\) par \(g(x) = (x-2)(x+1)\). D&rsquo;après le
 graphe de cette fonction (on verra comment faire algébriquement plus tard), on
 peut conjecturer que :
 </p>
 <ol class="org-ol">
-<li>La fonction \(g\) est positive sur l'intervalle \(]-\infty; -1]\)</li>
-<li>La fonction \(g\) est négative sur l'intervalle \([-1; 2]\)</li>
-<li>La fonction \(g\) est positive (de nouveau) sur l'intervalle \([2; + \infty[\)</li>
+<li>La fonction \(g\) est positive sur l&rsquo;intervalle \(]-\infty; -1]\)</li>
+<li>La fonction \(g\) est négative sur l&rsquo;intervalle \([-1; 2]\)</li>
+<li>La fonction \(g\) est positive (de nouveau) sur l&rsquo;intervalle \([2; + \infty[\)</li>
 </ol>
-
-
-<div id="org099116a" class="figure">
-<p><img src="images/exeTblSign.svg" alt="exeTblSign.svg" class="org-svg" />
-</p>
-</div>
 
 <p>
 On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </p>
 
-
-<div id="org3c13c80" class="figure">
-<p><img src="images/exeTblSignTbl.svg" alt="exeTblSignTbl.svg" class="org-svg" />
-</p>
 </div>
 
+<div class="org-src-container">
+<pre class="src src-asymptote" id="orgc344729"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(12<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+
+<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold;">f</span> (<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">x</span>) { <span style="font-weight: bold;">return</span> (x-<span style="font-weight: bold; text-decoration: underline;">2</span>)*(x+<span style="font-weight: bold; text-decoration: underline;">1</span>); }
+
+<span style="font-weight: bold;">xaxis</span>(<span style="font-style: italic;">"$x$"</span>,<span style="font-weight: bold;">LeftTicks</span>(Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, xmin=-<span style="font-weight: bold; text-decoration: underline;">3</span>, xmax=<span style="font-weight: bold; text-decoration: underline;">4</span>);
+<span style="font-weight: bold;">yaxis</span>(<span style="font-style: italic;">"$y$"</span>,<span style="font-weight: bold;">RightTicks</span>(NoZero, Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, ymin = -<span style="font-weight: bold; text-decoration: underline;">2.5</span>, ymax=<span style="font-weight: bold; text-decoration: underline;">9</span>);
+
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">graph</span>(f, -<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">4</span>));
+
+<span style="font-weight: bold;">ylimits</span>(-<span style="font-weight: bold; text-decoration: underline;">2.5</span>, <span style="font-weight: bold; text-decoration: underline;">9.1</span>, <span style="font-weight: bold; text-decoration: underline;">Crop</span>);
+<span style="font-weight: bold;">dot</span>((-<span style="font-weight: bold; text-decoration: underline;">1</span>,<span style="font-weight: bold; text-decoration: underline;">0</span>));
+<span style="font-weight: bold;">dot</span>((<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>));
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org4fb1b96"><span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf -1 2 +inf"</span>},
+{<span style="font-style: italic;">"g(x)"</span>, <span style="font-style: italic;">" + 0 - 0 + "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>,<span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgde5b039" class="outline-2">
-<h2 id="orgde5b039"><span class="section-number-2">3.</span> Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></h2>
+<div id="outline-container-orgbf62b0b" class="outline-2">
+<h2 id="orgbf62b0b"><span class="section-number-2">3.</span> Résumé des différences entre les tableaux de <b>signes</b>, et les tableaux de <b>variations</b></h2>
 <div class="outline-text-2" id="text-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -395,7 +431,7 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </thead>
 <tbody>
 <tr>
-<td class="org-left">Qu'est-ce que ça repère ?</td>
+<td class="org-left">Qu&rsquo;est-ce que ça repère ?</td>
 <td class="org-left">Le signe des fonctions</td>
 <td class="org-left">Les variations de la fonction</td>
 </tr>
@@ -409,7 +445,7 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </tbody>
 <tbody>
 <tr>
-<td class="org-left">Qu'est-ce qu'on met dans le tableau ?</td>
+<td class="org-left">Qu&rsquo;est-ce qu&rsquo;on met dans le tableau ?</td>
 <td class="org-left">Des \(+\) ou des \(-\)</td>
 <td class="org-left">Des flèches vers le haut, ou vers le bas</td>
 </tr>
@@ -418,12 +454,12 @@ On peut ainsi résumer ces informations dans un tableau de signes suivant :
 </div>
 </div>
 
-<div id="outline-container-orge968fa5" class="outline-2">
-<h2 id="orge968fa5"><span class="section-number-2">4.</span> Étude du signe des fonctions affines</h2>
+<div id="outline-container-org9f6a488" class="outline-2">
+<h2 id="org9f6a488"><span class="section-number-2">4.</span> Étude du signe des fonctions affines</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org3059713" class="outline-3">
-<h3 id="org3059713"><span class="section-number-3">4.1.</span> Motivations</h3>
+<div id="outline-container-orgf1fe048" class="outline-3">
+<h3 id="orgf1fe048"><span class="section-number-3">4.1.</span> Motivations</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Les fonctions affines sont les fonctions qui sont à la fois pas évidente, et pas
@@ -435,8 +471,8 @@ techniques pour aborder des fonctions plus compliquées.
 </div>
 
 
-<div id="outline-container-org11eb246" class="outline-3">
-<h3 id="org11eb246"><span class="section-number-3">4.2.</span> Théorie</h3>
+<div id="outline-container-orgf7ac5a7" class="outline-3">
+<h3 id="orgf7ac5a7"><span class="section-number-3">4.2.</span> Théorie</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Soit \(f\) une fonction affine définie sur \(\mathbb{R}\), avec
@@ -444,7 +480,7 @@ Soit \(f\) une fonction affine définie sur \(\mathbb{R}\), avec
 f(x) = ax + b
 \]
 avec \(a \in \mathbb{R}\) non nul le coefficient directeur de la fonction affine
-\(f\), et \(b \in \mathbb{R}\) l'ordonnée à l'origine.
+\(f\), et \(b \in \mathbb{R}\) l&rsquo;ordonnée à l&rsquo;origine.
 </p>
 
 <p>
@@ -452,8 +488,8 @@ On cherche à établir le tableau de signe de \(f\).
 </p>
 
 <p>
-En résolvant l'équation \(f(x) = 0\), on peut déterminer le moment où la droite
-représentant la fonction \(f\) coupe l'axe des abscisses.
+En résolvant l&rsquo;équation \(f(x) = 0\), on peut déterminer le moment où la droite
+représentant la fonction \(f\) coupe l&rsquo;axe des abscisses.
 </p>
 
 \begin{align*}
@@ -481,39 +517,61 @@ Autrement dit :
 </p>
 </div>
 
-<div id="outline-container-org77566f9" class="outline-4">
-<h4 id="org77566f9"><span class="section-number-4">4.2.1.</span> Tableau de signes si \(a > 0\)</h4>
+<div id="outline-container-orgc7118ee" class="outline-4">
+<h4 id="orgc7118ee"><span class="section-number-4">4.2.1.</span> Tableau de signes si \(a > 0\)</h4>
 <div class="outline-text-4" id="text-4-2-1">
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org301644d">
+<span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf -\frac{b}{a} +inf"</span>},
+{<span style="font-style: italic;">"ax+b"</span>, <span style="font-style: italic;">" - 0 + "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="org59df31b" class="figure">
-<p><img src="images/tblSigneFctAffineCroiss.svg" alt="tblSigneFctAffineCroiss.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org5eff17f" class="outline-4">
-<h4 id="org5eff17f"><span class="section-number-4">4.2.2.</span> Tableau de signe si \(a < 0\)</h4>
+<div id="outline-container-org345aa13" class="outline-4">
+<h4 id="org345aa13"><span class="section-number-4">4.2.2.</span> Tableau de signe si \(a < 0\)</h4>
 <div class="outline-text-4" id="text-4-2-2">
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org38dcd41">
+<span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf -\frac{b}{a} +inf"</span>},
+{<span style="font-style: italic;">"ax+b"</span>, <span style="font-style: italic;">" + 0 - "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>, ky=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="org0eec3de" class="figure">
-<p><img src="images/tblSigneFctAffineDeCroiss.svg" alt="tblSigneFctAffineDeCroiss.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>,<span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge5f80fb" class="outline-3">
-<h3 id="orge5f80fb"><span class="section-number-3">4.3.</span> Pratique</h3>
+<div id="outline-container-orge2aa76c" class="outline-3">
+<h3 id="orge2aa76c"><span class="section-number-3">4.3.</span> Pratique</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-orgb3289e2" class="outline-4">
-<h4 id="orgb3289e2"><span class="section-number-4">4.3.1.</span> Cas d'un coefficient directeur positif</h4>
+<div id="outline-container-org9a76309" class="outline-4">
+<h4 id="org9a76309"><span class="section-number-4">4.3.1.</span> Cas d&rsquo;un coefficient directeur positif</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <p>
-Si on veut étudier le signe de la fonction \(f(x) = 2x - 3\), on détermine d'abord
+Si on veut étudier le signe de la fonction \(f(x) = 2x - 3\), on détermine d&rsquo;abord
 la solution de \(f(x) = 0\). On trouve \(x = \frac{3}{2} = 1,5\).
 </p>
 
@@ -522,19 +580,30 @@ Le coefficient de cette fonction est positif, donc le tableau de signe de cette
 fonction est donné par :
 </p>
 
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org66b0f35">
+<span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf 1,5 +inf"</span>},
+{<span style="font-style: italic;">"2x-3"</span>, <span style="font-style: italic;">" - 0 + "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="org846b0ed" class="figure">
-<p><img src="images/tblSigneFctAffinePratique.svg" alt="tblSigneFctAffinePratique.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc97e09c" class="outline-4">
-<h4 id="orgc97e09c"><span class="section-number-4">4.3.2.</span> Cas d'un coefficient directeur négatif</h4>
+<div id="outline-container-org1fdd7dc" class="outline-4">
+<h4 id="org1fdd7dc"><span class="section-number-4">4.3.2.</span> Cas d&rsquo;un coefficient directeur négatif</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
-Si on veut étudier le signe de la fonction \(g(x) = -4x +5\), on détermine d'abord
+Si on veut étudier le signe de la fonction \(g(x) = -4x +5\), on détermine d&rsquo;abord
 la solution de \(g(x) = 0\). On trouve \(x = \frac{5}{4} =1,25\).
 </p>
 
@@ -543,10 +612,21 @@ Le coefficient de cette fonction est négatif, donc le tableau de signe de cette
 fonction est donné par :
 </p>
 
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org1994111">
+<span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf 1,25 +inf"</span>},
+{<span style="font-style: italic;">"-4x+5"</span>, <span style="font-style: italic;">" + 0 - "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="org0708630" class="figure">
-<p><img src="images/tblSigneFctAffinePratiqueDecc.svg" alt="tblSigneFctAffinePratiqueDecc.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
@@ -554,16 +634,16 @@ fonction est donné par :
 </div>
 
 
-<div id="outline-container-org20ea92a" class="outline-2">
-<h2 id="org20ea92a"><span class="section-number-2">5.</span> Étude du signe de produit de fonctions affines</h2>
+<div id="outline-container-orgf0f3531" class="outline-2">
+<h2 id="orgf0f3531"><span class="section-number-2">5.</span> Étude du signe de produit de fonctions affines</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orgc2b2316" class="outline-3">
-<h3 id="orgc2b2316"><span class="section-number-3">5.1.</span> Motivation</h3>
+<div id="outline-container-org5aff2d4" class="outline-3">
+<h3 id="org5aff2d4"><span class="section-number-3">5.1.</span> Motivation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Si peu de fonctions en mathématiques sont strictement affine, on peut par contre
-plus souvent se retrouver avec des fonctions qui s'écrivent par exemple comme :
+plus souvent se retrouver avec des fonctions qui s&rsquo;écrivent par exemple comme :
 \[
 f(x) = (2x - 3)(-4x + 5)
 \]
@@ -574,8 +654,8 @@ déployées plus haut.
 </div>
 </div>
 
-<div id="outline-container-org35a44c9" class="outline-3">
-<h3 id="org35a44c9"><span class="section-number-3">5.2.</span> Étude d'un exemple</h3>
+<div id="outline-container-org2ea3be2" class="outline-3">
+<h3 id="org2ea3be2"><span class="section-number-3">5.2.</span> Étude d&rsquo;un exemple</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Soit \(f\) la fonction définie sur \(\mathbb{R}\) par \(f(x) = (2x - 3)(-4x + 5)\). On
@@ -585,14 +665,25 @@ cherche à construire le tableau de signe de cette fonction. Pour cela, on
 seul tableau :
 </p>
 
+<div class="org-src-container">
+<pre class="src src-asymptote"><span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf 1,25 1,5 +inf"</span>},
+{<span style="font-style: italic;">"2x-3"</span>, <span style="font-style: italic;">" - | - 0 + "</span>},
+{<span style="font-style: italic;">"-4x+5"</span>, <span style="font-style: italic;">" + 0 - | - "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="org1123e2e" class="figure">
-<p><img src="images/TblProduitFctAffine.svg" alt="TblProduitFctAffine.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 
 <p>
-Maintenant que l'on a découpé le travail, il suffit de se rappeler que :
+Maintenant que l&rsquo;on a découpé le travail, il suffit de se rappeler que :
 </p>
 <ol class="org-ol">
 <li>Le produit de deux facteurs de même signe est positif</li>
@@ -603,30 +694,54 @@ Maintenant que l'on a découpé le travail, il suffit de se rappeler que :
 Donc, on peut résumer le signe de la fonction \(g\) sur \(\mathbb{R}\) par le
 tableau suivant :
 </p>
+<div class="org-src-container">
+<pre class="src src-asymptote"><span style="font-weight: bold;">import</span> gm_tableaux;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<span style="font-weight: bold; text-decoration: underline;">string</span>[][] tab={
+{<span style="font-style: italic;">"x"</span>, <span style="font-style: italic;">"-inf 1,25 1,5 +inf"</span>},
+{<span style="font-style: italic;">"2x-3"</span>, <span style="font-style: italic;">" - | - 0 + "</span>},
+{<span style="font-style: italic;">"-4x+5"</span>, <span style="font-style: italic;">" + 0 - | - "</span>},
+{<span style="font-style: italic;">"(2x+3)(-4x+5)"</span>, <span style="font-style: italic;">" - 0 + 0 - "</span>}};
+<span style="font-weight: bold; text-decoration: underline;">picture</span> <span style="font-weight: bold; font-style: italic;">tab</span>=tabsgn(tab, ul=<span style="font-weight: bold; text-decoration: underline;">1.6</span>, kx=<span style="font-weight: bold; text-decoration: underline;">1.7</span>);
 
-<div id="orgc69eae0" class="figure">
-<p><img src="images/TblProduitFctAffineFin.svg" alt="TblProduitFctAffineFin.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">le premier sens de variation est "d&#233;croissant", les suivants sont tels</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">que les valeurs de y seront alternativement plac&#233;es en haut et en bas.</span>
+<span style="font-weight: bold;">add</span>(tab);
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 
 <p>
-Donc la fonction \(g\) est positive seulement sur l'intervalle \([1,25;1,5]\), et
-elle est négative ailleurs. On peut confirmer cela à l'aide du graphe de cette
+Donc la fonction \(g\) est positive seulement sur l&rsquo;intervalle \([1,25;1,5]\), et
+elle est négative ailleurs. On peut confirmer cela à l&rsquo;aide du graphe de cette
 fonction :
 </p>
 
+<div class="org-src-container">
+<pre class="src src-asymptote"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(11<span style="font-weight: bold; text-decoration: underline;">pt</span>));
 
-<div id="org24fe958" class="figure">
-<p><img src="images/grapheFonctionEtudieTblVariations.svg" alt="grapheFonctionEtudieTblVariations.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold;">unitsize</span>(4<span style="font-weight: bold; text-decoration: underline;">cm</span>, 4<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold;">g</span> (<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">x</span>) {<span style="font-weight: bold;">return</span> (<span style="font-weight: bold; text-decoration: underline;">2</span>*x-<span style="font-weight: bold; text-decoration: underline;">3</span>)*(-<span style="font-weight: bold; text-decoration: underline;">4</span>*x+<span style="font-weight: bold; text-decoration: underline;">5</span>);}
+
+<span style="font-weight: bold;">xaxis</span>(<span style="font-style: italic;">"$x$"</span>,<span style="font-weight: bold;">LeftTicks</span>(Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, xmin=<span style="font-weight: bold; text-decoration: underline;">0</span>, xmax=<span style="font-weight: bold; text-decoration: underline;">2</span>);
+<span style="font-weight: bold;">yaxis</span>(<span style="font-style: italic;">"$y$"</span>,<span style="font-weight: bold;">RightTicks</span>(NoZero, Step=<span style="font-weight: bold; text-decoration: underline;">2</span>, step=<span style="font-weight: bold; text-decoration: underline;">1</span>),Arrow, ymin = -<span style="font-weight: bold; text-decoration: underline;">3</span>, ymax=<span style="font-weight: bold; text-decoration: underline;">0.5</span>);
+
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">graph</span>(g, <span style="font-weight: bold; text-decoration: underline;">0.75</span>, <span style="font-weight: bold; text-decoration: underline;">2</span>));
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: John Doe</p>
-<p class="date">Created: 2022-03-18 ven. 10:31</p>
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-04-14 jeu. 00:51</p>
 </div>
 </body>
 </html>

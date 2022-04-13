@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="french" xml:lang="french">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 ven. 10:32 -->
+<!-- 2022-04-14 jeu. 00:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projete Orthogonal</title>
-<meta name="author" content="John Doe" />
+<meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -225,34 +225,34 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="~/MathCoursOrg.github.io/"> HOME </a>
+ <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Projete Orthogonal</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfda2e46">1. Définitions</a></li>
-<li><a href="#org4831097">2. Pourquoi ce point existe ?</a></li>
-<li><a href="#orgeee35cf">3. Approche géométrique</a></li>
-<li><a href="#orgdbcf995">4. Trigonométrie</a>
+<li><a href="#org1dd98b9">1. Définitions</a></li>
+<li><a href="#org5592755">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#orgb4f90b3">3. Approche géométrique</a></li>
+<li><a href="#org9222469">4. Trigonométrie</a>
 <ul>
-<li><a href="#org5a9fe6f">4.1. Définitions</a></li>
+<li><a href="#org4b1b356">4.1. Définitions</a></li>
 </ul>
 </li>
-<li><a href="#org02def15">5. Le chemin difficile : trouver les coordonnées d'un projeté.</a>
+<li><a href="#orgcfcc591">5. Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</a>
 <ul>
-<li><a href="#org206f054">5.1. Première étape, trouver l'équation de la droite \((AB)\)</a></li>
-<li><a href="#org2e5aadd">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
-<li><a href="#org86ca9f7">5.3. Rappeler que \(M \in (AB)\)</a></li>
+<li><a href="#org2cd0a45">5.1. Première étape, trouver l&rsquo;équation de la droite \((AB)\)</a></li>
+<li><a href="#org8fc0c21">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
+<li><a href="#org97b001f">5.3. Rappeler que \(M \in (AB)\)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgfda2e46" class="outline-2">
-<h2 id="orgfda2e46"><span class="section-number-2">1.</span> Définitions</h2>
+<div id="outline-container-org1dd98b9" class="outline-2">
+<h2 id="org1dd98b9"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
@@ -262,24 +262,37 @@ par \(M\).
 <p>
 On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
 </p>
-<div class="defi" id="org39db76a">
+<div class="defi" id="orgfcc9d87">
 <p>
-Le projeté orthogonal d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
+Le projeté orthogonal d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
 que la distance \(MM'\) est minimale.
 </p>
 
 </div>
 
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org1e26a3f"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
 
-<div id="orgf486707" class="figure">
-<p><img src="images/projetOrthoIntro.svg" alt="projetOrthoIntro.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">M</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>), <span style="font-weight: bold; font-style: italic;">A</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">B</span> = (<span style="font-weight: bold; text-decoration: underline;">7</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
+<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
+<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">Mp</span> = proj*M;
+<span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M$"</span>, M); <span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M'$"</span>, Mp, <span style="font-weight: bold; text-decoration: underline;">S</span>);
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(A, B));
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(M, Mp), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\Delta$"</span>, A--B);
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4831097" class="outline-2">
-<h2 id="org4831097"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
+<div id="outline-container-org5592755" class="outline-2">
+<h2 id="org5592755"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
@@ -287,7 +300,7 @@ est une fonction qui dépend de la position de \(M'\) sur la droite.
 </p>
 
 <p>
-Mais cette fonction ressemble à une parabole, puisque si l'on connaît les
+Mais cette fonction ressemble à une parabole, puisque si l&rsquo;on connaît les
 coordonnée de \(M\) et de \(M'\), on sait que :
 \[
 MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
@@ -296,8 +309,8 @@ MM'^{2} = (x_{M'} - x_{M})^{2} + (y_{M'} - y_{M})^{2}
 
 <p>
 Autrement dit, la fonction \(M' \mapsto MM'^{2}\) ressemble à une parabole (il y a des
-carrés dans la formule, ce n'est pas un argument suffisant, c'est un argument
-que l'on appelle «heuristique», qui repose sur l'intuition plutôt que de la
+carrés dans la formule, ce n&rsquo;est pas un argument suffisant, c&rsquo;est un argument
+que l&rsquo;on appelle «heuristique», qui repose sur l&rsquo;intuition plutôt que de la
 formalisation pure. Mais vous pouvez me faire confiance ici, cela fonctionne
 bien) ! Donc, cette parabole admet un point minimale atteint pour un certain
 point \(M'_{0}\), qui est le projeté orthogonale de \(M\) sur la droite \(\Delta\).
@@ -311,20 +324,20 @@ learning (!).
 </div>
 </div>
 
-<div id="outline-container-orgeee35cf" class="outline-2">
-<h2 id="orgeee35cf"><span class="section-number-2">3.</span> Approche géométrique</h2>
+<div id="outline-container-orgb4f90b3" class="outline-2">
+<h2 id="orgb4f90b3"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
-<div class="defi" id="orgcbbd995">
+<div class="defi" id="org5412b70">
 <p>
-Le projeté d'un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l'angle
+Le projeté d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l&rsquo;angle
 entre \(\Delta\) et \(M'M\) est droit.
 </p>
 
 </div>
 
-<div class="prop" id="org815af88">
+<div class="prop" id="org3eff293">
 <p>
-Les deux définitions sont équivalentes ! C'est-à-dire que trouver le point \(M'\) tel
+Les deux définitions sont équivalentes ! C&rsquo;est-à-dire que trouver le point \(M'\) tel
 que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
 la droite \(\Delta\) qui passe par \(M\) !
 </p>
@@ -332,28 +345,42 @@ la droite \(\Delta\) qui passe par \(M\) !
 </div>
 
 <p>
-Remarquez l'angle droit formé sur la figure ci-contre (qui a la même
+Remarquez l&rsquo;angle droit formé sur la figure ci-contre (qui a la même
 configuration que la figure précédente.)
 </p>
+<div class="org-src-container">
+<pre class="src src-asymptote" id="orgcb0be62"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
 
-<div id="org876cb74" class="figure">
-<p><img src="images/projetOrthoIntroAngleDroit.svg" alt="projetOrthoIntroAngleDroit.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">M</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>), <span style="font-weight: bold; font-style: italic;">A</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">B</span> = (<span style="font-weight: bold; text-decoration: underline;">7</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
+<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
+<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">Mp</span> = proj*M;
+<span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M$"</span>, M); <span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M'$"</span>, Mp, <span style="font-weight: bold; text-decoration: underline;">S</span>);
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(A, B));
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(M, Mp), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\Delta$"</span>, A--B);
+<span style="font-weight: bold;">markrightangle</span>(M, Mp, B, 2<span style="font-weight: bold; text-decoration: underline;">bp</span> + <span style="font-weight: bold; text-decoration: underline;">black</span>);
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgdbcf995" class="outline-2">
-<h2 id="orgdbcf995"><span class="section-number-2">4.</span> Trigonométrie</h2>
+<div id="outline-container-org9222469" class="outline-2">
+<h2 id="org9222469"><span class="section-number-2">4.</span> Trigonométrie</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org5a9fe6f" class="outline-3">
-<h3 id="org5a9fe6f"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div id="outline-container-org4b1b356" class="outline-3">
+<h3 id="org4b1b356"><span class="section-number-3">4.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="defi" id="org1250489">
+<div class="defi" id="org3661d0f">
 <p>
 On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
-fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
+fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 \[
 \cos(\widehat{ABC}) = \frac{AB}{BC} = \frac{\text{Adjacent}}{\text{Hypoténuse}}
 \]
@@ -361,45 +388,80 @@ fonction \(\cos\) de l'angle \(\widehat{ABC}\) par :
 
 </div>
 
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org5ac3ef3"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
 
-<div id="org094ffa6" class="figure">
-<p><img src="images/deftrigo.svg" alt="deftrigo.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">triangle</span> <span style="font-weight: bold; font-style: italic;">t</span> = <span style="font-weight: bold;">triangleAbc</span>(<span style="font-weight: bold; text-decoration: underline;">90</span>, <span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">3</span>, angle = <span style="font-weight: bold; text-decoration: underline;">233</span>) ;
+<span style="font-weight: bold;">show</span>(Lb = <span style="font-style: italic;">""</span>, Lc=<span style="font-style: italic;">"Adjacent"</span>, La=<span style="font-style: italic;">"Hypot&#233;nuse"</span>, t);
+<span style="font-weight: bold;">markrightangle</span>(t.B, t.A, t.C);
+<span style="font-weight: bold;">markangle</span>(<span style="font-style: italic;">"$\widehat{ABC}$"</span>, t.C, t.B, t.A);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\cos{(\widehat{ABC})} = \frac{Adjacent}{Hypotenuse}$"</span>, (<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>));
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org02def15" class="outline-2">
-<h2 id="org02def15"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d'un projeté.</h2>
+<div id="outline-container-orgcfcc591" class="outline-2">
+<h2 id="orgcfcc591"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 On considère le problème suivant. On connaît \(A(2, 3)\) et \(B(4;5)\) les
-coordonnées de deux points dans le plan. Soit \(C(4, 6)\) un point qui n'est pas
+coordonnées de deux points dans le plan. Soit \(C(4, 6)\) un point qui n&rsquo;est pas
 sur la droite \((AB)\) (ça se voit, puisque \(C\) a la même abscisse que \(B\), mais
 pas la même ordonnées). Comment calculer les coordonnées de \(I\) le projeté de \(C\)
 sur la droite \((AB)\) ?
 </p>
 
 <p>
-Si on demande à l'ordinateur de représenter la situation, voici ce que l'on
+Si on demande à l&rsquo;ordinateur de représenter la situation, voici ce que l&rsquo;on
 obtient :
 </p>
+<div class="org-src-container">
+<pre class="src src-asymptote" id="org3182d17"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
 
-<div id="org6165be4" class="figure">
-<p><img src="images/chemindiffProjete.svg" alt="chemindiffProjete.svg" class="org-svg" />
-</p>
+<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">A</span>=(<span style="font-weight: bold; text-decoration: underline;">2</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>), <span style="font-weight: bold; font-style: italic;">B</span>=(<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>), <span style="font-weight: bold; font-style: italic;">C</span>=(<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">6</span>);
+
+<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">D</span> = <span style="font-weight: bold;">line</span>(A, B);
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">label(afficherpoint(A, "A"), A);</span>
+<span style="font-weight: bold;">dot</span>(A);
+<span style="font-weight: bold;">dot</span>(B);
+<span style="font-weight: bold;">dot</span>(C);
+<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
+<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; text-decoration: underline;">I</span> = proj*C;
+<span style="font-weight: bold;">dot</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>);
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>, C), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
+<span style="font-weight: bold;">markrightangle</span>(C, <span style="font-weight: bold; text-decoration: underline;">I</span>, A, 1<span style="font-weight: bold; text-decoration: underline;">bp</span> + <span style="font-weight: bold; text-decoration: underline;">black</span>);
+<span style="font-weight: bold;">draw</span>(D);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"A"</span>, A, <span style="font-weight: bold; text-decoration: underline;">S</span>);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"B"</span>, B, <span style="font-weight: bold; text-decoration: underline;">S</span>);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"C"</span>, C, <span style="font-weight: bold; text-decoration: underline;">SW</span>);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"I"</span>, <span style="font-weight: bold; text-decoration: underline;">I</span>, <span style="font-weight: bold; text-decoration: underline;">N</span>);
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
 </div>
 </div>
 
-<div id="outline-container-org206f054" class="outline-3">
-<h3 id="org206f054"><span class="section-number-3">5.1.</span> Première étape, trouver l'équation de la droite \((AB)\)</h3>
+<div id="outline-container-org2cd0a45" class="outline-3">
+<h3 id="org2cd0a45"><span class="section-number-3">5.1.</span> Première étape, trouver l&rsquo;équation de la droite \((AB)\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 On a déjà vu avec le chapitre sur le déterminant comment déterminer une équation
-de droite. Ici, elle est simple, puisque l'on remarque que l'ordonnée des points
+de droite. Ici, elle est simple, puisque l&rsquo;on remarque que l&rsquo;ordonnée des points
 \(A\) et \(B\) est égale à \(1\) ajouté aux abscisses de ces points. Donc si \((x;y)\)
-représente les coordonnées d'un point sur \((AB)\), on a :
+représente les coordonnées d&rsquo;un point sur \((AB)\), on a :
 \[
 (AB) \quad : \quad x - y = -1
 \]
@@ -407,13 +469,13 @@ représente les coordonnées d'un point sur \((AB)\), on a :
 </div>
 </div>
 
-<div id="outline-container-org2e5aadd" class="outline-3">
-<h3 id="org2e5aadd"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
+<div id="outline-container-org8fc0c21" class="outline-3">
+<h3 id="org8fc0c21"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
-D'après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
-un point \(M=(x;y)\). On va calculer cette distance au carré pour éviter d'être
-embêté avec d'éventuelles racines carrés :
+D&rsquo;après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
+un point \(M=(x;y)\). On va calculer cette distance au carré pour éviter d&rsquo;être
+embêté avec d&rsquo;éventuelles racines carrés :
 </p>
 \begin{align*}
   CM^2 &= \lVert CM \rVert^{2} = (x -4)^{2} + (y - 6)^{2} \\
@@ -422,11 +484,11 @@ embêté avec d'éventuelles racines carrés :
 </div>
 </div>
 
-<div id="outline-container-org86ca9f7" class="outline-3">
-<h3 id="org86ca9f7"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
+<div id="outline-container-org97b001f" class="outline-3">
+<h3 id="org97b001f"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
-On rappelle que l'on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
+On rappelle que l&rsquo;on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
 remplacer chaque \(y\) par \(x + 1\) dans la formule suivante :
 \[
   CM^2= x^{2} + y^{2} -8x - 12y + 52
@@ -436,7 +498,7 @@ Et on obtient :
 CM^{2} = x^{2} + (x + 1)^{2} - 8x - 12(x + 1) + 52
 \]
 Finalement, après développement et simplification (il y a donc quelques lignes
-de calculs qu'il faut compléter) :
+de calculs qu&rsquo;il faut compléter) :
 \[
     CM^{2} = 2x^{2} -18x + 41 = 2 \times (x^{2} - 9x + 20,5)
 \]
@@ -444,11 +506,33 @@ On peut donc poser \(f\) la fonction :
 \[
   f(x) = x^{2} - 9x + 20,5
 \]
-Et il s'agit de trouver le minimum de cette fonction. Si on représente cette
+Et il s&rsquo;agit de trouver le minimum de cette fonction. Si on représente cette
 fonction par ordinateur, on observe la courbe suivante :
 </p>
+<div class="org-src-container">
+<pre class="src src-asymptote" id="orgccdaa32"><span style="font-weight: bold;">import</span> mesFonctions;
+<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+
+<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>.5<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+
+<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+
+<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">xmin</span> = <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; font-style: italic;">xmax</span> = <span style="font-weight: bold; text-decoration: underline;">7</span>;
+
+<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold;">f</span> (<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">x</span>) { <span style="font-weight: bold;">return</span> x^<span style="font-weight: bold; text-decoration: underline;">2</span>-9x+<span style="font-weight: bold; text-decoration: underline;">20.5</span> ; }
+
+<span style="font-weight: bold; text-decoration: underline;">path</span> <span style="font-weight: bold; font-style: italic;">cf</span> = <span style="font-weight: bold;">graph</span>(f, xmin, xmax);
+<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$f$"</span>, cf);
+<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">graph</span>(f, xmin, xmax));
+<span style="font-weight: bold;">xaxis</span>(<span style="font-style: italic;">"$x$"</span>,<span style="font-weight: bold;">LeftTicks</span>(Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, xmin=xmin, xmax=xmax);
+<span style="font-weight: bold;">yaxis</span>(<span style="font-style: italic;">"$y$"</span>,<span style="font-weight: bold;">RightTicks</span>(NoZero, Step=<span style="font-weight: bold; text-decoration: underline;">2</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow);
+
+<span style="font-weight: bold;">dot</span>((<span style="font-weight: bold; text-decoration: underline;">4.5</span>, f(<span style="font-weight: bold; text-decoration: underline;">4.5</span>)));
+
+<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+</pre>
+</div>
 <p>
-<img src="images/courbeDistanceCM.svg" alt="courbeDistanceCM.svg" class="org-svg" />
 On voit que le minimum semble être atteint en \(x =4,5\). Pour le démontrer, on
 calcule alors :
 </p>
@@ -464,7 +548,7 @@ nombre toujours positif !
 </p>
 
 <p>
-Donc le minimum est atteint en \(x = 4,5\), ce qui est l'absicce du point \(I\),
+Donc le minimum est atteint en \(x = 4,5\), ce qui est l&rsquo;absicce du point \(I\),
 projeté orthogonal de \(C\) sur la droite \((AB)\). Le point \(I\) est donc de
 coordonnées \(I = (4,5;5,5)\).
 </p>
@@ -473,8 +557,8 @@ coordonnées \(I = (4,5;5,5)\).
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: John Doe</p>
-<p class="date">Created: 2022-03-18 ven. 10:32</p>
+<p class="author">Author: Delhomme Fabien</p>
+<p class="date">Created: 2022-04-14 jeu. 00:51</p>
 </div>
 </body>
 </html>
