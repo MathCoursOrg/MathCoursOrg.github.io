@@ -6,8 +6,7 @@
 <!-- 2022-05-15 dim. 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="author" content="Delhomme Fabien" />
+<title>Probabilite</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -193,6 +192,33 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -200,9 +226,184 @@
  |
  <a accesskey="H" href="~/MathCoursOrg.github.io/index.html"> HOME </a>
 </div><div id="content" class="content">
+<h1 class="title">Probabilite</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgca2e6a9">1. Définitions</a></li>
+<li><a href="#orgcf4fa06">2. Modéliser en mathématique une expérience aléatoire</a>
+<ul>
+<li><a href="#org526c9c2">2.1. Vérifier expérimentalement nos résultats</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgca2e6a9" class="outline-2">
+<h2 id="orgca2e6a9"><span class="section-number-2">1.</span> Définitions</h2>
+<div class="outline-text-2" id="text-1">
+<div class="defi" id="org741b4d9">
+<p>
+Une expérience aléatoire est une expérience dont le résultat n&rsquo;est pas
+prévisible à l&rsquo;avance. Une expérience aléatoire peut avoir deux, trois voire une
+infinité de résultats différents.
+</p>
+
+</div>
+
+<div class="defi" id="org100b889">
+<p>
+Un événement est un ensemble d&rsquo;issus. Ensemble étant compris comme un ensemble
+en mathématiques. On note souvent les événements par des lettres majuscules.
+Ainsi, si \(w\) est une issue qui <i>appartient</i> à \(A\), on écrira : \(w \in A\). Pour
+désigner un événement qui ne contient qu&rsquo;une seule issue est désigné par
+\(A=\{w\}\).
+</p>
+
+</div>
+
+<div class="defi" id="org727e095">
+<p>
+En probabilité, l&rsquo;univers \(\Omega\) désigne l&rsquo;ensemble des événements d&rsquo;une expérience
+aléatoire.
+</p>
+
+</div>
+
+<div class="defi" id="orgd34ec23">
+<p>
+Une probabilité est une application qui associe à un événement \(A\) un nombre
+réel entre \(0\) et \(1\). On peut écrire ainsi, pour \(A \subset \Omega\), \(P(A) \in [0;1]\). Une
+probabilité suit d&rsquo;autre conditions que nous décrirons juste après.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcf4fa06" class="outline-2">
+<h2 id="orgcf4fa06"><span class="section-number-2">2.</span> Modéliser en mathématique une expérience aléatoire</h2>
+<div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+On lance deux dés à six faces, équilibré. Quelle est la chance que la somme des
+deux faces tirées fasse \(7\) ?
+</p>
+</blockquote>
+
+<p>
+L&rsquo;éxpérience aléatoire dans cet exemple est le résultat de la somme de deux dés.
+Donc, toutes les issues possibles sont \(\{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}\),
+car la somme de deux dés est compris entre \(2\) (le minimum possible, avec deux
+dés de faces \(1\)) et \(12\) (le maximum, avec deux dés de faces \(6\)). On note donc
+</p>
+
+<p>
+\[
+    \Omega = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}
+\]
+</p>
+
+<p>
+l&rsquo;univers associé à cet expérience aléatoire. L&rsquo;événement qui nous intéresse est
+l&rsquo;événement consitué d&rsquo;une seule issue, l&rsquo;obtiention de la somme égale à \(7\). On
+note \(A\) cet événement, et on a :
+</p>
+
+<p>
+\[
+    A = \{ 7 \}
+\]
+</p>
+
+<p>
+On cherche donc à calculer la probabilité associée à l&rsquo;événement \(A\). On note
+mathématiquement ce nombre \(P(A)\).
+</p>
+
+<p>
+Pour calculer \(P(A)\), il faut dénombrer les issues qui appartiennent à notre
+événement. On divisera ce nombre d&rsquo;issues par le nombre d&rsquo;issues total.
+</p>
+
+<p>
+Commençons par lister <i>toutes les issues possibles</i>. Nous avons deux dés, lancés
+indépendamment l&rsquo;un par rapport à l&rsquo;autre. Il y a six possibilités pour le
+premier, six pour le deuxième. Pour chaque possibilité du premier, il y a six
+possibilité pour le second. Ainsi, il y a \(6\times 6 = 36\) possibilités au total.
+</p>
+
+<p>
+Quelles sont les issues qui réalise l&rsquo;événement \(A =\)« la somme des deux dés est
+égal à \(7\) » ?
+</p>
+
+<p>
+Nous devons les lister pour les compter :
+</p>
+<ol class="org-ol">
+<li>\(1 + 6 = 7\)</li>
+<li>\(2 + 5 = 7\)</li>
+<li>\(3 + 4 = 7\)</li>
+<li>\(4 + 3 = 7\)</li>
+<li>\(5 + 2 = 7\)</li>
+<li>\(6 + 1 = 7\)</li>
+</ol>
+<p>
+On peut maintenant se convaincre que toutes les possibilités sont listées.
+</p>
+
+<p>
+Finalement, la probabilité associée à l&rsquo;événement \(A\) est :
+\[
+P(A) = \frac{6}{36} = \frac{1}{6}
+\]
+</p>
+</div>
+
+<div id="outline-container-org526c9c2" class="outline-3">
+<h3 id="org526c9c2"><span class="section-number-3">2.1.</span> Vérifier expérimentalement nos résultats</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Nous pourrions réaliser à la main un grand nombre de fois cette expérience, mais nous pouvons aussi demander à l&rsquo;ordinateur de le faire à notre place.
+</p>
+
+<p>
+Voici un programme python qui calcule la somme de deux dés aléatoires et qui compte le nombre de fois ou le résultat donne \(7\). Ici, le programme lance \(10000\) dés.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" id="orge5c9fea"><span style="color: #ff79c6;">import</span> random
+
+<span style="color: #ffc9e8;">c</span> = <span style="color: #bd93f9; font-weight: bold;">0</span>
+<span style="color: #ffc9e8;">n</span> = <span style="color: #bd93f9; font-weight: bold;">10000</span>
+
+<span style="color: #ff79c6;">for</span> i <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(n):
+    <span style="color: #ff79c6;">if</span> random.randint(<span style="color: #bd93f9; font-weight: bold;">1</span>,<span style="color: #bd93f9; font-weight: bold;">6</span>) + random.randint(<span style="color: #bd93f9; font-weight: bold;">1</span>,<span style="color: #bd93f9; font-weight: bold;">6</span>) == <span style="color: #bd93f9; font-weight: bold;">7</span> :
+        <span style="color: #ffc9e8;">c</span> = c + <span style="color: #bd93f9; font-weight: bold;">1</span>
+<span style="color: #ffb86c;">print</span>(c/n)
+</pre>
+</div>
+
+<p>
+Nous avons obtenu une fréquence de :
+</p>
+<pre class="example">
+0.1685
+</pre>
+
+
+
+<p>
+En relançant plusieurs fois le programme, on voit qu&rsquo;on obtient une fréquence autour de \(0,16666... = \frac{1}{6}\).
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Delhomme Fabien</p>
 <p class="date">Created: 2022-05-15 dim. 18:01</p>
 </div>
 </body>

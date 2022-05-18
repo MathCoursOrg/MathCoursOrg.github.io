@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:52 -->
+<!-- 2022-05-15 dim. 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Indicateurs Statistiques</title>
@@ -191,7 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
@@ -232,18 +232,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0da629e">1. Motivations</a></li>
-<li><a href="#org003bead">2. Définitions, et illustration reprise dans le cours.</a></li>
-<li><a href="#org9a61721">3. Médiane</a></li>
-<li><a href="#orgd5a214f">4. Quartile</a></li>
-<li><a href="#orgcb3dece">5. Écart interquartile</a></li>
-<li><a href="#org9e3227f">6. Moyenne</a></li>
+<li><a href="#org5e9429b">1. Motivations</a></li>
+<li><a href="#orgd216831">2. Définitions, et illustration reprise dans le cours.</a></li>
+<li><a href="#orgf1a340e">3. Médiane</a></li>
+<li><a href="#org2ab459f">4. Quartile</a></li>
+<li><a href="#org436297f">5. Écart interquartile</a></li>
+<li><a href="#orgf8f600f">6. Moyenne</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0da629e" class="outline-2">
-<h2 id="org0da629e"><span class="section-number-2">1.</span> Motivations</h2>
+<div id="outline-container-org5e9429b" class="outline-2">
+<h2 id="org5e9429b"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On entend des «chiffres» utilisés tous les jours à la radio, à la télé, sur
@@ -258,10 +258,10 @@ les informations auxquelles nous sommes exposés quotidiennement.
 </div>
 </div>
 
-<div id="outline-container-org003bead" class="outline-2">
-<h2 id="org003bead"><span class="section-number-2">2.</span> Définitions, et illustration reprise dans le cours.</h2>
+<div id="outline-container-orgd216831" class="outline-2">
+<h2 id="orgd216831"><span class="section-number-2">2.</span> Définitions, et illustration reprise dans le cours.</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="orgc7034a9">
+<div class="defi" id="orgb88d9f1">
 <p>
 Une série statistique est une série de valeurs organisés souvent sous forme de
 tableau.
@@ -269,7 +269,7 @@ tableau.
 
 </div>
 
-<div class="ex" id="org0528040">
+<div class="ex" id="orgb50ad7b">
 <p>
 On peut regarder les notes d&rsquo;une classe d&rsquo;élèves. Les notes sont situés sur la
 première ligne, le <b>nombre d&rsquo;élèves</b> qui on eu cette note est sur la deuxième
@@ -323,15 +323,15 @@ différents indicateurs statistique.
 </div>
 </div>
 
-<div id="outline-container-org9a61721" class="outline-2">
-<h2 id="org9a61721"><span class="section-number-2">3.</span> Médiane</h2>
+<div id="outline-container-orgf1a340e" class="outline-2">
+<h2 id="orgf1a340e"><span class="section-number-2">3.</span> Médiane</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Surement l&rsquo;un des indicateurs le plus sous estimé d&rsquo;entre tous : la médiane.
 Regardons comment calculer une médiane d&rsquo;une
 </p>
 
-<div class="defi" id="org575038d">
+<div class="defi" id="org79cb220">
 <p>
 La médiane d&rsquo;une série statistique, est une valeur \(m\) tel que \(50\%\) des valeurs
 soit en dessous, et \(50\%\) soit au dessus.
@@ -339,7 +339,7 @@ soit en dessous, et \(50\%\) soit au dessus.
 
 </div>
 
-<div class="ex" id="org00160b5">
+<div class="ex" id="org2c53ff8">
 <p>
 Dans l&rsquo;exemple précédent, on voit qu&rsquo;il y a en tout \(16\) élèves, donc il faut
 regarder la note du $8$-ième élève dans la liste des notes triées. Ici, le
@@ -351,10 +351,10 @@ la série statistique est \(3\).
 </div>
 </div>
 
-<div id="outline-container-orgd5a214f" class="outline-2">
-<h2 id="orgd5a214f"><span class="section-number-2">4.</span> Quartile</h2>
+<div id="outline-container-org2ab459f" class="outline-2">
+<h2 id="org2ab459f"><span class="section-number-2">4.</span> Quartile</h2>
 <div class="outline-text-2" id="text-4">
-<div class="defi" id="org0917b76">
+<div class="defi" id="orgf1718b7">
 <p>
 On appelle quartile à \(p\) pourcent toutes valeur \(q\) tel que \(p\%\) des valeurs
 soient en dessous, et \(1-p\%\) soit au dessus.
@@ -362,14 +362,14 @@ soient en dessous, et \(1-p\%\) soit au dessus.
 
 </div>
 
-<div class="ex" id="orgf17a20e">
+<div class="ex" id="org71b773f">
 <p>
 La médianne est un quartile à \(50\%\).
 </p>
 
 </div>
 
-<div class="ex" id="orgd1eabcf">
+<div class="ex" id="org0ec39a0">
 <p>
 Dans l&rsquo;exemple précédent, l&rsquo;élève qui a la note telle que \(25\%\) soit en
 dessous, et \(75\%\) en dessous, est l&rsquo;élève qui se trouve à la $4$ième position
@@ -378,21 +378,21 @@ de la liste des notes triées. La quatrième valeur est donc la note \(2\).
 
 </div>
 
-<div class="defi" id="org8a0b080">
+<div class="defi" id="org13809a8">
 <p>
 Le premier quartile correspond au quartile à \(25\%\)
 </p>
 
 </div>
 
-<div class="defi" id="org26f60f9">
+<div class="defi" id="org1626342">
 <p>
 Le troisième quartile correspond au quartile à \(75\%\).
 </p>
 
 </div>
 
-<div class="ex" id="org3388f04">
+<div class="ex" id="org21b3df5">
 <p>
 Le troisième quartile de l&rsquo;exemple précédent correspond à la $16-4 = 12$ième
 note triés dans l&rsquo;ordre. Ici, \(3+2+7 +1 = 12\), et \(3+2+7+1+3 > 12\). Donc \(4\) est
@@ -403,10 +403,10 @@ la note qui correspond au troisième quartile de notre série statistique.
 </div>
 </div>
 
-<div id="outline-container-orgcb3dece" class="outline-2">
-<h2 id="orgcb3dece"><span class="section-number-2">5.</span> Écart interquartile</h2>
+<div id="outline-container-org436297f" class="outline-2">
+<h2 id="org436297f"><span class="section-number-2">5.</span> Écart interquartile</h2>
 <div class="outline-text-2" id="text-5">
-<div class="defi" id="orgfed925b">
+<div class="defi" id="org7f347a4">
 <p>
 Un écart interquartile est la différence entre le troisième quartile et le
 premier quartile.
@@ -414,7 +414,7 @@ premier quartile.
 
 </div>
 
-<div class="ex" id="org61931bb">
+<div class="ex" id="org60a0053">
 <p>
 Dans l&rsquo;exemple précédent, le premier quartile était \(2\), et le troisième
 quartile était \(4\). Donc l&rsquo;écart interquartile est de \(2 = 4-2\).
@@ -423,10 +423,10 @@ quartile était \(4\). Donc l&rsquo;écart interquartile est de \(2 = 4-2\).
 </div>
 </div>
 </div>
-<div id="outline-container-org9e3227f" class="outline-2">
-<h2 id="org9e3227f"><span class="section-number-2">6.</span> Moyenne</h2>
+<div id="outline-container-orgf8f600f" class="outline-2">
+<h2 id="orgf8f600f"><span class="section-number-2">6.</span> Moyenne</h2>
 <div class="outline-text-2" id="text-6">
-<div class="defi" id="org6699753">
+<div class="defi" id="orgda7b8a5">
 <p>
 Pour calculer la moyenne \(m\) d&rsquo;une série statistique \((x_{i}, y_{i})_{i}\) :
 \[
@@ -437,7 +437,7 @@ Où \(n = \sum y_{i}\)
 
 </div>
 
-<div class="ex" id="org3602896">
+<div class="ex" id="org053f511">
 <p>
 Dans l&rsquo;exemple précédent, le calcul de la moyenne donne :
 \[
@@ -451,7 +451,7 @@ m = \frac{1\times3 + 2\times2 + 3\times7 + 4 \times1 + 5\times3}{3 + 2 + 7 + 1 +
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:52</p>
+<p class="date">Created: 2022-05-15 dim. 18:01</p>
 </div>
 </body>
 </html>

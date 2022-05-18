@@ -3,196 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:51 -->
+<!-- 2022-05-15 dim. 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projete Orthogonal</title>
 <meta name="author" content="Delhomme Fabien" />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-</style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -232,27 +48,27 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1dd98b9">1. Définitions</a></li>
-<li><a href="#org5592755">2. Pourquoi ce point existe ?</a></li>
-<li><a href="#orgb4f90b3">3. Approche géométrique</a></li>
-<li><a href="#org9222469">4. Trigonométrie</a>
+<li><a href="#org716b87c">1. Définitions</a></li>
+<li><a href="#orgc5902e1">2. Pourquoi ce point existe ?</a></li>
+<li><a href="#orgc33df18">3. Approche géométrique</a></li>
+<li><a href="#org8429fa7">4. Trigonométrie</a>
 <ul>
-<li><a href="#org4b1b356">4.1. Définitions</a></li>
+<li><a href="#orgfaf45d1">4.1. Définitions</a></li>
 </ul>
 </li>
-<li><a href="#orgcfcc591">5. Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</a>
+<li><a href="#org475b6e5">5. Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</a>
 <ul>
-<li><a href="#org2cd0a45">5.1. Première étape, trouver l&rsquo;équation de la droite \((AB)\)</a></li>
-<li><a href="#org8fc0c21">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
-<li><a href="#org97b001f">5.3. Rappeler que \(M \in (AB)\)</a></li>
+<li><a href="#org3541059">5.1. Première étape, trouver l&rsquo;équation de la droite \((AB)\)</a></li>
+<li><a href="#orgaef20c0">5.2. Calculer la distance entre \(C\) et un point \(M\) de la droite.</a></li>
+<li><a href="#org77532c0">5.3. Rappeler que \(M \in (AB)\)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1dd98b9" class="outline-2">
-<h2 id="org1dd98b9"><span class="section-number-2">1.</span> Définitions</h2>
+<div id="outline-container-org716b87c" class="outline-2">
+<h2 id="org716b87c"><span class="section-number-2">1.</span> Définitions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On considère \(M\) un point du plan, et \(\Delta\) une droite du plan, qui ne passe pas
@@ -262,7 +78,7 @@ par \(M\).
 <p>
 On peut donner plusieurs définitions équivalentes aux projeté orthogonal.
 </p>
-<div class="defi" id="orgfcc9d87">
+<div class="defi" id="orgf03069f">
 <p>
 Le projeté orthogonal d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel
 que la distance \(MM'\) est minimale.
@@ -271,28 +87,28 @@ que la distance \(MM'\) est minimale.
 </div>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org1e26a3f"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="orgb7a2865"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">size</span>(7<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">M</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>), <span style="font-weight: bold; font-style: italic;">A</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">B</span> = (<span style="font-weight: bold; text-decoration: underline;">7</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
-<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">Mp</span> = proj*M;
-<span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M$"</span>, M); <span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M'$"</span>, Mp, <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(A, B));
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(M, Mp), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\Delta$"</span>, A--B);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #bd93f9;">point</span> <span style="color: #ffc9e8;">M</span> = (-<span style="color: #bd93f9; font-weight: bold;">2</span>, <span style="color: #bd93f9; font-weight: bold;">1</span>), <span style="color: #ffc9e8;">A</span> = (-<span style="color: #bd93f9; font-weight: bold;">2</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>), <span style="color: #ffc9e8;">B</span> = (<span style="color: #bd93f9; font-weight: bold;">7</span>, <span style="color: #bd93f9; font-weight: bold;">5</span>);
+<span style="color: #bd93f9;">transform</span> <span style="color: #ffc9e8;">proj</span> = <span style="color: #50fa7b;">projection</span>(A, B);
+<span style="color: #bd93f9;">point</span> <span style="color: #ffc9e8;">Mp</span> = proj*M;
+<span style="color: #50fa7b;">dot</span>(<span style="color: #f1fa8c;">"$M$"</span>, M); <span style="color: #50fa7b;">dot</span>(<span style="color: #f1fa8c;">"$M'$"</span>, Mp, <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">line</span>(A, B));
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">line</span>(M, Mp), <span style="color: #8be9fd;">dashed</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$\Delta$"</span>, A--B);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5592755" class="outline-2">
-<h2 id="org5592755"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
+<div id="outline-container-orgc5902e1" class="outline-2">
+<h2 id="orgc5902e1"><span class="section-number-2">2.</span> Pourquoi ce point existe ?</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 La distance entre un point \(M'\) qui appartient à la droite \(\Delta\) et le point \(M\)
@@ -324,10 +140,10 @@ learning (!).
 </div>
 </div>
 
-<div id="outline-container-orgb4f90b3" class="outline-2">
-<h2 id="orgb4f90b3"><span class="section-number-2">3.</span> Approche géométrique</h2>
+<div id="outline-container-orgc33df18" class="outline-2">
+<h2 id="orgc33df18"><span class="section-number-2">3.</span> Approche géométrique</h2>
 <div class="outline-text-2" id="text-3">
-<div class="defi" id="org5412b70">
+<div class="defi" id="orgd129d4f">
 <p>
 Le projeté d&rsquo;un point \(M\) sur une droite \(\Delta\) est le point \(M'\) tel que l&rsquo;angle
 entre \(\Delta\) et \(M'M\) est droit.
@@ -335,7 +151,7 @@ entre \(\Delta\) et \(M'M\) est droit.
 
 </div>
 
-<div class="prop" id="org3eff293">
+<div class="prop" id="orgcede73f">
 <p>
 Les deux définitions sont équivalentes ! C&rsquo;est-à-dire que trouver le point \(M'\) tel
 que la distance entre \(M'M\) est le minimum revient à tracer la perpendiculaire à
@@ -349,35 +165,35 @@ Remarquez l&rsquo;angle droit formé sur la figure ci-contre (qui a la même
 configuration que la figure précédente.)
 </p>
 <div class="org-src-container">
-<pre class="src src-asymptote" id="orgcb0be62"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org136af39"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">size</span>(7<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">M</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>), <span style="font-weight: bold; font-style: italic;">A</span> = (-<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">B</span> = (<span style="font-weight: bold; text-decoration: underline;">7</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
-<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; font-style: italic;">Mp</span> = proj*M;
-<span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M$"</span>, M); <span style="font-weight: bold;">dot</span>(<span style="font-style: italic;">"$M'$"</span>, Mp, <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(A, B));
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(M, Mp), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\Delta$"</span>, A--B);
-<span style="font-weight: bold;">markrightangle</span>(M, Mp, B, 2<span style="font-weight: bold; text-decoration: underline;">bp</span> + <span style="font-weight: bold; text-decoration: underline;">black</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #bd93f9;">point</span> <span style="color: #ffc9e8;">M</span> = (-<span style="color: #bd93f9; font-weight: bold;">2</span>, <span style="color: #bd93f9; font-weight: bold;">1</span>), <span style="color: #ffc9e8;">A</span> = (-<span style="color: #bd93f9; font-weight: bold;">2</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>), <span style="color: #ffc9e8;">B</span> = (<span style="color: #bd93f9; font-weight: bold;">7</span>, <span style="color: #bd93f9; font-weight: bold;">5</span>);
+<span style="color: #bd93f9;">transform</span> <span style="color: #ffc9e8;">proj</span> = <span style="color: #50fa7b;">projection</span>(A, B);
+<span style="color: #bd93f9;">point</span> <span style="color: #ffc9e8;">Mp</span> = proj*M;
+<span style="color: #50fa7b;">dot</span>(<span style="color: #f1fa8c;">"$M$"</span>, M); <span style="color: #50fa7b;">dot</span>(<span style="color: #f1fa8c;">"$M'$"</span>, Mp, <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">line</span>(A, B));
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">line</span>(M, Mp), <span style="color: #8be9fd;">dashed</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$\Delta$"</span>, A--B);
+<span style="color: #50fa7b;">markrightangle</span>(M, Mp, B, 2<span style="color: #8be9fd;">bp</span> + <span style="color: #8be9fd;">black</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9222469" class="outline-2">
-<h2 id="org9222469"><span class="section-number-2">4.</span> Trigonométrie</h2>
+<div id="outline-container-org8429fa7" class="outline-2">
+<h2 id="org8429fa7"><span class="section-number-2">4.</span> Trigonométrie</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org4b1b356" class="outline-3">
-<h3 id="org4b1b356"><span class="section-number-3">4.1.</span> Définitions</h3>
+<div id="outline-container-orgfaf45d1" class="outline-3">
+<h3 id="orgfaf45d1"><span class="section-number-3">4.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="defi" id="org3661d0f">
+<div class="defi" id="orgd3c9eb9">
 <p>
 On considère un triangle <b>rectangle</b> ABC rectangle en A. Alors, on définit la
 fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
@@ -389,28 +205,28 @@ fonction \(\cos\) de l&rsquo;angle \(\widehat{ABC}\) par :
 </div>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org5ac3ef3"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org833491e"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">triangle</span> <span style="font-weight: bold; font-style: italic;">t</span> = <span style="font-weight: bold;">triangleAbc</span>(<span style="font-weight: bold; text-decoration: underline;">90</span>, <span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">3</span>, angle = <span style="font-weight: bold; text-decoration: underline;">233</span>) ;
-<span style="font-weight: bold;">show</span>(Lb = <span style="font-style: italic;">""</span>, Lc=<span style="font-style: italic;">"Adjacent"</span>, La=<span style="font-style: italic;">"Hypot&#233;nuse"</span>, t);
-<span style="font-weight: bold;">markrightangle</span>(t.B, t.A, t.C);
-<span style="font-weight: bold;">markangle</span>(<span style="font-style: italic;">"$\widehat{ABC}$"</span>, t.C, t.B, t.A);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\cos{(\widehat{ABC})} = \frac{Adjacent}{Hypotenuse}$"</span>, (<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>));
+<span style="color: #bd93f9;">triangle</span> <span style="color: #ffc9e8;">t</span> = <span style="color: #50fa7b;">triangleAbc</span>(<span style="color: #bd93f9; font-weight: bold;">90</span>, <span style="color: #bd93f9; font-weight: bold;">4</span>, <span style="color: #bd93f9; font-weight: bold;">3</span>, angle = <span style="color: #bd93f9; font-weight: bold;">233</span>) ;
+<span style="color: #50fa7b;">show</span>(Lb = <span style="color: #f1fa8c;">""</span>, Lc=<span style="color: #f1fa8c;">"Adjacent"</span>, La=<span style="color: #f1fa8c;">"Hypot&#233;nuse"</span>, t);
+<span style="color: #50fa7b;">markrightangle</span>(t.B, t.A, t.C);
+<span style="color: #50fa7b;">markangle</span>(<span style="color: #f1fa8c;">"$\widehat{ABC}$"</span>, t.C, t.B, t.A);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$\cos{(\widehat{ABC})} = \frac{Adjacent}{Hypotenuse}$"</span>, (<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">0</span>));
 
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgcfcc591" class="outline-2">
-<h2 id="orgcfcc591"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</h2>
+<div id="outline-container-org475b6e5" class="outline-2">
+<h2 id="org475b6e5"><span class="section-number-2">5.</span> Le chemin difficile : trouver les coordonnées d&rsquo;un projeté.</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 On considère le problème suivant. On connaît \(A(2, 3)\) et \(B(4;5)\) les
@@ -425,37 +241,37 @@ Si on demande à l&rsquo;ordinateur de représenter la situation, voici ce que l
 obtient :
 </p>
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org3182d17"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org35b88e4"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">size</span>(7<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">A</span>=(<span style="font-weight: bold; text-decoration: underline;">2</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>), <span style="font-weight: bold; font-style: italic;">B</span>=(<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>), <span style="font-weight: bold; font-style: italic;">C</span>=(<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">6</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">A</span>=(<span style="color: #bd93f9; font-weight: bold;">2</span>,<span style="color: #bd93f9; font-weight: bold;">3</span>), <span style="color: #ffc9e8;">B</span>=(<span style="color: #bd93f9; font-weight: bold;">4</span>, <span style="color: #bd93f9; font-weight: bold;">5</span>), <span style="color: #ffc9e8;">C</span>=(<span style="color: #bd93f9; font-weight: bold;">4</span>, <span style="color: #bd93f9; font-weight: bold;">6</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">D</span> = <span style="font-weight: bold;">line</span>(A, B);
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">label(afficherpoint(A, "A"), A);</span>
-<span style="font-weight: bold;">dot</span>(A);
-<span style="font-weight: bold;">dot</span>(B);
-<span style="font-weight: bold;">dot</span>(C);
-<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">proj</span> = <span style="font-weight: bold;">projection</span>(A, B);
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; text-decoration: underline;">I</span> = proj*C;
-<span style="font-weight: bold;">dot</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>, C), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
-<span style="font-weight: bold;">markrightangle</span>(C, <span style="font-weight: bold; text-decoration: underline;">I</span>, A, 1<span style="font-weight: bold; text-decoration: underline;">bp</span> + <span style="font-weight: bold; text-decoration: underline;">black</span>);
-<span style="font-weight: bold;">draw</span>(D);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"A"</span>, A, <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"B"</span>, B, <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"C"</span>, C, <span style="font-weight: bold; text-decoration: underline;">SW</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"I"</span>, <span style="font-weight: bold; text-decoration: underline;">I</span>, <span style="font-weight: bold; text-decoration: underline;">N</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">D</span> = <span style="color: #50fa7b;">line</span>(A, B);
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">label(afficherpoint(A, "A"), A);</span>
+<span style="color: #50fa7b;">dot</span>(A);
+<span style="color: #50fa7b;">dot</span>(B);
+<span style="color: #50fa7b;">dot</span>(C);
+<span style="color: #bd93f9;">transform</span> <span style="color: #ffc9e8;">proj</span> = <span style="color: #50fa7b;">projection</span>(A, B);
+<span style="color: #bd93f9;">point</span> <span style="color: #8be9fd;">I</span> = proj*C;
+<span style="color: #50fa7b;">dot</span>(<span style="color: #8be9fd;">I</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">line</span>(<span style="color: #8be9fd;">I</span>, C), <span style="color: #8be9fd;">dashed</span>);
+<span style="color: #50fa7b;">markrightangle</span>(C, <span style="color: #8be9fd;">I</span>, A, 1<span style="color: #8be9fd;">bp</span> + <span style="color: #8be9fd;">black</span>);
+<span style="color: #50fa7b;">draw</span>(D);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"A"</span>, A, <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"B"</span>, B, <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"C"</span>, C, <span style="color: #8be9fd;">SW</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"I"</span>, <span style="color: #8be9fd;">I</span>, <span style="color: #8be9fd;">N</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org2cd0a45" class="outline-3">
-<h3 id="org2cd0a45"><span class="section-number-3">5.1.</span> Première étape, trouver l&rsquo;équation de la droite \((AB)\)</h3>
+<div id="outline-container-org3541059" class="outline-3">
+<h3 id="org3541059"><span class="section-number-3">5.1.</span> Première étape, trouver l&rsquo;équation de la droite \((AB)\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 On a déjà vu avec le chapitre sur le déterminant comment déterminer une équation
@@ -469,8 +285,8 @@ représente les coordonnées d&rsquo;un point sur \((AB)\), on a :
 </div>
 </div>
 
-<div id="outline-container-org8fc0c21" class="outline-3">
-<h3 id="org8fc0c21"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
+<div id="outline-container-orgaef20c0" class="outline-3">
+<h3 id="orgaef20c0"><span class="section-number-3">5.2.</span> Calculer la distance entre \(C\) et un point \(M\) de la droite.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 D&rsquo;après les formules déjà vues en cours, on peut calculer entre le point \(C\) et
@@ -484,8 +300,8 @@ embêté avec d&rsquo;éventuelles racines carrés :
 </div>
 </div>
 
-<div id="outline-container-org97b001f" class="outline-3">
-<h3 id="org97b001f"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
+<div id="outline-container-org77532c0" class="outline-3">
+<h3 id="org77532c0"><span class="section-number-3">5.3.</span> Rappeler que \(M \in (AB)\)</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 On rappelle que l&rsquo;on sait que \(x - y = -1\) pour \(M(x;y) \in (AB)\), donc, on peut
@@ -510,26 +326,26 @@ Et il s&rsquo;agit de trouver le minimum de cette fonction. Si on représente ce
 fonction par ordinateur, on observe la courbe suivante :
 </p>
 <div class="org-src-container">
-<pre class="src src-asymptote" id="orgccdaa32"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org79d39bd"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>.5<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>, <span style="color: #bd93f9; font-weight: bold;">0</span>.5<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">xmin</span> = <span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; font-style: italic;">xmax</span> = <span style="font-weight: bold; text-decoration: underline;">7</span>;
+<span style="color: #bd93f9;">real</span> <span style="color: #ffc9e8;">xmin</span> = <span style="color: #bd93f9; font-weight: bold;">0</span>, <span style="color: #ffc9e8;">xmax</span> = <span style="color: #bd93f9; font-weight: bold;">7</span>;
 
-<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold;">f</span> (<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">x</span>) { <span style="font-weight: bold;">return</span> x^<span style="font-weight: bold; text-decoration: underline;">2</span>-9x+<span style="font-weight: bold; text-decoration: underline;">20.5</span> ; }
+<span style="color: #bd93f9;">real</span> <span style="color: #50fa7b;">f</span> (<span style="color: #bd93f9;">real</span> <span style="color: #ffc9e8;">x</span>) { <span style="color: #ffb86c;">return</span> x^<span style="color: #bd93f9; font-weight: bold;">2</span>-9x+<span style="color: #bd93f9; font-weight: bold;">20.5</span> ; }
 
-<span style="font-weight: bold; text-decoration: underline;">path</span> <span style="font-weight: bold; font-style: italic;">cf</span> = <span style="font-weight: bold;">graph</span>(f, xmin, xmax);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$f$"</span>, cf);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">graph</span>(f, xmin, xmax));
-<span style="font-weight: bold;">xaxis</span>(<span style="font-style: italic;">"$x$"</span>,<span style="font-weight: bold;">LeftTicks</span>(Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, xmin=xmin, xmax=xmax);
-<span style="font-weight: bold;">yaxis</span>(<span style="font-style: italic;">"$y$"</span>,<span style="font-weight: bold;">RightTicks</span>(NoZero, Step=<span style="font-weight: bold; text-decoration: underline;">2</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow);
+<span style="color: #bd93f9;">path</span> <span style="color: #ffc9e8;">cf</span> = <span style="color: #50fa7b;">graph</span>(f, xmin, xmax);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$f$"</span>, cf);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">graph</span>(f, xmin, xmax));
+<span style="color: #50fa7b;">xaxis</span>(<span style="color: #f1fa8c;">"$x$"</span>,<span style="color: #50fa7b;">LeftTicks</span>(Step=<span style="color: #bd93f9; font-weight: bold;">1</span>, step=<span style="color: #bd93f9; font-weight: bold;">0.5</span>),Arrow, xmin=xmin, xmax=xmax);
+<span style="color: #50fa7b;">yaxis</span>(<span style="color: #f1fa8c;">"$y$"</span>,<span style="color: #50fa7b;">RightTicks</span>(NoZero, Step=<span style="color: #bd93f9; font-weight: bold;">2</span>, step=<span style="color: #bd93f9; font-weight: bold;">0.5</span>),Arrow);
 
-<span style="font-weight: bold;">dot</span>((<span style="font-weight: bold; text-decoration: underline;">4.5</span>, f(<span style="font-weight: bold; text-decoration: underline;">4.5</span>)));
+<span style="color: #50fa7b;">dot</span>((<span style="color: #bd93f9; font-weight: bold;">4.5</span>, f(<span style="color: #bd93f9; font-weight: bold;">4.5</span>)));
 
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 <p>
@@ -558,7 +374,7 @@ coordonnées \(I = (4,5;5,5)\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:51</p>
+<p class="date">Created: 2022-05-15 dim. 18:01</p>
 </div>
 </body>
 </html>

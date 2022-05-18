@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:52 -->
+<!-- 2022-05-15 dim. 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vecteur, deuxième partie</title>
@@ -191,7 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -226,49 +226,49 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8670515">1. Coordonnées d&rsquo;un vecteur dans un repère orthonormé</a>
+<li><a href="#orgf8dd1fa">1. Coordonnées d&rsquo;un vecteur dans un repère orthonormé</a>
 <ul>
-<li><a href="#orga514b70">1.1. Définitions</a>
+<li><a href="#org421a8af">1.1. Définitions</a>
 <ul>
-<li><a href="#org44b3b9d">1.1.1. Repère dans le plan</a></li>
-<li><a href="#org9814d9a">1.1.2. Repère orthonormé dans le plan</a></li>
-<li><a href="#orgdf8a434">1.1.3. Convention</a></li>
+<li><a href="#orgf4e67f2">1.1.1. Repère dans le plan</a></li>
+<li><a href="#org88d73f0">1.1.2. Repère orthonormé dans le plan</a></li>
+<li><a href="#org120f459">1.1.3. Convention</a></li>
 </ul>
 </li>
-<li><a href="#org3fa2569">1.2. Coordonnées d&rsquo;un vecteur dans un repère orthonormé</a>
+<li><a href="#org146423b">1.2. Coordonnées d&rsquo;un vecteur dans un repère orthonormé</a>
 <ul>
-<li><a href="#org2fd266a">1.2.1. Lorsque le vecteur est défini par deux points.</a></li>
-<li><a href="#org20154a2">1.2.2. Somme, multiplication par un scalaire.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org8cd8390">2. Application : coordonnées du milieu d&rsquo;un segment</a>
-<ul>
-<li><a href="#orgb0678d6">2.1. Énoncé du problème</a></li>
-<li><a href="#org6eae504">2.2. Résolution</a>
-<ul>
-<li><a href="#org8a8cf58">2.2.1. Méthode longue, mais intuitive</a></li>
-<li><a href="#orge27fcff">2.2.2. <span class="todo HOLD">HOLD</span> Méthode simple, et géométrique.</a></li>
+<li><a href="#org5082151">1.2.1. Lorsque le vecteur est défini par deux points.</a></li>
+<li><a href="#org3a5a7b2">1.2.2. Somme, multiplication par un scalaire.</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgce7a0db">3. Norme d&rsquo;un vecteur, et calcul de la distance entre deux points</a></li>
+<li><a href="#orgef1f996">2. Application : coordonnées du milieu d&rsquo;un segment</a>
+<ul>
+<li><a href="#org109d8d2">2.1. Énoncé du problème</a></li>
+<li><a href="#org5a29cb8">2.2. Résolution</a>
+<ul>
+<li><a href="#org63e50a7">2.2.1. Méthode longue, mais intuitive</a></li>
+<li><a href="#orgfec5c73">2.2.2. <span class="todo HOLD">HOLD</span> Méthode simple, et géométrique.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orged78ff8">3. Norme d&rsquo;un vecteur, et calcul de la distance entre deux points</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8670515" class="outline-2">
-<h2 id="org8670515"><span class="section-number-2">1.</span> Coordonnées d&rsquo;un vecteur dans un repère orthonormé</h2>
+<div id="outline-container-orgf8dd1fa" class="outline-2">
+<h2 id="orgf8dd1fa"><span class="section-number-2">1.</span> Coordonnées d&rsquo;un vecteur dans un repère orthonormé</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga514b70" class="outline-3">
-<h3 id="orga514b70"><span class="section-number-3">1.1.</span> Définitions</h3>
+<div id="outline-container-org421a8af" class="outline-3">
+<h3 id="org421a8af"><span class="section-number-3">1.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org44b3b9d" class="outline-4">
-<h4 id="org44b3b9d"><span class="section-number-4">1.1.1.</span> Repère dans le plan</h4>
+<div id="outline-container-orgf4e67f2" class="outline-4">
+<h4 id="orgf4e67f2"><span class="section-number-4">1.1.1.</span> Repère dans le plan</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 Pour se repérer sur le plan, on a besoin de se mettre d&rsquo;accord sur :
@@ -284,7 +284,7 @@ l&rsquo;origine, et de deux vecteurs qui indiquent les directions que l&rsquo;on
 «verticale» et «horizontale».
 </p>
 
-<div class="prop" id="orgd388779">
+<div class="prop" id="org3f73c43">
 <p>
 On appelle \((A, \vec{u}, \vec{v})\) un repère du plan si \(A\) est un point du
 plan, et que les vecteurs \(\vec{u}\), et \(\vec{v}\) n&rsquo;ont pas la même direction.
@@ -292,7 +292,7 @@ plan, et que les vecteurs \(\vec{u}\), et \(\vec{v}\) n&rsquo;ont pas la même d
 
 </div>
 
-<div class="ex" id="orge26f201">
+<div class="ex" id="org9c1fd46">
 <p>
 Voici un exemple de repère dans le plan.
 </p>
@@ -300,23 +300,23 @@ Voici un exemple de repère dans le plan.
 </div>
 
 
-<div id="org1465953" class="figure">
+<div id="orgb6e0d23" class="figure">
 <p><img src="./images/repereQuelconque.svg" alt="repereQuelconque.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org9814d9a" class="outline-4">
-<h4 id="org9814d9a"><span class="section-number-4">1.1.2.</span> Repère orthonormé dans le plan</h4>
+<div id="outline-container-org88d73f0" class="outline-4">
+<h4 id="org88d73f0"><span class="section-number-4">1.1.2.</span> Repère orthonormé dans le plan</h4>
 <div class="outline-text-4" id="text-1-1-2">
 
-<div id="org379831b" class="figure">
+<div id="orgd945405" class="figure">
 <p><img src="./images/explicationOrthonormee.svg" alt="explicationOrthonormee.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="defi" id="orgfe4ead3">
+<div class="defi" id="org1ebd08c">
 <p>
 Un repère est dit <b>orthonormé</b> lorsque les vecteurs du repères sont :
 </p>
@@ -332,7 +332,7 @@ La quasi-totalité des repères des exercices sont orthormés, car cela permet u
 lecture des coordonnées plus simple, ainsi que des calculs de normes plus faciles.
 </p>
 
-<div class="ex" id="org1bb1087">
+<div class="ex" id="orgc42b2d8">
 <p>
 Vous trouverez un exemple de repère orthornormé dans l&rsquo;image ci-dessous.
 </p>
@@ -343,7 +343,7 @@ Vous trouverez un exemple de repère orthornormé dans l&rsquo;image ci-dessous.
 Voici un repère orthonormé, nommé \((A, \vec{u}, \vec{v})\)
 </p>
 
-<div id="org06ebbad" class="figure">
+<div id="org6cb18bb" class="figure">
 <p><img src="./images/repereOrtho.svg" alt="repereOrtho.svg" class="org-svg" />
 </p>
 </div>
@@ -354,15 +354,15 @@ Voici un repère orthonormé, nommé \((O, \vec{i}, \vec{j})\)
 </p>
 
 
-<div id="orgc9be0cb" class="figure">
+<div id="org92ba5e3" class="figure">
 <p><img src="./images/repereOrthonormeAutomatique.svg" alt="repereOrthonormeAutomatique.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgdf8a434" class="outline-4">
-<h4 id="orgdf8a434"><span class="section-number-4">1.1.3.</span> Convention</h4>
+<div id="outline-container-org120f459" class="outline-4">
+<h4 id="org120f459"><span class="section-number-4">1.1.3.</span> Convention</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 Très souvent, on notera \((O, \vec{i}, \vec{j})\) un repère orthonormé, le vecteur
@@ -374,10 +374,10 @@ donner les coordonnées des vecteurs.
 </div>
 </div>
 
-<div id="outline-container-org3fa2569" class="outline-3">
-<h3 id="org3fa2569"><span class="section-number-3">1.2.</span> Coordonnées d&rsquo;un vecteur dans un repère orthonormé</h3>
+<div id="outline-container-org146423b" class="outline-3">
+<h3 id="org146423b"><span class="section-number-3">1.2.</span> Coordonnées d&rsquo;un vecteur dans un repère orthonormé</h3>
 <div class="outline-text-3" id="text-1-2">
-<div class="defi" id="org1a324e9">
+<div class="defi" id="org812a3a3">
 <p>
 Soit \(\vec{u}\) un vecteur, et on considère un repère orthonormé, \((O, \vec{i},
 \vec{j})\),du plan. Alors, le vecteur \(\vec{u}\) admet des coordonnées qui le
@@ -387,13 +387,13 @@ décrivent.
 </div>
 
 
-<div id="orga9a0117" class="figure">
+<div id="orgeb30733" class="figure">
 <p><img src="./images/vecteurCoordonnees.svg" alt="vecteurCoordonnees.svg" class="org-svg" />
 </p>
 </div>
 
 
-<div class="ex" id="orgda5bc97">
+<div class="ex" id="orge1b3c2c">
 <p>
 Dans l&rsquo;image suivante, vous trouverez un exemple de vecteur \(\vec{u}\) qui admet
 pour coordonnées \((3;4)\). Ainsi, l&rsquo;égalité
@@ -407,7 +407,7 @@ de \(4\) verticalement.
 </div>
 
 
-<div class="ex" id="orge3a68eb">
+<div class="ex" id="org118c957">
 <p>
 Un vecteur peut aussi admettre des coordonnées négatives. Par exemple, dans
 l&rsquo;image suivante, le vecteur \(\vec{v}\) admet une abscisse négative.
@@ -416,12 +416,12 @@ l&rsquo;image suivante, le vecteur \(\vec{v}\) admet une abscisse négative.
 </div>
 
 
-<div id="org79fab93" class="figure">
+<div id="orgdd493c9" class="figure">
 <p><img src="./images/vecteurCoordoNegatives.svg" alt="vecteurCoordoNegatives.svg" class="org-svg" />
 </p>
 </div>
 
-<div class="defi" id="orgb9f0533">
+<div class="defi" id="orgba9b384">
 <p>
 Les coordonnées nulles, c&rsquo;est-à-dire \((0;0)\) désignent le
 vecteur nul, noté \(\vec{0}\).
@@ -430,8 +430,8 @@ vecteur nul, noté \(\vec{0}\).
 </div>
 </div>
 
-<div id="outline-container-org2fd266a" class="outline-4">
-<h4 id="org2fd266a"><span class="section-number-4">1.2.1.</span> Lorsque le vecteur est défini par deux points.</h4>
+<div id="outline-container-org5082151" class="outline-4">
+<h4 id="org5082151"><span class="section-number-4">1.2.1.</span> Lorsque le vecteur est défini par deux points.</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 À partir de deux points, \(A\) et \(B\), on peut définir le vecteur qui «emmène» le
@@ -440,7 +440,7 @@ coordonnées de \(A\) et de celle de \(B\), on peut en déduire les coordonnées
 vecteur \(\overrightarrow{AB}\).
 </p>
 
-<div class="prop" id="org38ade15">
+<div class="prop" id="orgddc1b20">
 <p>
 Si \(A\) et \(B\) admettent les coordonnées \((x_{A}, y_{A})\), \((x_{B}, y_{B})\),
 alors le vecteur \(\overrightarrow{AB}\) a pour coordonnées :
@@ -451,7 +451,7 @@ alors le vecteur \(\overrightarrow{AB}\) a pour coordonnées :
 
 </div>
 
-<div class="ex" id="org7caca14">
+<div class="ex" id="org540e9e5">
 <p>
 Si \(A(3;4)\) et \(B(-2;-3)\) alors le vecteur \(\overrightarrow{AB}\) a pour
 coordonnées
@@ -466,21 +466,21 @@ Donc pour se rendre de \(A\) vers \(B\), il faut se déplacer de \(5\) horizonta
 </div>
 
 
-<div id="org61ff8ff" class="figure">
+<div id="orgd254f05" class="figure">
 <p><img src="./images/exemplevecCoordoPoints.svg" alt="exemplevecCoordoPoints.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org20154a2" class="outline-4">
-<h4 id="org20154a2"><span class="section-number-4">1.2.2.</span> Somme, multiplication par un scalaire.</h4>
+<div id="outline-container-org3a5a7b2" class="outline-4">
+<h4 id="org3a5a7b2"><span class="section-number-4">1.2.2.</span> Somme, multiplication par un scalaire.</h4>
 <div class="outline-text-4" id="text-1-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org70f62e7"></a>Somme de vecteurs<br />
+<li><a id="org727b9ba"></a>Somme de vecteurs<br />
 <div class="outline-text-5" id="text-1-2-2-1">
-<div class="prop" id="orga1374eb">
+<div class="prop" id="orgcba2ae9">
 <p>
 Si on considère deux vecteurs \(\vec{u}\) et \(\vec{v}\) de coordonnée \((x;y)\) et
 \((w;z)\), alors si on note \(\vec{z} = \vec{u} + \vec{v}\), le vecteur \(\vec{z}\) a
@@ -492,7 +492,7 @@ pour coordonnées :
 
 </div>
 
-<div class="ex" id="org3c8791d">
+<div class="ex" id="orgd843168">
 <p>
 Si \(\vec{u} = (-3;4)\) et \(\vec{v} = (2; 5)\) alors \(\vec{u} + \vec{v} = (-1;9)\)
 </p>
@@ -501,14 +501,14 @@ Si \(\vec{u} = (-3;4)\) et \(\vec{v} = (2; 5)\) alors \(\vec{u} + \vec{v} = (-1;
 </div>
 </li>
 
-<li><a id="org585b239"></a>Multiplication d&rsquo;un vecteur par un scalaire<br />
+<li><a id="org175d453"></a>Multiplication d&rsquo;un vecteur par un scalaire<br />
 <div class="outline-text-5" id="text-1-2-2-2">
 <p>
 Si \(\vec{u}\) est un vecteur, alors \(2 \vec{u}\), \(3\vec{u}\), \(\sqrt{2}\vec{u}\),
 etc, sont aussi des vecteurs. On peut multiplier un vecteur par n&rsquo;importe quel
 nombre réel \(k\), et on notera l&rsquo;opération \(k \vec{u}\)
 </p>
-<div class="prop" id="orgbcde4cd">
+<div class="prop" id="orga96428a">
 <p>
 Soit \(\vec{u}\) un vecteur, de coordonnées \((x;y)\). Alors, le vecteur \(k \vec{u}\)
 a pour coordonnées
@@ -519,7 +519,7 @@ k \vec{u} = (k x ; k y)
 
 </div>
 
-<div class="ex" id="org4d52561">
+<div class="ex" id="org892ef6f">
 <p>
 Si \(\vec{u} = (-3; 5)\), alors \(-2 \vec{u} = (6;-10)\)
 </p>
@@ -532,12 +532,12 @@ Si \(\vec{u} = (-3; 5)\), alors \(-2 \vec{u} = (6;-10)\)
 </div>
 </div>
 
-<div id="outline-container-org8cd8390" class="outline-2">
-<h2 id="org8cd8390"><span class="section-number-2">2.</span> Application : coordonnées du milieu d&rsquo;un segment</h2>
+<div id="outline-container-orgef1f996" class="outline-2">
+<h2 id="orgef1f996"><span class="section-number-2">2.</span> Application : coordonnées du milieu d&rsquo;un segment</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgb0678d6" class="outline-3">
-<h3 id="orgb0678d6"><span class="section-number-3">2.1.</span> Énoncé du problème</h3>
+<div id="outline-container-org109d8d2" class="outline-3">
+<h3 id="org109d8d2"><span class="section-number-3">2.1.</span> Énoncé du problème</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Le problème est le suivant :
@@ -553,7 +553,7 @@ les coordonnées des points \(A\) et \(B\).
 Concrètement, si on considère la situation suivante:
 </p>
 
-<div id="org979ba80" class="figure">
+<div id="orgfa7ec79" class="figure">
 <p><img src="./images/milieuABProblem.svg" alt="milieuABProblem.svg" class="org-svg" />
 </p>
 </div>
@@ -572,12 +572,12 @@ Sachant que :
 </div>
 </div>
 
-<div id="outline-container-org6eae504" class="outline-3">
-<h3 id="org6eae504"><span class="section-number-3">2.2.</span> Résolution</h3>
+<div id="outline-container-org5a29cb8" class="outline-3">
+<h3 id="org5a29cb8"><span class="section-number-3">2.2.</span> Résolution</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org8a8cf58" class="outline-4">
-<h4 id="org8a8cf58"><span class="section-number-4">2.2.1.</span> Méthode longue, mais intuitive</h4>
+<div id="outline-container-org63e50a7" class="outline-4">
+<h4 id="org63e50a7"><span class="section-number-4">2.2.1.</span> Méthode longue, mais intuitive</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 On calcule les coordonnées du vecteur \(\overrightarrow{AB}\) :
@@ -613,8 +613,8 @@ I(2;-0.5)
 </p>
 </div>
 </div>
-<div id="outline-container-orge27fcff" class="outline-4">
-<h4 id="orge27fcff"><span class="section-number-4">2.2.2.</span> <span class="todo HOLD">HOLD</span> Méthode simple, et géométrique.</h4>
+<div id="outline-container-orgfec5c73" class="outline-4">
+<h4 id="orgfec5c73"><span class="section-number-4">2.2.2.</span> <span class="todo HOLD">HOLD</span> Méthode simple, et géométrique.</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 Je vous conseille cette méthode, car les calculs sont beaucoup plus courts.
@@ -625,7 +625,7 @@ Mais il faut observer la figure suivante :
 </p>
 
 
-<div id="org94ab5fa" class="figure">
+<div id="org619074e" class="figure">
 <p><img src="./images/milieuABProblemePara.svg" alt="milieuABProblemePara.svg" class="org-svg" />
 </p>
 </div>
@@ -656,8 +656,8 @@ I \left( \frac{x_{A} + x_{B}}{2}; \frac{y_{A} + y_{B}}{2} \right)
 </div>
 </div>
 
-<div id="outline-container-orgce7a0db" class="outline-2">
-<h2 id="orgce7a0db"><span class="section-number-2">3.</span> Norme d&rsquo;un vecteur, et calcul de la distance entre deux points</h2>
+<div id="outline-container-orged78ff8" class="outline-2">
+<h2 id="orged78ff8"><span class="section-number-2">3.</span> Norme d&rsquo;un vecteur, et calcul de la distance entre deux points</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 La norme d&rsquo;un vecteur \(\overrightarrow{AB}\) représente la distance à parcourir
@@ -668,7 +668,7 @@ pour emmener \(A\) vers \(B\).
 À partir des coordonnées d&rsquo;un vecteur, on peut calculer sa norme !
 </p>
 
-<div class="prop" id="orgc9e45c8">
+<div class="prop" id="orgb53807f">
 <p>
 Soit \(\vec{u}\) un vecteur, de coordonnées \((x ;y)\). Alors, sa norme se calcule
 par
@@ -679,7 +679,7 @@ par
 
 </div>
 
-<div class="ex" id="org9056cf0">
+<div class="ex" id="orgf0a1da3">
 <p>
 Ce résultat provient du théorème de Pythagore !
 Sur l&rsquo;image, puisque le triangle \(OAH\) est rectangle en \(H\), d&rsquo;après le théorème de
@@ -696,30 +696,30 @@ Ici, puisque \(\vec{u} = (4;5)\), on a \(OH = 4\) et \(HA = 5\), donc:
 </div>
 
 <div class="org-src-container">
-<pre class="src src-asymptote"><span style="font-weight: bold;">import</span> mesFonctions;
-<span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(16<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote"><span style="color: #ffb86c;">import</span> mesFonctions;
+<span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(16<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold;">show</span>(<span style="font-weight: bold; text-decoration: underline;">defaultcoordsys</span>);
+<span style="color: #50fa7b;">show</span>(<span style="color: #8be9fd;">defaultcoordsys</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">O</span> = (<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>);
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">A</span> = (<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">H</span> = (A.x, <span style="font-weight: bold; text-decoration: underline;">0</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">O</span> = (<span style="color: #bd93f9; font-weight: bold;">0</span>, <span style="color: #bd93f9; font-weight: bold;">0</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">A</span> = (<span style="color: #bd93f9; font-weight: bold;">4</span>, <span style="color: #bd93f9; font-weight: bold;">5</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">H</span> = (A.x, <span style="color: #bd93f9; font-weight: bold;">0</span>);
 
-<span style="font-weight: bold;">dot</span>(A);
-<span style="font-weight: bold;">dot</span>(H);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$H$"</span>, H, <span style="font-weight: bold; text-decoration: underline;">SE</span>);
-<span style="font-weight: bold;">label</span>(afficherPoint(A, <span style="font-style: italic;">"A"</span>), A, <span style="font-weight: bold; text-decoration: underline;">E</span>);
-<span style="font-weight: bold;">draw</span>(O--A, EndArrow);
-<span style="font-weight: bold;">draw</span>(O--H--A -- <span style="font-weight: bold;">cycle</span>);
-<span style="font-weight: bold;">fill</span>(O--H--A -- <span style="font-weight: bold;">cycle</span>, <span style="font-weight: bold; text-decoration: underline;">palered</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"4"</span>, O--H);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"5"</span>, H--A );
-<span style="font-weight: bold;">perpendicularmark</span>(<span style="font-weight: bold;">line</span>(H, A),<span style="font-weight: bold;">line</span>(H, O));
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
-<span style="font-weight: bold;">label</span>(<span style="font-weight: bold;">rotate</span>(<span style="font-weight: bold; text-decoration: underline;">50</span>)*<span style="font-style: italic;">"$||\vec{u}|| = \sqrt{4^{2} + 5^{2}}$"</span>, O--A, <span style="font-weight: bold; text-decoration: underline;">NW</span>);
+<span style="color: #50fa7b;">dot</span>(A);
+<span style="color: #50fa7b;">dot</span>(H);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$H$"</span>, H, <span style="color: #8be9fd;">SE</span>);
+<span style="color: #50fa7b;">label</span>(afficherPoint(A, <span style="color: #f1fa8c;">"A"</span>), A, <span style="color: #8be9fd;">E</span>);
+<span style="color: #50fa7b;">draw</span>(O--A, EndArrow);
+<span style="color: #50fa7b;">draw</span>(O--H--A -- <span style="color: #ffb86c;">cycle</span>);
+<span style="color: #50fa7b;">fill</span>(O--H--A -- <span style="color: #ffb86c;">cycle</span>, <span style="color: #8be9fd;">palered</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"4"</span>, O--H);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"5"</span>, H--A );
+<span style="color: #50fa7b;">perpendicularmark</span>(<span style="color: #50fa7b;">line</span>(H, A),<span style="color: #50fa7b;">line</span>(H, O));
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
+<span style="color: #50fa7b;">label</span>(<span style="color: #50fa7b;">rotate</span>(<span style="color: #bd93f9; font-weight: bold;">50</span>)*<span style="color: #f1fa8c;">"$||\vec{u}|| = \sqrt{4^{2} + 5^{2}}$"</span>, O--A, <span style="color: #8be9fd;">NW</span>);
 </pre>
 </div>
 
@@ -728,7 +728,7 @@ Et finalement, si on donne deux points \(A\) et \(B\) du plan, on obtient une
 méthode pour calculer la longueur entre les deux points.
 </p>
 
-<div class="prop" id="orga369bba">
+<div class="prop" id="orgf47fdbd">
 <p>
 Soit \(A(x_{A}; y_{A})\), et \(B(x_{B}; y_{B})\) deux points dans un plan munit d&rsquo;un
 repère orthonormé. Alors :
@@ -743,7 +743,7 @@ AB = \lVert \overrightarrow{AB} \rVert = \sqrt{(x_{B} - x_{A})^{2} + (y_{B} - y_
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:52</p>
+<p class="date">Created: 2022-05-15 dim. 18:01</p>
 </div>
 </body>
 </html>

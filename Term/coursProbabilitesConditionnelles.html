@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:51 -->
+<!-- 2022-05-15 dim. 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cours Probabilités Conditionnelles</title>
@@ -191,7 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -226,15 +226,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0b3de48">1. Les probabilités conditionnelles</a>
+<li><a href="#org31a86f6">1. Les probabilités conditionnelles</a>
 <ul>
-<li><a href="#org594b9e6">1.1. Définitions</a></li>
-<li><a href="#org2119f8d">1.2. Formule de Bayes</a></li>
-<li><a href="#org92d52a7">1.3. Formule des probabilités totales</a></li>
-<li><a href="#org471e442">1.4. Exemples pour bien comprendre</a>
+<li><a href="#orge01e439">1.1. Définitions</a></li>
+<li><a href="#org4d05a1d">1.2. Formule de Bayes</a></li>
+<li><a href="#orge62cecd">1.3. Formule des probabilités totales</a></li>
+<li><a href="#org2465e33">1.4. Exemples pour bien comprendre</a>
 <ul>
-<li><a href="#org29d4dfc">1.4.1. Des dés cachottiers</a></li>
-<li><a href="#orgbda168b">1.4.2. Qui porte des lunettes ?</a></li>
+<li><a href="#orgbd6fba0">1.4.1. Des dés cachottiers</a></li>
+<li><a href="#orgaa29e15">1.4.2. Qui porte des lunettes ?</a></li>
 </ul>
 </li>
 </ul>
@@ -243,14 +243,14 @@
 </div>
 </div>
 
-<div id="outline-container-org0b3de48" class="outline-2">
-<h2 id="org0b3de48"><span class="section-number-2">1.</span> Les probabilités conditionnelles</h2>
+<div id="outline-container-org31a86f6" class="outline-2">
+<h2 id="org31a86f6"><span class="section-number-2">1.</span> Les probabilités conditionnelles</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org594b9e6" class="outline-3">
-<h3 id="org594b9e6"><span class="section-number-3">1.1.</span> Définitions</h3>
+<div id="outline-container-orge01e439" class="outline-3">
+<h3 id="orge01e439"><span class="section-number-3">1.1.</span> Définitions</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="defi" id="org1ebb6c6">
+<div class="defi" id="orgcafbadf">
 <p>
 Soit \(A\) et \(B\) deux événements, avec \(B\) un événement de probabilité non nulle.
 Alors, on définit \(\mathbb{P}_{B}(A)\) par :
@@ -268,7 +268,7 @@ patates qui les représentent.
 </p>
 
 
-<div id="orgc26a10a" class="figure">
+<div id="org700ff19" class="figure">
 <p><img src="./images/patatoideProbaConditionnelles.svg" alt="patatoideProbaConditionnelles.svg" class="org-svg" />
 </p>
 </div>
@@ -278,7 +278,7 @@ Sur cette image, \(\mathbb{P}_{B}(A)\) calcule la proportion qu&rsquo;occupe
 l&rsquo;intersection des deux événements, par rapport à l&rsquo;événement \(A\).
 </p>
 
-<div class="prop" id="org99a5fb5">
+<div class="prop" id="orgfa97734">
 <p>
 Cette formule ne fonctione pas si \(\mathbb{P}(B)\) est nul
 </p>
@@ -291,15 +291,15 @@ En effet, dans ce cas, on effectue une division par \(0\), ce qui n&rsquo;a pas 
 </div>
 </div>
 
-<div id="outline-container-org2119f8d" class="outline-3">
-<h3 id="org2119f8d"><span class="section-number-3">1.2.</span> Formule de Bayes</h3>
+<div id="outline-container-org4d05a1d" class="outline-3">
+<h3 id="org4d05a1d"><span class="section-number-3">1.2.</span> Formule de Bayes</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 C&rsquo;est l&rsquo;une des formules les plus puissantes qui existe. Elle est utile dans
 énormément de domaines différents.
 </p>
 
-<div class="prop" id="orga0ee084">
+<div class="prop" id="org33ce0b8">
 <p>
 Soit \(A\) et \(B\) deux événements, de probabilités non nulles (pour les deux).
 Alors :
@@ -318,14 +318,14 @@ partir de \(\mathbb{P}_{A}(B)\), et vice versa.
 </div>
 </div>
 
-<div id="outline-container-org92d52a7" class="outline-3">
-<h3 id="org92d52a7"><span class="section-number-3">1.3.</span> Formule des probabilités totales</h3>
+<div id="outline-container-orge62cecd" class="outline-3">
+<h3 id="orge62cecd"><span class="section-number-3">1.3.</span> Formule des probabilités totales</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Cette formule forme un combo avec la précédente.
 </p>
 
-<div class="prop" id="orgd99332e">
+<div class="prop" id="org5766f37">
 <p>
 Soit \(A\) un événement, et \(B\) un événement de probabilité non nulle. Alors, si
 on note \(\bar{B}\) l&rsquo;événement contraire à \(B\) on a :
@@ -341,8 +341,8 @@ Autrement dit, on disseque l&rsquo;événement \(A\) selon \(B\) ou selon \(\bar
 </p>
 </div>
 </div>
-<div id="outline-container-org471e442" class="outline-3">
-<h3 id="org471e442"><span class="section-number-3">1.4.</span> Exemples pour bien comprendre</h3>
+<div id="outline-container-org2465e33" class="outline-3">
+<h3 id="org2465e33"><span class="section-number-3">1.4.</span> Exemples pour bien comprendre</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 La formule de Bayes peut s&rsquo;appliquer dans de très très nombreux exemples. En
@@ -350,12 +350,12 @@ voici quelques uns.
 </p>
 </div>
 
-<div id="outline-container-org29d4dfc" class="outline-4">
-<h4 id="org29d4dfc"><span class="section-number-4">1.4.1.</span> Des dés cachottiers</h4>
+<div id="outline-container-orgbd6fba0" class="outline-4">
+<h4 id="orgbd6fba0"><span class="section-number-4">1.4.1.</span> Des dés cachottiers</h4>
 <div class="outline-text-4" id="text-1-4-1">
 </div>
 <ol class="org-ol">
-<li><a id="org6fb1f5a"></a>Énoncé<br />
+<li><a id="org813f5ff"></a>Énoncé<br />
 <div class="outline-text-5" id="text-1-4-1-1">
 <p>
 Charlie a deux dés de \(6\) faces avec lui. Mais ses dés sont spéciaux. Voici les
@@ -377,10 +377,10 @@ qu&rsquo;il ait pris le premier dé ?
 </div>
 </li>
 
-<li><a id="org325974f"></a>Correction<br />
+<li><a id="org3508450"></a>Correction<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 
-<div id="orgcc97144" class="figure">
+<div id="orgbfef7f2" class="figure">
 <p><img src="desCachotiers.svg" alt="desCachotiers.svg" class="org-svg" />
 </p>
 </div>
@@ -466,8 +466,8 @@ Il nous faut donc calculer \(\mathbb{P}(B)\), et \(\mathbb{P}_{B}(A)\).
 </ol>
 </div>
 
-<div id="outline-container-orgbda168b" class="outline-4">
-<h4 id="orgbda168b"><span class="section-number-4">1.4.2.</span> Qui porte des lunettes ?</h4>
+<div id="outline-container-orgaa29e15" class="outline-4">
+<h4 id="orgaa29e15"><span class="section-number-4">1.4.2.</span> Qui porte des lunettes ?</h4>
 <div class="outline-text-4" id="text-1-4-2">
 <p>
 On considère une classe de \(17\) élèves. On compte parmi eux :
@@ -532,7 +532,7 @@ On a donc le tableau suivant .
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:51</p>
+<p class="date">Created: 2022-05-15 dim. 18:00</p>
 </div>
 </body>
 </html>
