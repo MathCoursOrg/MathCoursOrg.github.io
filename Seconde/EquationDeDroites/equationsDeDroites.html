@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:51 -->
+<!-- 2022-05-15 dim. 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Equations De Droites</title>
@@ -191,7 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
@@ -232,41 +232,41 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2e89235">1. Motivations</a></li>
-<li><a href="#org7e8c1ef">2. Définition.</a></li>
-<li><a href="#orgc170d44">3. Exemples</a>
+<li><a href="#org3d53ba1">1. Motivations</a></li>
+<li><a href="#org9d39bcc">2. Définition.</a></li>
+<li><a href="#orgef1b665">3. Exemples</a>
 <ul>
-<li><a href="#orgb1e5a9f">3.1. Une droite telle que \(a = 0\)</a></li>
-<li><a href="#org619ed76">3.2. Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</a></li>
-<li><a href="#org19f7539">3.3. Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</a></li>
-<li><a href="#orgb66be69">3.4. Hors programme : un vecteur orthogonal à la droite.</a></li>
+<li><a href="#orgb3ed432">3.1. Une droite telle que \(a = 0\)</a></li>
+<li><a href="#org94ca59b">3.2. Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</a></li>
+<li><a href="#org1682ada">3.3. Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</a></li>
+<li><a href="#org5a67fc7">3.4. Hors programme : un vecteur orthogonal à la droite.</a></li>
 </ul>
 </li>
-<li><a href="#orga18ce2e">4. Combien d&rsquo;équations pour décrire une droite ?</a></li>
-<li><a href="#org0d20c15">5. Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</a>
+<li><a href="#org224d05b">4. Combien d&rsquo;équations pour décrire une droite ?</a></li>
+<li><a href="#orga0792bf">5. Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</a>
 <ul>
-<li><a href="#org3d52204">5.1. Définition</a></li>
-<li><a href="#org9518b18">5.2. Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</a>
+<li><a href="#orge98948d">5.1. Définition</a></li>
+<li><a href="#org95cee87">5.2. Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</a>
 <ul>
-<li><a href="#org72e4f74">5.2.1. Exemple.</a></li>
+<li><a href="#orgc6f91e9">5.2.1. Exemple.</a></li>
 </ul>
 </li>
-<li><a href="#orgf8339db">5.3. Hors programme : un vecteur orthogonal à un autre</a></li>
+<li><a href="#orga0c6f01">5.3. Hors programme : un vecteur orthogonal à un autre</a></li>
 </ul>
 </li>
-<li><a href="#org7804d06">6. Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</a>
+<li><a href="#org146c0b2">6. Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</a>
 <ul>
-<li><a href="#org340ec88">6.1. Motivations</a></li>
-<li><a href="#org505875b">6.2. Première méthode : la substitution</a></li>
-<li><a href="#org1cc2aab">6.3. Méthode du pivot de Gauss</a></li>
+<li><a href="#org0a1da0c">6.1. Motivations</a></li>
+<li><a href="#orgb419641">6.2. Première méthode : la substitution</a></li>
+<li><a href="#org1fde2b1">6.3. Méthode du pivot de Gauss</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2e89235" class="outline-2">
-<h2 id="org2e89235"><span class="section-number-2">1.</span> Motivations</h2>
+<div id="outline-container-org3d53ba1" class="outline-2">
+<h2 id="org3d53ba1"><span class="section-number-2">1.</span> Motivations</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Nous avons vu dans le cours les notions suivantes :
@@ -292,10 +292,10 @@ sur une droite en utilisant une équation de droite, avec le déterminant.
 </div>
 </div>
 
-<div id="outline-container-org7e8c1ef" class="outline-2">
-<h2 id="org7e8c1ef"><span class="section-number-2">2.</span> Définition.</h2>
+<div id="outline-container-org9d39bcc" class="outline-2">
+<h2 id="org9d39bcc"><span class="section-number-2">2.</span> Définition.</h2>
 <div class="outline-text-2" id="text-2">
-<div class="defi" id="org528fe9a">
+<div class="defi" id="org33d1f0c">
 <p>
 Soit \(a\) et \(b\), et \(c\) trois nombres réels. On appelle <b>une</b> équation de droite, une
 équation de la forme suivante :
@@ -310,7 +310,7 @@ ax + by = d
 Pourquoi cette équation ? C&rsquo;est précisé par la proposition ci-dessous.
 </p>
 
-<div class="prop" id="org618f653">
+<div class="prop" id="orgff060b4">
 <p>
 Soit \((D)\) une droite du plan, avec \((O, \vec{\imath}, \vec{\jmath})\) un repère
 orthonormé. Alors, il existe \(a\), \(b\), et \(c\) trois nombres réels, avec \(a\) et
@@ -339,12 +339,12 @@ formelle correcte.
 </div>
 </div>
 
-<div id="outline-container-orgc170d44" class="outline-2">
-<h2 id="orgc170d44"><span class="section-number-2">3.</span> Exemples</h2>
+<div id="outline-container-orgef1b665" class="outline-2">
+<h2 id="orgef1b665"><span class="section-number-2">3.</span> Exemples</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgb1e5a9f" class="outline-3">
-<h3 id="orgb1e5a9f"><span class="section-number-3">3.1.</span> Une droite telle que \(a = 0\)</h3>
+<div id="outline-container-orgb3ed432" class="outline-3">
+<h3 id="orgb3ed432"><span class="section-number-3">3.1.</span> Une droite telle que \(a = 0\)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Dans la partie précédente, nous avons vu que les équations :
@@ -369,39 +369,39 @@ pas partie.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="orgb16fc2f"><span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">import</span> graph;
+<pre class="src src-asymptote" id="orgfb6724e"><span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #ffb86c;">import</span> graph;
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">show(defaultcoordsys);</span>
+<span style="color: #6272a4;">//</span><span style="color: #6272a4;">show(defaultcoordsys);</span>
 
-<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold;">f</span> (<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">x</span>) { <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">2</span> ; }
+<span style="color: #bd93f9;">real</span> <span style="color: #50fa7b;">f</span> (<span style="color: #bd93f9;">real</span> <span style="color: #ffc9e8;">x</span>) { <span style="color: #ffb86c;">return</span> <span style="color: #bd93f9; font-weight: bold;">2</span> ; }
 
-<span style="font-weight: bold; text-decoration: underline;">real</span> <span style="font-weight: bold; font-style: italic;">xmin</span> = -<span style="font-weight: bold; text-decoration: underline;">10</span> , <span style="font-weight: bold; font-style: italic;">xmax</span> =<span style="font-weight: bold; text-decoration: underline;">10</span> ;
+<span style="color: #bd93f9;">real</span> <span style="color: #ffc9e8;">xmin</span> = -<span style="color: #bd93f9; font-weight: bold;">10</span> , <span style="color: #ffc9e8;">xmax</span> =<span style="color: #bd93f9; font-weight: bold;">10</span> ;
 
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">A</span>=(<span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">B</span>=(<span style="font-weight: bold; text-decoration: underline;">10</span>,<span style="font-weight: bold; text-decoration: underline;">2</span>), <span style="font-weight: bold; font-style: italic;">C</span>=(<span style="font-weight: bold; text-decoration: underline;">1</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>);
-<span style="font-weight: bold;">dot</span>(A);
-<span style="font-weight: bold;">dot</span>(B);
-<span style="font-weight: bold;">dot</span>(C);
-<span style="font-weight: bold; text-decoration: underline;">path</span> <span style="font-weight: bold; font-style: italic;">cf</span> = <span style="font-weight: bold;">graph</span>(f, xmin, xmax);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"A"</span>, A, <span style="font-weight: bold; text-decoration: underline;">N</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"B"</span>, B, <span style="font-weight: bold; text-decoration: underline;">N</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"C"</span>, C, <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$f$"</span>, cf);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">graph</span>(f, xmin, xmax));
-<span style="font-weight: bold;">xaxis</span>(<span style="font-style: italic;">"$x$"</span>,<span style="font-weight: bold;">LeftTicks</span>(Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow, xmin=xmin, xmax=xmax);
-<span style="font-weight: bold;">yaxis</span>(<span style="font-style: italic;">"$y$"</span>,<span style="font-weight: bold;">RightTicks</span>(NoZero, Step=<span style="font-weight: bold; text-decoration: underline;">1</span>, step=<span style="font-weight: bold; text-decoration: underline;">0.5</span>),Arrow);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">A</span>=(<span style="color: #bd93f9; font-weight: bold;">1</span>, <span style="color: #bd93f9; font-weight: bold;">2</span>), <span style="color: #ffc9e8;">B</span>=(<span style="color: #bd93f9; font-weight: bold;">10</span>,<span style="color: #bd93f9; font-weight: bold;">2</span>), <span style="color: #ffc9e8;">C</span>=(<span style="color: #bd93f9; font-weight: bold;">1</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>);
+<span style="color: #50fa7b;">dot</span>(A);
+<span style="color: #50fa7b;">dot</span>(B);
+<span style="color: #50fa7b;">dot</span>(C);
+<span style="color: #bd93f9;">path</span> <span style="color: #ffc9e8;">cf</span> = <span style="color: #50fa7b;">graph</span>(f, xmin, xmax);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"A"</span>, A, <span style="color: #8be9fd;">N</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"B"</span>, B, <span style="color: #8be9fd;">N</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"C"</span>, C, <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$f$"</span>, cf);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">graph</span>(f, xmin, xmax));
+<span style="color: #50fa7b;">xaxis</span>(<span style="color: #f1fa8c;">"$x$"</span>,<span style="color: #50fa7b;">LeftTicks</span>(Step=<span style="color: #bd93f9; font-weight: bold;">1</span>, step=<span style="color: #bd93f9; font-weight: bold;">0.5</span>),Arrow, xmin=xmin, xmax=xmax);
+<span style="color: #50fa7b;">yaxis</span>(<span style="color: #f1fa8c;">"$y$"</span>,<span style="color: #50fa7b;">RightTicks</span>(NoZero, Step=<span style="color: #bd93f9; font-weight: bold;">1</span>, step=<span style="color: #bd93f9; font-weight: bold;">0.5</span>),Arrow);
 
 
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org619ed76" class="outline-3">
-<h3 id="org619ed76"><span class="section-number-3">3.2.</span> Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</h3>
+<div id="outline-container-org94ca59b" class="outline-3">
+<h3 id="org94ca59b"><span class="section-number-3">3.2.</span> Qu&rsquo;est-ce qui se passe si on change le paramètre \(c\)?</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Regardons maintenant deux équations de droites :
@@ -427,18 +427,18 @@ Affichons ces deux droites dans le plan, à l&rsquo;aide de l&rsquo;ordinateur.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org9cdf7bd"><span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">import</span> graph;
+<pre class="src src-asymptote" id="org0893031"><span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #ffb86c;">import</span> graph;
 
-<span style="font-weight: bold;">size</span>(7<span style="font-weight: bold; text-decoration: underline;">cm</span>);
-<span style="font-weight: bold;">show</span>(<span style="font-weight: bold; text-decoration: underline;">currentcoordsys</span>);
+<span style="color: #50fa7b;">size</span>(7<span style="color: #8be9fd;">cm</span>);
+<span style="color: #50fa7b;">show</span>(<span style="color: #8be9fd;">currentcoordsys</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">d1</span>=<span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>);
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">d2</span>=<span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>);
-<span style="font-weight: bold;">draw</span>(d1, <span style="font-weight: bold; text-decoration: underline;">green</span>);
-<span style="font-weight: bold;">draw</span>(d2, <span style="font-weight: bold; text-decoration: underline;">blue</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">box</span>((-<span style="font-weight: bold; text-decoration: underline;">3</span>, -<span style="font-weight: bold; text-decoration: underline;">3</span>), (<span style="font-weight: bold; text-decoration: underline;">3</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>)), <span style="font-weight: bold; text-decoration: underline;">invisible</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>,<span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">d1</span>=<span style="color: #50fa7b;">line</span>(<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">2</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>);
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">d2</span>=<span style="color: #50fa7b;">line</span>(<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">2</span>, <span style="color: #bd93f9; font-weight: bold;">0</span>);
+<span style="color: #50fa7b;">draw</span>(d1, <span style="color: #8be9fd;">green</span>);
+<span style="color: #50fa7b;">draw</span>(d2, <span style="color: #8be9fd;">blue</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">box</span>((-<span style="color: #bd93f9; font-weight: bold;">3</span>, -<span style="color: #bd93f9; font-weight: bold;">3</span>), (<span style="color: #bd93f9; font-weight: bold;">3</span>,<span style="color: #bd93f9; font-weight: bold;">3</span>)), <span style="color: #8be9fd;">invisible</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>,<span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 
@@ -470,7 +470,7 @@ Conclusion : le paramètre \(c\) permet de faire varier le moment où là droite
 coupe l&rsquo;axe des ordonnées.
 </p>
 
-<div class="prop" id="org7dffdd2">
+<div class="prop" id="org313e7d6">
 <p>
 Avec les conditions données dans les propositions précédentes, le nombre \(c\) est
 nul si et seulement si la droite passe par l&rsquo;origine du repère.
@@ -478,7 +478,7 @@ nul si et seulement si la droite passe par l&rsquo;origine du repère.
 
 </div>
 
-<div class="dem" id="orgfb700ec">
+<div class="dem" id="org6a6985f">
 <p>
 Si la droite passe par l&rsquo;origine du repère, alors \(a\times 0 + b\times 0 = 0 = c\) donc \(c\)
 est nul.
@@ -492,8 +492,8 @@ Si \(c\) est nul, alors l&rsquo;origine est une solution de l&rsquo;équation \(
 </div>
 </div>
 </div>
-<div id="outline-container-org19f7539" class="outline-3">
-<h3 id="org19f7539"><span class="section-number-3">3.3.</span> Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</h3>
+<div id="outline-container-org1682ada" class="outline-3">
+<h3 id="org1682ada"><span class="section-number-3">3.3.</span> Trouver les paramètres \(a\), \(b\) et \(c\) d&rsquo;une droite.</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Pour trouver les paramètres d&rsquo;une équation d&rsquo;une droite qui passe par deux
@@ -501,8 +501,8 @@ points, il faut utiliser le déterminant. Relisez le cours associés.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb66be69" class="outline-3">
-<h3 id="orgb66be69"><span class="section-number-3">3.4.</span> Hors programme : un vecteur orthogonal à la droite.</h3>
+<div id="outline-container-org5a67fc7" class="outline-3">
+<h3 id="org5a67fc7"><span class="section-number-3">3.4.</span> Hors programme : un vecteur orthogonal à la droite.</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 On considère une équation \(ax+by=c\) d&rsquo;une droite dans le plan. À quoi correspond
@@ -513,22 +513,22 @@ le vecteur \(\vec{u} = (a, b)\) pour cette droite ?
 Voici un exemple :
 </p>
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org57caad0"><span style="font-weight: bold;">import</span> graph;
-<span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org19d1940"><span style="color: #ffb86c;">import</span> graph;
+<span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold;">show</span>(<span style="font-weight: bold; text-decoration: underline;">defaultcoordsys</span>);
+<span style="color: #50fa7b;">show</span>(<span style="color: #8be9fd;">defaultcoordsys</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">d1</span> = <span style="font-weight: bold;">line</span>(-<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">4</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>);
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">u</span> = (-<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">4</span>);
-<span style="font-weight: bold;">draw</span>(d1, <span style="font-weight: bold; text-decoration: underline;">blue</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold; text-decoration: underline;">origin</span>--u, EndArrow);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">box</span>((-<span style="font-weight: bold; text-decoration: underline;">3</span>, -<span style="font-weight: bold; text-decoration: underline;">3</span>), (<span style="font-weight: bold; text-decoration: underline;">3</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>)), <span style="font-weight: bold; text-decoration: underline;">invisible</span>);
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">d1</span> = <span style="color: #50fa7b;">line</span>(-<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">4</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">u</span> = (-<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">4</span>);
+<span style="color: #50fa7b;">draw</span>(d1, <span style="color: #8be9fd;">blue</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #8be9fd;">origin</span>--u, EndArrow);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">box</span>((-<span style="color: #bd93f9; font-weight: bold;">3</span>, -<span style="color: #bd93f9; font-weight: bold;">3</span>), (<span style="color: #bd93f9; font-weight: bold;">3</span>,<span style="color: #bd93f9; font-weight: bold;">3</span>)), <span style="color: #8be9fd;">invisible</span>);
 
 
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 
@@ -542,8 +542,8 @@ rapidemment une droite en connaissant une de ses équations.
 </div>
 </div>
 
-<div id="outline-container-orga18ce2e" class="outline-2">
-<h2 id="orga18ce2e"><span class="section-number-2">4.</span> Combien d&rsquo;équations pour décrire une droite ?</h2>
+<div id="outline-container-org224d05b" class="outline-2">
+<h2 id="org224d05b"><span class="section-number-2">4.</span> Combien d&rsquo;équations pour décrire une droite ?</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Il existe une infinité d&rsquo;équations «différentes» pour décrire la même droite du
@@ -562,7 +562,7 @@ Mais on dira <b>une</b> (attention à l&rsquo;article) équation de la droite, c
 trouve une, on en trouve une <b>infinité</b>.
 </p>
 
-<div class="prop" id="orgd63d547">
+<div class="prop" id="org3ce17f7">
 <p>
 Deux équations désignent la même droite si et seulement si elles sont proportionnelles.
 </p>
@@ -571,14 +571,14 @@ Deux équations désignent la même droite si et seulement si elles sont proport
 </div>
 </div>
 
-<div id="outline-container-org0d20c15" class="outline-2">
-<h2 id="org0d20c15"><span class="section-number-2">5.</span> Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</h2>
+<div id="outline-container-orga0792bf" class="outline-2">
+<h2 id="orga0792bf"><span class="section-number-2">5.</span> Lien entre une équation de droite et le vecteur directeur d&rsquo;une droite.</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org3d52204" class="outline-3">
-<h3 id="org3d52204"><span class="section-number-3">5.1.</span> Définition</h3>
+<div id="outline-container-orge98948d" class="outline-3">
+<h3 id="orge98948d"><span class="section-number-3">5.1.</span> Définition</h3>
 <div class="outline-text-3" id="text-5-1">
-<div class="defi" id="org865b75f">
+<div class="defi" id="orgb38ecc5">
 <p>
 Soit \(\mathcal{D}\) une droite dans le plan. On dit que \(\vec{u}\) est <b>un</b>
 vecteur directeur de la droite \(\mathcal{D}\) si et seulement si la direction du
@@ -594,20 +594,20 @@ suivant (avec le vecteur «sur» la droite \(\mathcal{D}\)):
 </p>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org7f78bd7"><span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">import</span> graph;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="orge066955"><span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #ffb86c;">import</span> graph;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">d</span> = <span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">4</span>, <span style="font-weight: bold; text-decoration: underline;">8</span>, <span style="font-weight: bold; text-decoration: underline;">5</span>);
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">u</span> = (<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">1</span>);
-<span style="font-weight: bold; text-decoration: underline;">transform</span> <span style="font-weight: bold; font-style: italic;">decal</span> = <span style="font-weight: bold;">shift</span>((<span style="font-weight: bold; text-decoration: underline;">0</span>, -<span style="font-weight: bold; text-decoration: underline;">0.625</span>));
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">Label</span>(<span style="font-style: italic;">"$\mathcal{D}$"</span>, <span style="font-weight: bold;">Relative</span>(<span style="font-weight: bold; text-decoration: underline;">0.9</span>), <span style="font-weight: bold; text-decoration: underline;">align</span>=<span style="font-weight: bold; text-decoration: underline;">N</span>), d, p=<span style="font-weight: bold; text-decoration: underline;">orange</span>);
-<span style="font-weight: bold;">draw</span>(decal*<span style="font-weight: bold; text-decoration: underline;">origin</span>--decal*u, arrow=<span style="font-weight: bold;">Arrow</span>(<span style="font-weight: bold; text-decoration: underline;">SimpleHead</span>));
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\vec{u}$"</span>, u, <span style="font-weight: bold; text-decoration: underline;">W</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">box</span>((-<span style="font-weight: bold; text-decoration: underline;">3</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), (<span style="font-weight: bold; text-decoration: underline;">3</span>,<span style="font-weight: bold; text-decoration: underline;">1</span>)), <span style="font-weight: bold; text-decoration: underline;">invisible</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">d</span> = <span style="color: #50fa7b;">line</span>(<span style="color: #bd93f9; font-weight: bold;">4</span>, <span style="color: #bd93f9; font-weight: bold;">8</span>, <span style="color: #bd93f9; font-weight: bold;">5</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">u</span> = (<span style="color: #bd93f9; font-weight: bold;">2</span>, -<span style="color: #bd93f9; font-weight: bold;">1</span>);
+<span style="color: #bd93f9;">transform</span> <span style="color: #ffc9e8;">decal</span> = <span style="color: #50fa7b;">shift</span>((<span style="color: #bd93f9; font-weight: bold;">0</span>, -<span style="color: #bd93f9; font-weight: bold;">0.625</span>));
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">Label</span>(<span style="color: #f1fa8c;">"$\mathcal{D}$"</span>, <span style="color: #50fa7b;">Relative</span>(<span style="color: #bd93f9; font-weight: bold;">0.9</span>), <span style="color: #8be9fd;">align</span>=<span style="color: #8be9fd;">N</span>), d, p=<span style="color: #8be9fd;">orange</span>);
+<span style="color: #50fa7b;">draw</span>(decal*<span style="color: #8be9fd;">origin</span>--decal*u, arrow=<span style="color: #50fa7b;">Arrow</span>(<span style="color: #8be9fd;">SimpleHead</span>));
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$\vec{u}$"</span>, u, <span style="color: #8be9fd;">W</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">box</span>((-<span style="color: #bd93f9; font-weight: bold;">3</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>), (<span style="color: #bd93f9; font-weight: bold;">3</span>,<span style="color: #bd93f9; font-weight: bold;">1</span>)), <span style="color: #8be9fd;">invisible</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 
@@ -618,8 +618,8 @@ Voici une exemple de vecteur directeur \(\vec{u}\) de la droite (en orange) du p
 </div>
 
 
-<div id="outline-container-org9518b18" class="outline-3">
-<h3 id="org9518b18"><span class="section-number-3">5.2.</span> Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</h3>
+<div id="outline-container-org95cee87" class="outline-3">
+<h3 id="org95cee87"><span class="section-number-3">5.2.</span> Trouver les coefficients \(a\) et \(b\) à partir d&rsquo;un vecteur directeur.</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Soit \(\vec{u} = (a;b)\) un vecteur dont les coordonnées sont données dans un
@@ -627,7 +627,7 @@ repère orthonormé du plan. Qu&rsquo;elles serait les équations des droites qu
 admettent comme direction ce vecteur ?
 </p>
 
-<div class="prop" id="orgf2d3f2d">
+<div class="prop" id="orgece531d">
 <p>
 Toutes les droites qui admettent comme direction le vecteur \(\vec{u} = (a;b)\)
 admettent comme équations :
@@ -642,8 +642,8 @@ Pour retrouver la formule, il suffit de remplacer \(x\) par \(a\) et \(b\) par \
 </p>
 </div>
 
-<div id="outline-container-org72e4f74" class="outline-4">
-<h4 id="org72e4f74"><span class="section-number-4">5.2.1.</span> Exemple.</h4>
+<div id="outline-container-orgc6f91e9" class="outline-4">
+<h4 id="orgc6f91e9"><span class="section-number-4">5.2.1.</span> Exemple.</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
 On considère le vecteur \(\vec{u} = (3; 2)\). D&rsquo;après la proposition précédente,
@@ -659,22 +659,22 @@ Vérifions tout cela.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="orgc1ac0f3"><span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="orgfbf4afd"><span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(1<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(1<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold;">show</span>(<span style="font-weight: bold; text-decoration: underline;">defaultcoordsys</span>);
+<span style="color: #50fa7b;">show</span>(<span style="color: #8be9fd;">defaultcoordsys</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">pair</span> <span style="font-weight: bold; font-style: italic;">u</span> = (<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">2</span>);
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">d</span> = <span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">2</span>, -<span style="font-weight: bold; text-decoration: underline;">3</span>, <span style="font-weight: bold; text-decoration: underline;">0</span>);
+<span style="color: #bd93f9;">pair</span> <span style="color: #ffc9e8;">u</span> = (<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">2</span>);
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">d</span> = <span style="color: #50fa7b;">line</span>(<span style="color: #bd93f9; font-weight: bold;">2</span>, -<span style="color: #bd93f9; font-weight: bold;">3</span>, <span style="color: #bd93f9; font-weight: bold;">0</span>);
 
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">Label</span>(<span style="font-style: italic;">"$\mathcal{D} : 2x - 3y = 0$"</span>, <span style="font-weight: bold;">Relative</span>(<span style="font-weight: bold; text-decoration: underline;">0.2</span>), <span style="font-weight: bold; text-decoration: underline;">align</span>=<span style="font-weight: bold; text-decoration: underline;">SE</span>), d, <span style="font-weight: bold; text-decoration: underline;">orange</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold; text-decoration: underline;">origin</span>--u, EndArrow);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">Label</span>(<span style="color: #f1fa8c;">"$\mathcal{D} : 2x - 3y = 0$"</span>, <span style="color: #50fa7b;">Relative</span>(<span style="color: #bd93f9; font-weight: bold;">0.2</span>), <span style="color: #8be9fd;">align</span>=<span style="color: #8be9fd;">SE</span>), d, <span style="color: #8be9fd;">orange</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #8be9fd;">origin</span>--u, EndArrow);
 
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$\vec{u} = (3;2)$"</span>, u, <span style="font-weight: bold; text-decoration: underline;">SE</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">box</span>((-<span style="font-weight: bold; text-decoration: underline;">3</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), (<span style="font-weight: bold; text-decoration: underline;">5</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>)), <span style="font-weight: bold; text-decoration: underline;">invisible</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$\vec{u} = (3;2)$"</span>, u, <span style="color: #8be9fd;">SE</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">box</span>((-<span style="color: #bd93f9; font-weight: bold;">3</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>), (<span style="color: #bd93f9; font-weight: bold;">5</span>,<span style="color: #bd93f9; font-weight: bold;">3</span>)), <span style="color: #8be9fd;">invisible</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
@@ -682,10 +682,10 @@ Vérifions tout cela.
 </div>
 
 
-<div id="outline-container-orgf8339db" class="outline-3">
-<h3 id="orgf8339db"><span class="section-number-3">5.3.</span> Hors programme : un vecteur orthogonal à un autre</h3>
+<div id="outline-container-orga0c6f01" class="outline-3">
+<h3 id="orga0c6f01"><span class="section-number-3">5.3.</span> Hors programme : un vecteur orthogonal à un autre</h3>
 <div class="outline-text-3" id="text-5-3">
-<div class="prop" id="orgdc39ff9">
+<div class="prop" id="org75def37">
 <p>
 Si on applique ce que l&rsquo;on a vu précédemment, on peut en déduire que le vecteur
 de coordonnées \((b, -a)\) est toujours orthogonal au vecteur de coordonnées \((a ,
@@ -698,12 +698,12 @@ orthogonal au vecteur \(\vec{u}\).
 </div>
 </div>
 
-<div id="outline-container-org7804d06" class="outline-2">
-<h2 id="org7804d06"><span class="section-number-2">6.</span> Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</h2>
+<div id="outline-container-org146c0b2" class="outline-2">
+<h2 id="org146c0b2"><span class="section-number-2">6.</span> Point d&rsquo;intersection de deux droites : résolution de systèmes linéaires.</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org340ec88" class="outline-3">
-<h3 id="org340ec88"><span class="section-number-3">6.1.</span> Motivations</h3>
+<div id="outline-container-org0a1da0c" class="outline-3">
+<h3 id="org0a1da0c"><span class="section-number-3">6.1.</span> Motivations</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Si on souhaite trouver un point qui appartiennent à deux droites en même temps
@@ -732,8 +732,8 @@ deux équations (deux lignes dans notre système).</li>
 </div>
 </div>
 
-<div id="outline-container-org505875b" class="outline-3">
-<h3 id="org505875b"><span class="section-number-3">6.2.</span> Première méthode : la substitution</h3>
+<div id="outline-container-orgb419641" class="outline-3">
+<h3 id="orgb419641"><span class="section-number-3">6.2.</span> Première méthode : la substitution</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 La substution n&rsquo;est pas une méthode qui marche toujours le mieux, mais parfois,
@@ -802,37 +802,37 @@ et on peut vérifier notre résultat en affichant les deux droites par ordinateu
 </p>
 
 <div class="org-src-container">
-<pre class="src src-asymptote" id="org54595a6"><span style="font-weight: bold;">import</span> geometry;
-<span style="font-weight: bold;">defaultpen</span>(<span style="font-weight: bold;">fontsize</span>(13<span style="font-weight: bold; text-decoration: underline;">pt</span>));
+<pre class="src src-asymptote" id="org358b2df"><span style="color: #ffb86c;">import</span> geometry;
+<span style="color: #50fa7b;">defaultpen</span>(<span style="color: #50fa7b;">fontsize</span>(13<span style="color: #8be9fd;">pt</span>));
 
-<span style="font-weight: bold;">unitsize</span>(4<span style="font-weight: bold; text-decoration: underline;">cm</span>, 2<span style="font-weight: bold; text-decoration: underline;">cm</span>);
+<span style="color: #50fa7b;">unitsize</span>(4<span style="color: #8be9fd;">cm</span>, 2<span style="color: #8be9fd;">cm</span>);
 
-<span style="font-weight: bold;">show</span>(<span style="font-weight: bold; text-decoration: underline;">defaultcoordsys</span>);
+<span style="color: #50fa7b;">show</span>(<span style="color: #8be9fd;">defaultcoordsys</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">a</span> = <span style="font-weight: bold;">line</span>(<span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">3</span>, -<span style="font-weight: bold; text-decoration: underline;">5</span>);
-<span style="font-weight: bold; text-decoration: underline;">line</span> <span style="font-weight: bold; font-style: italic;">b</span> = <span style="font-weight: bold;">line</span>(-<span style="font-weight: bold; text-decoration: underline;">2</span>, <span style="font-weight: bold; text-decoration: underline;">1</span>, -<span style="font-weight: bold; text-decoration: underline;">1</span>);
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">a</span> = <span style="color: #50fa7b;">line</span>(<span style="color: #bd93f9; font-weight: bold;">1</span>, <span style="color: #bd93f9; font-weight: bold;">3</span>, -<span style="color: #bd93f9; font-weight: bold;">5</span>);
+<span style="color: #bd93f9;">line</span> <span style="color: #ffc9e8;">b</span> = <span style="color: #50fa7b;">line</span>(-<span style="color: #bd93f9; font-weight: bold;">2</span>, <span style="color: #bd93f9; font-weight: bold;">1</span>, -<span style="color: #bd93f9; font-weight: bold;">1</span>);
 
-<span style="font-weight: bold; text-decoration: underline;">point</span> <span style="font-weight: bold; text-decoration: underline;">I</span>=<span style="font-weight: bold;">intersectionpoint</span>(a, b);
+<span style="color: #bd93f9;">point</span> <span style="color: #8be9fd;">I</span>=<span style="color: #50fa7b;">intersectionpoint</span>(a, b);
 
-<span style="font-weight: bold;">draw</span>(a);
-<span style="font-weight: bold;">draw</span>(b);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>);
+<span style="color: #50fa7b;">draw</span>(a);
+<span style="color: #50fa7b;">draw</span>(b);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #8be9fd;">I</span>);
 
-<span style="font-weight: bold;">dot</span>(<span style="font-weight: bold; text-decoration: underline;">I</span>);
-<span style="font-weight: bold;">dot</span>((<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">I</span>.y));
-<span style="font-weight: bold;">dot</span>((<span style="font-weight: bold; text-decoration: underline;">I</span>.x, <span style="font-weight: bold; text-decoration: underline;">0</span>));
-<span style="font-weight: bold;">draw</span>((<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">I</span>.y)--<span style="font-weight: bold; text-decoration: underline;">I</span>--(<span style="font-weight: bold; text-decoration: underline;">I</span>.x, <span style="font-weight: bold; text-decoration: underline;">0</span>), <span style="font-weight: bold; text-decoration: underline;">dashed</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$x = \frac{2}{7}$"</span>, (<span style="font-weight: bold; text-decoration: underline;">I</span>.x, <span style="font-weight: bold; text-decoration: underline;">0</span>), <span style="font-weight: bold; text-decoration: underline;">S</span>);
-<span style="font-weight: bold;">label</span>(<span style="font-style: italic;">"$y = \frac{11}{7}$"</span>, (<span style="font-weight: bold; text-decoration: underline;">0</span>, <span style="font-weight: bold; text-decoration: underline;">I</span>.y), <span style="font-weight: bold; text-decoration: underline;">SW</span>);
-<span style="font-weight: bold;">draw</span>(<span style="font-weight: bold;">box</span>((-<span style="font-weight: bold; text-decoration: underline;">1</span>, -<span style="font-weight: bold; text-decoration: underline;">2</span>), (<span style="font-weight: bold; text-decoration: underline;">1</span>,<span style="font-weight: bold; text-decoration: underline;">3</span>)), <span style="font-weight: bold; text-decoration: underline;">invisible</span>);
-<span style="font-weight: bold;">shipout</span>(<span style="font-weight: bold;">bbox</span>(2<span style="font-weight: bold; text-decoration: underline;">mm</span>, <span style="font-weight: bold;">Fill</span>(<span style="font-weight: bold; text-decoration: underline;">white</span>)));
+<span style="color: #50fa7b;">dot</span>(<span style="color: #8be9fd;">I</span>);
+<span style="color: #50fa7b;">dot</span>((<span style="color: #bd93f9; font-weight: bold;">0</span>, <span style="color: #8be9fd;">I</span>.y));
+<span style="color: #50fa7b;">dot</span>((<span style="color: #8be9fd;">I</span>.x, <span style="color: #bd93f9; font-weight: bold;">0</span>));
+<span style="color: #50fa7b;">draw</span>((<span style="color: #bd93f9; font-weight: bold;">0</span>, <span style="color: #8be9fd;">I</span>.y)--<span style="color: #8be9fd;">I</span>--(<span style="color: #8be9fd;">I</span>.x, <span style="color: #bd93f9; font-weight: bold;">0</span>), <span style="color: #8be9fd;">dashed</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$x = \frac{2}{7}$"</span>, (<span style="color: #8be9fd;">I</span>.x, <span style="color: #bd93f9; font-weight: bold;">0</span>), <span style="color: #8be9fd;">S</span>);
+<span style="color: #50fa7b;">label</span>(<span style="color: #f1fa8c;">"$y = \frac{11}{7}$"</span>, (<span style="color: #bd93f9; font-weight: bold;">0</span>, <span style="color: #8be9fd;">I</span>.y), <span style="color: #8be9fd;">SW</span>);
+<span style="color: #50fa7b;">draw</span>(<span style="color: #50fa7b;">box</span>((-<span style="color: #bd93f9; font-weight: bold;">1</span>, -<span style="color: #bd93f9; font-weight: bold;">2</span>), (<span style="color: #bd93f9; font-weight: bold;">1</span>,<span style="color: #bd93f9; font-weight: bold;">3</span>)), <span style="color: #8be9fd;">invisible</span>);
+<span style="color: #50fa7b;">shipout</span>(<span style="color: #50fa7b;">bbox</span>(2<span style="color: #8be9fd;">mm</span>, <span style="color: #50fa7b;">Fill</span>(<span style="color: #8be9fd;">white</span>)));
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org1cc2aab" class="outline-3">
-<h3 id="org1cc2aab"><span class="section-number-3">6.3.</span> Méthode du pivot de Gauss</h3>
+<div id="outline-container-org1fde2b1" class="outline-3">
+<h3 id="org1fde2b1"><span class="section-number-3">6.3.</span> Méthode du pivot de Gauss</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Cette méthode est celle qui fonctionne à «tous les coups», et qui est
@@ -881,7 +881,7 @@ méthode précédente pour trouver \(x = \frac{2}{7}\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:51</p>
+<p class="date">Created: 2022-05-15 dim. 18:00</p>
 </div>
 </body>
 </html>

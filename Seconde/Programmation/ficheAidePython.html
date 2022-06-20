@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:52 -->
+<!-- 2022-05-15 dim. 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fiche Aide Python</title>
@@ -190,8 +190,14 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -225,57 +231,57 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3b78772">1. Exprimer une condition</a></li>
-<li><a href="#orgf2709c9">2. Blocs conditions</a>
+<li><a href="#org9fc825c">1. Exprimer une condition</a></li>
+<li><a href="#org612f5be">2. Blocs conditions</a>
 <ul>
-<li><a href="#org4262941">2.1. Syntaxe</a></li>
-<li><a href="#orgaa2629a">2.2. Exemple</a></li>
-<li><a href="#org6a29dd6">2.3. Mises en garde</a></li>
+<li><a href="#org7d205ac">2.1. Syntaxe</a></li>
+<li><a href="#orgc75d42a">2.2. Exemple</a></li>
+<li><a href="#orgfb9462b">2.3. Mises en garde</a></li>
 </ul>
 </li>
-<li><a href="#org500d8fd">3. Boucles</a>
+<li><a href="#orgc777ac5">3. Boucles</a>
 <ul>
-<li><a href="#org72301de">3.1. Les boucles tant que</a>
+<li><a href="#org5c1cf80">3.1. Les boucles tant que</a>
 <ul>
-<li><a href="#org98a767b">3.1.1. Syntaxe</a></li>
-<li><a href="#org3f51e22">3.1.2. Exemple</a></li>
-<li><a href="#orgc68b487">3.1.3. Mise en garde</a></li>
+<li><a href="#org3ea12ba">3.1.1. Syntaxe</a></li>
+<li><a href="#orgb4ad7f8">3.1.2. Exemple</a></li>
+<li><a href="#org8f3f75c">3.1.3. Mise en garde</a></li>
 </ul>
 </li>
-<li><a href="#org1b68a15">3.2. Les boucles for</a>
+<li><a href="#org777dd7a">3.2. Les boucles for</a>
 <ul>
-<li><a href="#orgead3804">3.2.1. Syntaxe</a></li>
-<li><a href="#org7758cc6">3.2.2. Mise en garde</a></li>
-<li><a href="#org3e07c15">3.2.3. Exemple</a></li>
+<li><a href="#org4d6fb6b">3.2.1. Syntaxe</a></li>
+<li><a href="#org048c23f">3.2.2. Mise en garde</a></li>
+<li><a href="#org670bcc8">3.2.3. Exemple</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orge241d21">4. Demander à l&rsquo;utilisateur</a>
+<li><a href="#org622226f">4. Demander à l&rsquo;utilisateur</a>
 <ul>
-<li><a href="#orge97a968">4.1. Du texte</a></li>
-<li><a href="#org1d95420">4.2. Un nombre</a></li>
+<li><a href="#org24f723c">4.1. Du texte</a></li>
+<li><a href="#org0cdf82a">4.2. Un nombre</a></li>
 </ul>
 </li>
-<li><a href="#org4b120d5">5. Les fonctions</a>
+<li><a href="#org6cddce3">5. Les fonctions</a>
 <ul>
-<li><a href="#org7c8ca61">5.1. Syntaxe</a></li>
-<li><a href="#org031a56b">5.2. Mises en garde</a></li>
-<li><a href="#orgd575fee">5.3. Exemple</a></li>
+<li><a href="#org15486b8">5.1. Syntaxe</a></li>
+<li><a href="#orge6d6fd6">5.2. Mises en garde</a></li>
+<li><a href="#orga7960e4">5.3. Exemple</a></li>
 </ul>
 </li>
-<li><a href="#orgf1fc01a">6. Autre</a>
+<li><a href="#orgea3da50">6. Autre</a>
 <ul>
-<li><a href="#org54928f3">6.1. Tester si \(a\) est divisible par \(b\)</a></li>
-<li><a href="#orgb382914">6.2. Définir un nombre aléatoire</a></li>
+<li><a href="#org47ad3b8">6.1. Tester si \(a\) est divisible par \(b\)</a></li>
+<li><a href="#org3079046">6.2. Définir un nombre aléatoire</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3b78772" class="outline-2">
-<h2 id="org3b78772"><span class="section-number-2">1.</span> Exprimer une condition</h2>
+<div id="outline-container-org9fc825c" class="outline-2">
+<h2 id="org9fc825c"><span class="section-number-2">1.</span> Exprimer une condition</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>Pour tester si <code>a</code> est égal à <code>b</code> : <code>a==b</code></li>
@@ -288,19 +294,19 @@
 </div>
 </div>
 
-<div id="outline-container-orgf2709c9" class="outline-2">
-<h2 id="orgf2709c9"><span class="section-number-2">2.</span> Blocs conditions</h2>
+<div id="outline-container-org612f5be" class="outline-2">
+<h2 id="org612f5be"><span class="section-number-2">2.</span> Blocs conditions</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org4262941" class="outline-3">
-<h3 id="org4262941"><span class="section-number-3">2.1.</span> Syntaxe</h3>
+<div id="outline-container-org7d205ac" class="outline-3">
+<h3 id="org7d205ac"><span class="section-number-3">2.1.</span> Syntaxe</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">if</span> &lt;condition&gt; :
+<pre class="src src-python"><span style="color: #ff79c6;">if</span> &lt;condition&gt; :
     &lt;code&gt;
-<span style="font-weight: bold;">elif</span> &lt;condition&gt; :
+<span style="color: #ff79c6;">elif</span> &lt;condition&gt; :
     &lt;code&gt;
-<span style="font-weight: bold;">else</span> :
+<span style="color: #ff79c6;">else</span> :
     &lt;code&gt;
 </pre>
 </div>
@@ -316,24 +322,24 @@
 </div>
 </div>
 
-<div id="outline-container-orgaa2629a" class="outline-3">
-<h3 id="orgaa2629a"><span class="section-number-3">2.2.</span> Exemple</h3>
+<div id="outline-container-orgc75d42a" class="outline-3">
+<h3 id="orgc75d42a"><span class="section-number-3">2.2.</span> Exemple</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">age</span> = <span style="font-weight: bold; text-decoration: underline;">18</span>
-<span style="font-weight: bold;">if</span> age &gt; <span style="font-weight: bold; text-decoration: underline;">18</span> :
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous &#234;tes majeur"</span>)
-<span style="font-weight: bold;">elif</span> age == <span style="font-weight: bold; text-decoration: underline;">18</span> :
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous venez d'&#234;tre majeur"</span>)
-<span style="font-weight: bold;">else</span> :
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Vous &#234;tes mineur"</span>)
+<pre class="src src-python"><span style="color: #ffc9e8;">age</span> = <span style="color: #bd93f9; font-weight: bold;">18</span>
+<span style="color: #ff79c6;">if</span> age &gt; <span style="color: #bd93f9; font-weight: bold;">18</span> :
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"Vous &#234;tes majeur"</span>)
+<span style="color: #ff79c6;">elif</span> age == <span style="color: #bd93f9; font-weight: bold;">18</span> :
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"Vous venez d'&#234;tre majeur"</span>)
+<span style="color: #ff79c6;">else</span> :
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"Vous &#234;tes mineur"</span>)
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org6a29dd6" class="outline-3">
-<h3 id="org6a29dd6"><span class="section-number-3">2.3.</span> Mises en garde</h3>
+<div id="outline-container-orgfb9462b" class="outline-3">
+<h3 id="orgfb9462b"><span class="section-number-3">2.3.</span> Mises en garde</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>On commence toujours par <code>if</code>, puis, si besoin, on place un bloc <code>elif</code>,
@@ -344,19 +350,19 @@ autres conditions données par les blocs <code>if</code> et <code>elif</code> ne
 </div>
 </div>
 </div>
-<div id="outline-container-org500d8fd" class="outline-2">
-<h2 id="org500d8fd"><span class="section-number-2">3.</span> Boucles</h2>
+<div id="outline-container-orgc777ac5" class="outline-2">
+<h2 id="orgc777ac5"><span class="section-number-2">3.</span> Boucles</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org72301de" class="outline-3">
-<h3 id="org72301de"><span class="section-number-3">3.1.</span> Les boucles tant que</h3>
+<div id="outline-container-org5c1cf80" class="outline-3">
+<h3 id="org5c1cf80"><span class="section-number-3">3.1.</span> Les boucles tant que</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org98a767b" class="outline-4">
-<h4 id="org98a767b"><span class="section-number-4">3.1.1.</span> Syntaxe</h4>
+<div id="outline-container-org3ea12ba" class="outline-4">
+<h4 id="org3ea12ba"><span class="section-number-4">3.1.1.</span> Syntaxe</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">while</span> &lt;condition&gt; :
+<pre class="src src-python"><span style="color: #ff79c6;">while</span> &lt;condition&gt; :
     &lt;code&gt;
 </pre>
 </div>
@@ -370,21 +376,21 @@ autres conditions données par les blocs <code>if</code> et <code>elif</code> ne
 </div>
 </div>
 
-<div id="outline-container-org3f51e22" class="outline-4">
-<h4 id="org3f51e22"><span class="section-number-4">3.1.2.</span> Exemple</h4>
+<div id="outline-container-orgb4ad7f8" class="outline-4">
+<h4 id="orgb4ad7f8"><span class="section-number-4">3.1.2.</span> Exemple</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">nombre</span> = <span style="font-weight: bold; text-decoration: underline;">1</span>
-<span style="font-weight: bold;">while</span> nombre*nombre &lt; <span style="font-weight: bold; text-decoration: underline;">99</span> :
-    <span style="font-weight: bold; font-style: italic;">nombre</span> = nombre + <span style="font-weight: bold; text-decoration: underline;">1</span>
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">&#224; la fin de la boucle, la variable nombre vaut 9, car 10*10 &gt; 99</span>
+<pre class="src src-python"><span style="color: #ffc9e8;">nombre</span> = <span style="color: #bd93f9; font-weight: bold;">1</span>
+<span style="color: #ff79c6;">while</span> nombre*nombre &lt; <span style="color: #bd93f9; font-weight: bold;">99</span> :
+    <span style="color: #ffc9e8;">nombre</span> = nombre + <span style="color: #bd93f9; font-weight: bold;">1</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">&#224; la fin de la boucle, la variable nombre vaut 9, car 10*10 &gt; 99</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc68b487" class="outline-4">
-<h4 id="orgc68b487"><span class="section-number-4">3.1.3.</span> Mise en garde</h4>
+<div id="outline-container-org8f3f75c" class="outline-4">
+<h4 id="org8f3f75c"><span class="section-number-4">3.1.3.</span> Mise en garde</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ol class="org-ol">
 <li>Vérifier que votre condition n&rsquo;est pas respectée indéfiniement, sinon vous
@@ -394,15 +400,15 @@ obtenez une <b>boucle infinie</b>.</li>
 </div>
 </div>
 
-<div id="outline-container-org1b68a15" class="outline-3">
-<h3 id="org1b68a15"><span class="section-number-3">3.2.</span> Les boucles for</h3>
+<div id="outline-container-org777dd7a" class="outline-3">
+<h3 id="org777dd7a"><span class="section-number-3">3.2.</span> Les boucles for</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-orgead3804" class="outline-4">
-<h4 id="orgead3804"><span class="section-number-4">3.2.1.</span> Syntaxe</h4>
+<div id="outline-container-org4d6fb6b" class="outline-4">
+<h4 id="org4d6fb6b"><span class="section-number-4">3.2.1.</span> Syntaxe</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">for</span> &lt;variable&gt; <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(&lt;nombre&gt;):
+<pre class="src src-python"><span style="color: #ff79c6;">for</span> &lt;variable&gt; <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(&lt;nombre&gt;):
     &lt;code&gt;
 </pre>
 </div>
@@ -418,8 +424,8 @@ obtenez une <b>boucle infinie</b>.</li>
 </div>
 </div>
 
-<div id="outline-container-org7758cc6" class="outline-4">
-<h4 id="org7758cc6"><span class="section-number-4">3.2.2.</span> Mise en garde</h4>
+<div id="outline-container-org048c23f" class="outline-4">
+<h4 id="org048c23f"><span class="section-number-4">3.2.2.</span> Mise en garde</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <ol class="org-ol">
 <li><code>range(9)</code> correspond à tous les nombres entiers entre \(0\) et \(8\). Cela nous
@@ -430,53 +436,53 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 
-<div id="outline-container-org3e07c15" class="outline-4">
-<h4 id="org3e07c15"><span class="section-number-4">3.2.3.</span> Exemple</h4>
+<div id="outline-container-org670bcc8" class="outline-4">
+<h4 id="org670bcc8"><span class="section-number-4">3.2.3.</span> Exemple</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold; text-decoration: underline;">11</span>):
-    <span style="font-weight: bold;">print</span>(i*i)
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Affiche tous les carr&#233;s d'entiers de 0 &#224; 10</span>
+<pre class="src src-python"><span style="color: #ff79c6;">for</span> i <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(<span style="color: #bd93f9; font-weight: bold;">11</span>):
+    <span style="color: #ffb86c;">print</span>(i*i)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Affiche tous les carr&#233;s d'entiers de 0 &#224; 10</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-orge241d21" class="outline-2">
-<h2 id="orge241d21"><span class="section-number-2">4.</span> Demander à l&rsquo;utilisateur</h2>
+<div id="outline-container-org622226f" class="outline-2">
+<h2 id="org622226f"><span class="section-number-2">4.</span> Demander à l&rsquo;utilisateur</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orge97a968" class="outline-3">
-<h3 id="orge97a968"><span class="section-number-3">4.1.</span> Du texte</h3>
+<div id="outline-container-org24f723c" class="outline-3">
+<h3 id="org24f723c"><span class="section-number-3">4.1.</span> Du texte</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">texte</span> = <span style="font-weight: bold;">input</span>(<span style="font-style: italic;">"message affich&#233;"</span>)
+<pre class="src src-python"><span style="color: #ffc9e8;">texte</span> = <span style="color: #ffb86c;">input</span>(<span style="color: #f1fa8c;">"message affich&#233;"</span>)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org1d95420" class="outline-3">
-<h3 id="org1d95420"><span class="section-number-3">4.2.</span> Un nombre</h3>
+<div id="outline-container-org0cdf82a" class="outline-3">
+<h3 id="org0cdf82a"><span class="section-number-3">4.2.</span> Un nombre</h3>
 <div class="outline-text-3" id="text-4-2">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">nombre</span> = <span style="font-weight: bold;">int</span>(<span style="font-weight: bold;">input</span>(<span style="font-style: italic;">"message affich&#233;"</span>))
+<pre class="src src-python"><span style="color: #ffc9e8;">nombre</span> = <span style="color: #ffb86c;">int</span>(<span style="color: #ffb86c;">input</span>(<span style="color: #f1fa8c;">"message affich&#233;"</span>))
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org4b120d5" class="outline-2">
-<h2 id="org4b120d5"><span class="section-number-2">5.</span> Les fonctions</h2>
+<div id="outline-container-org6cddce3" class="outline-2">
+<h2 id="org6cddce3"><span class="section-number-2">5.</span> Les fonctions</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org7c8ca61" class="outline-3">
-<h3 id="org7c8ca61"><span class="section-number-3">5.1.</span> Syntaxe</h3>
+<div id="outline-container-org15486b8" class="outline-3">
+<h3 id="org15486b8"><span class="section-number-3">5.1.</span> Syntaxe</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> &lt;nom de la fonction&gt;(&lt;var1&gt;, &lt;var2&gt;, ...):
+<pre class="src src-python"><span style="color: #ff79c6;">def</span> &lt;nom de la fonction&gt;(&lt;var1&gt;, &lt;var2&gt;, ...):
     &lt;code&gt;
-    <span style="font-weight: bold;">return</span> &lt;nom de variable&gt;
+    <span style="color: #ff79c6;">return</span> &lt;nom de variable&gt;
 </pre>
 </div>
 
@@ -490,8 +496,8 @@ toute seule de \(1\) entre différent passage de boucle.</li>
 </div>
 </div>
 
-<div id="outline-container-org031a56b" class="outline-3">
-<h3 id="org031a56b"><span class="section-number-3">5.2.</span> Mises en garde</h3>
+<div id="outline-container-orge6d6fd6" class="outline-3">
+<h3 id="orge6d6fd6"><span class="section-number-3">5.2.</span> Mises en garde</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Une fonction peut avoir aucun argument, un seul, ou bien plusieurs.</li>
@@ -502,83 +508,83 @@ les arguments qu&rsquo;on lui envoie (regardez les exemples).</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd575fee" class="outline-3">
-<h3 id="orgd575fee"><span class="section-number-3">5.3.</span> Exemple</h3>
+<div id="outline-container-orga7960e4" class="outline-3">
+<h3 id="orga7960e4"><span class="section-number-3">5.3.</span> Exemple</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">affichage</span>(messages):
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"==========="</span>)
-    <span style="font-weight: bold;">print</span>(message)
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"==========="</span>)
+<pre class="src src-python"><span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">affichage</span>(messages):
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"==========="</span>)
+    <span style="color: #ffb86c;">print</span>(message)
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"==========="</span>)
 
-affichage(<span style="font-style: italic;">"Coucou !"</span>)
+affichage(<span style="color: #f1fa8c;">"Coucou !"</span>)
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">rappel</span>():
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"Pas besoin d'argument"</span>)
+<pre class="src src-python"><span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">rappel</span>():
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"Pas besoin d'argument"</span>)
 rappel()
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">Affiche : "Pas besoin d'argument"</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">Affiche : "Pas besoin d'argument"</span>
 essai = rappel()
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">essai vaut None</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">essai vaut None</span>
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">calcul</span>(variable):
-    <span style="font-weight: bold;">if</span> variable &gt; <span style="font-weight: bold; text-decoration: underline;">3</span> :
-        <span style="font-weight: bold;">return</span> variable * <span style="font-weight: bold; text-decoration: underline;">3</span>
-    <span style="font-weight: bold;">else</span> :
-        <span style="font-weight: bold;">return</span> variable * <span style="font-weight: bold; text-decoration: underline;">2</span>
+<pre class="src src-python"><span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">calcul</span>(variable):
+    <span style="color: #ff79c6;">if</span> variable &gt; <span style="color: #bd93f9; font-weight: bold;">3</span> :
+        <span style="color: #ff79c6;">return</span> variable * <span style="color: #bd93f9; font-weight: bold;">3</span>
+    <span style="color: #ff79c6;">else</span> :
+        <span style="color: #ff79c6;">return</span> variable * <span style="color: #bd93f9; font-weight: bold;">2</span>
 
-<span style="font-weight: bold; font-style: italic;">res</span> = calcul(<span style="font-weight: bold; text-decoration: underline;">3</span>)
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">res vaut 9</span>
-<span style="font-weight: bold; font-style: italic;">autreRes</span> = calcul(<span style="font-weight: bold; text-decoration: underline;">2</span>)
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">autreRes vaut 4</span>
+<span style="color: #ffc9e8;">res</span> = calcul(<span style="color: #bd93f9; font-weight: bold;">3</span>)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">res vaut 9</span>
+<span style="color: #ffc9e8;">autreRes</span> = calcul(<span style="color: #bd93f9; font-weight: bold;">2</span>)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">autreRes vaut 4</span>
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">minimun</span>(a, b):
-    <span style="font-weight: bold;">if</span> a &gt; <span style="font-weight: bold; font-style: italic;">b</span> :
-        <span style="font-weight: bold;">return</span> b
-    <span style="font-weight: bold;">else</span> :
-        <span style="font-weight: bold;">return</span> a
-petit = minimun(<span style="font-weight: bold; text-decoration: underline;">13</span>, <span style="font-weight: bold; text-decoration: underline;">193</span>)
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">petit vaut 13</span>
+<pre class="src src-python"><span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">minimun</span>(a, b):
+    <span style="color: #ff79c6;">if</span> a &gt; <span style="color: #ffc9e8;">b</span> :
+        <span style="color: #ff79c6;">return</span> b
+    <span style="color: #ff79c6;">else</span> :
+        <span style="color: #ff79c6;">return</span> a
+petit = minimun(<span style="color: #bd93f9; font-weight: bold;">13</span>, <span style="color: #bd93f9; font-weight: bold;">193</span>)
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">petit vaut 13</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf1fc01a" class="outline-2">
-<h2 id="orgf1fc01a"><span class="section-number-2">6.</span> Autre</h2>
+<div id="outline-container-orgea3da50" class="outline-2">
+<h2 id="orgea3da50"><span class="section-number-2">6.</span> Autre</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org54928f3" class="outline-3">
-<h3 id="org54928f3"><span class="section-number-3">6.1.</span> Tester si \(a\) est divisible par \(b\)</h3>
+<div id="outline-container-org47ad3b8" class="outline-3">
+<h3 id="org47ad3b8"><span class="section-number-3">6.1.</span> Tester si \(a\) est divisible par \(b\)</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">if</span> a % b == <span style="font-weight: bold; text-decoration: underline;">0</span> :
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"a est divisible par b"</span>)
-<span style="font-weight: bold;">else</span> :
-    <span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"a n'est pas divisible par b"</span>)
+<pre class="src src-python"><span style="color: #ff79c6;">if</span> a % b == <span style="color: #bd93f9; font-weight: bold;">0</span> :
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"a est divisible par b"</span>)
+<span style="color: #ff79c6;">else</span> :
+    <span style="color: #ffb86c;">print</span>(<span style="color: #f1fa8c;">"a n'est pas divisible par b"</span>)
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb382914" class="outline-3">
-<h3 id="orgb382914"><span class="section-number-3">6.2.</span> Définir un nombre aléatoire</h3>
+<div id="outline-container-org3079046" class="outline-3">
+<h3 id="org3079046"><span class="section-number-3">6.2.</span> Définir un nombre aléatoire</h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">from</span> random <span style="font-weight: bold;">import</span> randint
+<pre class="src src-python"><span style="color: #ff79c6;">from</span> random <span style="color: #ff79c6;">import</span> randint
 
-<span style="font-weight: bold; font-style: italic;">nombre</span> = randint(<span style="font-weight: bold; text-decoration: underline;">1</span>, <span style="font-weight: bold; text-decoration: underline;">100</span>)
+<span style="color: #ffc9e8;">nombre</span> = randint(<span style="color: #bd93f9; font-weight: bold;">1</span>, <span style="color: #bd93f9; font-weight: bold;">100</span>)
 
-<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">La variable nombre contient un nombre al&#233;atoire entre 1 et 100</span>
+<span style="color: #6272a4;"># </span><span style="color: #6272a4;">La variable nombre contient un nombre al&#233;atoire entre 1 et 100</span>
 </pre>
 </div>
 </div>
@@ -586,7 +592,7 @@ petit = minimun(<span style="font-weight: bold; text-decoration: underline;">13<
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2022-04-14 jeu. 00:52</p>
+<p class="date">Created: 2022-05-15 dim. 18:01</p>
 </div>
 </body>
 </html>

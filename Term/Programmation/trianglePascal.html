@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-14 jeu. 00:51 -->
+<!-- 2022-05-15 dim. 18:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Triangle Pascal</title>
@@ -191,8 +191,14 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -205,13 +211,13 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgee68fc2">1. Calculer le triangle de Pascal</a></li>
+<li><a href="#org6b1956b">1. Calculer le triangle de Pascal</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgee68fc2" class="outline-2">
-<h2 id="orgee68fc2"><span class="section-number-2">1.</span> Calculer le triangle de Pascal</h2>
+<div id="outline-container-org6b1956b" class="outline-2">
+<h2 id="org6b1956b"><span class="section-number-2">1.</span> Calculer le triangle de Pascal</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On peut calculer le triangle de Pascal à l&rsquo;aide de Python. Cela permet
@@ -220,22 +226,22 @@ supérieures.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python" id="org56a0bea"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">coefBinom</span>(k, n) :
-    <span style="font-weight: bold;">if</span> k &gt; n <span style="font-weight: bold;">or</span> k &lt; <span style="font-weight: bold; text-decoration: underline;">0</span>:
-        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">0</span>
-    <span style="font-weight: bold;">elif</span> n &lt; <span style="font-weight: bold; text-decoration: underline;">2</span> :
-        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">1</span>
-    <span style="font-weight: bold;">else</span> :
-        <span style="font-weight: bold;">return</span> coefBinom(k, n-<span style="font-weight: bold; text-decoration: underline;">1</span>) + coefBinom(k-<span style="font-weight: bold; text-decoration: underline;">1</span>,n-<span style="font-weight: bold; text-decoration: underline;">1</span>)
+<pre class="src src-python" id="orgc3e739b"><span style="color: #ff79c6;">def</span> <span style="color: #50fa7b;">coefBinom</span>(k, n) :
+    <span style="color: #ff79c6;">if</span> k &gt; n <span style="color: #ff79c6;">or</span> k &lt; <span style="color: #bd93f9; font-weight: bold;">0</span>:
+        <span style="color: #ff79c6;">return</span> <span style="color: #bd93f9; font-weight: bold;">0</span>
+    <span style="color: #ff79c6;">elif</span> n &lt; <span style="color: #bd93f9; font-weight: bold;">2</span> :
+        <span style="color: #ff79c6;">return</span> <span style="color: #bd93f9; font-weight: bold;">1</span>
+    <span style="color: #ff79c6;">else</span> :
+        <span style="color: #ff79c6;">return</span> coefBinom(k, n-<span style="color: #bd93f9; font-weight: bold;">1</span>) + coefBinom(k-<span style="color: #bd93f9; font-weight: bold;">1</span>,n-<span style="color: #bd93f9; font-weight: bold;">1</span>)
 
-<span style="font-weight: bold; font-style: italic;">n</span> = <span style="font-weight: bold; text-decoration: underline;">11</span>
+<span style="color: #ffc9e8;">n</span> = <span style="color: #bd93f9; font-weight: bold;">11</span>
 
-<span style="font-weight: bold; font-style: italic;">#</span><span style="font-weight: bold; font-style: italic;">Pour cr&#233;er un tableau automatiquement.</span>
-<span style="font-weight: bold;">for</span> i <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(<span style="font-weight: bold; text-decoration: underline;">1</span>,n+<span style="font-weight: bold; text-decoration: underline;">1</span>):
-    <span style="font-weight: bold; font-style: italic;">txt</span> = <span style="font-style: italic;">"|"</span>
-    <span style="font-weight: bold;">for</span> j <span style="font-weight: bold;">in</span> <span style="font-weight: bold;">range</span>(i+<span style="font-weight: bold; text-decoration: underline;">1</span>):
-        <span style="font-weight: bold; font-style: italic;">txt</span> += <span style="font-style: italic;">" "</span> + <span style="font-weight: bold;">str</span>(coefBinom(j, i)) + <span style="font-style: italic;">"|"</span>
-    <span style="font-weight: bold;">print</span>(txt)
+<span style="color: #6272a4;">#</span><span style="color: #6272a4;">Pour cr&#233;er un tableau automatiquement.</span>
+<span style="color: #ff79c6;">for</span> i <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(<span style="color: #bd93f9; font-weight: bold;">1</span>,n+<span style="color: #bd93f9; font-weight: bold;">1</span>):
+    <span style="color: #ffc9e8;">txt</span> = <span style="color: #f1fa8c;">"|"</span>
+    <span style="color: #ff79c6;">for</span> j <span style="color: #ff79c6;">in</span> <span style="color: #ffb86c;">range</span>(i+<span style="color: #bd93f9; font-weight: bold;">1</span>):
+        <span style="color: #ffc9e8;">txt</span> += <span style="color: #f1fa8c;">" "</span> + <span style="color: #ffb86c;">str</span>(coefBinom(j, i)) + <span style="color: #f1fa8c;">"|"</span>
+    <span style="color: #ffb86c;">print</span>(txt)
 </pre>
 </div>
 
@@ -250,56 +256,17 @@ On obtient le résultat suivant :
 <col  class="org-right" />
 
 <col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
 <td class="org-right">1</td>
 <td class="org-right">1</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
 <td class="org-right">1</td>
 <td class="org-right">2</td>
 <td class="org-right">1</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -307,14 +274,6 @@ On obtient le résultat suivant :
 <td class="org-right">3</td>
 <td class="org-right">3</td>
 <td class="org-right">1</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -323,13 +282,6 @@ On obtient le résultat suivant :
 <td class="org-right">6</td>
 <td class="org-right">4</td>
 <td class="org-right">1</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -339,12 +291,6 @@ On obtient le résultat suivant :
 <td class="org-right">10</td>
 <td class="org-right">5</td>
 <td class="org-right">1</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -355,11 +301,6 @@ On obtient le résultat suivant :
 <td class="org-right">15</td>
 <td class="org-right">6</td>
 <td class="org-right">1</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -371,10 +312,6 @@ On obtient le résultat suivant :
 <td class="org-right">21</td>
 <td class="org-right">7</td>
 <td class="org-left">1</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -387,9 +324,6 @@ On obtient le résultat suivant :
 <td class="org-right">28</td>
 <td class="org-left">8</td>
 <td class="org-left">1</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -403,8 +337,6 @@ On obtient le résultat suivant :
 <td class="org-left">36</td>
 <td class="org-left">9</td>
 <td class="org-left">1</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -419,7 +351,6 @@ On obtient le résultat suivant :
 <td class="org-left">45</td>
 <td class="org-left">10</td>
 <td class="org-left">1</td>
-<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
@@ -443,7 +374,7 @@ On obtient le résultat suivant :
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Delhomme Fabien</p>
-<p class="date">Created: 2022-04-14 jeu. 00:51</p>
+<p class="date">Created: 2022-05-15 dim. 18:00</p>
 </div>
 </body>
 </html>
