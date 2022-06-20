@@ -4,7 +4,10 @@ author = ["Delhomme Fabien"]
 draft = false
 +++
 
-## Priorité opératoire. {#priorité-opératoire-dot}
+## Site {#post}
+
+
+### Priorité opératoire. {#priorité-opératoire-dot}
 
 Il existe plusieurs opérations en mathématique, parmi elles :
 
@@ -40,14 +43,14 @@ Sauf parenthèses, le deuxième groupe est prioritaire sur le premier dans un ca
 </div>
 
 
-## Présentation des calculs {#présentation-des-calculs}
+### Présentation des calculs {#présentation-des-calculs}
 
 Pour démontrer et raisonner, les mathématiciens ont besoin de rédiger leurs
 calculs proprement. Si une rédaction en français nécessite une bonne
 orthographe, grammaire, etc, les mathématiques ont aussi des règles similaires.
 
 
-### Parenthèses {#parenthèses}
+#### Parenthèses {#parenthèses}
 
 <div class="defi">
 
@@ -64,7 +67,7 @@ On n'écrit jamais \\(2+-3\\) mais \\(2+(-3)\\) (ou encore \\(2-3\\), ou bien \\
 </div>
 
 
-### Présenter un calcul avec des inconnues {#présenter-un-calcul-avec-des-inconnues}
+#### Présenter un calcul avec des inconnues {#présenter-un-calcul-avec-des-inconnues}
 
 <div class="defi">
 
@@ -132,7 +135,7 @@ L'expression \\(3x + 5\\) est déjà simplifiée.
 </div>
 
 
-### Résolution d'équations {#résolution-d-équations}
+#### Résolution d'équations {#résolution-d-équations}
 
 Lors de la résolution d'équations, il faut revenir à la ligne entre chaque
 opération effectuée sur le membre de gauche et de droite, le signe \\(=\\) marquant
@@ -151,10 +154,10 @@ qui est faux (parce que \\(-7\\) n'est pas égal à \\(0\\)) et illisible.
 </div>
 
 
-## Fractions {#fractions}
+### Fractions {#fractions}
 
 
-### Définition des fractions {#définition-des-fractions}
+#### Définition des fractions {#définition-des-fractions}
 
 <div class="defi">
 
@@ -218,7 +221,7 @@ On appelle \\(\frac{b}{a}\\) l'inverse de la fraction \\(\frac{a}{b}\\).
 </div>
 
 
-### Simplifier des fractions {#simplifier-des-fractions}
+#### Simplifier des fractions {#simplifier-des-fractions}
 
 <div class="prop">
 
@@ -238,84 +241,87 @@ On a \\(\frac{14}{21} = \frac{2\times 7}{3\times 7} = \frac{2}{3}\\), donc on pr
 </div>
 
 
-### Opération sur les fractions {#opération-sur-les-fractions}
+#### Opération sur les fractions {#opération-sur-les-fractions}
+
+<!--list-separator-->
+
+-  Multiplication de fractions
+
+    <div class="defi">
+
+    Soit \\(\frac{a}{b}\\) et \\(\frac{c}{d}\\) deux fractions. Alors :
+    \\[
+    \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
+    \\]
+
+    </div>
+
+    Autrement dit : pour multiplier deux fractions, il suffit de multiplier les
+    numérateurs entre eux, et les dénominateurs entre eux.
+
+    <div class="ex">
+
+    \\[
+    \frac{2}{3}\times\frac{7}{5} = \frac{2\times 7}{3\times 5} = \frac{14}{15}
+    \\]
+
+    </div>
+
+<!--list-separator-->
+
+-  Diviser par des fractions
+
+    <div class="prop">
+
+    Diviser revient à multiplier par l'inverse.
+
+    </div>
+
+    <div class="ex">
+
+    Diviser par \\(3\\) revient à multiplier par \\(\frac{1}{3}\\). Diviser par
+    \\(\frac{5}{2}\\) revient à multiplier par \\(\frac{2}{5}\\).
+
+    </div>
+
+    <div class="ex">
+
+    \\[
+    \frac{2}{3}\div 3 = \frac{2}{3}\times\frac{1}{3} = \frac{2 \times 1}{3\times 3} = \frac{2}{9}
+    \\]
+
+    </div>
+
+<!--list-separator-->
+
+-  Additionner les fractions
+
+    <div class="prop">
+
+    Soit \\(\frac{a}{b}\\) et \\(\frac{c}{b}\\) deux fractions. Alors :
+    \\[
+    \frac{a}{b} + \frac{c}{b} = \frac{a + c}{b}
+    \\]
+
+    </div>
+
+    <div class="ex">
+
+    Une fois que l'on a mis au même dénominateur, on peut donc additionner les
+    numérateurs. Voici une série d'exemples pour montrer des calculs corrects
+    d'addition de fractions.
+
+    \\[ \frac{2}{3} + \frac{5}{21} = \frac{14}{21} +
+    \frac{5}{21} = \frac{19}{21} \\]
+
+    \\[
+    1 + \frac{8}{7} = \frac{7}{7} + \frac{8}{7} = \frac{7 + 8}{7} = \frac{15}{7}
+    \\]
+
+    </div>
 
 
-#### Multiplication de fractions {#multiplication-de-fractions}
-
-<div class="defi">
-
-Soit \\(\frac{a}{b}\\) et \\(\frac{c}{d}\\) deux fractions. Alors :
-\\[
-\frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
-\\]
-
-</div>
-
-Autrement dit : pour multiplier deux fractions, il suffit de multiplier les
-numérateurs entre eux, et les dénominateurs entre eux.
-
-<div class="ex">
-
-\\[
-\frac{2}{3}\times\frac{7}{5} = \frac{2\times 7}{3\times 5} = \frac{14}{15}
-\\]
-
-</div>
-
-
-#### Diviser par des fractions {#diviser-par-des-fractions}
-
-<div class="prop">
-
-Diviser revient à multiplier par l'inverse.
-
-</div>
-
-<div class="ex">
-
-Diviser par \\(3\\) revient à multiplier par \\(\frac{1}{3}\\). Diviser par
-\\(\frac{5}{2}\\) revient à multiplier par \\(\frac{2}{5}\\).
-
-</div>
-
-<div class="ex">
-
-\\[
-\frac{2}{3}\div 3 = \frac{2}{3}\times\frac{1}{3} = \frac{2 \times 1}{3\times 3} = \frac{2}{9}
-\\]
-
-</div>
-
-
-#### Additionner les fractions {#additionner-les-fractions}
-
-<div class="prop">
-
-Soit \\(\frac{a}{b}\\) et \\(\frac{c}{b}\\) deux fractions. Alors :
-\\[
-\frac{a}{b} + \frac{c}{b} = \frac{a + c}{b}
-\\]
-
-</div>
-
-<div class="ex">
-
-Une fois que l'on a mis au même dénominateur, on peut donc additionner les
-numérateurs. Voici une série d'exemples pour montrer des calculs corrects
-d'addition de fractions.
-
-\\[ \frac{2}{3} + \frac{5}{21} = \frac{14}{21} +
-\frac{5}{21} = \frac{19}{21} \\]
-
-\\[
-1 + \frac{8}{7} = \frac{7}{7} + \frac{8}{7} = \frac{7 + 8}{7} = \frac{15}{7}
-\\]
-
-</div>
-
-
-## Carré et racine carré {#carré-et-racine-carré}
+### Carré et racine carré {#carré-et-racine-carré}
 
 <div class="defi">
 
@@ -394,7 +400,7 @@ Vous pouvez remarquer que dans la première colonne du tableau, il y a des
 derrières la virgule.[^fn:3]
 
 
-## Puissance {#puissance}
+### Puissance {#puissance}
 
 <div class="defi">
 
@@ -443,7 +449,7 @@ a^p \times a^q = a^{p+q}
 </div>
 
 
-## Divisibilité et nombres premiers {#divisibilité-et-nombres-premiers}
+### Divisibilité et nombres premiers {#divisibilité-et-nombres-premiers}
 
 <div class="prop">
 
@@ -492,7 +498,7 @@ de nombres premiers.
 </div>
 
 
-## Distributivité simple et double {#distributivité-simple-et-double}
+### Distributivité simple et double {#distributivité-simple-et-double}
 
 <div class="defi">
 
@@ -546,10 +552,10 @@ La forme \\(3x^2 + 5x-2\\) est la forme développée de \\((x + 2)(3x - 1)\\).
 </div>
 
 
-## Utiliser un repère {#utiliser-un-repère}
+### Utiliser un repère {#utiliser-un-repère}
 
 
-### Tracer un repère {#tracer-un-repère}
+#### Tracer un repère {#tracer-un-repère}
 
 <div class="defi">
 
@@ -569,7 +575,7 @@ L'image suivante est une représentation correcte d'une repère. Vous noterez :
 {{< figure src="/ox-hugo/repere.svg" caption="<span class=\"figure-number\">Figure 1: </span>Un repère orthonormé correct." >}}
 
 
-### Les coordonnées dans un repère. {#les-coordonnées-dans-un-repère-dot}
+#### Les coordonnées dans un repère. {#les-coordonnées-dans-un-repère-dot}
 
 <div class="defi">
 
@@ -582,7 +588,7 @@ nombre en ordonnée.
 {{< figure src="/ox-hugo/exempleCoordonneesRepere.svg" caption="<span class=\"figure-number\">Figure 2: </span>Des exemples de points avec leurs coordonnées. Assurez-vous d'avoir compris le placement de chacuns des points." >}}
 
 
-## Résoudre une équation linéaire de premier degré. {#résoudre-une-équation-linéaire-de-premier-degré-dot}
+### Résoudre une équation linéaire de premier degré. {#résoudre-une-équation-linéaire-de-premier-degré-dot}
 
 <div class="defi">
 
@@ -697,10 +703,10 @@ solution qui est \\(x = -15\\).
 </div>
 
 
-## Logique et raisonnements {#logique-et-raisonnements}
+### Logique et raisonnements {#logique-et-raisonnements}
 
 
-### Raisonnements pour démontrer. {#raisonnements-pour-démontrer-dot}
+#### Raisonnements pour démontrer. {#raisonnements-pour-démontrer-dot}
 
 Il y a de l'or dans un seul de ces trésors. Un seul message est vrai, les autres sont faux.
 
@@ -708,59 +714,61 @@ Il y a de l'or dans un seul de ces trésors. Un seul message est vrai, les autre
 -   Trésor B : «Il n'y a pas d'or ici»
 -   Trésor C : «Le trésor B contient de l'or»
 
+<!--list-separator-->
 
-#### Raisonnements par l'absude. {#raisonnements-par-l-absude-dot}
+-  Raisonnements par l'absude.
 
-À partir de la situation décrite ci-dessous, nous allons montrer la proposition
-suivante :
+    À partir de la situation décrite ci-dessous, nous allons montrer la proposition
+    suivante :
 
-<div class="prop">
+    <div class="prop">
 
-Le message du trésor C est faux.
+    Le message du trésor C est faux.
 
-</div>
+    </div>
 
-Nous allons montrer ce résultat en utilisant le principe du «raisonnement par
-l'absurde». Nous allons commencer par supposer que le message du trésor C est
-vrai, puis montrer que cela aboutit à une absurdité.
+    Nous allons montrer ce résultat en utilisant le principe du «raisonnement par
+    l'absurde». Nous allons commencer par supposer que le message du trésor C est
+    vrai, puis montrer que cela aboutit à une absurdité.
 
-<div class="dem">
+    <div class="dem">
 
-Supposons que le message du trésor C est vrai. Alors, il y a de l'or dans le
-trésor B. Donc, le message du trésor B est faux, mais celui du trésor A est
-vrai. Donc, deux messages sont vrais. Ce qui est absurde puisque seulement un
-seul message est vrai.
+    Supposons que le message du trésor C est vrai. Alors, il y a de l'or dans le
+    trésor B. Donc, le message du trésor B est faux, mais celui du trésor A est
+    vrai. Donc, deux messages sont vrais. Ce qui est absurde puisque seulement un
+    seul message est vrai.
 
-</div>
+    </div>
 
-Nous avons donc démontré en particulier que le trésor B ne peut pas contenir de l'or.
+    Nous avons donc démontré en particulier que le trésor B ne peut pas contenir de l'or.
 
+<!--list-separator-->
 
-#### Raisonnements par disjonctions de cas. {#raisonnements-par-disjonctions-de-cas-dot}
+-  Raisonnements par disjonctions de cas.
 
-Nous allons démontrer la proposition suivante :
+    Nous allons démontrer la proposition suivante :
 
-<div class="prop">
+    <div class="prop">
 
-L'or se trouve dans le trésor A.
+    L'or se trouve dans le trésor A.
 
-</div>
+    </div>
 
-<div class="dem">
+    <div class="dem">
 
-On cherche à savoir où se trouve l'or parmi le trésor A et C. On procède par une
-disjonction de cas.
+    On cherche à savoir où se trouve l'or parmi le trésor A et C. On procède par une
+    disjonction de cas.
 
--   Si l'or est contenu dans le trésor A, alors seul le message du trésor B est
-    vrai, ce qui est conforme aux hypothèses formulées au départ.
--   Si l'or est contenu dans le trésor C, alors les messages A et B sont vrais, ce
-    qui contredit l'hypothèse de départ.
+    -   Si l'or est contenu dans le trésor A, alors seul le message du trésor B est
+        vrai, ce qui est conforme aux hypothèses formulées au départ.
+    -   Si l'or est contenu dans le trésor C, alors les messages A et B sont vrais, ce
+        qui contredit l'hypothèse de départ.
 
-On a balayé toutes les possibilités, et la seule qui ne mène pas à une absurdité
-est celle où l'or est contenu dans le trésor A. Nous avons donc montré que l'or
-était contenu dans le trésor A.
+    On a balayé toutes les possibilités, et la seule qui ne mène pas à une absurdité
+    est celle où l'or est contenu dans le trésor A. Nous avons donc montré que l'or
+    était contenu dans le trésor A.
 
-</div>
+    </div>
 
 [^fn:1]: De façon plus rigoureuse : on ne peut pas simplifier \\(3x^2 + 5x\\) puisque
     la meilleur factorisation possible serait \\(x(3x + 5)\\) qui n'est pas plus
