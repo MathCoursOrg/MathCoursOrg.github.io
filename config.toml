@@ -2,3 +2,4 @@ baseURL = 'mathcoursorg.github.io/'
 languageCode = 'fr-fr'
 title = 'Cours de mathématiques'
 themes="shadocs"
+unsafe=true
